@@ -11,11 +11,12 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 ## Integrantes
 
 * Nathália Lopes Soares Bispo
-* Marilia
+* Marília Rocha de Andrade
 * João Marcos Magalhães Füzessy Teixeira
-* Daniel
+* Daniel Felipe Maciel Fernandes
 * Luiz Henrique Santos de Andrade
 * Matheus Carlos Fraga dos Santos
+
 
 ## Orientador
 
