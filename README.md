@@ -14,7 +14,6 @@ Através de um software de treinamento que ofereça módulos de treinos e ensino
 
 * Nathália Lopes Soares Bispo
 * Marilia Rocha de Andrade
-* João Marcos Magalhães Füzessy Teixeira
 * Daniel Felipe Maciel Fernandes
 * Luiz Henrique Santos de Andrade
 * Matheus Carlos Fraga dos Santos
