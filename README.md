@@ -6,7 +6,8 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto 'Aprendizagem musical' tem como objetivo criar um aplicativo que auxilie aqueles que desejam aprender ou aperfeiçoar os conhecimentos em teoria musical.
+Atarvés de um software de treinamento que ofereça módulos de treinos e ensinos teóricos envolvendo um ou mais instrumentos.
 
 ## Integrantes
 
