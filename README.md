@@ -7,14 +7,15 @@
 `SEMESTRE: 1º`
 
 O projeto 'Aprendizagem musical' tem como objetivo criar um aplicativo que auxilie aqueles que desejam aprender ou aperfeiçoar os conhecimentos em teoria musical.
-Atarvés de um software de treinamento que ofereça módulos de treinos e ensinos teóricos envolvendo um ou mais instrumentos.
+<br>
+Através de um software de treinamento que ofereça módulos de treinos e ensinos teóricos envolvendo um ou mais instrumentos.
 
 ## Integrantes
 
 * Nathália Lopes Soares Bispo
-* Marilia
+* Marilia Rocha de Andrade
 * João Marcos Magalhães Füzessy Teixeira
-* Daniel
+* Daniel Felipe Maciel Fernandes
 * Luiz Henrique Santos de Andrade
 * Matheus Carlos Fraga dos Santos
 
