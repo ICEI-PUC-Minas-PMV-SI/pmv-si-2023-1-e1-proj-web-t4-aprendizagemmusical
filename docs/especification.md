@@ -47,70 +47,78 @@ As personas levantadas durante o processo de investigação do problema através
 | Hobbies            | Ir ao cinema, escutar música variadas                                                                                                                                                       |
 | Aplicativos        | Whatsapp, Facebook, Shein, LinkedIn, Spotify                                                                                                                                                |
 <br>
+
 ## Histórias de Usuários
+<br><br>
+Fundamentadas na pesquisa feita para o desenvolvimento, foram registradas as histórias de
+usuários apresentadas a seguir.
+<br>
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| Eu como…          |                           …quero/desejo…                           |                                  ...para...                                 |
+|-------------------|:------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
+| Marcelo Faria     | Aprender sobre música e aprender a tocar algum instrumento musical | Como psicólogo, quero utilizar isso como recurso durante meus atendimentos. |
+| Maria Vasconcelos | Aprender sobre música clássica e teoria musical gratuitamente      | Não dispõe de recursos para aprender com profissionais da área              |
+| Fernanda Couto    | Aprender a criar suas próprias composições                         | Para utilizar esses conhecimentos em suas aulas como professora             |
+| Fernanda Couto    | Testar seus conhecimentos através de exercícios                    | Para verificar se está evoluindo em seu aprendizado                         |
+| Maria Vasconcelos | Aprender a ler partituras e outras representações musicais         |                                                                             |
+| Maria Vasconcelos | aprender a identificar a sonoridade de cada nota musical           |                                                                             |
+<br>
 
 ## Requisitos
+<br><br>
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
+Itens imprescindíveis para a execução do projeto de forma que alcance o fim desejado.
+<br>
 
 ### Requisitos Funcionais
+<br><br>
 
-|ID    | Descrição do Requisito  | Prioridade | Responsável |
-|------|-----------------------------------------|----| ----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA |  |
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA | |
+A tabela a seguir apresenta os requisitos do projeto, descrevendo e identificando as prioridades.
+<br><br>
+
+| ID    |                                                                                               Descrição                                                                                               | Prioridade |
+|-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| RF-01 | O aplicativo deve ter no mínimo dois modos diferentes, um para amadores e iniciantes, e outro para músicos já experientes.                                                                            | Alta       |
+| RF-02 | O aplicativo deverá conter um playground, onde seja possível o usuário interagir com a interface.                                                                                                     | Alta       |
+| RF-03 | Para o playground, apresentar as notas corretas de acordo com a escolha do usuário.                                                                                                                   | Alta       |
+| RF-04 | Para o playground, ao menos dois instrumentos devem ser apresentados como opções de escolha (violão, piano).                                                                                          | Alta       |
+| RF-05 | Para o playground, o usuário poderá fazer o overlapping de no máximo 3 escalas no mesmo tom.                                                                                                          | Média      |
+| RF-06 | Para o playground, deve haver uma opção para que o usuário identifique as terças e quintas, de acordo com sua escolha.                                                                                | Baixa      |
+| RF-07 | Para o playground, na escolha da interface do violão, o usuário poderá escolher entre afinações padrões, ou criar afinações personalizadas.                                                           | Baixa      |
+| RF-08 | Para o playground, dependendo das notas escolhidas, o aplicativo deverá gerar um código, que ficará disponível ao usuário, para que o mesmo possa guardar suas configurações para usá-las mais tarde. | Baixa      |
+| RF-09 | Para o playground, haverá um modo de construção de escalas totalmente manual (direcionados para pessoas experientes/professores).                                                                     | Alta       |
+| RF-10 | O aplicativo deve conter, para iniciantes, exercícios básicos de música.                                                                                                                              | Média      |
+| RF-11 | Para os exercícios, o usuário poderá escolher entre até três dificuldades.                                                                                                                            | Média      |
 
 
 ### Requisitos não Funcionais
+<br><br>
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+A tabela a seguir apresenta os requisitos não funcionais que o projeto deve possuir.
+<br>
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+| ID     |                                                   Descrição                                                  | Prioridade |
+|--------|:------------------------------------------------------------------------------------------------------------:|:----------:|
+| RNF-01 | O site deve ser publicado em um ambiente acessível publicamente na Internet (Repl.it, GitHub Pages, Heroku); | Alta       |
+| RNF-02 | O site deverá ser responsivo permitindo a visualização em um celular de forma adequada                       | Alta       |
+| RNF-03 | O site deve ter bom nível de contraste entre os elementos da tela em conformidade                            | Média      |
+| RNF-04 | O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | Alta       |
+| RNF-05 | O site deve possuir recursos de acessibilidade tais como aumento da fonte                                    | Média      |
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
+<br><br>
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+A tabela a seguir exibe as restrições que se configuram como obrigações claras para o desenvolvimento do projeto.
+<br>
 
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
+| ID  | Descrição |
+| ------------- |-------------|
+| RE-01 | O projeto deverá seguir o cronograma de entregas proposto, respeitando a data de entrega a cada etapa.     |
+| RE-02      | O aplicativo deve se restringir às tecnologias básicas da Web no Frontend.     |
+| RE-03      | A equipe não pode subcontratar o desenvolvimento do trabalho.     |
+| RE-04      | Devido a restrições de orçamento, serão utilizadas apenas figuras de bancos de imagens gratuitos, como por exemplo o Freepik ou de criação do próprio grupo com as devidas atribuições de crédito e direitos de uso.      |
+| RE-05      | Pelo mesmo motivo, utilizaremos uma versão de avaliação/gratuita do provedor de hospedagem.     |
 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
