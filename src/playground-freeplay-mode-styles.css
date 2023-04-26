@@ -1,0 +1,10 @@
+.user-interaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.playground {
+  width: 100%;
+  height: clamp(300px, 25vh, 30vh);
+  border: 1px solid black;
+}
