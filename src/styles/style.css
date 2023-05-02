@@ -30,7 +30,7 @@ header {
     margin-bottom: 30px;
   }
 
-  button {
+  .back-btn {
     background-color: #3275a8;
     color: #fff;
     border: 1px;
