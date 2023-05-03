@@ -30,10 +30,10 @@ header {
     margin-bottom: 30px;
   }
 
-  .back-btn {
+  .back-btn, button {
     background-color: #3275a8;
     color: #fff;
-    border: 1px;
+    border: none;
     border-radius: 5px;
     padding: 10px 20px;
     margin: 10px;
@@ -48,4 +48,58 @@ header {
   a {
     text-decoration: none;
     color: #fff;
+  }
+
+.user-interaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+.playground {
+  width: 100%;
+  height: clamp(300px, 25vh, 30vh);
+  border: 1px solid black;
+  }
+
+/* theory*/
+
+  .theory{
+    font-family: Arial, sans-serif;
+    background-color:white;
+  }
+
+  .trilha{
+    /*estilizar depois*/
+  }
+
+  .theory h1{
+    color: #1d3557;
+    margin-top: 50px;
+  }
+  
+  .theory p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    color:black;
+    text-align: center;
+  }
+  
+  .theory a{
+    color: #fff;
+    align-items: start;
+  }
+
+  .trilha a{
+    text-decoration: none;
+    color: #000000;
+    text-align:justify ;
+  }
+
+  .trilha li{
+    list-style-type:square;
+    text-align: justify;
+  }
+  
+  .theory .back-btn{
+   ????
   }
