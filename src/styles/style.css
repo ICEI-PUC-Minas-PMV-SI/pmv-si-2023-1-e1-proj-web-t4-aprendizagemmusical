@@ -1,0 +1,94 @@
+header {
+    font-size: large;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0px;
+  }
+
+  h1 {
+    -webkit-text-stroke: 0.2px rgba(192, 192, 192, 0);
+    color: #355889;
+    margin-top: 50px;
+  }
+
+  p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .back-btn, button {
+    background-color: #3275a8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #457b9d;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+.user-interaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+.playground {
+  width: 100%;
+  height: clamp(300px, 25vh, 30vh);
+  border: 1px solid black;
+  }
+
+/* theory*/
+
+  .theory{
+    font-family: Arial, sans-serif;
+    background-color:white;
+  }
+
+  .trilha{
+    text-align: initial;
+  }
+
+  .theory h1{
+    color: #1d3557;
+    margin-top: 50px;
+  }
+  
+  .theory p{
+    font-size: 18px;
+    margin-bottom: 30px;
+    color:black;
+    text-align: center;
+  }
+  
+  .theory a{
+    color: #fff;
+    align-items: start;
+  }
+
+  .trilha a{
+    text-decoration: none;
+    color: #000000;
+    text-align:justify ;
+  }
+
+  .trilha li{
+    list-style-type:square;
+    text-align: justify;
+  }
