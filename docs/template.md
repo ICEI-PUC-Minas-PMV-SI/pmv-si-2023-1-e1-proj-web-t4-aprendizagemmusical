@@ -10,30 +10,25 @@ Onde é mostrado de maneira interativa para o usuário todos os possíveis camin
 
 Inicialmente, o projeto está divido em algumas telas, essas sendo:
 
-1. index<br>
-    a) playground
-        i. playground-advanced-mode
-        ii. playground-freeplay-mode
+1. index:<br> 
+    a) playground: playground-advanced-mode e playground-freeplay-mode
+    <br>    
     b) theory<br>
     c) exercises
 
 ## Design
-
 A seção de Design é um dos aspectos mais importantes em um projeto de aplicativo, pois é responsável por criar a identidade visual e a experiência do usuário. Para o nosso aplicativo, optamos por um design clean e minimalista, que visa a simplicidade e a eficiência. Com isso, nossa intenção é proporcionar uma experiência fluida e agradável para o usuário, sem distrações ou elementos desnecessários que possam comprometer a usabilidade do aplicativo.
-<br>
 
 A logo central nas telas, que foi criada para ser facilmente identificável foi projetada para se adaptar facilmente a diferentes tamanhos de tela, garantindo uma aparência consistente em todas as plataformas e dispositivos.
-<br>
+
 
 **![Tela inicial](./img/tela_inicial.png)** 
-
 Apresenta ao usuário três possíveis opções de prosseguimento no app, a partir de três botões clicáveis que o direcionam para as respectivas páginas HTML. 
 * “Playground” consiste em uma área onde o usuário poderá indicar notas e escalas para que o app altere o tom em um só clique. 
 * “Exercícios” apresenta alguns exercícios projetados para que o usuário agregue informações úteis ao seu rol de conhecimentos acerca da Musicologia.
 * “Teorias” apresenta aspectos técnicos acerca da teoria musical.
 
 **![Playground](./img/playground.png)** 
-
 Apresenta ao usuário duas possíveis opções de prosseguimento no app, a partir de dois botões clicáveis que o direcionam para as respectivas páginas HTML. 
 * “Modo Livre” dá ao usuário a possibilidade de optar mais livremente entre escalas já pré-selecionadas, e que já seguem padrões criados com base na teoria musical, como por exemplo a diagramação de uma escala maior. 
 * “Modo Avançado” presume um conhecimento prévio do usuário. Deixando-o livre para que possa personalizar uma escala ou acorde, de acordo com sua vontade, e ainda escolher outras cores para a melhor compreensão. Esse modo é pensado para ser usado por professores que querem mostrar aos seus alunos, de forma interativa a criação de uma escala, ou a fusão de duas ou mais escalas.
@@ -41,21 +36,17 @@ Apresenta ao usuário duas possíveis opções de prosseguimento no app, a parti
 Requisitos funcionais e não-funcionais:
 
 **![Playground: modo livre](./img/playground_modo_livre.png)** 
-
 Apresenta ao usuário três possíveis opções de seleção, a partir de três botões clicáveis que alteram a diagramação demonstrada abaixo dos mesmos, visando especificar qual tipo de instrumento será utilizado na escala tonal. Na parte inferior da página existem dois campos para que o usuário opte por qual nota e escala deseja utilizar
 
 Requisitos funcionais e não-funcionais:
 
 **![Playground: modo avançado](./img/playground_modo_avan%C3%A7ado.png)** 
-
 Apresenta ao usuário três possíveis opções de seleção, a partir de três botões clicáveis que alteram o layout demonstrado abaixo dos mesmos, visando especificar qual tipo de instrumento será utilizado na escala tonal.
 
 **![Exercícios](./img/exercicios.png)** 
-
 Apresenta ao usuário três possíveis opções de prosseguimento no app, a partir de três botões clicáveis que o direcionam para as respectivas páginas HTML. Cada opção o direciona para exercícios associados com as nomenclaturas da própria opção.
 
-**![Teoria](./img/teoria.png** 
-
+**![Teoria](./img/teoria.png)** 
 Apresenta ao usuário três possíveis opções de prosseguimento no app, a partir de três botões clicáveis que o direcionam para as respectivas páginas HTML, que por sua vez demonstram teorias específicas para o instrumento selecionado. Abaixo dos botões existem alguns textos clicáveis separados por categorias. Tais textos informam sobre o tema que será tratado em pequenos artigos escritos visando oferecer informação e aprendizado ao usuário.
 
 ## Cores
