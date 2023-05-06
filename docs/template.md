@@ -4,7 +4,9 @@ O padrão de layout está baseado no projeto de interface, disposto conforme ane
 <br>
 
 Link layout:
+
 https://miro.com/app/board/uXjVMOLyiIw=/. 
+
 Onde é mostrado de maneira interativa para o usuário todos os possíveis caminhos, lembrando que ainda se trata de um protótipo de baixa fidelidade, e por isso pode apresentar problemas com dispositivos com telas muito grandes e/ou pequenas.
 <br>
 
@@ -99,7 +101,12 @@ Requisitos funcionais e não-funcionais:
 
 | ID    |                                                                                               Descrição                                                                                               | Prioridade |
 |-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
-
+| RF-12 | As sessões de estudo teórico devem ter mais que um parágrafo.                                                                                                                              | Média      |
+| RF-13 | Devem ser apresentados ao menos um exemplo durante as sessões de estudo.                                                                                                                            | Média      |
+| RF-14 | Em todo artigo teórico deve conter uma sintese do assunto abordado e o objetivo pedagógico do conteúdo.                                                                                                                            | Média      |
+| RF-15 | Os artigos teóricos devem possuir diagramas e outras representações para elucidar conceitos, incluindo partituras ou outros sistemas de escrita.                                                                                                                            | Média      |
+| RF-16 | O usuário poderá escolher de forma personalizada o que gostaria de aprender e os assuntos apresentados devem alinhar-se ao seu objetivo.                                                                                                                            | Média      |
+| RF-17 | Poderá ser utilizado recursos de hipermídia como áudio ou vídeo.                                                                                                                            | Média      |
 
 > **Links Úteis**:
 >
