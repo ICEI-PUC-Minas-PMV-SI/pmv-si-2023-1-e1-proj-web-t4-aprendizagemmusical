@@ -90,6 +90,13 @@ A tabela a seguir apresenta os requisitos do projeto, descrevendo e identificand
 | RF-09 | Para o playground, haverá um modo de construção de escalas totalmente manual (direcionados para pessoas experientes/professores).                                                                     | Alta       |
 | RF-10 | O aplicativo deve conter, para iniciantes, exercícios básicos de música.                                                                                                                              | Média      |
 | RF-11 | Para os exercícios, o usuário poderá escolher entre até três dificuldades.                                                                                                                            | Média      |
+| RF-12 | As sessões de estudo teórico devem ter mais que um parágrafo.                                                                                                                              | Média      |
+| RF-13 | Devem ser apresentados ao menos um exemplo durante as sessões de estudo.                                                                                                                            | Média      |
+| RF-14 | Em todo artigo teórico deve conter uma sintese do assunto abordado e o objetivo pedagógico do conteúdo.                                                                                                                            | Média      |
+| RF-15 | Os artigos teóricos devem possuir diagramas e outras representações para elucidar conceitos, incluindo partituras ou outros sistemas de escrita.                                                                                                                            | Média      |
+| RF-16 | O usuário poderá escolher de forma personalizada o que gostaria de aprender e os assuntos apresentados devem alinhar-se ao seu objetivo.                                                                                                                            | Média      |
+| RF-17 | Poderá ser utilizado recursos de hipermídia como áudio ou vídeo.                                                                                                                            | Média      |
+
 
 
 ### Requisitos não Funcionais
