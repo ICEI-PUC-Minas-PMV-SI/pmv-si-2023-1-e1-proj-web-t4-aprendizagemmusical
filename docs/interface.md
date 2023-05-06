@@ -46,21 +46,21 @@ Com base na estrutura padrão, o bloco de conteúdo traz as opções (playground
 ![tela-inicial-wireframe](img/tela-inicial-wireframe.png)
 
 ### Tela playground
-<br
+<br>
 
 A tela de playground apresenta, no bloco de conteúdo, dois botões clicáveis, que direcionam para as respectivas páginas “Modo Livre” e “Modo Avançado”. O Bloco de cabeçalho apresenta os elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação).
 
 ![tela-playground](img/tela-playground.png)
     
 ### Tela exercícios
-<br
+<br>
 
 A tela de exercícios apresenta no bloco de conteúdo, opções possíveis de prosseguimento no site, a partir de botões que o direcionam para páginas que contêm exercícios de aprendizagem. Cada opção direciona o usuário para um exercício.
 
 ![tela-exercicios](img/tela-exercicios.png)
 
 ### Tela teoria
-<br
+<br>
     
 A tela teoria apresenta uma trilha de estudos que oferece uma sequência de conteúdos organizados de forma didática. Nesta tela, em seu bloco de conteúdo o usuário possui à sua disposição opções de botões clicáveis que apresentam listas instrucionais de aprendizado com artigos.
 
