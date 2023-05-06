@@ -8,7 +8,7 @@ As personas levantadas durante o processo de investigação do problema através
 <br>
 
     
-| **![Marcelo Faria](./img/marcelo_faria.jpg)** |    **Marcelo Faria**                                                                                                                                                                               |
+| **![Marcelo Faria](.src/img/marcelo_faria.jpg)** |    **Marcelo Faria**                                                                                                                                                                               |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     **Idade**   | **30**                                                                                                                                                                                    |
 | Ocupação          | Psicólogo                                                                                                                                                                                 |
@@ -18,7 +18,7 @@ As personas levantadas durante o processo de investigação do problema através
 | Aplicativos       | Linkedin, Whatsapp, Kwai, Tidal                                                                                                                                                           |
 <br>
 
-| **![Marcelo Faria](./img/sergio_gomes.jpg)**| **Sérgio Gomes**                                                                                                                                 |
+| **![Marcelo Faria](.src/img/sergio_gomes.jpg)**| **Sérgio Gomes**                                                                                                                                 |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |   **Idade**    | **18**                                                                                                                                     |
 | Ocupação         | Estudante                                                                                                                                  |
@@ -28,7 +28,7 @@ As personas levantadas durante o processo de investigação do problema através
 | Aplicativos      | TikTok, Instagram, WhatsApp, Kwai, Twitter                                                                                                 |
 <br>
 
-|**![Maria Vasconcelos](./img/maria_vasconcelos.jpg)**  |  **Maria Vasconcelos**                                                                                             |
+|**![Maria Vasconcelos](.src/img/maria_vasconcelos.jpg)**  |  **Maria Vasconcelos**                                                                                             |
 |-----------------------|---------------------------------------------------------------------------------------------------------|
 |  **Idade**           | **23**                                                                                                  |
 | Ocupação              | Estudante                                                                                               |
@@ -38,7 +38,7 @@ As personas levantadas durante o processo de investigação do problema através
 | Aplicativos           | Whatsapp, TikTok, Duolingo, LinkedIn, Kwai, Twitter, Spotify, Deezer                                    |
 <br>
 
-| **![Fernanda Couto](./img/fernanda_couto.jpg)**  | **Fernanda Couto**                                                                                                                                                                               |
+| **![Fernanda Couto](.src/img/fernanda_couto.jpg)**  | **Fernanda Couto**                                                                                                                                                                               |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  **Idade**        | **45**                                                                                                                                                                                      |
 | Ocupação           | Professora de educação infantil                                                                                                                                                             |
