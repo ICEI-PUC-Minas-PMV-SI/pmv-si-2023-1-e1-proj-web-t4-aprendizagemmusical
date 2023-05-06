@@ -23,12 +23,15 @@ A logo central nas telas, que foi criada para ser facilmente identificável foi 
 
 
 **![Tela inicial](./img/tela_inicial.png)**
+<br>
+
 Tela inicial: Apresenta ao usuário três possíveis opções de prosseguimento no app, a partir de três botões clicáveis que o direcionam para as respectivas páginas HTML. 
 * “Playground” consiste em uma área onde o usuário poderá indicar notas e escalas para que o app altere o tom em um só clique. 
 * “Exercícios” apresenta alguns exercícios projetados para que o usuário agregue informações úteis ao seu rol de conhecimentos acerca da Musicologia.
 * “Teorias” apresenta aspectos técnicos acerca da teoria musical.
 
 **![Playground](./img/playground.png)**
+<br>
 
 Tela playground: Apresenta ao usuário duas possíveis opções de prosseguimento no app, a partir de dois botões clicáveis que o direcionam para as respectivas páginas HTML. 
 * “Modo Livre” dá ao usuário a possibilidade de optar mais livremente entre escalas já pré-selecionadas, e que já seguem padrões criados com base na teoria musical, como por exemplo a diagramação de uma escala maior. 
@@ -36,23 +39,66 @@ Tela playground: Apresenta ao usuário duas possíveis opções de prosseguiment
 
 Requisitos funcionais e não-funcionais:
 
+| ID    |                                                                                               Descrição                                                                                               | Prioridade |
+|-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| RF-01 | O aplicativo deve ter no mínimo dois modos diferentes, um para amadores e iniciantes, e outro para músicos já experientes.                                                                            | Alta     
+
 **![Playground: modo livre](./img/playground_modo_livre.png)** 
+<br>
 
 Tela playground modo livre: Apresenta ao usuário três possíveis opções de seleção, a partir de três botões clicáveis que alteram a diagramação demonstrada abaixo dos mesmos, visando especificar qual tipo de instrumento será utilizado na escala tonal. Na parte inferior da página existem dois campos para que o usuário opte por qual nota e escala deseja utilizar
 
 Requisitos funcionais e não-funcionais:
 
+| ID    |                                                                                               Descrição                                                                                               | Prioridade |
+|-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| RF-02 | O aplicativo deverá conter um playground, onde seja possível o usuário interagir com a interface.                                                                                                     | Alta       |
+| RF-03 | Para o playground, apresentar as notas corretas de acordo com a escolha do usuário.                                                                                                                   | Alta       |
+| RF-04 | Para o playground, ao menos dois instrumentos devem ser apresentados como opções de escolha (violão, piano).                                                                                          | Alta       |
+| RF-05 | Para o playground, o usuário poderá fazer o overlapping de no máximo 3 escalas no mesmo tom.                                                                                                          | Média      |
+| RF-06 | Para o playground, deve haver uma opção para que o usuário identifique as terças e quintas, de acordo com sua escolha.                                                                                | Baixa      |
+| RF-07 | Para o playground, na escolha da interface do violão, o usuário poderá escolher entre afinações padrões, ou criar afinações personalizadas.                                                           | Baixa      |
+| RF-08 | Para o playground, dependendo das notas escolhidas, o aplicativo deverá gerar um código, que ficará disponível ao usuário, para que o mesmo possa guardar suas configurações para usá-las mais tarde. | Baixa      |
+| RF-09 | Para o playground, haverá um modo de construção de escalas totalmente manual (direcionados para pessoas experientes/professores).                                                                     | Alta       |
+
 **![Playground: modo avançado](./img/playground_modo_avan%C3%A7ado.png)** 
+<br>
 
 Tela playground modo avançado: Apresenta ao usuário três possíveis opções de seleção, a partir de três botões clicáveis que alteram o layout demonstrado abaixo dos mesmos, visando especificar qual tipo de instrumento será utilizado na escala tonal.
 
+Requisitos funcionais e não-funcionais:
+
+| ID    |                                                                                               Descrição                                                                                               | Prioridade |
+|-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| RF-02 | O aplicativo deverá conter um playground, onde seja possível o usuário interagir com a interface.                                                                                                     | Alta       |
+| RF-03 | Para o playground, apresentar as notas corretas de acordo com a escolha do usuário.                                                                                                                   | Alta       |
+| RF-04 | Para o playground, ao menos dois instrumentos devem ser apresentados como opções de escolha (violão, piano).                                                                                          | Alta       |
+| RF-05 | Para o playground, o usuário poderá fazer o overlapping de no máximo 3 escalas no mesmo tom.                                                                                                          | Média      |
+| RF-06 | Para o playground, deve haver uma opção para que o usuário identifique as terças e quintas, de acordo com sua escolha.                                                                                | Baixa      |
+| RF-07 | Para o playground, na escolha da interface do violão, o usuário poderá escolher entre afinações padrões, ou criar afinações personalizadas.                                                           | Baixa      |
+| RF-08 | Para o playground, dependendo das notas escolhidas, o aplicativo deverá gerar um código, que ficará disponível ao usuário, para que o mesmo possa guardar suas configurações para usá-las mais tarde. | Baixa      |
+| RF-09 | Para o playground, haverá um modo de construção de escalas totalmente manual (direcionados para pessoas experientes/professores).                                                                     | Alta       |
+
 **![Exercícios](./img/exercicios.png)** 
+<br>
 
 Tela exercícios: Apresenta ao usuário três possíveis opções de prosseguimento no app, a partir de três botões clicáveis que o direcionam para as respectivas páginas HTML. Cada opção o direciona para exercícios associados com as nomenclaturas da própria opção.
 
+Requisitos funcionais e não-funcionais:
+
+| ID    |                                                                                               Descrição                                                                                               | Prioridade |
+|-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| RF-10 | O aplicativo deve conter, para iniciantes, exercícios básicos de música.                                                                                                                              | Média      |
+| RF-11 | Para os exercícios, o usuário poderá escolher entre até três dificuldades.                                                                                                                            | Média      |
+
 **![Teoria](./img/teoria.png)**
+<br>
 
 Tela teorias: Apresenta ao usuário três possíveis opções de prosseguimento no app, a partir de três botões clicáveis que o direcionam para as respectivas páginas HTML, que por sua vez demonstram teorias específicas para o instrumento selecionado. Abaixo dos botões existem alguns textos clicáveis separados por categorias. Tais textos informam sobre o tema que será tratado em pequenos artigos escritos visando oferecer informação e aprendizado ao usuário.
+Requisitos funcionais e não-funcionais:
+
+| ID    |                                                                                               Descrição                                                                                               | Prioridade |
+|-------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|
 
 
 > **Links Úteis**:
