@@ -23,15 +23,50 @@ https://miro.com/app/board/uXjVMOLyiIw=/?share_link_id=559641622221
 
 ## Wireframes
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
+Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens que se seguem. As telas do sistema apresentam uma estrutura comum que é apresentada na figura abaixo. Nesta estrutura, existem 2 grandes blocos, descritos a seguir.
+<br>
+São eles:
+* Cabeçalho - local onde são dispostos elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação);
+* Conteúdo - apresenta o conteúdo da tela em questão.
 
-### Exemplo
+![Estrutura-padrao-site](img/estrutura_padrao_site.png)
 
-A tela Inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade.
+### Tela inicial
+<br>
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+A tela de home-page apresenta ao usuário três possíveis opções de prosseguimento no site, a partir de três botões clicáveis que o direcionam para as respectivas páginas. 
+<br>
 
- 
+Com base na estrutura padrão, o bloco de conteúdo traz as opções (playground, exercícios e teorias):
+
+* O componente “Playground” consiste em uma área onde o usuário poderá indicar notas e escalas para que o app altere o tom em um só clique. 
+* O componente “Exercícios” apresenta alguns exercícios projetados para que o usuário agregue informações úteis ao seu rol de conhecimentos acerca da Musicologia.
+* O  componente “Teorias” apresenta aspectos técnicos acerca da teoria musical.
+
+![tela-inicial-wireframe](img/tela-inicial-wireframe.png)
+
+### Tela playground
+<br
+
+A tela de playground apresenta, no bloco de conteúdo, dois botões clicáveis, que direcionam para as respectivas páginas “Modo Livre” e “Modo Avançado”. O Bloco de cabeçalho apresenta os elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação).
+
+![tela-playground](img/tela-playground.png)
+    
+### Tela exercícios
+<br
+
+A tela de exercícios apresenta no bloco de conteúdo, opções possíveis de prosseguimento no site, a partir de botões que o direcionam para páginas que contêm exercícios de aprendizagem. Cada opção direciona o usuário para um exercício.
+
+![tela-exercicios](img/tela-exercicios.png)
+
+### Tela teoria
+<br
+    
+A tela teoria apresenta uma trilha de estudos que oferece uma sequência de conteúdos organizados de forma didática. Nesta tela, em seu bloco de conteúdo o usuário possui à sua disposição opções de botões clicáveis que apresentam listas instrucionais de aprendizado com artigos.
+
+![tela-teorias](img/tela-teorias.png)
+    
+    
 > **Links Úteis**:
 > - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
 > - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
