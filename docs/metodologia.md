@@ -14,7 +14,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A r
 | Ambiente  | Plataforma | Link de acesso|
 | ------------- |-------------|-------------|
 | Repositório de código fonte | GitHub | https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2023-1-e1-proj-web-t4-aprendizagemmusical 
-| Documentos do projeto | Google Drive | https://docs.google.com/folder/d/1xE9t6zD78VnVkeOSgDfss33QWe85ogqYpx9x-tuG24 
+| Documentos do projeto | Google Drive | https://docs.google.com/document/d/1hMt39A_TtzWJEVmbb3-uw-tdamgqb8d0/edit
 | Projeto de Interface e  Wireframes | Miro |https://miro.com/app/board/uXjVMOLyiIw=/ 
 |Gerenciamento do Projeto | GitHub Project | https://github.com/orgs/ICEI-PUC-Minas-PMV-SI/projects/87/views/1 
 
