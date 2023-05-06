@@ -48,4 +48,4 @@ O quadro kanban do grupo desenvolvido na ferramenta de gerenciamento de projetos
 https://github.com/orgs/ICEI-PUC-Minas-PMV-SI/projects/87/views/1
 
 E é apresentado, no estado atual, na Figura abaixo. 
-**![Project](./img/kanban.jpg)** 
+**![Project](./img/kanban.png)** 
