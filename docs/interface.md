@@ -54,7 +54,7 @@ A tela de playground apresenta, no bloco de conteúdo, dois botões clicáveis, 
 
 ![tela-playground-modo-avancado](img/playground-modo-avancado-wireframe.png)
 
-![tela-playground-modo-livre](img/playground_modo_livre.png)
+![tela-playground-modo-livre](img/playground_modo_livre-wireframe.png)
     
 ### Tela exercícios
 <br>
