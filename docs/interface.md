@@ -5,7 +5,9 @@ Para elaboração do projeto de interface, foram observados os requisitos exigid
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+![Exemplo de UserFlow mobile](img/layout_mobile.png)
+
+![Exemplo de UserFlow pc](img/layout_pc.png)
 
 Os diagramas nas figuras abaixo apresentam o fluxo de usuário, onde é possível observar as ações possíveis e estruturação das páginas. Os layouts apresentados são em ambiente desktop através do acesso via navegador de internet e também por meio de dispositivos móveis. A visualização do fluxo de usuário está disponível através do projeto na ferramenta Miro.
 <br>
