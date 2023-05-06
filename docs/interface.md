@@ -29,7 +29,7 @@ São eles:
 * Cabeçalho - local onde são dispostos elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação);
 * Conteúdo - apresenta o conteúdo da tela em questão.
 
-![Estrutura-padrao-site](img/estrutura_padrao_site.png)
+![Estrutura-padrao-site](img/estrutura-padrao-site.png)
 
 ### Tela inicial
 <br>
@@ -50,21 +50,33 @@ Com base na estrutura padrão, o bloco de conteúdo traz as opções (playground
 
 A tela de playground apresenta, no bloco de conteúdo, dois botões clicáveis, que direcionam para as respectivas páginas “Modo Livre” e “Modo Avançado”. O Bloco de cabeçalho apresenta os elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação).
 
-![tela-playground](img/tela-playground.png)
+![tela-playground](img/playground-wireframe.png)
+
+![tela-playground-modo-avancado](img/playground-modo-avancado-wireframe.png)
+
+![tela-playground-modo-livre](img/playground_modo_livre.png)
     
 ### Tela exercícios
 <br>
 
 A tela de exercícios apresenta no bloco de conteúdo, opções possíveis de prosseguimento no site, a partir de botões que o direcionam para páginas que contêm exercícios de aprendizagem. Cada opção direciona o usuário para um exercício.
 
-![tela-exercicios](img/tela-exercicios.png)
+![tela-exercicios](img/exercicios-wireframe.png)
+
+![tela-exercicios-complete-escala](img/exercicios-complete-escala-wireframe.png)
+
+![tela-exercicios-percepcao-musical](img/exercicios-percepcao-musical-wireframe.png)
+
+![tela-exercicios-percepcao-ritimica](img/exercicios-percepcao-ritimica-wireframe.png)
 
 ### Tela teoria
 <br>
     
 A tela teoria apresenta uma trilha de estudos que oferece uma sequência de conteúdos organizados de forma didática. Nesta tela, em seu bloco de conteúdo o usuário possui à sua disposição opções de botões clicáveis que apresentam listas instrucionais de aprendizado com artigos.
 
-![tela-teorias](img/tela-teorias.png)
+![tela-teorias](img/teoria-wireframe.png)
+
+![tela-teorias-historia](img/teoria-historia-musica-wireframe.png)
     
     
 > **Links Úteis**:
