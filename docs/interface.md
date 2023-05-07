@@ -1,19 +1,15 @@
 
 # Projeto de Interface
 
-Para elaboração do projeto de interface, foram observados os requisitos exigidos para o sistema, com o foco em usabilidade e acessibilidade e responsividade para todas as telas, com o intuito de funcionar em desktops e dispositivos móveis.
+Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
+
+ Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
 
 ## User Flow
 
-![Exemplo de UserFlow mobile](img/layout_mobile.png)
+![Exemplo de UserFlow](img/userflow.jpg)
 
-![Exemplo de UserFlow pc](img/layout_pc.png)
-
-Os diagramas nas figuras abaixo apresentam o fluxo de usuário, onde é possível observar as ações possíveis e estruturação das páginas. Os layouts apresentados são em ambiente desktop através do acesso via navegador de internet e também por meio de dispositivos móveis. A visualização do fluxo de usuário está disponível através do projeto na ferramenta Miro.
-<br>
-
-Link miro:
-https://miro.com/app/board/uXjVMOLyiIw=/?share_link_id=559641622221
+Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
 
 > **Links Úteis**:
 > - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
@@ -23,62 +19,15 @@ https://miro.com/app/board/uXjVMOLyiIw=/?share_link_id=559641622221
 
 ## Wireframes
 
-Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens que se seguem. As telas do sistema apresentam uma estrutura comum que é apresentada na figura abaixo. Nesta estrutura, existem 2 grandes blocos, descritos a seguir.
-<br>
-São eles:
-* Cabeçalho - local onde são dispostos elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação);
-* Conteúdo - apresenta o conteúdo da tela em questão.
+São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
 
-![Estrutura-padrao-site](img/estrutura-padrao-site.png)
+### Exemplo
 
-### Tela inicial
-<br>
+A tela Inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade.
 
-A tela de home-page apresenta ao usuário três possíveis opções de prosseguimento no site, a partir de três botões clicáveis que o direcionam para as respectivas páginas. 
-<br>
+![Exemplo de Wireframe](img/wireframe-example.png)
 
-Com base na estrutura padrão, o bloco de conteúdo traz as opções (playground, exercícios e teorias):
-
-* O componente “Playground” consiste em uma área onde o usuário poderá indicar notas e escalas para que o app altere o tom em um só clique. 
-* O componente “Exercícios” apresenta alguns exercícios projetados para que o usuário agregue informações úteis ao seu rol de conhecimentos acerca da Musicologia.
-* O  componente “Teorias” apresenta aspectos técnicos acerca da teoria musical.
-
-![tela-inicial-wireframe](img/tela-inicial-wireframe.png)
-
-### Tela playground
-<br>
-
-A tela de playground apresenta, no bloco de conteúdo, dois botões clicáveis, que direcionam para as respectivas páginas “Modo Livre” e “Modo Avançado”. O Bloco de cabeçalho apresenta os elementos fixos de identidade (logo) e navegação principal do site (menu da aplicação).
-
-![tela-playground](img/playground-wireframe.png)
-
-![tela-playground-modo-avancado](img/playground-modo-avancado-wireframe.png)
-
-![tela-playground-modo-livre](img/playground-modo-livre-wireframe.png)
-    
-### Tela exercícios
-<br>
-
-A tela de exercícios apresenta no bloco de conteúdo, opções possíveis de prosseguimento no site, a partir de botões que o direcionam para páginas que contêm exercícios de aprendizagem. Cada opção direciona o usuário para um exercício.
-
-![tela-exercicios](img/exercicios-wireframe.png)
-
-![tela-exercicios-complete-escala](img/exercicios-complete-escala-wireframe.png)
-
-![tela-exercicios-percepcao-musical](img/exercicios-percepcao-musical-wireframe.png)
-
-![tela-exercicios-percepcao-ritimica](img/exercicios-percepcao-ritimica-wireframe.png)
-
-### Tela teoria
-<br>
-    
-A tela teoria apresenta uma trilha de estudos que oferece uma sequência de conteúdos organizados de forma didática. Nesta tela, em seu bloco de conteúdo o usuário possui à sua disposição opções de botões clicáveis que apresentam listas instrucionais de aprendizado com artigos.
-
-![tela-teorias](img/teoria-wireframe.png)
-
-![tela-teorias-historia](img/teoria-historia-musica-wireframe.png)
-    
-    
+ 
 > **Links Úteis**:
 > - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
 > - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
