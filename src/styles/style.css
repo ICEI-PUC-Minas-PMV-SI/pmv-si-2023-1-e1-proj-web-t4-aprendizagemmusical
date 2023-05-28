@@ -1,3 +1,9 @@
+:root {
+  --dark-theme-background-color : #0A2740;
+  --dark-theme-main-color : #64E4A3;
+  --dark-theme-text-color : #FFF;
+  --dark-theme-text-color : #C2C2C2;
+}
 header {
     font-size: large;
     font-style: italic;
@@ -12,11 +18,13 @@ header {
   }
 
   h1 {
-    -webkit-text-stroke: 0.2px rgba(192, 192, 192, 0);
-    color: #355889;
-    margin-top: 50px;
+    font-size: 1.5rem;
+    word-wrap: break-word;
   }
-
+  h2 {
+    font-size: 1rem;
+    word-wrap: break-word;
+  }
   p {
     color: white;
     font-size: 18px;
@@ -91,4 +99,98 @@ header {
   .trilha li{
     list-style-type:square;
     text-align: justify;
+  }
+
+  .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+  }
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  .logo {
+    grid-column: 1/2;
+    background-color: blue;
+  }
+  nav {
+    background-color: red;
+    grid-column: 2/6;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .presentation {
+    background-color: purple;
+    grid-column: 1/6;
+    grid-row: 2/3;
+  }
+  .buttons {
+    background-color: green;
+    grid-column: 1/6;
+    grid-row: 3/4;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .presentationContent {
+    margin: 0 25%;
+    word-wrap: break-word;
+  }
+  .presentationText {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+  }
+  .buttons a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 480px)
+  {
+    body {
+      background-color: red;
+      width: 100%;
+    }
+    nav {
+      grid-column: initial;
+      flex-direction: column;
+    }
+    nav a {
+      padding: 5px 0;
+    }
+    .container {
+      width: 100%;
+      height: 50%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 1fr 1fr 1fr;
+    }
+    .presentationContent {
+      margin: 0;
+    }
+    .logo {
+      grid-column: 1/6;
+      background-color: blue;
+    }
+    .presentation {
+      grid-row: initial;
+    }
+    .buttons {
+      grid-row: initial;
+      flex-direction: column;
+    }
+    .buttons a {
+      padding: 5px 0;
+    }
+    .presentationText {
+      font-size: 1rem;
+    }
   }
