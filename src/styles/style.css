@@ -12,9 +12,11 @@ header {
   }
 
   body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
   }
 
   h1 {
@@ -24,11 +26,6 @@ header {
   h2 {
     font-size: 1rem;
     word-wrap: break-word;
-  }
-  p {
-    color: white;
-    font-size: 18px;
-    margin-bottom: 30px;
   }
 
   .back-btn, button {
@@ -105,12 +102,13 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 3fr 1fr;
-  }
-  body {
-    max-width: 1200px;
+    
     background-color: var(--dark-theme-background-color);
-    margin: auto;
+    padding: 0 calc(50% - 600px);
+    max-width: 1200px;
+    height: 35vh;
   }
+
   .logo {
     background-color: red;
     grid-column: 1/2;
@@ -123,6 +121,7 @@ header {
     align-items: center;
   }
   .presentation {
+    align-self: center;
     grid-column: 1/6;
     grid-row: 2/3;
   }
@@ -139,8 +138,8 @@ header {
     word-wrap: break-word;
   }
   .presentationText {
+    text-align: center;
     color: white;
-    font-size: 1.5rem;
     word-wrap: break-word;
   }
   .buttons a {
@@ -152,6 +151,7 @@ header {
     align-items: center;
 
     background-color: var(--dark-theme-main-color);
+    color: var(--dark-theme-background-color);
     margin: 0 15px;
   }
 
@@ -172,9 +172,11 @@ header {
       height: 50%;
       grid-template-columns: 1fr;
       grid-template-rows: 100px 1fr 1fr 1fr;
+      padding: 0;
     }
     .presentationContent {
       margin: 0;
+      
     }
     .logo {
       grid-column: 1/6;
