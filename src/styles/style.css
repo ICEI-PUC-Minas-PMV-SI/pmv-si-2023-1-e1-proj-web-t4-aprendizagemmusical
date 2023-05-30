@@ -109,9 +109,17 @@ header {
     height: 35vh;
   }
 
-  .logo {
+  .voltar {
     background-color: var(--dark-theme-main-color);
     grid-column: 1/2;
+    align-self: center;
+    justify-self: left;
+  }
+
+  .voltar a{
+    background-color: var(--dark-theme-main-color);
+    color: var(--dark-theme-background-color);
+    padding: 10px 20px;
   }
   nav {
     grid-column: 3/6;
@@ -183,7 +191,7 @@ header {
       margin: 0;
       
     }
-    .logo {
+    .voltar {
       grid-column: 1;
     }
     .presentation {
