@@ -4,14 +4,20 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
-    
     <div class="container">
-      <div class="voltar" href="/src/views/index.html">
-        <a href="/src/views/index.html">Voltar</a>
-      </div>
-      <nav>
+      <nav id="childrenPageNav">
+        <div class="logo">[LOGO]</div>
+        <a  href="/src/views/index.html">backBtn</a>
+        <div class="userUiSettings">
+          <button id="changeTheme">dark</button>
+          <button id="englishTranslation" value="enus">enus</button>
+          <button id="portugueseTranslation" value="ptbr">ptbr</button>
+        </div>
       </nav>
       <div class="presentation">
         <div class="presentationContent">
@@ -26,19 +32,6 @@
         <a href="/src/views/playground-advanced-mode.html">Modo Avançado</a>
       </div>
     </div>
-    
-
-    <!-- <div>
-      <a href="index.html" style="color: black">
-        <img src="../assets/images/logo.jpg" width="30px" height="30px">
-          APRENDIZAGEM MUSICAL
-        <img src="../assets/images/logo.jpg" width="30px" height="30px">
-      </a>
-    </div>
-    <h1>Aprendizagem Musical</h1>
-    <p>Escolha uma das opções abaixo para começar:</p>
-    <a href="playground.html" class="back-btn">Playground</a>
-    <a href="exercises.html" class="back-btn">Exercícios</a>
-    <a href="theory.html" class="back-btn">Teorias</a> -->
   </body>
+  <script src="../scripts/main.js" type="module"></script>
 </html>

@@ -4,12 +4,22 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
     
     <div class="container">
-      <div class="voltar" href="/src/views/index.html">
-        <a href="/src/views/index.html">Voltar</a>
+      <nav id="childrenPageNav">
+        <div class="logo">[LOGO]</div>
+        <a href="/src/views/playground.html">backBtn</a>
+        <div class="userUiSettings">
+          <button id="changeTheme">dark</button>
+          <button id="englishTranslation" value="enus">enus</button>
+          <button id="portugueseTranslation" value="ptbr">ptbr</button>
+        </div>
+      </nav>
       <div class="presentation">
         <div class="presentationContent">
           <h1 class="presentationText">Playground: Modo Livre</h1>
@@ -22,22 +32,6 @@
         <a>Baixo</a>
         <a>Piano</a>
       </div>
-      <!--<div class="container.content">
-      <div> class="playground">[Playground logic]</div>
-      <label>Escolha a nota
-      <select name="" id="">
-        <option value="a">A</option>
-        <option value="b">B</option>
-        <option value="c">C</option>
-      </select>
-    </label>
-    <label>Escolha a escala
-      <select name="" id="">
-        <option value="major">Major</option>
-        <option value="minor">Minor</option>
-        <option value="chromatic">Chromatic</option>
-      </select>
-    </label>
-  </div>
     </div>
-    <p>[CONTINUES]</p>
+    <script src="../scripts/main.js" type="module"></script>
+  </body>

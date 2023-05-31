@@ -1,192 +1,178 @@
 :root {
   --dark-theme-background-color : #0A2740;
   --dark-theme-main-color : #64E4A3;
-  --dark-theme-text-color : #FFF;
-  --dark-theme-text-color : #C2C2C2;
+  --dark-theme-primary-text-color : #FFF;
+  --dark-theme-secondary-text-color : #C2C2C2;
 }
-header {
-    font-size: large;
-    font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-  }
-
-  body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    word-wrap: break-word;
-  }
-  h2 {
-    font-size: 1rem;
-    word-wrap: break-word;
-  }
-
-  a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-.user-interaction {
+/* generic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+body {
+  background-color: var(--dark-theme-background-color);
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  word-wrap: break-word;
+}
+h2 {
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-theme-primary-text-color);
+}
+.logo {
+  background-color: red;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  }
-.playground {
+}
+.userUiSettings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.userUiSettings button {
+  padding: 0 2px;
+  border: none;
+  background-color: transparent;
+  color: var(--dark-theme-primary-text-color);
+}
+.backBtn {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  
+  background-color: var(--dark-theme-background-color);
+  padding: 0 calc(50% - 600px);
+  max-width: 1200px;
+  min-height: 35vh;
+  box-sizing: initial;
+}
+
+#mainPageNav .logo { grid-area: logo; width: 100%; height: 100%;}
+#mainPageNav .userUiSettings { grid-area: userUI}
+#mainPageNav a:nth-child(3) { grid-area: button0}
+#mainPageNav a:nth-child(4) { grid-area: button1}
+#mainPageNav a:nth-child(5) { grid-area: button2}
+#mainPageNav {
+  grid-column: 1/6;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: "logo logo . .  userUI button0 button1 button2";
+  align-items: center;
+  justify-items: center;
+}
+
+#childrenPageNav .logo { grid-area: logo; width: 100%; height: 100%;}
+#childrenPageNav .userUiSettings { grid-area: userUI}
+#childrenPageNav a:nth-child(2) { grid-area: button0}
+#childrenPageNav {
+  grid-column: 1/6;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "button0 . logo userUI .";
+  align-items: center;
+  justify-items: center;
+}
+
+.presentation {
+  align-self: center;
+  grid-column: 1/6;
+  grid-row: 2/3;
+}
+.buttons {
+  grid-column: 1/6;
+  grid-row: 3/4;
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.presentationContent {
+  margin: 0 25%;
+  word-wrap: break-word;
+}
+.presentationText {
+  text-align: center;
+  color: var(--dark-theme-primary-text-color);
+  word-wrap: break-word;
+}
+
+.buttons a{
   width: 100%;
-  height: clamp(300px, 25vh, 30vh);
-  border: 1px solid black;
-  }
+  height: 100%;
 
-/* theory*/
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 
-  .theory{
-    font-family: Arial, sans-serif;
-    background-color:white;
-  }
+  background-color: var(--dark-theme-main-color);
+  color: var(--dark-theme-background-color);
+  margin: 0 15px;
+}
 
-  .trilha{
-    text-align: initial;
-  }
+.buttons a:active{
+  background-color: rgb(59, 92, 223);
+}
 
-  .theory h1{
-    color: #1d3557;
-    margin-top: 50px;
-  }
-  
-  .theory p{
-    font-size: 18px;
-    margin-bottom: 30px;
-    color:black;
-    text-align: center;
-  }
-  
-  .theory a{
-    color: #fff;
-    align-items: start;
-  }
-
-  .trilha a{
-    text-decoration: none;
-    color: #000000;
-    text-align:justify ;
-  }
-
-  .trilha li{
-    list-style-type:square;
-    text-align: justify;
-  }
-  
-  .userUiSettings {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .userUiSettings button {
-    border: none;
-    background-color: transparent;
-    color: var(--dark-theme-text-color);
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    
-    background-color: var(--dark-theme-background-color);
-    padding: 0 calc(50% - 600px);
-    max-width: 1200px;
-    height: 35vh;
-  }
-
-  .voltar {
-    background-color: var(--dark-theme-main-color);
-    grid-column: 1/2;
-    align-self: center;
-    justify-self: left;
-  }
-
-  .voltar a{
-    background-color: var(--dark-theme-main-color);
-    color: var(--dark-theme-background-color);
-    padding: 10px 20px;
-  }
-  nav {
-    grid-column: 3/6;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .presentation {
-    align-self: center;
-    grid-column: 1/6;
-    grid-row: 2/3;
-  }
-  .buttons {
-    grid-column: 1/6;
-    grid-row: 3/4;
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .presentationContent {
-    margin: 0 25%;
-    word-wrap: break-word;
-  }
-  .presentationText {
-    text-align: center;
-    color: white;
-    word-wrap: break-word;
-  }
-
-  .buttons a{
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    background-color: var(--dark-theme-main-color);
-    color: var(--dark-theme-background-color);
-    margin: 0 15px;
-  }
-
-  .buttons a:active{
-    background-color: rgb(59, 92, 223);
-  }
-
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     body {
-      width: 100%;
       margin: 0;
     }
-    nav {
-      grid-column: initial;
-      flex-direction: column;
+
+    #mainPageNav {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas: "logo"
+                           "userUI"
+                           "button0"
+                           "button1"
+                           "button2"
     }
-    nav a {
+
+    #childrenPageNav {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "button0"
+                            "logo" 
+                            "userUI";
+      align-items: center;
+      justify-items: center;
+    }
+    #mainPageNav a {
       padding: 5px 0;
     }
     .container {
       width: 100%;
       height: 50%;
       grid-template-columns: 1fr;
-      grid-template-rows: 100px 1fr 1fr 1fr;
+      grid-template-rows: 100px 1fr 1fr;
       padding: 0;
     }
     .presentationContent {
       margin: 0;
       
     }
-    .voltar {
+    .backBtn {
       grid-column: 1;
     }
     .presentation {
