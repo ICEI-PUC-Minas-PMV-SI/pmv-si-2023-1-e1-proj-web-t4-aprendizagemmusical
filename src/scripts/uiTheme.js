@@ -1,13 +1,50 @@
 let changeThemeBtn = document.getElementById('changeTheme');
-
-function changeTheme(e) {
-  e.preventDefault();
-  //change colors
-  changeNodeText(e.target);
-}
-function changeNodeText(node) {
-  node.innerText = (node.innerText === "dark") ? "light" : "dark";
-}
 changeThemeBtn.addEventListener("click", changeTheme);
 
+function setInitialTheme() {
+	const root = document.documentElement;
+	const savedTheme = localStorage.getItem('theme');
+	if (savedTheme) {
+    root.classList.add(savedTheme);
+    setNodeValue(changeThemeBtn, savedTheme);
+		return;
+	}
+	
+  let currentTheme;
+	if (root.classList.length == 0) {
+		currentTheme = "light";
+	}
+
+	root.classList.add(currentTheme);
+	localStorage.setItem('theme', currentTheme);
+}
+
+// change theme on demand
+function changeTheme(e) {
+  e.preventDefault();
+  
+  const root = document.documentElement;
+
+  if(e.target.value === "light" || e.target.value == ""){
+    setNodeValue(e.target, "dark");
+  } else {
+    setNodeValue(e.target, "light");
+  }
+  let themeArray = ['light', 'dark'];
+	root.classList.remove(...themeArray);
+  root.classList.add(e.target.value);
+  localStorage.setItem('theme', e.target.value);
+}
+
+function setNodeValue(node, currentTheme) {
+  node.value = currentTheme
+  changeNodeContent(node);
+}
+function changeNodeContent(node) {
+  node.innerText = node.value === "light" ? "dark" : "light";
+  //in future this will return an SVG path instead of text
+}
+
 console.log("ui theme loaded");
+
+export { setInitialTheme }

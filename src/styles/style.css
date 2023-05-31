@@ -11,6 +11,9 @@
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
 }
+.light body {
+  background-color: var(--dark-theme-primary-text-color-text-color);
+}
 body {
   background-color: var(--dark-theme-background-color);
   width: 100%;

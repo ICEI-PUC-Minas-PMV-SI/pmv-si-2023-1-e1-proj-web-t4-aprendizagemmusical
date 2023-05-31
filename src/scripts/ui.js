@@ -1,5 +1,5 @@
 import { setInitialLanguage } from "./uiTranslation.js";
-import {  } from "./uiTheme.js";
+import { setInitialTheme } from "./uiTheme.js";
 
-export { setInitialLanguage };
+export { setInitialLanguage, setInitialTheme };
 console.log("ui module loaded");
