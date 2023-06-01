@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <header>
-      <link rel="stylesheet" href="../styles/style.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    </header>
-    <title>Modo Exercício</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Aprendizagem Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div>
-      <a href="index.html" style="color: black">
-      <img src="../assets/images/logo.jpg" width="30px" height="30px">
-        APRENDIZAGEM MUSICAL
-      <img src="../assets/images/logo.jpg" width="30px" height="30px">
-    </a>
+
+<body>
+  <div class="container">
+    <nav id="mainPageNav">
+      <div class="logo">[LOGO]</div>
+      <div class="userUiSettings">
+          <button id="changeTheme" value="dark"></button>
+          <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+          <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+      </div>
+      <a href="#" data-text-node="home"></a>
+    </nav>
+    <div class="presentation">
+      <div class="presentationContent">
+        <h1 class = "presentationText" data-text-node="presentationHeader">Aprenda Música título</h1>
+        <h2 class="presentationText" data-text-node="presentationExercises">Exercícios</h2>
+        <h3 class="presentationText" data-text-node="introductionExercises">Prepare-se para desbloquear seu potencial musical!</h3>
+      </div>
     </div>
-    <h1>Modo exercício</h1>
-    <a href="#" class="back-btn">Percepcao musical</a>
-    <a href="#" class="back-btn">Percepcao rítimica</a>
-    <a href="#" class="back-btn">Complete a escala</a>
+    <div class ="buttons">
+      <a href="/src/views/exercises-percepcao-musical.html"  data-text-node="exercisesPercepcaoMusical">Percepção Musical</a>
+      <a href="/src/views/exercises-percepcao-ritmica.html"  data-text-node="exercisesPercepcaoRitmica">Percepção Rítmica</a>
+      <a href="/src/views/exercises-complete-escala.html"  data-text-node="exercisesCompleteEscala">Complete a Escala</a>
+    </div>
+  </div>
+  <div class="content"></div>
+  <script src="../scripts/main.js" type="module"></script>
 </body>
 </html>

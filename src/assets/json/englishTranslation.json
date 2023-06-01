@@ -6,5 +6,10 @@
   "theory" : "Theory",
   "home" : "Home",
   "aboutUs" : "About us",
-  "contact" : "Contact"
+  "contact" : "Contact",
+  "presentationExercises": "Exercises",
+  "introductionExercises": "Get ready to unlock your musical potential!",
+  "exercisesPercepcaoMusical": "Musical Perception",
+  "exercisesPercepcaoRitmica": "Rhythmic Perception",
+  "exercisesCompleteEscala": "Complete the scale"
 }
