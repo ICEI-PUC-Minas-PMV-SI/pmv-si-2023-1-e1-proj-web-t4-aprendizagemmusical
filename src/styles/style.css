@@ -3,6 +3,8 @@
   --dark-theme-main-color : #64E4A3;
   --dark-theme-primary-text-color : #FFF;
   --dark-theme-secondary-text-color : #C2C2C2;
+  
+  --generic-svg-white: invert(99%) sepia(17%) saturate(1%) hue-rotate(238deg) brightness(110%) contrast(100%);
 }
 /* generic */
 * {
@@ -21,6 +23,7 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0;
+  transition: background-color 0.3s;
 }
 
 h1 {
@@ -45,12 +48,21 @@ a {
 .userUiSettings {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
 }
 .userUiSettings button {
-  padding: 0 2px;
   border: none;
   background-color: transparent;
   color: var(--dark-theme-primary-text-color);
+  width: 100%;
+  height: 100%;
+}
+#changeTheme img {
+  pointer-events: none;
+
+  width: 20px;
+  filter: var(--generic-svg-white);
 }
 .backBtn {
   height: 100%;
@@ -82,6 +94,9 @@ a {
   align-items: center;
   justify-items: center;
 }
+#mainPageNav button img {
+  pointer-events: none;
+}
 
 #childrenPageNav .logo { grid-area: logo; width: 100%; height: 100%;}
 #childrenPageNav .userUiSettings { grid-area: userUI}
@@ -94,6 +109,18 @@ a {
   grid-template-areas: "button0 . logo userUI .";
   align-items: center;
   justify-items: center;
+}
+#childrenPageNav a  {
+  height: min-content;
+  padding: 25px;
+}
+#childrenPageNav a img {
+  pointer-events: none;
+  width: 12px;
+  filter: var(--generic-svg-white);
+}
+#childrenPageNav button img {
+  pointer-events: none;
 }
 
 .presentation {
@@ -130,6 +157,8 @@ a {
   background-color: var(--dark-theme-main-color);
   color: var(--dark-theme-background-color);
   margin: 0 15px;
+
+  font-size: 1.5em;
 }
 
 .buttons a:active{

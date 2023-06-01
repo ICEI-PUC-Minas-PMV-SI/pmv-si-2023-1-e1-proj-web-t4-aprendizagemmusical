@@ -37,12 +37,21 @@ function changeTheme(e) {
 }
 
 function setNodeValue(node, currentTheme) {
-  node.value = currentTheme
+  node.value = currentTheme;
   changeNodeContent(node);
 }
+
 function changeNodeContent(node) {
-  node.innerText = node.value === "light" ? "dark" : "light";
-  //in future this will return an SVG path instead of text
+  node.replaceChildren();
+  let img = document.createElement("img");
+  if(node.value === "light") {
+    img.setAttribute("src", "/src/assets/images/svg/moon.svg");
+  } else {
+    img.setAttribute("src", "/src/assets/images/svg/sun.svg");
+  }
+  if(node.children.length == 0) {
+    node.appendChild(img);
+  }
 }
 
 console.log("ui theme loaded");
