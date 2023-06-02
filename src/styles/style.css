@@ -112,6 +112,30 @@ a {
   box-sizing: initial;
 }
 
+.containerPlay {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.dark .buttonsDescription {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+.light .buttonsDescription {
+  color: #000;
+}
+
+.buttonsDescription {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+@media only screen and (max-width: 600px) {
+  /* Media queries para dispositivos móveis */
+  /* Restante do seu código CSS para dispositivos móveis */
+}
+
 #mainPageNav .logo {
   grid-area: logo;
   width: 100%;

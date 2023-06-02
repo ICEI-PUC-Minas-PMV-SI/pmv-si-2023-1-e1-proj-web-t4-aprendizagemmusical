@@ -12,5 +12,15 @@
   "exercisesPercepcaoMusical": "Percepção Musical",
   "exercisesPercepcaoRitmica": "Percepção Rítmica",
   "exercisesCompleteEscala": "Complete a Escala",
-  "appName": "Aprendizagem músical"
+  "appName": "Aprendizagem músical",
+  "presentationHeaderPlayAdvanced": "Playground: Modo Avançado",
+  "presentationSubHeaderPlay": "Escolha a diagramação",
+  "playgroundViolao": "Violão",
+  "playgroundPiano": "Piano",
+  "playgroundBaixo": "Baixo",
+  "presentationHeaderPlayFree": "Playground: Modo livre",
+  "presentationPlay":"Playground",
+  "introductionPlay":"Bem vindo ao Playground. Escolha abaixo qual modo voce irá utilizar",
+  "buttonsDescriptionFree": "MODO LIVRE: Caso você seja livrão",
+  "buttonsDescriptionAdvanced": "MODO AVANÇADO: Caso vc seja desumilde"
 }

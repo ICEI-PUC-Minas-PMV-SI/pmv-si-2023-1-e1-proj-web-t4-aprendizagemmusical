@@ -24,17 +24,20 @@
       </nav>
       <div class="presentation">
         <div class="presentationContent">
-          <h1 class="presentationText">Playground</h1>
-          <h2 class="presentationText">Bem vindo ao Playground. Escolha abaixo qual modo voce irá utilizar
-            <p>> MODO LIVRE: Caso voce seja livrão   > MODO AVANCADO: Caso vc seja desumilde</p>
+          <h1 class="presentationText" data-text-node="presentationPlay"></h1>
+          <h2 class="presentationText" data-text-node="introductionPlay">
           </h2>
         </div>
       </div>
       <div class="buttons">
-        <a href="/src/views/playground-freeplay-mode.html">Modo Livre</a>
-        <a href="/src/views/playground-advanced-mode.html">Modo Avançado</a>
+        <a href="/src/views/playground-freeplay-mode.html" data-text-node="presentationHeaderPlayAdvanced"></a>
+        <a href="/src/views/playground-advanced-mode.html" data-text-node="presentationHeaderPlayFree"></a>
       </div>
     </div>
   </body>
+  <div class="containerPlay">
+    <div class="buttonsDescription" data-text-node="buttonsDescriptionFree"></div>
+    <div class="buttonsDescription" data-text-node="buttonsDescriptionAdvanced"></div>
+  </div>
   <script src="../scripts/main.js" type="module"></script>
 </html>

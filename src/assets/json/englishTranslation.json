@@ -12,5 +12,15 @@
   "exercisesPercepcaoMusical": "Musical Perception",
   "exercisesPercepcaoRitmica": "Rhythmic Perception",
   "exercisesCompleteEscala": "Complete the scale",
-  "appName": "Musician's tool"
+  "appName": "Musician's tool",
+  "presentationHeaderPlayAdvanced": "Playground: Advanced Mode",
+  "presentationSubHeaderPlay": "Choose layout",
+  "playgroundViolao": "Acoustic Guitar",
+  "playgroundPiano": "Piano",
+  "playgroundBaixo": "Bass",
+  "presentationHeaderPlayFree": "Playground: Free play",
+  "introductionPlay":"Welcome to the Playground. Choose below which mode you will use",
+  "presentationPlay":"Playground",
+  "buttonsDescriptionFree": "FREE MODE: If you are free",
+  "buttonsDescriptionAdvanced": "ADVANCED MODE: In case you are disheartened"
 }
