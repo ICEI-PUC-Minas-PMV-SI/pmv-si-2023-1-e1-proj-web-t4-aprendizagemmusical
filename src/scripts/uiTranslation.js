@@ -31,11 +31,13 @@ function setInitialLanguageBasedOnLocalStorage() {
 	console.log(localStorage.getItem("userPreferredLanguage"));
 	if(localStorage.getItem("userPreferredLanguage") == "enus") {
 		changeLanguageEnglish();
+		return;
 	} 
 	if(localStorage.getItem("userPreferredLanguage") == "ptbr") {
 		changeLanguagePortuguese();
+		return;
 	}
-	return;
+	changeLanguageEnglish();
 }
 
 function changeLanguagePortuguese(){

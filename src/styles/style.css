@@ -1,11 +1,14 @@
 :root {
-  --dark-theme-background-color : #0A2740;
-  --dark-theme-main-color : #64E4A3;
-  --dark-theme-primary-text-color : #FFF;
-  --dark-theme-secondary-text-color : #C2C2C2;
-  
+  --dark-theme-background-color: #0A2740;
+  --dark-theme-background-active-color: #123454;
+  --dark-theme-main-color: #64E4A3;
+  --dark-theme-primary-text-color: #FFF;
+  --dark-theme-secondary-text-color: #C2C2C2;
+
   --generic-svg-white: invert(99%) sepia(17%) saturate(1%) hue-rotate(238deg) brightness(110%) contrast(100%);
+  --generic-svg-secondary-text-color: invert(98%) sepia(0%) saturate(291%) hue-rotate(187deg) brightness(79%) contrast(96%);
 }
+
 /* generic */
 * {
   margin: 0;
@@ -13,23 +16,30 @@
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
 }
+
 .light body {
   background-color: var(--dark-theme-primary-text-color-text-color);
 }
-body {
+
+.dark body {
   background-color: var(--dark-theme-background-color);
+}
+
+body {
+  background-color: var(--dark-theme-primary-text-color);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  transition: background-color 0.3s;
+  transition: background-color 0.1s;
 }
 
 h1 {
   font-size: 1.5rem;
   word-wrap: break-word;
 }
+
 h2 {
   font-size: 1rem;
   word-wrap: break-word;
@@ -37,20 +47,32 @@ h2 {
 
 a {
   text-decoration: none;
-  color: var(--dark-theme-primary-text-color);
+  color: var(--dark-theme-secondary-text-color);
 }
+
 .logo {
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.logo img {
+  height: 50px;
+  filter: var(--generic-svg-white);
+}
+
+.logo p {
+  color: var(--dark-theme-primary-text-color);
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
 .userUiSettings {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
   height: 100%;
 }
+
 .userUiSettings button {
   border: none;
   background-color: transparent;
@@ -58,21 +80,19 @@ a {
   width: 100%;
   height: 100%;
 }
+
 #changeTheme img {
   pointer-events: none;
 
   width: 20px;
-  filter: var(--generic-svg-white);
-}
-.backBtn {
-  height: 100%;
+  filter: var(--generic-svg-secondary-text-color);
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
-  
+
   background-color: var(--dark-theme-background-color);
   padding: 0 calc(50% - 600px);
   max-width: 1200px;
@@ -84,7 +104,7 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  
+
   background-color: var(--dark-theme-background-color);
   padding: 0 calc(50% - 600px);
   max-width: 1200px;
@@ -92,47 +112,86 @@ a {
   box-sizing: initial;
 }
 
-#mainPageNav .logo { grid-area: logo; width: 100%; height: 100%;}
-#mainPageNav .userUiSettings { grid-area: userUI}
-#mainPageNav a:nth-child(3) { grid-area: button0}
-#mainPageNav a:nth-child(4) { grid-area: button1}
-#mainPageNav a:nth-child(5) { grid-area: button2}
+#mainPageNav .logo {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+}
+
+#mainPageNav .userUiSettings {
+  grid-area: userUI
+}
+
+#mainPageNav a:nth-child(3) {
+  grid-area: aboutUs
+}
+
 #mainPageNav {
   grid-column: 1/6;
 
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-areas: "logo logo . .  userUI button0 button1 button2";
+  grid-template-areas: "logo logo logo . . . userUI aboutUs";
   align-items: center;
   justify-items: center;
 }
+
 #mainPageNav button img {
   pointer-events: none;
 }
 
-#childrenPageNav .logo { grid-area: logo; width: 100%; height: 100%;}
-#childrenPageNav .userUiSettings { grid-area: userUI}
-#childrenPageNav a:nth-child(2) { grid-area: button0}
+#mainPageNav a:hover,
+#childrenPageNav a:hover {
+  color: var(--dark-theme-primary-text-color);
+  transition: 0.2s;
+}
+
+#childrenPageNav .logo {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+}
+
+#childrenPageNav .userUiSettings {
+  grid-area: userUI
+}
+
+#childrenPageNav a:nth-child(2) {
+  grid-area: button0
+}
+
 #childrenPageNav {
   grid-column: 1/6;
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-areas: "button0 . logo userUI .";
+  grid-template-areas: "button0 logo logo  logo userUI";
   align-items: center;
   justify-items: center;
 }
-#childrenPageNav a  {
+
+#childrenPageNav a {
   height: min-content;
-  padding: 25px;
 }
-#childrenPageNav a img {
-  pointer-events: none;
-  width: 12px;
-  filter: var(--generic-svg-white);
-}
+
 #childrenPageNav button img {
   pointer-events: none;
+}
+
+#childrenPageNav a img {
+  pointer-events: none;
+  filter: var(--generic-svg-secondary-text-color);
+  height: 100%;
+}
+
+#childrenPageNav .logo img {
+  filter: var(--generic-svg-white);
+  width: 2.2em;
+}
+
+#childrenPageNav .backBtn img {
+  width: 0.8em;
+  align-self: center;
 }
 
 .presentation {
@@ -140,18 +199,21 @@ a {
   grid-column: 1/6;
   grid-row: 2/3;
 }
+
 .buttons {
   grid-column: 1/6;
   grid-row: 3/4;
-  
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+
 .presentationContent {
   margin: 0 25%;
   word-wrap: break-word;
 }
+
 .presentationText {
   text-align: center;
   color: var(--dark-theme-primary-text-color);
@@ -159,7 +221,7 @@ a {
 }
 
 
-.buttons a{
+.buttons a {
   width: 100%;
   height: 100%;
 
@@ -170,79 +232,93 @@ a {
   background-color: var(--dark-theme-main-color);
   color: var(--dark-theme-background-color);
   margin: 0 15px;
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0) inset;
 
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
-.buttons a:active{
-  background-color: rgb(59, 92, 223);
+.buttons a:hover {
+  background-color: var(--dark-theme-background-color);
+  color: var(--dark-theme-main-color);
+  box-shadow: 0px 0px 0px 3px var(--dark-theme-main-color) inset;
+  font-size: 1.25em;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.4s, font-size 0.8s;
 }
 
-  @media only screen and (max-width: 600px) {
-    body {
-      margin: 0;
-    }
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
 
-  @media (max-width: 768px) {
-    .cards {
-      grid-template-columns: 1fr;
-    }
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
   }
 
-
-
-    #mainPageNav {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(6, 1fr);
-      grid-template-areas: "logo"
-                           "userUI"
-                           "button0"
-                           "button1"
-                           "button2"
-    }
-
-
-    #childrenPageNav {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-areas: "button0"
-                            "logo" 
-                            "userUI";
-      align-items: center;
-      justify-items: center;
-    }
-    #mainPageNav a {
-      padding: 5px 0;
-    }
-    .container {
-      width: 100%;
-      height: 50%;
-      grid-template-columns: 1fr;
-      grid-template-rows: 100px 1fr 1fr;
-      padding: 0;
-    }
-
-    
-    .presentationContent {
-      margin: 0;
-      
-    }
-    .backBtn {
-      grid-column: 1;
-    }
-    .presentation {
-      grid-row: initial;
-    }
-    .buttons {
-      grid-row: initial;
-      flex-direction: column;
-    }
-    .buttons a {
-      padding: 5px 0;
-      margin: 5px 0;
-    }
-    .presentationText {
-      font-size: 1rem;
-    }
+  .container {
+    width: 100%;
+    height: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0;
   }
+
+  #mainPageNav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "logo logo logo"
+                        ". userUI ."
+                        ". aboutUs .";
+    align-items: center;
+    justify-items: center;
+  }
+
+  #childrenPageNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "button0 logo ."
+      "button0 logo ."
+      ". userUI .";
+    align-items: center;
+    justify-items: center;
+  }
+
+  #mainPageNav a {
+    padding: 5px 0;
+  }
+
+  #childrenPageNav .logo img {
+    width: 50px;
+  }
+
+  #childrenPageNav .logo p {
+    display: none;
+  }
+
+  .presentationContent {
+    margin: 0;
+  }
+
+  .backBtn {
+    grid-column: 1;
+  }
+
+  .presentation {
+    grid-row: initial;
+  }
+
+  .buttons {
+    grid-row: initial;
+    flex-direction: column;
+  }
+
+  .buttons a {
+    padding: 5px 0;
+    margin: 5px 0;
+  }
+
+  .presentationText {
+    font-size: 1rem;
+  }
+}
