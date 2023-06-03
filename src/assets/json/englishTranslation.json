@@ -22,5 +22,9 @@
   "introductionPlay":"Welcome to the Playground. Choose below which mode you will use",
   "presentationPlay":"Playground",
   "buttonsDescriptionFree": "FREE MODE: If you are free",
-  "buttonsDescriptionAdvanced": "ADVANCED MODE: In case you are disheartened"
+  "buttonsDescriptionAdvanced": "ADVANCED MODE: In case you are disheartened",
+  "basicDifficulty": "Basic",
+  "intermediateDifficulty": "Intermediary",
+  "advancedDifficulty":  "Advanced",
+  "selectDifficulty": "Select"
 }

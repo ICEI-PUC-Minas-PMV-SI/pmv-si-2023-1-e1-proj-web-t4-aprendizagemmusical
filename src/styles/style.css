@@ -346,3 +346,11 @@ a {
     font-size: 1rem;
   }
 }
+
+#contentTextExercises {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;

@@ -7,7 +7,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+
+
+
   </head>
 
 <body>
@@ -26,17 +29,27 @@
     </nav>
     <div class="presentation">
       <div class="presentationContent">
-        <h1 class="presentationText" data-text-node="presentationExercises">Exercícios</h1>
-        <h2 class="presentationText" data-text-node="introductionExercises">Prepare-se para desbloquear seu potencial musical!</h2>
+        <h1 class="presentationText" data-text-node="presentationExercises"></h1>
+        <h2 class="presentationText" data-text-node="introductionExercises"></h2>
       </div>
     </div>
     <div class ="buttons">
-      <a href="/src/views/exercises-percepcao-musical.html"  data-text-node="exercisesPercepcaoMusical">Percepção Musical</a>
-      <a href="/src/views/exercises-percepcao-ritmica.html"  data-text-node="exercisesPercepcaoRitmica">Percepção Rítmica</a>
-      <a href="/src/views/exercises-complete-escala.html"  data-text-node="exercisesCompleteEscala">Complete a Escala</a>
+      <a button  id = "exercisesPercepcaoMusical" data-text-node="exercisesPercepcaoMusical"></button></a>
+      <a button id = "exercisesPercepcaoRitmica" data-text-node="exercisesPercepcaoRitmica"></button></a>
+      <a button id = "exercisesCompleteEscala" data-text-node="exercisesCompleteEscala"></button></a>
+    </div>
+    <div id="difficultyOptions" style="display: none;">
+      <select id="difficultySelect">
+        <option value="basic" data-text-node="basicDifficulty"></option>
+        <option value="intermediate" data-text-node="intermediateDifficulty"></option>
+        <option value="advanced" data-text-node="advancedDifficulty"></option>
+      </select>
     </div>
   </div>
-  <div class="content"></div>
+  <div class="content">
+    <div id="contentTextExercises"></div> 
+  </div>
   <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/exercises.js" type="module"></script>
 </body>
 </html>

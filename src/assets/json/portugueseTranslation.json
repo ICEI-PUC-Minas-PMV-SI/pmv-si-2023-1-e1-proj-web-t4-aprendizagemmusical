@@ -22,5 +22,9 @@
   "presentationPlay":"Playground",
   "introductionPlay":"Bem vindo ao Playground. Escolha abaixo qual modo voce irá utilizar",
   "buttonsDescriptionFree": "MODO LIVRE: Caso você seja livrão",
-  "buttonsDescriptionAdvanced": "MODO AVANÇADO: Caso vc seja desumilde"
+  "buttonsDescriptionAdvanced": "MODO AVANÇADO: Caso vc seja desumilde",
+  "basicDifficulty": "Básico",
+  "intermediateDifficulty": "Intermediário",
+  "advancedDifficulty":  "Avançado",
+  "selectDifficulty": "Selecionar"
 }
