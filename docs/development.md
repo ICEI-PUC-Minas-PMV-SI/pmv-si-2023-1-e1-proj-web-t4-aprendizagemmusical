@@ -75,7 +75,7 @@ Largura da tela: 2560px
 **![img-index-pc-responsividade](./img/img_index_pc_responsividade.PNG)** 
 
 Largura da tela: 320px
-**![img-index-mobile-responsividade](./img/img-index-pc-responsividade.PNG)** 
+**![img-index-mobile-responsividade](./img/img_index_mobile_responsividade.PNG)** 
 
 #### JavaScript
 
