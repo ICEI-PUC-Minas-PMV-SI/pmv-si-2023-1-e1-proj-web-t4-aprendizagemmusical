@@ -112,6 +112,9 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deve pos
 | RNF-03 | O site deve ter bom nível de contraste entre os elementos da tela em conformidade                            | Média      |
 | RNF-04 | O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | Alta       |
 | RNF-05 | O site deve possuir recursos de acessibilidade tais como aumento da fonte                                    | Média      |
+| RNF-06 | O site deve possuir nível adequado de contraste entre os elementos da tela em conformidade                                    | Média      |
+| RNF-07 | O site deve possuir ao menos 2 linguagens disponíveis, Inglês e Português.                                   | Alta      |
+| RNF-08 | Para a tradução, que seja de fácil manutenção para eventuais mudanças de textos em qualquer momento.                                  | Alta      |
 
 
 ## Restrições
