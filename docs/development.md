@@ -49,8 +49,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 ## Notícia
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Id             | Numero (Inteiro)  | Identificador único da notícia            | 1                                              |
-| Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
-| Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
-| Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
+| title | Texto | Define o título da página exibido na barra de título do navegador.  | Aprendizagem Musical                      |
+| logo  | Imagem | Link que contém um logotipo e um nome de aplicativo. | Simbolo musical  |
+| appName | Texto             | Nome do app                       | Aprendizagem músical   |
+| changeTheme | Botão  | Botão para alterar o tema  | dark/light    |
+| englishTranslation | Botão  |  Botão para selecionar a tradução para o inglês |      Learn Music Header/Aprenda Música título  |
+| portugueseTranslation | Botão  | Botão para selecionar a tradução para o português | Learn Music Header/Aprenda Música título  |
+| presentationContent | Texto  | Cabeçalho e subcabeçalho da apresentação cujo texto é definido dinamicamente por meio de scripts | Aprenda Música título/ Aprenda Música subtítulo  |
+| buttons | Botão  | Redireciona para as demais telas | Exercicios/ Playground/ Teoria ou Exercicios percepção musical/  Exercicios percepção rítimica/  Exercicios complete a escala |
+| difficultySelect | Texto  | Escolha do nivel de dificuldade dos exercicios | Basico/ Avançado/ Intermediário    |
+| containerPlay | Texto  | Escolha entre os modos playground | Livre/ Avançado    |
 
