@@ -72,10 +72,10 @@ Com base nessa definição, a interface foi implementada utilizando o grid layou
 Nenhum pré-processador de CSS foi utilizado no projeto. A equipe optou por utilizar recursos nativos, evitando sobrecarregar a estrutura HTML com classes e IDs gerados automaticamente, o que poderia comprometer o desempenho do site. Essa abordagem foi adotada visando garantir uma melhor performance geral do sistema.
 
 Largura da tela: 2560px
-**![img-index-pc-responsividade](./img/img-index-pc-responsividade.jpg)** 
+**![img-index-pc-responsividade](./img/img-index-pc-responsividade.png)** 
 
 Largura da tela: 320px
-**![img-index-mobile-responsividade](./img/img-index-pc-responsividade.jpg)** 
+**![img-index-mobile-responsividade](./img/img-index-pc-responsividade.png)** 
 
 #### JavaScript
 
@@ -89,11 +89,11 @@ No solução manual disponibilizamos ao usuário a opção de trocar o tema manu
 
 Modo light:
 
-**![modo-light](./img/img-index-pc-responsividade.jpg)** 
+**![modo-light](./img/modo-light.png)** 
 
 Modo dark:
 
-**![modo-dark](./img/img-index-pc-responsividade.jpg)** 
+**![modo-dark](./img/modo-dark.png)** 
 
 
 **Tradução**
@@ -108,8 +108,8 @@ Para garantir a manutenção do conteúdo [RNF-08], a tradução é realizada a 
 
 Arquivo de tradução ingles:
 
-**![ingles-tradutor](./img/img-index-pc-responsividade.jpg)** 
+**![ingles-tradutor](./img/ingles-tradutor.png)** 
 
 Arquivo de tradução português:
 
-**![portugues-tradutor](./img/img-index-pc-responsividade.jpg)** 
+**![portugues-tradutor](./img/portugues-tradutor.png)** 
