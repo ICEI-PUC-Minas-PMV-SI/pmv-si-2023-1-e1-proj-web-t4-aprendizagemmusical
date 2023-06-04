@@ -1,12 +1,11 @@
 # Programação de Funcionalidades
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+Este documento de desenvolvimento de software tem como objetivo apresentar a seção de Implementação do sistema, a qual descreve a forma como os requisitos funcionais e/ou não funcionais foram implementados. Serão detalhadas as estratégias e abordagens adotadas para construir o sistema de acordo com as necessidades e expectativas definidas nas etapas anteriores do processo de desenvolvimento.
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo.
-
-O professor Rommel Carneiro apresenta alguns exemplos prontos para serem utilizados como referência:
-- Login do sistema: [https://repl.it/@rommelpuc/LoginApp](https://repl.it/@rommelpuc/LoginApp) 
-- Cadastro de Contatos: [https://repl.it/@rommelpuc/Cadastro-de-Contatos](https://repl.it/@rommelpuc/Cadastro-de-Contatos)
+>**Links Referência**:
+>
+> - Login do sistema: [https://repl.it/@rommelpuc/LoginApp](https://repl.it/@rommelpuc/LoginApp) 
+> - Cadastro de Contatos: [https://repl.it/@rommelpuc/Cadastro-de-Contatos](https://repl.it/@rommelpuc/Cadastro-de-Contatos)
 
 
 > **Links Úteis**:
@@ -17,7 +16,6 @@ O professor Rommel Carneiro apresenta alguns exemplos prontos para serem utiliza
 > - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
 > - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
 
-## Exemplo
 
 ## Requisitos Atendidos
 
@@ -27,8 +25,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Prioridade | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| O sistema deve exibir as notícias mais populares. | ALTA | index.html |
-|RF-002| Usuários autenticados podem registrar novas notícias. | ALTA | cadastro-noticia.html |
+|RF-018| A tela home deve fornecer uma navegação clara e intuitiva para as principais funcionalidades e seções do aplicativo, como menus, botões ou ícones que levam a outras telas ou recursos. | ALTA | index.html |
+|RF-011| Para os exercícios, o usuário poderá escolher entre até três dificuldades. | MEDIA | exercises.html |
+|RF-010| O aplicativo deve conter, para iniciantes, exercícios básicos de música. | MEDIA | exercises.html |
+|RF-001|O aplicativo deve ter no mínimo dois modos diferentes, um para amadores e iniciantes, e outro para músicos já experientes | ALTA | playground.html |
+|RF-002|O aplicativo deverá conter um playground, onde seja possível o usuário interagir com a interface. | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html |
+|RF-003|Para o playground, apresentar as notas corretas de acordo com a escolha do usuário. | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html |
+|RF-004|Para o playground, ao menos dois instrumentos devem ser apresentados como opções de escolha (violão, piano). | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html |
+|RF-005|Para o playground, o usuário poderá fazer o overlapping de no máximo 3 escalas no mesmo tom. | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html |
+|RF-006|Para o playground, deve haver uma opção para que o usuário identifique as terças e quintas, de acordo com sua escolha. | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html |
+|RF-007|Para o playground, na escolha da interface do violão, o usuário poderá escolher entre afinações padrões, ou criar afinações personalizadas. | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html |
+|RF-008|Para o playground, dependendo das notas escolhidas, o aplicativo deverá gerar um código, que ficará disponível ao usuário, para que o mesmo possa guardar suas configurações para usá-las mais tarde. | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html |
+|RF-009|Para o playground, haverá um modo de construção de escalas totalmente manual (direcionados para pessoas experientes/professores). | ALTA | playground-advanced-mode.html e playground-freeplay-mode.html|
+|RF-012|As sessões de estudo teórico devem ter mais que um parágrafo. | ALTA | theory.html|
+|RF-013|Devem ser apresentados ao menos um exemplo durante as sessões de estudo| ALTA | theory.html|
+|RF-014|Em todo artigo teórico deve conter uma sintese do assunto abordado e o objetivo pedagógico do conteúdo. | ALTA | theory.html|
+|RF-015|Os artigos teóricos devem possuir diagramas e outras representações para elucidar conceitos, incluindo partituras ou outros sistemas de escrita. | ALTA | theory.html|
+|RF-016|O usuário poderá escolher de forma personalizada o que gostaria de aprender e os assuntos apresentados devem alinhar-se ao seu objetivo. | ALTA | theory.html|
+|RF-017|Poderá ser utilizado recursos de hipermídia como áudio ou vídeo. | ALTA | theory.html|
 
 ## Descrição das estruturas:
 
