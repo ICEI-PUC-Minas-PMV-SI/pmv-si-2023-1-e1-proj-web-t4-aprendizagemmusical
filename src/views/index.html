@@ -3,19 +3,42 @@
   <head>
     <link rel="stylesheet" href="../styles/style.css">
     <title>Aprendizagem Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <a href="index.html" style="color: black">
-        <img src="../assets/images/logo.jpg" width="30px" height="30px">
-          APRENDIZAGEM MUSICAL
-        <img src="../assets/images/logo.jpg" width="30px" height="30px">
-      </a>
+
+    <div class="container">
+      <nav id="mainPageNav">
+        <a class="logo" href="/src/views/index.html">
+          <img src="/src/assets/images/svg/logo.svg">
+          <p data-text-node="appName"></p>
+        </a>
+        <div class="userUiSettings">
+          <button id="changeTheme" value="dark"></button>
+          <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+          <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+        </div>
+        <a href="#" data-text-node="aboutUs"></a>
+      </nav>
+      <div class="presentation">
+        <div class="presentationContent">
+          <h1 class="presentationText" data-text-node="presentationHeader"></h1>
+          <h2 class="presentationText" data-text-node="presentationSubHeader"></h2>
+        </div>
+      </div>
+      <div class="buttons">
+        <a href="/src/views/exercises.html" data-text-node="exercises"></a>
+        <a href="/src/views/playground.html" data-text-node="playground"></a>
+        <a href="/src/views/theory.html" data-text-node="theory"></a>
+      </div>
     </div>
-    <h1>Aprendizagem Musical</h1>
-    <p>Escolha uma das opções abaixo para começar:</p>
-    <a href="playground.html" class="back-btn">Playground</a>
-    <a href="exercises.html" class="back-btn">Exercícios</a>
-    <a href="theory.html" class="back-btn">Teorias</a>
+    <div class="content">
+      <p id="wipText">[Content yet to be decided]</p>
+    </div>
+    <script src="../scripts/main.js" type="module"></script>
   </body>
 </html>

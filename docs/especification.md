@@ -96,6 +96,8 @@ A tabela a seguir apresenta os requisitos do projeto, descrevendo e identificand
 | RF-15 | Os artigos teóricos devem possuir diagramas e outras representações para elucidar conceitos, incluindo partituras ou outros sistemas de escrita.                                                                                                                            | Média      |
 | RF-16 | O usuário poderá escolher de forma personalizada o que gostaria de aprender e os assuntos apresentados devem alinhar-se ao seu objetivo.                                                                                                                            | Média      |
 | RF-17 | Poderá ser utilizado recursos de hipermídia como áudio ou vídeo.                                                                                                                            | Média      |
+| RF-18 | A interface deve apresentar botões na parte superior, para que o usuário possa modificar o tema de acordo com sua escolha.                                                                                                                            | Média      |
+| RF-19 | A interface deve apresentar botões na parte superior, para que o usuário possa modificar a linguagem (português ou inglês) de acordo com sua escolha .                                                                                                                           | Média      |
 
 
 
@@ -112,6 +114,10 @@ A tabela a seguir apresenta os requisitos não funcionais que o projeto deve pos
 | RNF-03 | O site deve ter bom nível de contraste entre os elementos da tela em conformidade                            | Média      |
 | RNF-04 | O site deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge) | Alta       |
 | RNF-05 | O site deve possuir recursos de acessibilidade tais como aumento da fonte                                    | Média      |
+| RNF-06 | O site deve possuir nível adequado de contraste entre os elementos da tela em conformidade                   | Média      |
+| RNF-07 | O site deve possuir ao menos 2 linguagens disponíveis, Inglês e Português.                                   | Alta      |
+| RNF-08 | Para a tradução, que seja de fácil manutenção para eventuais mudanças de textos em qualquer momento.         | Alta      |
+| RNF-09 | As alterações de tema (dark ou light) e linguagem (português ou inglês) devem ficar armazenadas afim do usuário não precisar trocar suas configurações em casa página  | Alta      |
 
 
 ## Restrições

@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <header>
+  <head>
     <link rel="stylesheet" href="../styles/style.css">
-  </header>
-  <title>Playground</title>
-</head>
-<body>
-  <div>
-    <a href="index.html" style="color: black">
-      <img src="../assets/images/logo.jpg" width="30px" height="30px">
-        APRENDIZAGEM MUSICAL
-      <img src="../assets/images/logo.jpg" width="30px" height="30px">
-    </a>
+    <title>Aprendizagem Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <nav id="childrenPageNav">
+        <a class="logo" href="/src/views/index.html">
+          <img src="/src/assets/images/svg/logo.svg">
+          <p data-text-node="appName"></p>
+        </a>
+        <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
+        <div class="userUiSettings">
+          <button id="changeTheme" value="dark"></button>
+          <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+          <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+        </div>
+      </nav>
+      <div class="presentation">
+        <div class="presentationContent">
+          <h1 class="presentationText" data-text-node="presentationPlay"></h1>
+          <h2 class="presentationText" data-text-node="introductionPlay">
+          </h2>
+        </div>
+      </div>
+      <div class="buttons">
+        <a href="/src/views/playground-freeplay-mode.html" data-text-node="presentationHeaderPlayFree"></a>
+        <a href="/src/views/playground-advanced-mode.html" data-text-node="presentationHeaderPlayAdvanced"></a>
+      </div>
+    </div>
+  </body>
+  <div class="containerPlay">
+    <div class="buttonsDescription" data-text-node="buttonsDescriptionFree"></div>
+    <div class="buttonsDescription" data-text-node="buttonsDescriptionAdvanced"></div>
   </div>
-  <h1>Playground</h1>
-  <p>É um iniciante ou um expert?</p>
-  <a href="playground-freeplay-mode.html" class="back-btn">Modo Livre</a>
-  <a href="playground-advanced-mode.html" class="back-btn">Modo Avançado</a>
-</body>
-
+  <script src="../scripts/main.js" type="module"></script>
 </html>
