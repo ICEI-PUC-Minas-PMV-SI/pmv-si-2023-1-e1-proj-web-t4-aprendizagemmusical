@@ -14,11 +14,12 @@ exercisesPercepcaoRitmicaBtn.addEventListener("click", chooseExercise);
 exercisesCompleteEscalaBtn.addEventListener("click", chooseExercise);
 difficultySelect.addEventListener("change", chooseExerciseDificulty);
 
-function chooseExercise (exercise) {
+function chooseExercise () {
     exercisesPercepcaoMusicalBtn.style.display = "none";
     exercisesPercepcaoRitmicaBtn.style.display = "none";
     exercisesCompleteEscalaBtn.style.display = "none";
     difficultyOptions.style.display = "block";
+    chooseExerciseDificulty();
 }
 
 function chooseExerciseDificulty() {
@@ -26,9 +27,7 @@ function chooseExerciseDificulty() {
     if (difficultySelect.value == null || difficultySelect.value == undefined) {
         difficultySelect.value = "intermediate"
     }
-
     contentTextExercises.textContent = exercisesObject[difficultySelect.value];
-
 }
 
 export {chooseExercise, chooseExerciseDificulty}
