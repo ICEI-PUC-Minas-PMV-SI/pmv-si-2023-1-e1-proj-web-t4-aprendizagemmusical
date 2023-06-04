@@ -59,50 +59,48 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | difficultySelect | Texto  | Escolha do nivel de dificuldade dos exercicios | Basico/ Avançado/ Intermediário    |
 | containerPlay | Texto  | Escolha entre os modos playground | Livre/ Avançado    |
 
-### Funcionalidades do Sistema
+### Funcionalidades do Sistema<br>
 
-A seguir, apresentaremos uma descrição das interfaces desenvolvidas para cada uma das funcionalidades do sistema, juntamente com o respectivo endereço URL e instruções de uso.
+A seguir, apresentaremos uma descrição das interfaces desenvolvidas para cada uma das funcionalidades do sistema, juntamente com o respectivo endereço URL e instruções de uso.<br>
 
-#### Responsividade
+#### Responsividade<br>
 
-Para garantir a responsividade [RNF-02] do site, foi realizado um planejamento detalhado para determinar quais tipos de tela o aplicativo deveria suportar. A equipe definiu que a largura mínima seria de 320 pixels e a largura máxima seria de 2560 pixels.
+Para garantir a responsividade [RNF-02] do site, foi realizado um planejamento detalhado para determinar quais tipos de tela o aplicativo deveria suportar. A equipe definiu que a largura mínima seria de 320 pixels e a largura máxima seria de 2560 pixels.<br>
 
-Com base nessa definição, a interface foi implementada utilizando o grid layout e o flexbox, permitindo que os componentes e a estrutura HTML se adaptassem automaticamente ao tamanho da tela do usuário. Essas técnicas garantiram uma experiência consistente e agradável, independentemente do dispositivo utilizado para acessar o site.
+Com base nessa definição, a interface foi implementada utilizando o grid layout e o flexbox, permitindo que os componentes e a estrutura HTML se adaptassem automaticamente ao tamanho da tela do usuário. Essas técnicas garantiram uma experiência consistente e agradável, independentemente do dispositivo utilizado para acessar o site.<br>
 
-Nenhum pré-processador de CSS foi utilizado no projeto. A equipe optou por utilizar recursos nativos, evitando sobrecarregar a estrutura HTML com classes e IDs gerados automaticamente, o que poderia comprometer o desempenho do site. Essa abordagem foi adotada visando garantir uma melhor performance geral do sistema.
+Nenhum pré-processador de CSS foi utilizado no projeto. A equipe optou por utilizar recursos nativos, evitando sobrecarregar a estrutura HTML com classes e IDs gerados automaticamente, o que poderia comprometer o desempenho do site. Essa abordagem foi adotada visando garantir uma melhor performance geral do sistema.<br>
 
-Largura da tela: 2560px
+Largura da tela: 2560px<br>
 **![img-index-pc-responsividade](./img/img_index_pc_responsividade.PNG)** 
 
-Largura da tela: 320px
+Largura da tela: 320px<br>
 **![img-index-mobile-responsividade](./img/img_index_mobile_responsividade.PNG)** 
 
-#### JavaScript
+#### JavaScript<br>
 
-Para esta entrega, foram criadas duas funcionalidades para a interface do usuário: a opção de trocar o tema da página e a tradução da interface.
+Para esta entrega, foram criadas duas funcionalidades para a interface do usuário: a opção de trocar o tema da página e a tradução da interface.<br>
 
-**Modo Escuro/Claro**
-Para implementar essa funcionalidade, foram necessários conhecimentos de CSS, bem como compreensão do DOM e seus eventos. A funcionalidade consiste em duas etapas: uma automática e outra manual, esta última dependendo da escolha do usuário.
+**Modo Escuro/Claro**<br>
+Para implementar essa funcionalidade, foram necessários conhecimentos de CSS, bem como compreensão do DOM e seus eventos. A funcionalidade consiste em duas etapas: uma automática e outra manual, esta última dependendo da escolha do usuário.<br>
 
 Na solução automática, uma variável é armazenada no localStorage para guardar um valor caso o usuário tenha selecionado algum tema específico. Caso contrário, o tema claro (light) é exibido ao usuário.
-No solução manual disponibilizamos ao usuário a opção de trocar o tema manualmente, através de um botão de mudança de tema. Esse botão se adapta ao tema selecionado. Após o clique, a variável no localStorage é atualizada, permitindo que o usuário navegue pelo site com o tema escolhido aplicado em todas as páginas.
+No solução manual disponibilizamos ao usuário a opção de trocar o tema manualmente, através de um botão de mudança de tema. Esse botão se adapta ao tema selecionado. Após o clique, a variável no localStorage é atualizada, permitindo que o usuário navegue pelo site com o tema escolhido aplicado em todas as páginas.<br>
 
-Modo light:
-
+Modo light:<br>
 **![modo-light](./img/modo-light.PNG)** 
 
-Modo dark:
-
+Modo dark:<br>
 **![modo-dark](./img/modo-dark.PNG)** 
 
 
-**Tradução**
+**Tradução**<br>
 
-A funcionalidade de tradução da pagina atende aos requisito RNF-07  e RNF-08. Consiste em realizar uma busca no documento, utilizando um atributo personalizado chamado "data-text-node", que descreve a tag em que se encontra. Durante essa busca, é verificado o idioma do navegador por meio da API padrão "navigator", que representa o estado do agente do usuário, incluindo sua linguagem preferida.
+A funcionalidade de tradução da pagina atende aos requisito RNF-07  e RNF-08. Consiste em realizar uma busca no documento, utilizando um atributo personalizado chamado "data-text-node", que descreve a tag em que se encontra. Durante essa busca, é verificado o idioma do navegador por meio da API padrão "navigator", que representa o estado do agente do usuário, incluindo sua linguagem preferida.<br>
 
-Caso o usuário não tenha um idioma definido, o valor padrão é o inglês. No entanto, o usuário pode alterar essa configuração clicando nas bandeiras que representam o idioma desejado. Ao clicar na bandeira dos Estados Unidos, a função de tradução é ativada e todo o texto é traduzido.
+Caso o usuário não tenha um idioma definido, o valor padrão é o inglês. No entanto, o usuário pode alterar essa configuração clicando nas bandeiras que representam o idioma desejado. Ao clicar na bandeira dos Estados Unidos, a função de tradução é ativada e todo o texto é traduzido.<br>
 
-Para garantir a manutenção do conteúdo [RNF-08], a tradução é realizada a partir de um arquivo JSON que utiliza o sistema de chave-valor para definir os valores de tradução para os diferentes idiomas. Assim como os temas, a opção de qual tradução usar também é armazenada no localStorage quando selecionada pelo usuário.
+Para garantir a manutenção do conteúdo [RNF-08], a tradução é realizada a partir de um arquivo JSON que utiliza o sistema de chave-valor para definir os valores de tradução para os diferentes idiomas. Assim como os temas, a opção de qual tradução usar também é armazenada no localStorage quando selecionada pelo usuário.<br>
 
 É importante mencionar que essa tradução não é realizada por aplicativos de terceiros, mas sim implementada em JavaScript nativo, utilizando os módulos JS, o que proporciona uma programação modular e mais organizada do que o padrão funcional, tornando-a mais fácil de ser mantida.
 
