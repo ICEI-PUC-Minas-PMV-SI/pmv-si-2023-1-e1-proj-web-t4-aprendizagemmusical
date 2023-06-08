@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/playground.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
@@ -31,10 +32,14 @@
         </div>
       </div>
       <div class="buttons">
-        <a href="/src/views/playground-violao.html" data-text-node="playgroundViolao"></a>
-        <a href="/src/views/playground-baixo.html" data-text-node="playgroundBaixo"></a>
-        <a href="/src/views/playground-piano.html" data-text-node="playgroundPiano"></a>
+        <button type="button" id="guitarBtn" data-text-node="playgroundViolao"></button>
+        <button type="button" id="bassBtn" data-text-node="playgroundBaixo"></button>
+        <button type="button" id="pianoBtn" data-text-node="playgroundPiano"></button>
       </div>
     </div>
+    <div class="playground">
+      <div class="diagram"></div>
+    </div>
     <script src="../scripts/main.js" type="module"></script>
+    <script src="../scripts/scales.js" type="module"></script>
   </body>

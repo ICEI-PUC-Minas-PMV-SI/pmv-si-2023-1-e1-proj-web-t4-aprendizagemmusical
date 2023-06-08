@@ -64,6 +64,27 @@ export function getMajorScale(rootNote) { //get some intervals that creates a ma
   return majorScaleArray;
 }
 
+export function getScaleCustomIntervals(rootNote, intervalsArray) {
+  let majorScaleArray = [];
+  let acceptedIntervals = intervalsArray;
+
+  let chromaticScale = getChromaticScale(rootNote);
+  if(chromaticScale === null) {
+    return null;
+  }
+
+  for(let i = 0; i < chromaticScale.length; i++) {
+    if(scalesHelper.hasInterval(i, acceptedIntervals)){
+      majorScaleArray.push(chromaticScale[i]);
+    }
+  }
+
+  if(!majorScaleArray.length) {
+    return null;
+  }
+  return majorScaleArray;
+}
+
 export function sharpNoteToFlat(sharpNote) { //if the note has a # sign, it converts it to a flat note
   if(!sharpNote.includes("#")){
     return null;
