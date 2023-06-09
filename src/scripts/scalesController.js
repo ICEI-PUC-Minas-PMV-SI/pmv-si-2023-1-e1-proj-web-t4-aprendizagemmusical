@@ -85,6 +85,14 @@ export function getScaleCustomIntervals(rootNote, intervalsArray) {
   return majorScaleArray;
 }
 
+export function getOctaves(n, scale){
+  let output;
+  for (let i = 0; i < n; i++) {
+    output = scale.concat(scale);
+  }
+  return output;
+}
+
 export function sharpNoteToFlat(sharpNote) { //if the note has a # sign, it converts it to a flat note
   if(!sharpNote.includes("#")){
     return null;

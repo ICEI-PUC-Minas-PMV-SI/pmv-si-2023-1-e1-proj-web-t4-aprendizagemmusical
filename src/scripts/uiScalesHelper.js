@@ -47,6 +47,17 @@ export function adjustGridStyle(frets, notesPerFret) {
   diagramDiv.style.gridTemplateRows = `25px repeat(${notesPerFret}, 1fr)`;
 }
 
+export function getNoteElementsFromFret(fretElement) {
+  let noteArray = [];
+  for(let i = 0; i < fretElement.children.length; i++) { //get only note elements
+    const noteElement = fretElement.children[i];
+    if(noteElement.hasAttribute("data-fretboard-string-number")){
+      noteArray.push(noteElement);
+    }
+  }
+  return noteArray;
+}
+
 export function resetComponent(component){
   if(component.innerHTML == "") {
     return;
