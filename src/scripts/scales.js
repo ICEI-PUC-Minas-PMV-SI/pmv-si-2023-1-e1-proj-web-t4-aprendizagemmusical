@@ -2,9 +2,7 @@ import * as scalesController from './scalesController.js';
 import * as scalesHelper from './scalesHelper.js';
 import * as uiScales from './uiScales.js';
 
-uiScales.loadDefaultDiagram();
-//here goes the beautiful code
-
+/*
 console.log(scalesHelper.getNoteIndex("c"));
 console.log(scalesHelper.getNoteIndex("d"));
 console.log(scalesHelper.getNoteIndex("f#"));
@@ -27,3 +25,4 @@ console.log(scalesController.subtractSemitone("j#")); //return null | Not a vali
 
 console.log(scalesController.getScaleCustomIntervals("c", [0,1,2]));
 console.log(scalesController.getScaleCustomIntervals("c", [13, 14, 15])); //returns null
+*/
