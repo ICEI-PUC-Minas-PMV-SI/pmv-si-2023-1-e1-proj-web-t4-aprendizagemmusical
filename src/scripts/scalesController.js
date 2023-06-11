@@ -1,34 +1,5 @@
 import * as scalesHelper from './scalesHelper.js';
 
-const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-const intervalHashtable = {
-  1: "Perfect Unison",
-  2: "Minor Second",
-  3: "Major Second",
-  4: "Minor Third",
-  5: "Major Third",
-  6: "Perfect Fourth",
-  7: "Augmented Fourth / Diminished Fifth",
-  8: "Perfect Fifth",
-  9: "Minor Sixth",
-  10: "Major Sixth",
-  11: "Minor Seventh",
-  12: "Major Seventh",
-  13: "Perfect Octave",
-  14: "Minor Ninth",
-  15: "Major Ninth",
-  16: "Minor Tenth",
-  17: "Major Tenth",
-  18: "Perfect Eleventh",
-  19: "Augmented Eleventh / Diminished Twelfth",
-  20: "Perfect Twelfth",
-  21: "Minor Thirteenth",
-  22: "Major Thirteenth",
-  23: "Minor Fourteenth",
-  24: "Major Fourteenth",
-  25: "Double Octave"
-};
-
 export function getChromaticScale(rootNote) { //get the whole chromatic scales based on the root
   let outputArray = [];
   let rootNoteIndex = scalesHelper.getNoteIndex(rootNote);
@@ -39,9 +10,9 @@ export function getChromaticScale(rootNote) { //get the whole chromatic scales b
   
   for(let i = rootNoteIndex; i < rootNoteIndex+12; i++) {
     if(i >= 12){
-      outputArray.push(notes[i%12]);
+      outputArray.push(scalesHelper.notes[i%12]);
     }else{
-      outputArray.push(notes[i]);
+      outputArray.push(scalesHelper.notes[i]);
     }
   }
   return outputArray;
@@ -106,6 +77,22 @@ export function sharpNoteToFlat(sharpNote) { //if the note has a # sign, it conv
   let noteIndex = scalesHelper.getNoteIndexCustomScale(sharpNote, chromaticScale);
   let note = scalesHelper.getNoteNameFromIndex(noteIndex+1, chromaticScale);
   return note + "b";
+}
+
+export function flatNoteToSharp(flatNote) {
+  if(!flatNote.includes("b")){
+    return null;
+  }
+
+  flatNote = flatNote.substring(0,1);
+  let chromaticScale = getChromaticScale(flatNote);
+  if(chromaticScale === null) {
+    return null;
+  }
+  
+  let noteIndex = scalesHelper.getNoteIndexCustomScale(flatNote, chromaticScale);
+  let note = scalesHelper.getNoteNameFromIndex(noteIndex+11, chromaticScale);
+  return note;
 }
 
 export function addSemitone(note){

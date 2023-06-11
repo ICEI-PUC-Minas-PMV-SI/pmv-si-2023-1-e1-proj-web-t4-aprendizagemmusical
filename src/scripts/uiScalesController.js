@@ -1,5 +1,6 @@
 import * as uiScalesHelper from './uiScalesHelper.js';
 import * as scalesController from './scalesController.js';
+export { updatePlaygroundUiOptions } from './uiPlayground.js';
 
 export function generateFretboard(notesPerFret, frets, instrumentName) {
   uiScalesHelper.resetComponent(uiScalesHelper.diagramDiv);

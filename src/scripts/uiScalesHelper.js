@@ -35,7 +35,7 @@ function getFretNoteIdentifier(notesPerFret) {
 }
 
 function getCurrentFret(currentFret) {
-  return currentFret+1;
+  return currentFret;
 }
 
 export function handleFretboarGeneratorParams(notesPerFret, frets, instrumentName){

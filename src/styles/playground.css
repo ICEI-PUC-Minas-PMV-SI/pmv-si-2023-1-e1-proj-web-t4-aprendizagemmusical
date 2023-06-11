@@ -1,23 +1,41 @@
-html, body {
-  height: 100vh;
-}
-
 .playground {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: calc(100vh - 50vh);
   align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  grid-template-areas:  ". . . . . . . . . . . ."
+                        " tunningBtn rootNoteBtn scaleBtn sharpFlatBtn . . . . . . . ."
+                        "diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram"
+                        ". . . . . . . . . . . ."
+                        ". . . . . . . . . . . .";
 }
 .diagram {
+  grid-area: diagram;
+  height: 20vh;
   width: 100%;
-  height: 100%;
-  padding: 15vh 10%;
 
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+}
+#tunningBtn {grid-area: tunningBtn}
+#rootNoteBtn {grid-area: rootNoteBtn}
+#scaleBtn {grid-area: scaleBtn}
+#sharpFlatBtn {grid-area: sharpFlatBtn}
+.playgroundField {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.playgroundField button {
+  /* padding: 10px; */
 }
 .note, .fretCount {
   display: flex;
@@ -35,9 +53,30 @@ html, body {
   grid-template-rows: repeat(6, 1fr);
 }
 
-.dark .note, .dark .fretCount {
+.dark .note {
   box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
 }
+.dark .fretCount {
+  color: white;
+  background-color: #f2722d;
+  box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
+}
+
 .dark .playground {
   color: rgb(204, 204, 204);
+}
+
+.light .note {
+  color: #0a2740;
+  box-shadow: 0px 0px 0px 1px #0a2740;
+}
+
+.light .playground {
+  color: #0a2740;
+}
+
+.light .fretCount {
+  color: white;
+  background-color: #0a2740;
+  box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
 }
