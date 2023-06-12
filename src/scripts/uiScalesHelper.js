@@ -64,3 +64,11 @@ export function resetComponent(component){
   }
   component.innerHTML = "";
 }
+
+export function isScreenSmall(screenWidth) {
+  if (screenWidth <= 600) {
+    return true;
+  }
+  return false;
+}
+console.log("uiScalesHelper.js LOADED");

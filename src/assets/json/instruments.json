@@ -1,14 +1,76 @@
 {
   "guitar": {
-    "tunnings": ["EADGBE", "AAAAAA"],
-    "scales":[{"label": "Chromatic Scale", "intervals": [1,2,3,4,5,6,7,8,9,10,11,12]}]
+    "tunnings": [
+      {
+        "label": "Standard",
+        "notes": "EADGBE"
+      },
+      {
+        "label": "AAAAAA",
+        "notes": "AAAAAA"
+      }
+    ],
+    "scales": [
+      {
+        "label": "Chromatic Scale",
+        "intervals": [0,1,2,3,4,5,6,7,8,9,10,11]
+      },
+      {
+        "label": "Major Scale",
+        "intervals": [0,2,4,5,7,9,11,12]
+      },
+      {
+        "label": "Minor Scale",
+        "intervals": [0,2,3,5,7,8,10]
+      }
+    ]
   },
   "bass": {
-    "tunnings": ["EADG"],
-    "scales":[{"label": "Chromatic Scale", "intervals": [1,2,3,4,5,6,7,8,9,10,11,12]}]
+    "tunnings": [
+      {
+        "label": "Standard",
+        "notes": "EADG"
+      },
+      {
+        "label": "AAAAAA",
+        "notes": "AAAAAA"
+      }
+    ],
+    "scales": [
+      {
+        "label": "Chromatic Scale",
+        "intervals": [0,1,2,3,4,5,6,7,8,9,10,11]
+      },
+      {
+        "label": "Major Scale",
+        "intervals": [0,2,4,5,7,9,11]
+      },
+      {
+        "label": "Minor Scale",
+        "intervals": [0,2,3,5,7,8,10]
+      }
+    ]
   },
   "piano": {
-    "tunnings": ["C"],
-    "scales":[{"label": "Chromatic Scale", "intervals": [1,2,3,4,5,6,7,8,9,10,11,12]}]
+    "tunnings": [
+      {
+        "label": "Standard",
+        "notes": "C"
+      }
+    ],
+    "scales": [
+      {
+        "label": "Chromatic Scale",
+        "intervals": [0,1,2,3,4,5,6,7,8,9,10,11]
+      },
+      {
+        "label": "Major Scale",
+        "intervals": [0,2,4,5,7,9,11]
+      },
+      {
+        "label": "Minor Scale",
+        "intervals": [0,2,3,5,7,8,10]
+      }
+    ]
   }
 }

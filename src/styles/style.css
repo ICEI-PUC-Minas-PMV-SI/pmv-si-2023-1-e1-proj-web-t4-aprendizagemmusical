@@ -94,10 +94,8 @@ a {
   grid-template-rows: 1fr 3fr 1fr;
 
   background-color: var(--dark-theme-background-color);
-  padding: 0 calc(50% - 600px);
-  max-width: 1200px;
+  padding: 0 calc((100% - 1200px)/2);
   min-height: 35vh;
-  box-sizing: initial;
 }
 
 .containerExercises {
@@ -106,10 +104,8 @@ a {
   grid-template-rows: 1fr 1fr 1fr;
 
   background-color: var(--dark-theme-background-color);
-  padding: 0 calc(50% - 600px);
-  max-width: 1200px;
+  padding: 0 calc((100% - 1200px)/2);
   min-height: 35vh;
-  box-sizing: initial;
 }
 
 .containerPlay {
@@ -407,7 +403,7 @@ a {
     height: 50%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 0;
+    padding: 0 20px;
   }
 
   #mainPageNav {

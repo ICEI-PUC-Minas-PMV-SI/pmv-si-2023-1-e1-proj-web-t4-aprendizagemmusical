@@ -2,15 +2,41 @@ import instrumentsObject from '../assets/json/instruments.json' assert { type: '
 import * as scalesController from'./scalesController.js';
 import { notes } from './scalesHelper.js';
 import { diagramDiv } from './uiScalesHelper.js';
+import * as uiScalesController  from './uiScalesController.js';
 
 let tunningSelect = document.getElementById("tunning");
 let rootNoteSelect = document.getElementById("rootNote");
 let scaleSelect = document.getElementById("scale");
 let sharpFlatBtn = document.getElementById("sharpFlatBtn");
-sharpFlatBtn.addEventListener("click", changeDiagramAccidentalNotes);
 
+tunningSelect.addEventListener("change", tunningSelectHandle);
+rootNoteSelect.addEventListener("change", rootNoteSelectHandle);
+scaleSelect.addEventListener("change", scaleSelectHandle);
+sharpFlatBtn.addEventListener("click", handleSharpFlatButtonValue);
+
+function tunningSelectHandle(e){
+  uiScalesController.assignNotesFromTunningNotes(e.target.value);
+  //call highlight methods
+  //check for the flags
+  //convert to flat if needed
+}
+
+function rootNoteSelectHandle(e){
+  console.log(e.target.value);
+  //call highlight methods
+  //check for the flags
+  //convert to flat if needed
+}
+
+function scaleSelectHandle(e){
+  console.log(e.target.value);
+  //call highlight methods
+  //check for the flags
+  //convert to flat if needed
+}
+
+//controllers
 export function handleClick(e){
-  tunningSelect.innerHTML = "";
   updatePlaygroundUiOptions(e.target.value);
 }
 
@@ -18,13 +44,15 @@ export function updatePlaygroundUiOptions(instrument) {
   showAvailableTunnings(instrument);
   showAvailableScales(instrument);
   showAvailableRootNotes();
+  changeDiagramAccidentalNotes();
 }
 
 //helpers
 function showAvailableTunnings(instrument) {
+  tunningSelect.innerHTML = "";
   const availableTunnings = instrumentsObject[instrument].tunnings;
   for(let i = 0; i < availableTunnings.length; i++) {
-    tunningSelect.insertAdjacentHTML("beforeend", `<option value="${availableTunnings[i]}">${availableTunnings[i]}</option>`)
+    tunningSelect.insertAdjacentHTML("beforeend", `<option value="${availableTunnings[i].notes}">${availableTunnings[i].label}</option>`)
   }
 }
 
@@ -43,11 +71,15 @@ function showAvailableScales(instrument) {
   }
 }
 
-function changeDiagramAccidentalNotes() {
+function handleSharpFlatButtonValue() {
   let sharpFlatBtnTag = sharpFlatBtn.querySelector("button");
   sharpFlatBtnTag.value = sharpFlatBtnTag.value == "#" ? "b" : "#";
   sharpFlatBtnTag.textContent = sharpFlatBtnTag.textContent == "Show #" ? "Show b" : "Show #";
+  changeDiagramAccidentalNotes();
+}
 
+function changeDiagramAccidentalNotes() {
+  let sharpFlatBtnTag = sharpFlatBtn.querySelector("button");
   if(sharpFlatBtnTag.value == "b") {
     let fretArray = diagramDiv.getElementsByClassName("fret");
     Object.values(fretArray).forEach(fret => { //each fret logic

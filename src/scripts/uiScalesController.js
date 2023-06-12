@@ -3,6 +3,9 @@ import * as scalesController from './scalesController.js';
 export { updatePlaygroundUiOptions } from './uiPlayground.js';
 
 export function generateFretboard(notesPerFret, frets, instrumentName) {
+  let windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  frets = uiScalesHelper.isScreenSmall(windowWidth) == true ? 12 : frets; //develop a handler
+
   uiScalesHelper.resetComponent(uiScalesHelper.diagramDiv);
   uiScalesHelper.adjustGridStyle(frets, notesPerFret);
   uiScalesHelper.generateFret(notesPerFret, frets);
@@ -37,7 +40,17 @@ export function generateFretboard(notesPerFret, frets, instrumentName) {
   // }
 }
 
-export function assignInitialNotes(initialNotes) {
+export function assignNotesFromTunningNotes(initialNotes) {
+  //check if all notes are valid before assigning to the diagram
+  //if are there flat notes (*b), convert it to sharp before assigning to the diagram
+  if(!Array.isArray(initialNotes)){
+    initialNotes = initialNotes.split("");
+  }
+  assignInitialNotes(initialNotes);
+  assignSubSequentialNotes();
+}
+
+function assignInitialNotes(initialNotes) {
   let firstFretDiv = document.getElementsByClassName("fret")[0];
 
   let noteArray = uiScalesHelper.getNoteElementsFromFret(firstFretDiv);
@@ -47,7 +60,7 @@ export function assignInitialNotes(initialNotes) {
   }
 }
 
-export function assignSubSequentialNotes() {
+function assignSubSequentialNotes() {
   let fretElement = document.getElementsByClassName("fret");
   let diagramAssignedNotes = {};
 
@@ -84,10 +97,12 @@ export function assignSubSequentialNotes() {
 }
 
 export function loadDefaultDiagram() {
+  let windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  
   let notesPerFret = 6;
-  let frets = 24;
+  let frets = uiScalesHelper.isScreenSmall(windowWidth) == true ? 12 : 24; //develop a handler
   uiScalesHelper.generateFret(notesPerFret, frets);
   uiScalesHelper.adjustGridStyle(frets, notesPerFret);
-  assignInitialNotes(uiScalesHelper.GUITAR_STANDARD_TUNNING_INITIAL_NOTES);
-  assignSubSequentialNotes();
+  assignNotesFromTunningNotes(uiScalesHelper.GUITAR_STANDARD_TUNNING_INITIAL_NOTES);
 }
+console.log("uiScalesController.js LOADED");
