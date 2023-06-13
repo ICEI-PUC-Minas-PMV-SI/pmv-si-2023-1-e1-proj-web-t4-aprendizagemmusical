@@ -54,6 +54,5 @@ function changeNodeContent(node) {
   }
 }
 
-console.log("ui theme loaded");
-
 export { setInitialTheme }
+console.log("uiTheme.js LOADED");

@@ -1,6 +1,6 @@
 import * as scalesController from './scalesController.js';
 import * as scalesHelper from './scalesHelper.js';
-import * as uiScales from './uiScales.js';
+import * as uiPlayground from './uiPlayground.js';
 /*
 console.log(scalesHelper.getNoteIndex("c"));
 console.log(scalesHelper.getNoteIndex("d"));

@@ -1,4 +1,4 @@
-import * as uiScalesController from './uiScalesController.js';
+import * as uiScalesController from './diagramController.js';
 
 export const GUITAR_STANDARD_TUNNING_INITIAL_NOTES = ["E","A","D","G","B","E"];
 export const BASS_STANDARD_TUNNING_INITIAL_NOTES = ["E","A","D","G"];
@@ -66,7 +66,7 @@ export function resetComponent(component){
 }
 
 export function isScreenSmall(screenWidth) {
-  if (screenWidth <= 600) {
+  if (screenWidth <= 800) {
     return true;
   }
   return false;

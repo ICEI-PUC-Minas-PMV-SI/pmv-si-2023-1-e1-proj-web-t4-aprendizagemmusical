@@ -1,21 +1,82 @@
-import instrumentsObject from '../assets/json/instruments.json' assert { type: 'json' };
-import * as scalesController from'./scalesController.js';
-import { notes } from './scalesHelper.js';
-import { diagramDiv } from './uiScalesHelper.js';
-import * as uiScalesController  from './uiScalesController.js';
+import * as diagramController  from './diagramController.js';
+import * as diagramHelper from './diagramHelper.js';
+import * as uiPlaygroundController from './uiPlaygroundController.js';
+import * as uiPlaygroundHelper from './uiPlaygroundHelper.js';
+import * as uiTranslation from './uiTranslation.js';
 
-let tunningSelect = document.getElementById("tunning");
-let rootNoteSelect = document.getElementById("rootNote");
-let scaleSelect = document.getElementById("scale");
-let sharpFlatBtn = document.getElementById("sharpFlatBtn");
+export let playgroundDiv = document.getElementsByClassName("playground")[0];
+export let displayPlaygroundFreePlay = document.getElementById("displayPlaygroundFreePlay");
+export let displayPlaygroundAdvanced = document.getElementById("displayPlaygroundAdvanced");
+displayPlaygroundFreePlay.addEventListener("click", handleShowPlayground);
+displayPlaygroundAdvanced.addEventListener("click", handleShowPlayground);
 
-tunningSelect.addEventListener("change", tunningSelectHandle);
-rootNoteSelect.addEventListener("change", rootNoteSelectHandle);
-scaleSelect.addEventListener("change", scaleSelectHandle);
-sharpFlatBtn.addEventListener("click", handleSharpFlatButtonValue);
+export let guitarBtn = null;
+export let bassBtn = null;
+export let pianoBtn = null;
+
+
+
+export let tunningSelect = null;
+export let rootNoteSelect = null;
+export let scaleSelect = null;
+export let sharpFlatBtn = null;
+console.log(playgroundDiv.children.length);
+
+function handleShowPlayground() {
+
+  if(playgroundDiv.children.length <= 2) {
+    playgroundDiv.insertAdjacentHTML("afterbegin", `
+    <div class="chooseInstrumentDiv">
+    <button type="button" id="guitarBtn" value="guitar" data-text-node="playgroundViolao"></button>
+    <button type="button" id="bassBtn" value="bass" data-text-node="playgroundBaixo"></button>
+    <button type="button" id="pianoBtn" value="piano" data-text-node="playgroundPiano"></button>
+    </div>`);
+    playgroundDiv.insertAdjacentHTML("afterbegin", 
+    `<div class="playgroundField" id="tunningBtn">
+      <label for="tunning">Tunning</label>
+      <select name="tunning" id="tunning"></select>
+    </div>
+    <div class="playgroundField" id="rootNoteBtn">
+      <label for="rootNote">Root</label>
+      <select name="rootNote" id="rootNote"></select>
+    </div>
+    <div class="playgroundField" id="scaleBtn">
+      <label for="scale">Scale</label>
+      <select name="scale" id="scale"></select>
+    </div>
+    <div class="playgroundField" id="sharpFlatBtn">
+      <button value="#">Show b</button>
+    </div>`);
+  }
+
+  guitarBtn = document.getElementById("guitarBtn");
+  bassBtn = document.getElementById("bassBtn");
+  pianoBtn = document.getElementById("pianoBtn");
+  uiTranslation.translateElements([guitarBtn, bassBtn, pianoBtn]);
+
+  guitarBtn.addEventListener("click", diagramHelper.handleFretboarGeneratorParams.bind(null, 6, 24, guitarBtn.value));
+  bassBtn.addEventListener("click", diagramHelper.handleFretboarGeneratorParams.bind(null, 4, 24, bassBtn.value));
+  pianoBtn.addEventListener("click", diagramHelper.handleFretboarGeneratorParams.bind(null, 1, 12, pianoBtn.value));
+  guitarBtn.addEventListener("click", uiPlaygroundController.handleClick);
+  bassBtn.addEventListener("click", uiPlaygroundController.handleClick);
+  pianoBtn.addEventListener("click", uiPlaygroundController.handleClick);
+
+  tunningSelect = document.getElementById("tunning");
+  rootNoteSelect = document.getElementById("rootNote");
+  scaleSelect = document.getElementById("scale");
+  sharpFlatBtn = document.getElementById("sharpFlatBtn");
+
+  tunningSelect.addEventListener("change", tunningSelectHandle);
+  rootNoteSelect.addEventListener("change", rootNoteSelectHandle);
+  scaleSelect.addEventListener("change", scaleSelectHandle);
+  sharpFlatBtn.addEventListener("click", uiPlaygroundHelper.handleSharpFlatButtonValue);
+
+  uiPlaygroundController.loadDefaultDiagram();
+  uiPlaygroundController.updatePlaygroundUiOptions("guitar");
+}
 
 function tunningSelectHandle(e){
-  uiScalesController.assignNotesFromTunningNotes(e.target.value);
+  diagramController.assignNotesFromTunningNotes(e.target.value);
   //call highlight methods
   //check for the flags
   //convert to flat if needed
@@ -35,83 +96,6 @@ function scaleSelectHandle(e){
   //convert to flat if needed
 }
 
-//controllers
-export function handleClick(e){
-  updatePlaygroundUiOptions(e.target.value);
-}
 
-export function updatePlaygroundUiOptions(instrument) {
-  showAvailableTunnings(instrument);
-  showAvailableScales(instrument);
-  showAvailableRootNotes();
-  changeDiagramAccidentalNotes();
-}
 
-//helpers
-function showAvailableTunnings(instrument) {
-  tunningSelect.innerHTML = "";
-  const availableTunnings = instrumentsObject[instrument].tunnings;
-  for(let i = 0; i < availableTunnings.length; i++) {
-    tunningSelect.insertAdjacentHTML("beforeend", `<option value="${availableTunnings[i].notes}">${availableTunnings[i].label}</option>`)
-  }
-}
-
-function showAvailableRootNotes() {
-  rootNoteSelect.innerHTML = "";
-  for(let i = 0; i < notes.length; i++) {
-    rootNoteSelect.insertAdjacentHTML("beforeend", `<option value="${notes[i]}">${notes[i]}</option>`)
-  }
-}
-
-function showAvailableScales(instrument) {
-  scaleSelect.innerHTML = "";
-  const availableTunningsScales = instrumentsObject[instrument].scales;
-  for(let i = 0; i < availableTunningsScales.length; i++) {
-    scaleSelect.insertAdjacentHTML("beforeend", `<option value="${availableTunningsScales[i].intervals}">${availableTunningsScales[i].label}</option>`)
-  }
-}
-
-function handleSharpFlatButtonValue() {
-  let sharpFlatBtnTag = sharpFlatBtn.querySelector("button");
-  sharpFlatBtnTag.value = sharpFlatBtnTag.value == "#" ? "b" : "#";
-  sharpFlatBtnTag.textContent = sharpFlatBtnTag.textContent == "Show #" ? "Show b" : "Show #";
-  changeDiagramAccidentalNotes();
-}
-
-function changeDiagramAccidentalNotes() {
-  let sharpFlatBtnTag = sharpFlatBtn.querySelector("button");
-  if(sharpFlatBtnTag.value == "b") {
-    let fretArray = diagramDiv.getElementsByClassName("fret");
-    Object.values(fretArray).forEach(fret => { //each fret logic
-      const notesArray = fret.getElementsByClassName("note");
-      Object.values(notesArray).forEach(note => { //each note
-        if(note.textContent.includes("#")){
-          note.textContent = convertSharpToFlat(note.textContent);
-        }
-      })
-    });
-    return;
-  }
-
-  if(sharpFlatBtnTag.value == "#") {
-    let fretArray = diagramDiv.getElementsByClassName("fret");
-    Object.values(fretArray).forEach(fret => { //each fret logic
-      const notesArray = fret.getElementsByClassName("note");
-      Object.values(notesArray).forEach(note => { //each note
-        if(note.textContent.includes("b")){
-          note.textContent = convertFlatToSharp(note.textContent);
-        }
-      })
-    });
-    return;
-  }
-}
-
-function convertSharpToFlat(note){
-  return scalesController.sharpNoteToFlat(note);
-}
-
-function convertFlatToSharp(note){
-  return scalesController.flatNoteToSharp(note);
-}
 console.log("uiPlayground.js LOADED");

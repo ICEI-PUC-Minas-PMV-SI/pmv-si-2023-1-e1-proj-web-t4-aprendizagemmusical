@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/playground.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
@@ -10,35 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <nav id="childrenPageNav">
-        <a class="logo" href="/src/views/index.html">
-          <img src="/src/assets/images/svg/logo.svg">
-          <p data-text-node="appName"></p>
-        </a>
-        <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
-        <div class="userUiSettings">
-          <button id="changeTheme" value="dark"></button>
-          <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
-          <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
-        </div>
-      </nav>
-      <div class="presentation">
-        <div class="presentationContent">
-          <h1 class="presentationText" data-text-node="presentationPlay"></h1>
-          <h2 class="presentationText" data-text-node="introductionPlay">
-          </h2>
-        </div>
+    <nav id="minimalNav">
+      <a class="logo" href="/src/views/index.html">
+        <img src="/src/assets/images/svg/logo.svg">
+        <p data-text-node="appName"></p>
+      </a>
+      <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
+      <div class="userUiSettings">
+        <button id="changeTheme" value="dark"></button>
+        <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+        <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
       </div>
-      <div class="buttons">
-        <a href="/src/views/playground-freeplay-mode.html" data-text-node="presentationHeaderPlayFree"></a>
-        <a href="/src/views/playground-advanced-mode.html" data-text-node="presentationHeaderPlayAdvanced"></a>
-      </div>
-    </div>
+    </nav>
   </body>
-  <div class="containerPlay">
-    <div class="buttonsDescription" data-text-node="buttonsDescriptionFree"></div>
-    <div class="buttonsDescription" data-text-node="buttonsDescriptionAdvanced"></div>
+  <div class="playground">
+    <div class="choosePlaygroundDiv">
+      <button type="button" id="displayPlaygroundFreePlay" value="playgroundFreePlay" data-text-node="presentationHeaderPlayFree"></button>
+      <button type="button" id="displayPlaygroundAdvanced" value="playgroundAdvanced" data-text-node="presentationHeaderPlayAdvanced"></button>
+    </div>
+    <div class="diagram"></div>
   </div>
   <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/scales.js" type="module"></script>
+
 </html>

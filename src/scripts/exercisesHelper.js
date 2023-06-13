@@ -31,3 +31,4 @@ function chooseExerciseDificulty() {
 }
 
 export {chooseExercise, chooseExerciseDificulty}
+console.log("exercisesHelper.js LOADED");

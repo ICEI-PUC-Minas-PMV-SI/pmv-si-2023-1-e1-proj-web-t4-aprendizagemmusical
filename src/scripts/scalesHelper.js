@@ -54,3 +54,4 @@ export function hasInterval(i, acceptedIntervals){
 export function getNoteNameFromIndex(noteIndex, scale) {
   return scale[noteIndex];
 }
+console.log("scalesHelper.js LOADED");

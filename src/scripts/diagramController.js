@@ -1,6 +1,6 @@
-import * as uiScalesHelper from './uiScalesHelper.js';
+import * as uiScalesHelper from './diagramHelper.js';
 import * as scalesController from './scalesController.js';
-export { updatePlaygroundUiOptions } from './uiPlayground.js';
+import * as uiPlaygroundHelper from './uiPlaygroundHelper.js';
 
 export function generateFretboard(notesPerFret, frets, instrumentName) {
   let windowWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -48,6 +48,7 @@ export function assignNotesFromTunningNotes(initialNotes) {
   }
   assignInitialNotes(initialNotes);
   assignSubSequentialNotes();
+  uiPlaygroundHelper.changeDiagramAccidentalNotes();
 }
 
 function assignInitialNotes(initialNotes) {
@@ -96,13 +97,4 @@ function assignSubSequentialNotes() {
   
 }
 
-export function loadDefaultDiagram() {
-  let windowWidth = window.innerWidth || document.documentElement.clientWidth;
-  
-  let notesPerFret = 6;
-  let frets = uiScalesHelper.isScreenSmall(windowWidth) == true ? 12 : 24; //develop a handler
-  uiScalesHelper.generateFret(notesPerFret, frets);
-  uiScalesHelper.adjustGridStyle(frets, notesPerFret);
-  assignNotesFromTunningNotes(uiScalesHelper.GUITAR_STANDARD_TUNNING_INITIAL_NOTES);
-}
 console.log("uiScalesController.js LOADED");

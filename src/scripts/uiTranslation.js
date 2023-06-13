@@ -27,8 +27,14 @@ function hasUserPreferredLanguage() {
 	return false;
 }
 
+function getLocalStorageLanguage() {
+	if(hasUserPreferredLanguage()){
+		return localStorage.getItem("userPreferredLanguage");
+	}
+	return "enus";
+}
+
 function setInitialLanguageBasedOnLocalStorage() {
-	console.log(localStorage.getItem("userPreferredLanguage"));
 	if(localStorage.getItem("userPreferredLanguage") == "enus") {
 		changeLanguageEnglish();
 		return;
@@ -73,5 +79,20 @@ function changeLanguageEnglishOnDemand(e){
 	});
 }
 
+export function translateElement(element) {
+	element.innerText = getLocalStorageLanguage() == "enus" ? englishTranslation[element.getAttribute("data-text-node")] : portugueseTranslation[element.getAttribute("data-text-node")];
+}
+
+export function translateElements(elementArray) {
+	elementArray.forEach(element => {
+		if(getLocalStorageLanguage() == "enus") {
+			element.innerText = englishTranslation[element.getAttribute("data-text-node")];
+		}
+		if(getLocalStorageLanguage() == "ptbr") {
+			element.innerText = portugueseTranslation[element.getAttribute("data-text-node")];
+		}
+	}); 
+}
+
 export { setInitialLanguage };
-console.log("ui translation module loaded");
+console.log("uiTranslation.js LOADED");

@@ -134,3 +134,4 @@ export function subtractWholetone(note){
   let semitoneDown = scalesHelper.getNoteNameFromIndex((noteIndex-2)+12, chromaticScale);
   return semitoneDown;
 }
+console.log("scalesController.js LOADED");
