@@ -3,6 +3,7 @@ import * as diagramHelper from './diagramHelper.js';
 import * as uiPlaygroundController from './uiPlaygroundController.js';
 import * as uiPlaygroundHelper from './uiPlaygroundHelper.js';
 import * as uiTranslation from './uiTranslation.js';
+import * as scaleController from './scalesController.js';
 
 export let playgroundDiv = document.getElementsByClassName("playground")[0];
 export let displayPlaygroundFreePlay = document.getElementById("displayPlaygroundFreePlay");
@@ -13,8 +14,6 @@ displayPlaygroundAdvanced.addEventListener("click", handleShowPlayground);
 export let guitarBtn = null;
 export let bassBtn = null;
 export let pianoBtn = null;
-
-
 
 export let tunningSelect = null;
 export let rootNoteSelect = null;
@@ -32,7 +31,9 @@ function handleShowPlayground() {
     <button type="button" id="pianoBtn" value="piano" data-text-node="playgroundPiano"></button>
     </div>`);
     playgroundDiv.insertAdjacentHTML("afterbegin", 
-    `<div class="playgroundField" id="tunningBtn">
+    `
+    <div class="playgroundFreeplayFields">
+    <div class="playgroundField" id="tunningBtn">
       <label for="tunning">Tunning</label>
       <select name="tunning" id="tunning"></select>
     </div>
@@ -46,7 +47,9 @@ function handleShowPlayground() {
     </div>
     <div class="playgroundField" id="sharpFlatBtn">
       <button value="#">Show b</button>
-    </div>`);
+    </div>
+    </div>
+    `);
   }
 
   guitarBtn = document.getElementById("guitarBtn");
@@ -76,26 +79,30 @@ function handleShowPlayground() {
 }
 
 function tunningSelectHandle(e){
+  let intervals = scaleSelect.value.split(",");
+
   diagramController.assignNotesFromTunningNotes(e.target.value);
+  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(rootNoteSelect.value, intervals), sharpFlatBtn.getElementsByTagName("button")[0].value);
   //call highlight methods
   //check for the flags
   //convert to flat if needed
 }
 
 function rootNoteSelectHandle(e){
-  console.log(e.target.value);
+  let intervals = scaleSelect.value.split(",");
+  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(e.target.value, intervals), sharpFlatBtn.getElementsByTagName("button")[0].value);
   //call highlight methods
   //check for the flags
   //convert to flat if needed
 }
 
 function scaleSelectHandle(e){
-  console.log(e.target.value);
+  let intervals = e.target.value.split(",");
+  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(rootNoteSelect.value, intervals), sharpFlatBtn.getElementsByTagName("button")[0].value);
+  //diagramController.iterateThroughNotes();
   //call highlight methods
   //check for the flags
   //convert to flat if needed
 }
-
-
 
 console.log("uiPlayground.js LOADED");

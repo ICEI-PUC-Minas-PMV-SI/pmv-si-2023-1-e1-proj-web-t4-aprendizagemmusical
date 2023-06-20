@@ -56,6 +56,17 @@ export function getScaleCustomIntervals(rootNote, intervalsArray) {
   return majorScaleArray;
 }
 
+export function getScaleFlatNotes(scale) {
+  let outputScale = [];
+  scale.forEach(note => {
+    if(note.includes("#")){
+      note = sharpNoteToFlat(note);
+    }
+    outputScale.push(note);
+  });
+  return outputScale;
+}
+
 export function getOctaves(n, scale){
   let output;
   for (let i = 0; i < n; i++) {

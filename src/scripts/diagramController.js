@@ -44,11 +44,68 @@ export function assignNotesFromTunningNotes(initialNotes) {
   //check if all notes are valid before assigning to the diagram
   //if are there flat notes (*b), convert it to sharp before assigning to the diagram
   if(!Array.isArray(initialNotes)){
-    initialNotes = initialNotes.split("");
+    initialNotes = initialNotes.split("").reverse();
   }
   assignInitialNotes(initialNotes);
   assignSubSequentialNotes();
   uiPlaygroundHelper.changeDiagramAccidentalNotes();
+}
+
+export function iterateThroughNotes() {
+  let fretElement = document.getElementsByClassName("fret");
+
+  Object.values(fretElement).forEach(fret => {
+    let noteElement = fret.getElementsByClassName("note");
+    
+    Object.values(noteElement).forEach(note => {
+      console.log(note);
+    })
+  });
+}
+
+export function assignStyleToIntervals(notes, sharpFlatValue) {
+  resetStyle();
+  let fretElement = document.getElementsByClassName("fret");
+
+  Object.values(fretElement).forEach(fret => {
+    let noteElement = fret.getElementsByClassName("note");
+    
+    Object.values(noteElement).forEach(note => {
+      
+      if(sharpFlatValue.includes("#")) {
+        if(notes.includes(note.textContent)){
+          note.style.backgroundColor = "red";
+        }
+        if(notes[0] == note.textContent) {
+          note.style.backgroundColor = "yellow";
+        }
+      }
+
+      if(sharpFlatValue.includes("b")) {
+        let scaleFlatNotes = scalesController.getScaleFlatNotes(notes);
+        
+        if(scaleFlatNotes.includes(note.textContent)){
+          note.style.backgroundColor = "red";
+        }
+        if(scaleFlatNotes[0] == note.textContent) {
+          note.style.backgroundColor = "yellow";
+        }
+      }
+
+    })
+  });
+}
+
+function resetStyle() {
+  let fretElement = document.getElementsByClassName("fret");
+
+  Object.values(fretElement).forEach(fret => {
+    let noteElement = fret.getElementsByClassName("note");
+    
+    Object.values(noteElement).forEach(note => {
+      note.style.backgroundColor = "transparent";
+    })
+  });
 }
 
 function assignInitialNotes(initialNotes) {
