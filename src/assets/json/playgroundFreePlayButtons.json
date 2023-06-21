@@ -1,0 +1,37 @@
+{
+  "tunning" : {
+    "type": "select",
+    "label":"Tunning",
+    "labelPortuguese":"Tunning",
+    "id": "tunningBtn",
+    "value": null
+  },
+  "rootNote" : {
+    "type": "select",
+    "label":"Root",
+    "labelPortuguese":"Tônica",
+    "id": "rootNoteBtn",
+    "value": null
+  },
+  "scale" : {
+    "type": "select",
+    "label":"Scale",
+    "labelPortuguese":"Escala",
+    "id": "scaleBtn",
+    "value": null
+  },
+  "sharpFlat" : {
+    "type": "button",
+    "label":"Show b",
+    "labelPortuguese":"Mostrar b",
+    "id": "sharpFlatBtn",
+    "value": "#"
+  },
+  "show3rds" : {
+    "type": "checkbox",
+    "label":"Show 3rds",
+    "labelPortuguese":"Mostrar terças",
+    "id": "shor3rdBtn",
+    "value": null
+  }
+}

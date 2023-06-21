@@ -4,9 +4,9 @@ import * as uiScalesController from './diagramController.js';
 //TODO
   //CHANGE FROM THIS OT THE JSON DATA
   //REVERSE IS NEEDED BECUASE OF HOW ITS DISPLAYED TO THE USER
-export const GUITAR_STANDARD_TUNNING_INITIAL_NOTES = instrumentsObject.guitar.tunnings[0].notes.split("").reverse();
-export const BASS_STANDARD_TUNNING_INITIAL_NOTES = instrumentsObject.bass.tunnings[0].notes.split("").reverse();
-export const PIANO_INITIAL_NOTES = instrumentsObject.piano.tunnings[0].notes.split("").reverse();
+export const GUITAR_STANDARD_TUNNING_INITIAL_NOTES = instrumentsObject.guitar.tunnings[0].notes.split(",").reverse();
+export const BASS_STANDARD_TUNNING_INITIAL_NOTES = instrumentsObject.bass.tunnings[0].notes.split(",").reverse();
+export const PIANO_INITIAL_NOTES = instrumentsObject.piano.tunnings[0].notes.split(",").reverse();
 
 export let diagramDiv = document.getElementsByClassName("diagram")[0];
 

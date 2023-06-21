@@ -70,3 +70,5 @@ export function convertSharpToFlat(note){
 export function convertFlatToSharp(note){
   return scalesController.flatNoteToSharp(note);
 }
+
+console.log("uiPlaygroundHelper.js LOADED");

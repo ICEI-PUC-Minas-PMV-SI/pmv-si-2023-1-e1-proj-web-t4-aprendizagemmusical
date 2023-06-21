@@ -44,7 +44,7 @@ export function assignNotesFromTunningNotes(initialNotes) {
   //check if all notes are valid before assigning to the diagram
   //if are there flat notes (*b), convert it to sharp before assigning to the diagram
   if(!Array.isArray(initialNotes)){
-    initialNotes = initialNotes.split("").reverse();
+    initialNotes = initialNotes.split(",").reverse();
   }
   assignInitialNotes(initialNotes);
   assignSubSequentialNotes();
@@ -154,4 +154,4 @@ function assignSubSequentialNotes() {
   
 }
 
-console.log("uiScalesController.js LOADED");
+console.log("diagramController.js LOADED");

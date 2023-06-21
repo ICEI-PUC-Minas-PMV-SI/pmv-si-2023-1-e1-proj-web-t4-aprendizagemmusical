@@ -3,11 +3,19 @@
     "tunnings": [
       {
         "label": "Standard",
-        "notes": "EADGBE"
+        "notes": "E,A,D,G,B,E"
       },
       {
-        "label": "AAAAAA",
-        "notes": "AAAAAA"
+        "label": "Drop D",
+        "notes": "D,A,D,G,B,E"
+      },
+      {
+        "label": "Open G",
+        "notes": "D,G,D,G,B,D"
+      },
+      {
+        "label": "Half-step Down",
+        "notes": "D#,G#,C#,F#,A#,D#"
       }
     ],
     "scales": [
@@ -29,11 +37,19 @@
     "tunnings": [
       {
         "label": "Standard",
-        "notes": "EADG"
+        "notes": "E,A,D,G"
       },
       {
-        "label": "AAAAAA",
-        "notes": "AAAAAA"
+        "label": "Drop D",
+        "notes": "D,A,D,G"
+      },
+      {
+        "label": "Half-step Down",
+        "notes": "D#,G#,C#,F#"
+      },
+      {
+        "label": "Drop C",
+        "notes": "C,G,C,F"
       }
     ],
     "scales": [

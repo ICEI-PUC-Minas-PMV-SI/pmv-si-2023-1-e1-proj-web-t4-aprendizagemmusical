@@ -1,9 +1,11 @@
+import * as uiPlayground from './uiPlayground.js'
 import * as uiPlaygroundHelper from './uiPlaygroundHelper.js'
 import * as diagramController from './diagramController.js';
 import * as diagramHelper from './diagramHelper.js';
 
 export function handleClick(e){
   updatePlaygroundUiOptions(e.target.value);
+  uiPlayground.assignNotesDefaultStyle();
 }
 
 export function updatePlaygroundUiOptions(instrument) {
@@ -23,3 +25,5 @@ export function loadDefaultDiagram() {
   diagramHelper.adjustGridStyle(frets, notesPerFret);
   diagramController.assignNotesFromTunningNotes(diagramHelper.GUITAR_STANDARD_TUNNING_INITIAL_NOTES);
 }
+
+console.log("uiPlaygroundController.js LOADED");
