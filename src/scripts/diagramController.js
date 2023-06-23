@@ -98,8 +98,13 @@ export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, sho
           note.style.backgroundColor = "yellow";
         }
 
-        if(show3rds) {
+        if(showMajor3rds) {
           if(scalesController.sharpNoteToFlat(majorThirdFromRoot) == note.textContent) {
+            note.style.backgroundColor = "orange";
+          }
+        }
+        if(showMinor3rds) {
+          if(scalesController.sharpNoteToFlat(minorThirdFromRoot) == note.textContent) {
             note.style.backgroundColor = "orange";
           }
         }
