@@ -11,7 +11,7 @@ export let playgroundDiv = document.getElementsByClassName("playground")[0];
 export let displayPlaygroundFreePlay = document.getElementById("displayPlaygroundFreePlay");
 export let displayPlaygroundAdvanced = document.getElementById("displayPlaygroundAdvanced");
 displayPlaygroundFreePlay.addEventListener("click", handleShowPlayground);
-//displayPlaygroundAdvanced.addEventListener("click", handleShowPlayground);
+displayPlaygroundAdvanced.addEventListener("click", handleShowPlayground);
 
 export let guitarBtn = null;
 export let bassBtn = null;
@@ -78,7 +78,24 @@ function assignPlaygroundOptionsButtonsEventListeners() {
   })
 }
 
-function handleShowPlayground() {
+function handleShowPlayground(e) {
+  console.log(e.target);
+  if(e.target.value.toLowerCase().includes("freeplay")){
+    showFreePlayPlayground();
+  }
+  if(e.target.value.toLowerCase().includes("advanced")){
+    showAdvancedPlayground();
+  }
+
+}
+
+function showFreePlayPlayground(){
+  Array.from(document.querySelector("div.playground").children).forEach(element => {
+    if(element.className.includes("choosePlaygroundDiv") || element.className.includes("diagram")){ 
+    } else {
+      element.remove();
+    }
+  });
 
   if(playgroundDiv.children.length <= 2) {
     generateInstrumentButtons();
@@ -108,6 +125,41 @@ function handleShowPlayground() {
   assignNotesDefaultStyle();
 }
 
+function showAdvancedPlayground(){
+  
+  Array.from(document.querySelector("div.playground").children).forEach(element => {
+    if(element.className.includes("choosePlaygroundDiv") || element.className.includes("diagram")){ 
+    } else {
+      element.remove();
+    }
+  });
+
+  if(playgroundDiv.children.length <= 2) {
+    generateInstrumentButtons();
+  }
+  
+  let playgroundFreePlayButtonsHtmlElements = '';
+  playgroundFreePlayButtonsHtmlElements += 
+  `<div class="playgroundField" id="${playgroundFreePlayButtons.sharpFlat.id}">
+    <button value="${playgroundFreePlayButtons.sharpFlat.value}">${playgroundFreePlayButtons.sharpFlat.label}</button>
+   </div>
+  `
+  playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="playgroundFreeplayFields">${playgroundFreePlayButtonsHtmlElements}</div>`);
+  sharpFlatBtn = document.getElementById("sharpFlatBtn");
+  sharpFlatBtn.addEventListener("click", uiPlaygroundHelper.handleSharpFlatButtonValue);
+
+  guitarBtn = document.getElementById("guitarBtn");
+  bassBtn = document.getElementById("bassBtn");
+  pianoBtn = document.getElementById("pianoBtn");
+  uiTranslation.translateElements([guitarBtn, bassBtn, pianoBtn]);
+  
+  guitarBtn.addEventListener("click", showInstrumentDiagram);
+  bassBtn.addEventListener("click", showInstrumentDiagram);
+  pianoBtn.addEventListener("click", showInstrumentDiagram);
+
+  uiPlaygroundController.loadDefaultDiagram();
+}
+
 function showInstrumentDiagram(e) {
   let instrument = e.target.value;
   if(instrument == "guitar") {
@@ -127,12 +179,13 @@ function assignNotesStyle() {
   let paramField1 = document.getElementById("scale").value;
   let paramField2 = document.getElementById("tunning").value;
   let paramField3 = document.getElementById("sharpFlatBtn").querySelector("button").value;
-  let paramField4 = document.getElementById("show3rdBtn").querySelector("input").checked;
-  let paramField5 = document.getElementById("show5thBtn").querySelector("input").checked;
+  let paramField4 = document.getElementById("showMajor3rdBtn").querySelector("input").checked;
+  let paramField5 = document.getElementById("showMinor3rdBtn").querySelector("input").checked;
+  let paramField6 = document.getElementById("show5thBtn").querySelector("input").checked;
 
   let intervals = paramField1.split(","); //should be an function in helper
   diagramController.assignNotesFromTunningNotes(paramField2);
-  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(paramField0, intervals), paramField3, paramField4, paramField5);
+  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(paramField0, intervals), paramField3, paramField4, paramField5, paramField6);
 }
 
 //should be in helper
@@ -141,8 +194,6 @@ export function assignNotesDefaultStyle() {
   let paramField1 = document.getElementById("scale").value;
   let paramField2 = document.getElementById("tunning").value;
   let paramField3 = document.getElementById("sharpFlatBtn").querySelector("button").value;
-  let paramField4 = document.getElementById("show3rdBtn").querySelector("input").checked;
-  let paramField5 = document.getElementById("show5thBtn").querySelector("input").checked;
 
   let intervals = paramField1.split(","); //should be an function in helper
   diagramController.assignNotesFromTunningNotes(paramField2);

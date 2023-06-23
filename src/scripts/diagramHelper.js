@@ -8,7 +8,7 @@ export const GUITAR_STANDARD_TUNNING_INITIAL_NOTES = instrumentsObject.guitar.tu
 export const BASS_STANDARD_TUNNING_INITIAL_NOTES = instrumentsObject.bass.tunnings[0].notes.split(",").reverse();
 export const PIANO_INITIAL_NOTES = instrumentsObject.piano.tunnings[0].notes.split(",").reverse();
 
-export let diagramDiv = document.getElementsByClassName("diagram")[0];
+export let diagramDiv = document.querySelector("div.diagram");
 
 export function generateFret(notesPerFret, frets) {
   for(let i = 0; i < frets; i++){

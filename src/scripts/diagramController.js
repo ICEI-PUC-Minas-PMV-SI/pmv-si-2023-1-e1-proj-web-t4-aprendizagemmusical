@@ -25,19 +25,6 @@ export function generateFretboard(notesPerFret, frets, instrumentName) {
     assignSubSequentialNotes();
     return;
   }
-  // for(let j = 0; j < frets; j++){ //horizontal
-  //   for(let i = 0; i < notesPerFret+1; i++){ //vertical
-
-  //     if(i == 0) {
-  //       let html = `<div class="note" data-fretboard-number=${j+1}>1st</div>`;
-  //       diagramDiv.insertAdjacentHTML("beforeend", html);
-  //       continue;
-  //     }
-
-  //     let html = `<div class="note" data-fret-number=${j+1} data-fretboard-string-number=${(notesPerFret-i)+1}>${j+1}</div>`;
-  //     diagramDiv.insertAdjacentHTML("beforeend", html);
-  //   }
-  // }
 }
 
 export function assignNotesFromTunningNotes(initialNotes) {
@@ -63,14 +50,15 @@ export function iterateThroughNotes() {
   });
 }
 
-export function assignStyleToIntervals(notes, sharpFlatValue, show3rds, show5ths) {
+export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, showMinor3rds, show5ths) {
   resetStyle();
   let fretElement = document.getElementsByClassName("fret");
-
+  console.log(notes);
 
   Object.values(fretElement).forEach(fret => {
     let noteElement = fret.getElementsByClassName("note");
-    let majorThirdFromRoot = scalesController.get3rd(notes[0]);
+    let majorThirdFromRoot = scalesController.getMajor3rdFromScale(notes);
+    let minorThirdFromRoot = scalesController.getMinor3rdFromScale(notes);
     let fifthFromRoot = scalesController.get5th(notes[0]);
     
     Object.values(noteElement).forEach(note => {
@@ -83,8 +71,13 @@ export function assignStyleToIntervals(notes, sharpFlatValue, show3rds, show5ths
         if(notes[0] == note.textContent) {
           note.style.backgroundColor = "yellow";
         }
-        if(show3rds) {
+        if(showMajor3rds) {
           if(majorThirdFromRoot == note.textContent) {
+            note.style.backgroundColor = "orange";
+          }
+        }
+        if(showMinor3rds) {
+          if(minorThirdFromRoot == note.textContent) {
             note.style.backgroundColor = "orange";
           }
         }

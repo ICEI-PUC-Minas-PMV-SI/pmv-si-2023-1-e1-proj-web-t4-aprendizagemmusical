@@ -27,11 +27,18 @@
     "id": "sharpFlatBtn",
     "value": "#"
   },
-  "show3rds" : {
+  "showMinor3rds" : {
     "type": "checkbox",
-    "label":"Show 3rds?",
+    "label":"Show 3ms?",
     "labelPortuguese":"Mostrar terças?",
-    "id": "show3rdBtn",
+    "id": "showMinor3rdBtn",
+    "value": null
+  },
+  "showMajor3rds" : {
+    "type": "checkbox",
+    "label":"Show 3Ms?",
+    "labelPortuguese":"Mostrar terças?",
+    "id": "showMajor3rdBtn",
     "value": null
   },
   "show5ths" : {

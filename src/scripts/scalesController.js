@@ -146,7 +146,7 @@ export function subtractWholetone(note){
   return semitoneDown;
 }
 
-export function get3rd(note) {
+export function getMajor3rd(note) {
   let chromaticScale = getChromaticScale(note);
   if(chromaticScale === null) {
     return null;
@@ -160,5 +160,25 @@ export function get5th(note) {
     return null;
   }
   return chromaticScale[7];
+}
+
+export function getMajor3rdFromScale(scale) {
+  let chromaticScale = getChromaticScale(scale[0]);
+  if(chromaticScale === null) {
+    return null;
+  }
+  return chromaticScale[4];
+}
+
+export function getMinor3rdFromScale(scale) {
+  let chromaticScale = getChromaticScale(scale[0]);
+  if(chromaticScale === null) {
+    return null;
+  }
+  return chromaticScale[3];
+}
+
+export function get5thFromScale(scale) {
+  return scale[4];
 }
 console.log("scalesController.js LOADED");
