@@ -21,6 +21,7 @@ export let rootNoteSelect = null;
 export let scaleSelect = null;
 export let sharpFlatBtn = null;
 
+//should be in helper
 function generateInstrumentButtons() {
   let instrumentHtmlElements = '';
   Object.keys(instrumentsObject).forEach(instrument => {
@@ -29,6 +30,7 @@ function generateInstrumentButtons() {
   playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="chooseInstrumentDiv">${instrumentHtmlElements}</div>`);
 }
 
+//should be in helper
 function generatePlaygroundOptionsButtons() {
   let playgroundFreePlayButtonsHtmlElements = '';
   Object.values(playgroundFreePlayButtons).forEach(button => {
@@ -59,11 +61,29 @@ function generatePlaygroundOptionsButtons() {
   playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="playgroundFreeplayFields">${playgroundFreePlayButtonsHtmlElements}</div>`);
 }
 
+function assignPlaygroundOptionsButtonsEventListeners() {
+  let playgroundFieldsDiv = document.querySelector("div.playgroundFreeplayFields");
+  Array.from(playgroundFieldsDiv.children).forEach(e => {
+    Array.from(e.children).find(x => { //needs a better verification: whether needs external handle
+      if(x.tagName != "LABEL") {
+        if(x.tagName == "SELECT") {
+          x.addEventListener("change", assignNotesStyle);
+        }
+        if(x.tagName == "INPUT") {
+          x.addEventListener("change", assignNotesStyle);
+        }
+      }
+    });
+  
+  })
+}
+
 function handleShowPlayground() {
-  //field0Label field0Value 
+
   if(playgroundDiv.children.length <= 2) {
     generateInstrumentButtons();
     generatePlaygroundOptionsButtons();
+    assignPlaygroundOptionsButtonsEventListeners();
   }
   
   //needs abstraction
@@ -81,9 +101,6 @@ function handleShowPlayground() {
     scaleSelect = document.getElementById("scale");
     sharpFlatBtn = document.getElementById("sharpFlatBtn");
 
-    tunningSelect.addEventListener("change", assignNotesStyle);
-    rootNoteSelect.addEventListener("change", assignNotesStyle);
-    scaleSelect.addEventListener("change", assignNotesStyle);
     sharpFlatBtn.addEventListener("click", uiPlaygroundHelper.handleSharpFlatButtonValue);
   //
   uiPlaygroundController.loadDefaultDiagram();
@@ -106,15 +123,29 @@ function showInstrumentDiagram(e) {
 }
 
 function assignNotesStyle() {
-  let intervals = scaleSelect.value.split(",");
-  diagramController.assignNotesFromTunningNotes(tunningSelect.value);
-  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(rootNoteSelect.value, intervals), sharpFlatBtn.getElementsByTagName("button")[0].value);
+  let paramField0 = document.getElementById("root").value;
+  let paramField1 = document.getElementById("scale").value;
+  let paramField2 = document.getElementById("tunning").value;
+  let paramField3 = document.getElementById("sharpFlatBtn").querySelector("button").value;
+  let paramField4 = document.getElementById("show3rdBtn").querySelector("input").checked;
+  let paramField5 = document.getElementById("show5thBtn").querySelector("input").checked;
+
+  let intervals = paramField1.split(","); //should be an function in helper
+  diagramController.assignNotesFromTunningNotes(paramField2);
+  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(paramField0, intervals), paramField3, paramField4, paramField5);
 }
 
 //should be in helper
 export function assignNotesDefaultStyle() {
-  let intervals = scaleSelect.value.split(",");
-  diagramController.assignNotesFromTunningNotes(tunningSelect.value);
-  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(rootNoteSelect.value, intervals), sharpFlatBtn.getElementsByTagName("button")[0].value);
+  let paramField0 = document.getElementById("root").value;
+  let paramField1 = document.getElementById("scale").value;
+  let paramField2 = document.getElementById("tunning").value;
+  let paramField3 = document.getElementById("sharpFlatBtn").querySelector("button").value;
+  let paramField4 = document.getElementById("show3rdBtn").querySelector("input").checked;
+  let paramField5 = document.getElementById("show5thBtn").querySelector("input").checked;
+
+  let intervals = paramField1.split(","); //should be an function in helper
+  diagramController.assignNotesFromTunningNotes(paramField2);
+  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(paramField0, intervals), paramField3);
 }
 console.log("uiPlayground.js LOADED");

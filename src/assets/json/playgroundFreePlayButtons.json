@@ -29,9 +29,16 @@
   },
   "show3rds" : {
     "type": "checkbox",
-    "label":"Show 3rds",
-    "labelPortuguese":"Mostrar terças",
-    "id": "shor3rdBtn",
+    "label":"Show 3rds?",
+    "labelPortuguese":"Mostrar terças?",
+    "id": "show3rdBtn",
+    "value": null
+  },
+  "show5ths" : {
+    "type": "checkbox",
+    "label":"Show 5ths?",
+    "labelPortuguese":"Mostrar quintas?",
+    "id": "show5thBtn",
     "value": null
   }
 }

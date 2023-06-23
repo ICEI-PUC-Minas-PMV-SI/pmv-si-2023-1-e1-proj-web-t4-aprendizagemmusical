@@ -63,21 +63,35 @@ export function iterateThroughNotes() {
   });
 }
 
-export function assignStyleToIntervals(notes, sharpFlatValue) {
+export function assignStyleToIntervals(notes, sharpFlatValue, show3rds, show5ths) {
   resetStyle();
   let fretElement = document.getElementsByClassName("fret");
 
+
   Object.values(fretElement).forEach(fret => {
     let noteElement = fret.getElementsByClassName("note");
+    let majorThirdFromRoot = scalesController.get3rd(notes[0]);
+    let fifthFromRoot = scalesController.get5th(notes[0]);
     
     Object.values(noteElement).forEach(note => {
       
+      //change textContent for value later
       if(sharpFlatValue.includes("#")) {
         if(notes.includes(note.textContent)){
           note.style.backgroundColor = "red";
         }
         if(notes[0] == note.textContent) {
           note.style.backgroundColor = "yellow";
+        }
+        if(show3rds) {
+          if(majorThirdFromRoot == note.textContent) {
+            note.style.backgroundColor = "orange";
+          }
+        }
+        if(show5ths) {
+          if(fifthFromRoot == note.textContent) {
+            note.style.backgroundColor = "blue";
+          }
         }
       }
 
@@ -89,6 +103,17 @@ export function assignStyleToIntervals(notes, sharpFlatValue) {
         }
         if(scaleFlatNotes[0] == note.textContent) {
           note.style.backgroundColor = "yellow";
+        }
+
+        if(show3rds) {
+          if(scalesController.sharpNoteToFlat(majorThirdFromRoot) == note.textContent) {
+            note.style.backgroundColor = "orange";
+          }
+        }
+        if(show5ths) {
+          if(scalesController.sharpNoteToFlat(fifthFromRoot) == note.textContent) {
+            note.style.backgroundColor = "blue";
+          }
         }
       }
 

@@ -195,7 +195,7 @@
     width: 100%;
 
     grid-template-columns: initial;
-    grid-template-rows: 10vh 10vh 10vh 1fr;
+    grid-template-rows: 10vh 10vh min-content minmax(20vh, 30vh);
     grid-template-areas:  "choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv"
                           "buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv"
                           "playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv . . . . . . . ."

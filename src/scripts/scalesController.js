@@ -77,7 +77,7 @@ export function getOctaves(n, scale){
 
 export function sharpNoteToFlat(sharpNote) { //if the note has a # sign, it converts it to a flat note
   if(!sharpNote.includes("#")){
-    return null;
+    return sharpNote;
   }
 
   let chromaticScale = getChromaticScale(sharpNote);
@@ -92,7 +92,7 @@ export function sharpNoteToFlat(sharpNote) { //if the note has a # sign, it conv
 
 export function flatNoteToSharp(flatNote) {
   if(!flatNote.includes("b")){
-    return null;
+    return sharpNote;
   }
 
   flatNote = flatNote.substring(0,1);
@@ -144,5 +144,21 @@ export function subtractWholetone(note){
   let noteIndex = scalesHelper.getNoteIndexCustomScale(note, chromaticScale);
   let semitoneDown = scalesHelper.getNoteNameFromIndex((noteIndex-2)+12, chromaticScale);
   return semitoneDown;
+}
+
+export function get3rd(note) {
+  let chromaticScale = getChromaticScale(note);
+  if(chromaticScale === null) {
+    return null;
+  }
+  return chromaticScale[4];
+}
+
+export function get5th(note) {
+  let chromaticScale = getChromaticScale(note);
+  if(chromaticScale === null) {
+    return null;
+  }
+  return chromaticScale[7];
 }
 console.log("scalesController.js LOADED");

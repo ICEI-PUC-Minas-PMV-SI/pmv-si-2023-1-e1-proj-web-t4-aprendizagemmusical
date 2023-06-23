@@ -1,5 +1,5 @@
 import instrumentsObject from '../assets/json/instruments.json' assert { type: 'json' };
-import * as uiScalesController from './diagramController.js';
+import * as diagramController from './diagramController.js';
 
 //TODO
   //CHANGE FROM THIS OT THE JSON DATA
@@ -43,7 +43,7 @@ function getCurrentFret(currentFret) {
 }
 
 export function handleFretboarGeneratorParams(notesPerFret, frets, instrumentName){
-  uiScalesController.generateFretboard(notesPerFret, frets, instrumentName);
+  diagramController.generateFretboard(notesPerFret, frets, instrumentName);
 }
 
 export function adjustGridStyle(frets, notesPerFret) {
