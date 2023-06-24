@@ -1,6 +1,8 @@
 import * as uiScalesHelper from './diagramHelper.js';
 import * as scalesController from './scalesController.js';
+import * as scalesHelper from './scalesHelper.js';
 import * as uiPlaygroundHelper from './uiPlaygroundHelper.js';
+import * as diagramHelper from './diagramHelper.js';
 
 export function generateFretboard(notesPerFret, frets, instrumentName) {
   let windowWidth = window.innerWidth || document.documentElement.clientWidth;
@@ -9,21 +11,27 @@ export function generateFretboard(notesPerFret, frets, instrumentName) {
   uiScalesHelper.resetComponent(uiScalesHelper.diagramDiv);
   uiScalesHelper.adjustGridStyle(frets, notesPerFret);
   uiScalesHelper.generateFret(notesPerFret, frets);
+  
+  if(diagramHelper.diagramDiv.getAttribute("data-diagram-mode") == "freeplay"){
+    if (instrumentName.toLowerCase() == "guitar") {
+      assignInitialNotes(uiScalesHelper.GUITAR_STANDARD_TUNNING_INITIAL_NOTES);
+      assignSubSequentialNotes();
+      return;
+    }
+    if (instrumentName.toLowerCase() == "bass") {
+      assignInitialNotes(uiScalesHelper.BASS_STANDARD_TUNNING_INITIAL_NOTES);
+      assignSubSequentialNotes();
+      return;
+    }
+    if (instrumentName.toLowerCase() == "piano") {
+      assignInitialNotes(uiScalesHelper.PIANO_INITIAL_NOTES);
+      assignSubSequentialNotes();
+      return;
+    }
+  }
 
-  if (instrumentName.toLowerCase() == "guitar") {
-    assignInitialNotes(uiScalesHelper.GUITAR_STANDARD_TUNNING_INITIAL_NOTES);
-    assignSubSequentialNotes();
-    return;
-  }
-  if (instrumentName.toLowerCase() == "bass") {
-    assignInitialNotes(uiScalesHelper.BASS_STANDARD_TUNNING_INITIAL_NOTES);
-    assignSubSequentialNotes();
-    return;
-  }
-  if (instrumentName.toLowerCase() == "piano") {
-    assignInitialNotes(uiScalesHelper.PIANO_INITIAL_NOTES);
-    assignSubSequentialNotes();
-    return;
+  if(diagramHelper.diagramDiv.getAttribute("data-diagram-mode") == "advanced"){
+    console.log('generateFretboard advanced mode');
   }
 }
 
@@ -53,7 +61,6 @@ export function iterateThroughNotes() {
 export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, showMinor3rds, show5ths) {
   resetStyle();
   let fretElement = document.getElementsByClassName("fret");
-  console.log(notes);
 
   Object.values(fretElement).forEach(fret => {
     let noteElement = fret.getElementsByClassName("note");
@@ -119,6 +126,23 @@ export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, sho
   });
 }
 
+export function assignAdvancedPlaygroundInitialNotes() {
+  let fret = diagramHelper.getFret(0);
+  let fretNotes = Array.from(fret.querySelectorAll("div.note"));
+  fretNotes.forEach(note => {
+    note.insertAdjacentHTML("afterbegin", advancedPlaygroundInitialNotesOptions());
+  })
+}
+
+function advancedPlaygroundInitialNotesOptions() {
+  //needs to knows the sharpflatbutton value later
+  let options = '';
+  scalesHelper.notes.forEach(note => {
+    options += `<option value="${note}">${note}</option>`;
+  });
+  return `<select>${options}</select>`
+}
+
 function resetStyle() {
   let fretElement = document.getElementsByClassName("fret");
 
@@ -131,7 +155,7 @@ function resetStyle() {
   });
 }
 
-function assignInitialNotes(initialNotes) {
+export function assignInitialNotes(initialNotes) {
   let firstFretDiv = document.getElementsByClassName("fret")[0];
 
   let noteArray = uiScalesHelper.getNoteElementsFromFret(firstFretDiv);
@@ -141,7 +165,7 @@ function assignInitialNotes(initialNotes) {
   }
 }
 
-function assignSubSequentialNotes() {
+export function assignSubSequentialNotes() {
   let fretElement = document.getElementsByClassName("fret");
   let diagramAssignedNotes = {};
 
@@ -175,6 +199,56 @@ function assignSubSequentialNotes() {
     }
   }
   
+}
+
+export function assignAdvancedModeSubSequentialNotes() {
+  let fretElement = document.getElementsByClassName("fret");
+  let diagramAssignedNotes = {};
+  console.log();
+  for (let i = 0; i < fretElement.length; i++) {
+    const fret = fretElement[i];
+    if (i == 0) { //first fret
+      Object.values(uiScalesHelper.getNoteElementsFromFret(fret)).forEach(element => { //notes on first fret
+        Object.defineProperty(diagramAssignedNotes, element.getAttribute("data-fretboard-string-number"), { value: scalesController.getOctaves(2, scalesController.getChromaticScale(element.querySelector("select").value)), configurable: true })
+      });
+    } else { //sequential frets
+      Object.values(uiScalesHelper.getNoteElementsFromFret(fret)).forEach(element => {
+        if(element.getAttribute("data-fretboard-string-number") == 6){
+          element.textContent = diagramAssignedNotes[element.getAttribute("data-fretboard-string-number")][i];
+        }
+        if(element.getAttribute("data-fretboard-string-number") == 5){
+          element.textContent = diagramAssignedNotes[element.getAttribute("data-fretboard-string-number")][i];
+        }
+        if(element.getAttribute("data-fretboard-string-number") == 4){
+          element.textContent = diagramAssignedNotes[element.getAttribute("data-fretboard-string-number")][i];
+        }
+        if(element.getAttribute("data-fretboard-string-number") == 3){
+          element.textContent = diagramAssignedNotes[element.getAttribute("data-fretboard-string-number")][i];
+        }
+        if(element.getAttribute("data-fretboard-string-number") == 2){
+          element.textContent = diagramAssignedNotes[element.getAttribute("data-fretboard-string-number")][i];
+        }
+        if(element.getAttribute("data-fretboard-string-number") == 1){
+          element.textContent = diagramAssignedNotes[element.getAttribute("data-fretboard-string-number")][i];
+        }
+      });
+    }
+  }
+  
+}
+
+export function assignStringNotesFromInitialNote(stringNumber, value) {
+  let stringNotes = Array.from(diagramHelper.diagramDiv.querySelectorAll(`div.note[data-fretboard-string-number="${stringNumber}"]`));
+  stringNotes.shift();
+  console.log(stringNotes);
+  let scaleToServe = scalesController.getOctaves(2, scalesController.getChromaticScale(scalesController.flatNoteToSharp(value)));
+  scaleToServe.shift();
+  console.log(scaleToServe);
+
+  for (let i = 0; i < stringNotes.length; i++) {
+    const note = stringNotes[i];
+    note.textContent = scaleToServe[i];
+  }
 }
 
 console.log("diagramController.js LOADED");

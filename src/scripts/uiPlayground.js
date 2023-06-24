@@ -78,15 +78,28 @@ function assignPlaygroundOptionsButtonsEventListeners() {
   })
 }
 
+function assignPlaygroundInstrumentButtonsEventListeners() {
+  guitarBtn = document.getElementById("guitarBtn");
+  bassBtn = document.getElementById("bassBtn");
+  pianoBtn = document.getElementById("pianoBtn");
+
+  uiTranslation.translateElements([guitarBtn, bassBtn, pianoBtn]);
+  
+  guitarBtn.addEventListener("click", showInstrumentDiagram);
+  bassBtn.addEventListener("click", showInstrumentDiagram);
+  pianoBtn.addEventListener("click", showInstrumentDiagram);
+}
+
 function handleShowPlayground(e) {
-  console.log(e.target);
+  let diagramDiv = diagramHelper.diagramDiv;
   if(e.target.value.toLowerCase().includes("freeplay")){
+    diagramDiv.setAttribute("data-diagram-mode","freeplay");
     showFreePlayPlayground();
   }
   if(e.target.value.toLowerCase().includes("advanced")){
+    diagramDiv.setAttribute("data-diagram-mode","advanced");
     showAdvancedPlayground();
   }
-
 }
 
 function showFreePlayPlayground(){
@@ -102,24 +115,12 @@ function showFreePlayPlayground(){
     generatePlaygroundOptionsButtons();
     assignPlaygroundOptionsButtonsEventListeners();
   }
-  
-  //needs abstraction
-    guitarBtn = document.getElementById("guitarBtn");
-    bassBtn = document.getElementById("bassBtn");
-    pianoBtn = document.getElementById("pianoBtn");
-    uiTranslation.translateElements([guitarBtn, bassBtn, pianoBtn]);
-    
-    guitarBtn.addEventListener("click", showInstrumentDiagram);
-    bassBtn.addEventListener("click", showInstrumentDiagram);
-    pianoBtn.addEventListener("click", showInstrumentDiagram);
-
-    tunningSelect = document.getElementById("tunning");
-    rootNoteSelect = document.getElementById("root");
-    scaleSelect = document.getElementById("scale");
-    sharpFlatBtn = document.getElementById("sharpFlatBtn");
-
-    sharpFlatBtn.addEventListener("click", uiPlaygroundHelper.handleSharpFlatButtonValue);
-  //
+  assignPlaygroundInstrumentButtonsEventListeners();
+  tunningSelect = document.getElementById("tunning");
+  rootNoteSelect = document.getElementById("root");
+  scaleSelect = document.getElementById("scale");
+  sharpFlatBtn = document.getElementById("sharpFlatBtn");
+  sharpFlatBtn.addEventListener("click", uiPlaygroundHelper.handleSharpFlatButtonValue);
   uiPlaygroundController.loadDefaultDiagram();
   uiPlaygroundController.updatePlaygroundUiOptions("guitar");
   assignNotesDefaultStyle();
@@ -157,7 +158,13 @@ function showAdvancedPlayground(){
   bassBtn.addEventListener("click", showInstrumentDiagram);
   pianoBtn.addEventListener("click", showInstrumentDiagram);
 
-  uiPlaygroundController.loadDefaultDiagram();
+  uiPlaygroundController.loadDefaultAdvancedDiagram();
+  uiPlaygroundHelper.assignEventListenersToAdvancedModeInitialNotes();
+  diagramController.assignAdvancedModeSubSequentialNotes();
+}
+
+export function handleAdvancedPlaygroundInitialNotes(e) {
+  diagramController.assignStringNotesFromInitialNote(e.target.parentElement.getAttribute("data-fretboard-string-number"), e.target.value);
 }
 
 function showInstrumentDiagram(e) {
@@ -190,13 +197,21 @@ function assignNotesStyle() {
 
 //should be in helper
 export function assignNotesDefaultStyle() {
-  let paramField0 = document.getElementById("root").value;
-  let paramField1 = document.getElementById("scale").value;
-  let paramField2 = document.getElementById("tunning").value;
-  let paramField3 = document.getElementById("sharpFlatBtn").querySelector("button").value;
+  
+  if(diagramHelper.diagramDiv.getAttribute("data-diagram-mode") == "freeplay"){
+    let paramField0 = document.getElementById("root").value;
+    let paramField1 = document.getElementById("scale").value;
+    let paramField2 = document.getElementById("tunning").value;
+    let paramField3 = document.getElementById("sharpFlatBtn").querySelector("button").value;
+  
+    let intervals = paramField1.split(","); //should be an function in helper
+    diagramController.assignNotesFromTunningNotes(paramField2);
+    diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(paramField0, intervals), paramField3);
+  }
 
-  let intervals = paramField1.split(","); //should be an function in helper
-  diagramController.assignNotesFromTunningNotes(paramField2);
-  diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(paramField0, intervals), paramField3);
+  if(diagramHelper.diagramDiv.getAttribute("data-diagram-mode") == "advanced"){
+    //todo, if needed
+  }
 }
+
 console.log("uiPlayground.js LOADED");

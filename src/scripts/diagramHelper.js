@@ -34,6 +34,10 @@ export function generateFretNote(notesPerFret, currentFret) {
   return fretNoteHtmlStructure;
 }
 
+export function getFret(n) {
+  return Array.from(diagramDiv.getElementsByClassName("fret")).find(fret => fret.getAttribute("data-fret-number") == n);
+}
+
 function getFretNoteIdentifier(notesPerFret) {
   return notesPerFret+1;
 }

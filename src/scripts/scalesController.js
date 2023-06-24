@@ -92,7 +92,7 @@ export function sharpNoteToFlat(sharpNote) { //if the note has a # sign, it conv
 
 export function flatNoteToSharp(flatNote) {
   if(!flatNote.includes("b")){
-    return sharpNote;
+    return flatNote;
   }
 
   flatNote = flatNote.substring(0,1);
