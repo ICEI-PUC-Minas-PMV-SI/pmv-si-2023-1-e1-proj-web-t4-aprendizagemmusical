@@ -6,17 +6,17 @@
         "notes": "E,A,D,G,B,E"
       },
       {
+        "label": "Half-step Down",
+        "notes": "D#,G#,C#,F#,A#,D#"
+      },
+      {
         "label": "Drop D",
         "notes": "D,A,D,G,B,E"
       },
       {
         "label": "Open G",
         "notes": "D,G,D,G,B,D"
-      },
-      {
-        "label": "Half-step Down",
-        "notes": "D#,G#,C#,F#,A#,D#"
-      }
+      } 
     ],
     "scales": [
       {
@@ -30,6 +30,14 @@
       {
         "label": "Minor Scale",
         "intervals": [0,2,3,5,7,8,10]
+      },
+      {
+        "label": "Minor Pentatonic Scale",
+        "intervals":  [0,3,5,7,10]
+      },
+      {
+        "label": "Minor Blues Pentatonic Scale",
+        "intervals":  [0,3,5,6,7,10]
       }
     ]
   },
@@ -64,6 +72,14 @@
       {
         "label": "Minor Scale",
         "intervals": [0,2,3,5,7,8,10]
+      },
+      {
+        "label": "Minor Pentatonic Scale",
+        "intervals":  [0,3,5,7,10]
+      },
+      {
+        "label": "Minor Blues Pentatonic Scale",
+        "intervals":  [0,3,5,6,7,10]
       }
     ]
   },
@@ -86,6 +102,14 @@
       {
         "label": "Minor Scale",
         "intervals": [0,2,3,5,7,8,10]
+      },
+      {
+        "label": "Minor Pentatonic Scale",
+        "intervals":  [0,3,5,7,10]
+      },
+      {
+        "label": "Minor Blues Pentatonic Scale",
+        "intervals":  [0,3,5,6,7,10]
       }
     ]
   }
