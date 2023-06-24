@@ -61,6 +61,14 @@ export function iterateThroughNotes() {
 export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, showMinor3rds, show5ths) {
   resetStyle();
   let fretElement = document.getElementsByClassName("fret");
+  let selectedTheme = localStorage.getItem("theme") == undefined ? "dark" : localStorage.getItem("theme");
+  
+  let styleScaleNotes = `var(--${selectedTheme}-highlight-scale-note)`;
+  let styleScaleRootNote = `var(--${selectedTheme}-highlight-root-note)`;
+  let styleScale3rdMajorNote = `var(--${selectedTheme}-highlight-3rdMajor-note)`;
+  let styleScale3rdMinorNote = `var(--${selectedTheme}-highlight-3rdMinor-note)`;
+  let styleScale5thNote = `var(--${selectedTheme}-highlight-5th-note)`;
+
 
   Object.values(fretElement).forEach(fret => {
     let noteElement = fret.getElementsByClassName("note");
@@ -73,24 +81,24 @@ export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, sho
       //change textContent for value later
       if(sharpFlatValue.includes("#")) {
         if(notes.includes(note.textContent)){
-          note.style.backgroundColor = "red";
+          note.style.backgroundColor = styleScaleNotes;
         }
         if(notes[0] == note.textContent) {
-          note.style.backgroundColor = "yellow";
+          note.style.backgroundColor = styleScaleRootNote;
         }
         if(showMajor3rds) {
           if(majorThirdFromRoot == note.textContent) {
-            note.style.backgroundColor = "orange";
+            note.style.backgroundColor = styleScale3rdMajorNote;
           }
         }
         if(showMinor3rds) {
           if(minorThirdFromRoot == note.textContent) {
-            note.style.backgroundColor = "orange";
+            note.style.backgroundColor = styleScale3rdMinorNote;
           }
         }
         if(show5ths) {
           if(fifthFromRoot == note.textContent) {
-            note.style.backgroundColor = "blue";
+            note.style.backgroundColor = styleScale5thNote;
           }
         }
       }
@@ -99,25 +107,25 @@ export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, sho
         let scaleFlatNotes = scalesController.getScaleFlatNotes(notes);
         
         if(scaleFlatNotes.includes(note.textContent)){
-          note.style.backgroundColor = "red";
+          note.style.backgroundColor = styleScaleNotes;
         }
         if(scaleFlatNotes[0] == note.textContent) {
-          note.style.backgroundColor = "yellow";
+          note.style.backgroundColor = styleScaleRootNote;
         }
 
         if(showMajor3rds) {
           if(scalesController.sharpNoteToFlat(majorThirdFromRoot) == note.textContent) {
-            note.style.backgroundColor = "orange";
+            note.style.backgroundColor = styleScale3rdMajorNote;
           }
         }
         if(showMinor3rds) {
           if(scalesController.sharpNoteToFlat(minorThirdFromRoot) == note.textContent) {
-            note.style.backgroundColor = "orange";
+            note.style.backgroundColor = styleScale3rdMinorNote;
           }
         }
         if(show5ths) {
           if(scalesController.sharpNoteToFlat(fifthFromRoot) == note.textContent) {
-            note.style.backgroundColor = "blue";
+            note.style.backgroundColor = styleScale5thNote;
           }
         }
       }

@@ -4,6 +4,19 @@
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
 }
+:root {
+  --light-highlight-root-note: yellow;
+  --light-highlight-scale-note: red;
+  --light-highlight-3rdMajor-note: orange;
+  --light-highlight-3rdMinor-note: orange;
+  --light-highlight-5th-note: blue;
+
+  --dark-highlight-root-note: #eba327;
+  --dark-highlight-scale-note: #4f3c3c;
+  --dark-highlight-3rdMajor-note: #913434;
+  --dark-highlight-3rdMinor-note: #913434;
+  --dark-highlight-5th-note: #3e1b32;
+}
 #minimalNav {
   grid-column: 1/6;
 
@@ -137,7 +150,10 @@
   display: flex;
 }
 .dark .note {
+  cursor: crosshair;
+  color: white;
   box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
+  font-size: 0.8em;
 }
 .dark .fretCount {
   color: white;
@@ -238,4 +254,5 @@
   .chooseInstrumentDiv {
     flex-direction: initial;
   }
+
 }
