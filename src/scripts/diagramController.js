@@ -53,19 +53,56 @@ export function iterateThroughNotesAdvancedMode() {
   fretElement.forEach(fret => {
     let noteElement = fret.getElementsByClassName("note");
     Object.values(noteElement).forEach(note => {
-      note.addEventListener("click", manualHighlightAdvancedMode)
+      note.addEventListener("click", manualHighlightAdvancedMode);
+      note.addEventListener("contextmenu", manualHighlightAdvancedMode);
     })
   })
-
 }
+
 function manualHighlightAdvancedMode(e) {
   //when a user changes the initial note, the program needs to check if the change is ascendent or descendent
   //if ascendent > search the nearest ABOVE note div that contains the same textContent
   //if descendent > search the nearest BELOW note div that contains the same textContent
   //but first, the program should gather the all notes manually added by the user, before making a destructive change to the UI.
   //console.log(e.target);
-  e.target.style.backgroundColor = "red";
-  e.target.setAttribute("data-manually-marked", true);
+  //e.target.style.backgroundColor = "red";
+  if(e.type == "click") {
+    handleManualHighlightColors(e);
+    e.target.setAttribute("data-manually-marked", true);
+    e.target.setAttribute("data-manually-chosen-color", e.target.style.backgroundColor);
+  }
+  if(e.type == "contextmenu") {
+    e.preventDefault();
+    removeManualHighlight(e.target);
+  }
+}
+function removeManualHighlight(element) {
+  element.style.backgroundColor = "";
+  element.removeAttribute("data-manually-marked");
+  element.removeAttribute("data-manually-chosen-color");
+}
+
+function handleManualHighlightColors(e) {
+  if(e.target.style.backgroundColor == '' || e.target.style.backgroundColor == undefined) {
+    e.target.style.backgroundColor = "red"; //change to css color later
+    return;
+  }
+  if(e.target.style.backgroundColor == "red") {
+    e.target.style.backgroundColor = "green";
+    return;
+  }
+  if(e.target.style.backgroundColor == "green") {
+    e.target.style.backgroundColor = "tomato";
+    return;
+  }
+  if(e.target.style.backgroundColor == "tomato") {
+    e.target.style.backgroundColor = "blue";
+    return;
+  }
+  if(e.target.style.backgroundColor == "blue") {
+    e.target.style.backgroundColor = "red";
+    return;
+  }
 }
 
 export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, showMinor3rds, show5ths) {

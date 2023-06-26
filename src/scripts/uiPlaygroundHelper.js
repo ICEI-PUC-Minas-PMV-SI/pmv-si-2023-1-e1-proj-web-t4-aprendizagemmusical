@@ -62,44 +62,60 @@ export function reallocateManuallyMarkedNoteStyles(stringNumber, isAscendent, st
   
   let sharpFlatBtnTag = document.querySelector("#sharpFlatBtn");
   let sharpFlatBtn = sharpFlatBtnTag.querySelector("button");
-  console.log(sharpFlatBtn.value);
   //TODO
     //ARRANGE FOR WHEN THE USER AT SHOW Flat option
       //Do the logic using the sharp, than convert it all
   if(isAscendent) {
     let stringNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-fretboard-string-number="${stringNumber}"]`));
     let stringMarkedNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-manually-marked="true"][data-fretboard-string-number="${stringNumber}"]`));
-    let markedFretNumbersNotes = [];
+    let markedNoteData = [];
+    
     stringMarkedNotesArray.forEach(note => {
-      markedFretNumbersNotes.push(note.getAttribute("data-fretboard-fret-number"));
-      note.style.backgroundColor = "transparent";
+      let obj = {};
+      obj["position"] = note.getAttribute("data-fretboard-fret-number");
+      obj["chosenColor"] = note.getAttribute("data-manually-chosen-color");
+      markedNoteData.push(obj);
+
+      note.style.backgroundColor = "";
       note.removeAttribute("data-manually-marked");
+      note.removeAttribute("data-manually-chosen-color");
     });
-    let newArr = markedFretNumbersNotes.map(x => x-stepsApart);
-    stringNotesArray.forEach(note => {     
-      if(newArr.includes(parseInt(note.getAttribute("data-fretboard-fret-number")))) {
+    
+    markedNoteData.forEach(markedNote => markedNote.position = markedNote.position-stepsApart)
+    stringNotesArray.map(note => {
+      let foundNote = markedNoteData.find(markedObject => markedObject.position == note.getAttribute("data-fretboard-fret-number"));
+      if(foundNote) {
         note.setAttribute("data-manually-marked", true);
-        note.style.backgroundColor = "red";
+        note.setAttribute("data-manually-chosen-color", foundNote.chosenColor);
+        note.style.backgroundColor = foundNote.chosenColor;
       }
-    });
+    })
 
   } else {
     let stringNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-fretboard-string-number="${stringNumber}"]`));
     let stringMarkedNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-manually-marked="true"][data-fretboard-string-number="${stringNumber}"]`));
-    let markedFretNumbersNotes = [];
+    let markedNoteData = [];
+
     stringMarkedNotesArray.forEach(note => {
-      markedFretNumbersNotes.push(note.getAttribute("data-fretboard-fret-number"));
-      note.style.backgroundColor = "transparent";
+      let obj = {};
+      obj["position"] = note.getAttribute("data-fretboard-fret-number");
+      obj["chosenColor"] = note.getAttribute("data-manually-chosen-color");
+      markedNoteData.push(obj);
+
+      note.style.backgroundColor = "";
       note.removeAttribute("data-manually-marked");
+      note.removeAttribute("data-manually-chosen-color");
     });
 
-    let newArr = markedFretNumbersNotes.map(markedFretNumber => parseInt(markedFretNumber) + 12 - stepsApart + (stepsApart >= 12 ? 12 : 0) );
-    stringNotesArray.forEach(note => {     
-      if(newArr.includes(parseInt(note.getAttribute("data-fretboard-fret-number")))) {
+    markedNoteData.forEach(markedNote => markedNote.position = parseInt(markedNote.position) + 12 - stepsApart + (stepsApart >= 12 ? 12 : 0));
+    stringNotesArray.map(note => {
+      let foundNote = markedNoteData.find(markedObject => markedObject.position == note.getAttribute("data-fretboard-fret-number"));
+      if(foundNote) {
         note.setAttribute("data-manually-marked", true);
-        note.style.backgroundColor = "red";
+        note.setAttribute("data-manually-chosen-color", foundNote.chosenColor);
+        note.style.backgroundColor = foundNote.chosenColor;
       }
-    });
+    })
   }
 }
 
@@ -135,10 +151,11 @@ export function changeDiagramAccidentalNotes() {
   }
 
   if(diagramHelper.diagramDiv.getAttribute("data-diagram-mode") == "advanced"){
+    
     if(sharpFlatBtnTag.value == "b") {
       let fretArray = diagramDiv.getElementsByClassName("fret");
       Object.values(fretArray).forEach(fret => { //each fret logic
-        
+
         if(fret.getAttribute("data-fret-number") == 0) {
           Array.from(fret.querySelectorAll("select")).forEach(select => {
             Array.from(fret.querySelectorAll("option")).forEach(option => {
@@ -182,6 +199,58 @@ export function changeDiagramAccidentalNotes() {
       return;
     }
   }
+}
+
+export function forceSharpLayout(sharp) {
+
+
+  if(!sharp) {
+    let fretArray = diagramDiv.getElementsByClassName("fret");
+    Object.values(fretArray).forEach(fret => { //each fret logic
+      if(fret.getAttribute("data-fret-number") == 0) {
+        Array.from(fret.querySelectorAll("select")).forEach(select => {
+          Array.from(fret.querySelectorAll("option")).forEach(option => {
+            option.text = convertFlatToSharp(option.text);
+            option.value = convertFlatToSharp(option.value);
+          });
+        });
+      } else {
+        const notesArray = fret.getElementsByClassName("note");
+        Object.values(notesArray).forEach(note => { //each note
+          if(note.textContent.includes("b")){
+            note.textContent = scalesController.flatNoteToSharp(note.textContent);
+          }
+        })
+      }
+
+    });
+    return;
+  }
+
+  if(sharp) {
+    let fretArray = diagramDiv.getElementsByClassName("fret");
+    Object.values(fretArray).forEach(fret => { //each fret logic
+
+      if(fret.getAttribute("data-fret-number") == 0) {
+        Array.from(fret.querySelectorAll("select")).forEach(select => {
+          Array.from(fret.querySelectorAll("option")).forEach(option => {
+            option.text = convertSharpToFlat(option.text);
+            option.value = convertSharpToFlat(option.value);
+          });
+        });
+      } else {
+        const notesArray = fret.getElementsByClassName("note");
+        Object.values(notesArray).forEach(note => { //each note
+          if(note.textContent.includes("#")){
+            note.textContent = scalesController.sharpNoteToFlat(note.textContent);
+          }
+        });
+      }
+
+    });
+    return;
+  }
+
 }
 
 export function convertSharpToFlat(note){

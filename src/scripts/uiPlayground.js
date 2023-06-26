@@ -169,6 +169,9 @@ function storeInitialNotePreviousValue(element) {
   initialNotePreviousValue = element.value;
 }
 export function handleAdvancedPlaygroundInitialNotes(e) {
+  let sharpFlatBtnTag = document.querySelector("#sharpFlatBtn");
+  let sharpFlatBtn = sharpFlatBtnTag.querySelector("button");
+
   if(e.type == "focus") {
     storeInitialNotePreviousValue(e.target);
   }
@@ -176,12 +179,14 @@ export function handleAdvancedPlaygroundInitialNotes(e) {
     let newValue = e.target.value;
     let isAscendent = uiPlaygroundHelper.isChosenInitialNoteAscendent(initialNotePreviousValue, newValue);
     diagramController.assignStringNotesFromInitialNote(e.target.parentElement.getAttribute("data-fretboard-string-number"), e.target.value);
+    
     let stepsApart = scaleController.getHalfStepsApart(initialNotePreviousValue, newValue);
-    if(isAscendent) {
-      uiPlaygroundHelper.reallocateManuallyMarkedNoteStyles(e.target.parentElement.getAttribute("data-fretboard-string-number"), isAscendent, stepsApart);
-    } else {
-      uiPlaygroundHelper.reallocateManuallyMarkedNoteStyles(e.target.parentElement.getAttribute("data-fretboard-string-number"), isAscendent, stepsApart);
-    }
+    //uiPlaygroundHelper.forceSharpLayout();
+    uiPlaygroundHelper.reallocateManuallyMarkedNoteStyles(e.target.parentElement.getAttribute("data-fretboard-string-number"), isAscendent, stepsApart);
+
+    // if(sharpFlatBtn.value == "b") {
+    //   uiPlaygroundHelper.changeDiagramAccidentalNotes();
+    // }
   }
   e.target.blur();
 }
