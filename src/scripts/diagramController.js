@@ -260,7 +260,6 @@ export function assignSubSequentialNotes() {
 export function assignAdvancedModeSubSequentialNotes() {
   let fretElement = document.getElementsByClassName("fret");
   let diagramAssignedNotes = {};
-  console.log();
   for (let i = 0; i < fretElement.length; i++) {
     const fret = fretElement[i];
     if (i == 0) { //first fret

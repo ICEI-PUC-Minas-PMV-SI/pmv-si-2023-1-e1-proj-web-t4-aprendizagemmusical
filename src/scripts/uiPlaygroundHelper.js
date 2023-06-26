@@ -59,7 +59,6 @@ export function isChosenInitialNoteAscendent(oldValue, newValue) {
 }
 
 export function reallocateManuallyMarkedNoteStyles(stringNumber, isAscendent, stepsApart) {
-  
   let sharpFlatBtnTag = document.querySelector("#sharpFlatBtn");
   let sharpFlatBtn = sharpFlatBtnTag.querySelector("button");
   //TODO
@@ -98,7 +97,7 @@ export function reallocateManuallyMarkedNoteStyles(stringNumber, isAscendent, st
 
     stringMarkedNotesArray.forEach(note => {
       let obj = {};
-      obj["position"] = note.getAttribute("data-fretboard-fret-number");
+      obj["position"] = parseInt(note.getAttribute("data-fretboard-fret-number"));
       obj["chosenColor"] = note.getAttribute("data-manually-chosen-color");
       markedNoteData.push(obj);
 
@@ -106,7 +105,6 @@ export function reallocateManuallyMarkedNoteStyles(stringNumber, isAscendent, st
       note.removeAttribute("data-manually-marked");
       note.removeAttribute("data-manually-chosen-color");
     });
-
     markedNoteData.forEach(markedNote => markedNote.position = parseInt(markedNote.position) + 12 - stepsApart + (stepsApart >= 12 ? 12 : 0));
     stringNotesArray.map(note => {
       let foundNote = markedNoteData.find(markedObject => markedObject.position == note.getAttribute("data-fretboard-fret-number"));
@@ -202,9 +200,7 @@ export function changeDiagramAccidentalNotes() {
 }
 
 export function forceSharpLayout(sharp) {
-
-
-  if(!sharp) {
+  if(sharp) {
     let fretArray = diagramDiv.getElementsByClassName("fret");
     Object.values(fretArray).forEach(fret => { //each fret logic
       if(fret.getAttribute("data-fret-number") == 0) {
@@ -226,31 +222,6 @@ export function forceSharpLayout(sharp) {
     });
     return;
   }
-
-  if(sharp) {
-    let fretArray = diagramDiv.getElementsByClassName("fret");
-    Object.values(fretArray).forEach(fret => { //each fret logic
-
-      if(fret.getAttribute("data-fret-number") == 0) {
-        Array.from(fret.querySelectorAll("select")).forEach(select => {
-          Array.from(fret.querySelectorAll("option")).forEach(option => {
-            option.text = convertSharpToFlat(option.text);
-            option.value = convertSharpToFlat(option.value);
-          });
-        });
-      } else {
-        const notesArray = fret.getElementsByClassName("note");
-        Object.values(notesArray).forEach(note => { //each note
-          if(note.textContent.includes("#")){
-            note.textContent = scalesController.sharpNoteToFlat(note.textContent);
-          }
-        });
-      }
-
-    });
-    return;
-  }
-
 }
 
 export function convertSharpToFlat(note){

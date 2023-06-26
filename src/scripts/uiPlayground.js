@@ -177,16 +177,13 @@ export function handleAdvancedPlaygroundInitialNotes(e) {
   }
   if(e.type == "change") {
     let newValue = e.target.value;
-    let isAscendent = uiPlaygroundHelper.isChosenInitialNoteAscendent(initialNotePreviousValue, newValue);
+    let isAscendent = uiPlaygroundHelper.isChosenInitialNoteAscendent(scaleController.flatNoteToSharp(initialNotePreviousValue), scaleController.flatNoteToSharp(newValue));
     diagramController.assignStringNotesFromInitialNote(e.target.parentElement.getAttribute("data-fretboard-string-number"), e.target.value);
     
-    let stepsApart = scaleController.getHalfStepsApart(initialNotePreviousValue, newValue);
-    //uiPlaygroundHelper.forceSharpLayout();
+    let stepsApart = scaleController.getHalfStepsApart(scaleController.flatNoteToSharp(initialNotePreviousValue), scaleController.flatNoteToSharp(newValue));
+    uiPlaygroundHelper.forceSharpLayout((sharpFlatBtn.value == "b"));
     uiPlaygroundHelper.reallocateManuallyMarkedNoteStyles(e.target.parentElement.getAttribute("data-fretboard-string-number"), isAscendent, stepsApart);
-
-    // if(sharpFlatBtn.value == "b") {
-    //   uiPlaygroundHelper.changeDiagramAccidentalNotes();
-    // }
+    uiPlaygroundHelper.changeDiagramAccidentalNotes();
   }
   e.target.blur();
 }
