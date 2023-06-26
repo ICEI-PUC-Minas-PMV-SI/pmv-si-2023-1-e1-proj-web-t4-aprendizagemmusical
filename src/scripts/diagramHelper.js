@@ -28,7 +28,7 @@ export function generateFretNote(notesPerFret, currentFret) {
       fretNoteHtmlStructure += html;
       continue;
     }
-    let html = `<div class="note" data-fretboard-string-number=${(notesPerFret-i)+1}></div>`;
+    let html = `<div class="note" data-fretboard-string-number=${(notesPerFret-i)+1} data-fretboard-fret-number=${currentFret}></div>`;
     fretNoteHtmlStructure += html;
   }
   return fretNoteHtmlStructure;

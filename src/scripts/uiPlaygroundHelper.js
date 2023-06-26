@@ -1,5 +1,6 @@
 import instrumentsObject from '../assets/json/instruments.json' assert { type: 'json' };
-import { notes } from './scalesHelper.js';
+import { notes, getNoteIndex } from './scalesHelper.js';
+import * as scalesHelper from './scalesHelper.js';
 import {tunningSelect, rootNoteSelect, scaleSelect, sharpFlatBtn} from './uiPlayground.js';
 import * as scalesController from'./scalesController.js';
 import { diagramDiv }  from './diagramHelper.js';
@@ -41,7 +42,9 @@ export function assignEventListenersToAdvancedModeInitialNotes() {
   let fret = diagramHelper.getFret(0);
   let fretNotes = Array.from(fret.querySelectorAll("div.note"));
   fretNotes.forEach(note => {
-    note.addEventListener("change", uiPlayground.handleAdvancedPlaygroundInitialNotes);
+    let selectElement = note.querySelector("select");
+    selectElement.addEventListener("focus", uiPlayground.handleAdvancedPlaygroundInitialNotes);
+    selectElement.addEventListener("change", uiPlayground.handleAdvancedPlaygroundInitialNotes);
   });
   let selectFieldValue = Array.from(fret.querySelectorAll("div.note select"));
 
@@ -49,6 +52,55 @@ export function assignEventListenersToAdvancedModeInitialNotes() {
   selectFieldValue.forEach(select => {
     defaultNoteArray.push(select.value);
   });
+}
+
+export function isChosenInitialNoteAscendent(oldValue, newValue) {
+  return scalesHelper.getNoteIndex(newValue) > scalesHelper.getNoteIndex(oldValue) == true ? true : false; 
+}
+
+export function reallocateManuallyMarkedNoteStyles(stringNumber, isAscendent, stepsApart) {
+  
+  let sharpFlatBtnTag = document.querySelector("#sharpFlatBtn");
+  let sharpFlatBtn = sharpFlatBtnTag.querySelector("button");
+  console.log(sharpFlatBtn.value);
+  //TODO
+    //ARRANGE FOR WHEN THE USER AT SHOW Flat option
+      //Do the logic using the sharp, than convert it all
+  if(isAscendent) {
+    let stringNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-fretboard-string-number="${stringNumber}"]`));
+    let stringMarkedNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-manually-marked="true"][data-fretboard-string-number="${stringNumber}"]`));
+    let markedFretNumbersNotes = [];
+    stringMarkedNotesArray.forEach(note => {
+      markedFretNumbersNotes.push(note.getAttribute("data-fretboard-fret-number"));
+      note.style.backgroundColor = "transparent";
+      note.removeAttribute("data-manually-marked");
+    });
+    let newArr = markedFretNumbersNotes.map(x => x-stepsApart);
+    stringNotesArray.forEach(note => {     
+      if(newArr.includes(parseInt(note.getAttribute("data-fretboard-fret-number")))) {
+        note.setAttribute("data-manually-marked", true);
+        note.style.backgroundColor = "red";
+      }
+    });
+
+  } else {
+    let stringNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-fretboard-string-number="${stringNumber}"]`));
+    let stringMarkedNotesArray = Array.from(diagramDiv.querySelectorAll(`div.note[data-manually-marked="true"][data-fretboard-string-number="${stringNumber}"]`));
+    let markedFretNumbersNotes = [];
+    stringMarkedNotesArray.forEach(note => {
+      markedFretNumbersNotes.push(note.getAttribute("data-fretboard-fret-number"));
+      note.style.backgroundColor = "transparent";
+      note.removeAttribute("data-manually-marked");
+    });
+
+    let newArr = markedFretNumbersNotes.map(markedFretNumber => parseInt(markedFretNumber) + 12 - stepsApart + (stepsApart >= 12 ? 12 : 0) );
+    stringNotesArray.forEach(note => {     
+      if(newArr.includes(parseInt(note.getAttribute("data-fretboard-fret-number")))) {
+        note.setAttribute("data-manually-marked", true);
+        note.style.backgroundColor = "red";
+      }
+    });
+  }
 }
 
 export function changeDiagramAccidentalNotes() {

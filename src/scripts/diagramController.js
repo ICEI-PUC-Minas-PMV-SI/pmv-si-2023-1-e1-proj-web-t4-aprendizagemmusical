@@ -46,16 +46,26 @@ export function assignNotesFromTunningNotes(initialNotes) {
   uiPlaygroundHelper.changeDiagramAccidentalNotes();
 }
 
-export function iterateThroughNotes() {
-  let fretElement = document.getElementsByClassName("fret");
-
-  Object.values(fretElement).forEach(fret => {
+export function iterateThroughNotesAdvancedMode() {
+  let fretElement = Array.from(document.getElementsByClassName("fret"));
+  fretElement.shift();
+  
+  fretElement.forEach(fret => {
     let noteElement = fret.getElementsByClassName("note");
-    
     Object.values(noteElement).forEach(note => {
-      console.log(note);
+      note.addEventListener("click", manualHighlightAdvancedMode)
     })
-  });
+  })
+
+}
+function manualHighlightAdvancedMode(e) {
+  //when a user changes the initial note, the program needs to check if the change is ascendent or descendent
+  //if ascendent > search the nearest ABOVE note div that contains the same textContent
+  //if descendent > search the nearest BELOW note div that contains the same textContent
+  //but first, the program should gather the all notes manually added by the user, before making a destructive change to the UI.
+  //console.log(e.target);
+  e.target.style.backgroundColor = "red";
+  e.target.setAttribute("data-manually-marked", true);
 }
 
 export function assignStyleToIntervals(notes, sharpFlatValue, showMajor3rds, showMinor3rds, show5ths) {
@@ -152,6 +162,7 @@ function advancedPlaygroundInitialNotesOptions() {
 }
 
 function resetStyle() {
+  //needs to knows the sharpflatbutton value later
   let fretElement = document.getElementsByClassName("fret");
 
   Object.values(fretElement).forEach(fret => {
@@ -248,11 +259,8 @@ export function assignAdvancedModeSubSequentialNotes() {
 export function assignStringNotesFromInitialNote(stringNumber, value) {
   let stringNotes = Array.from(diagramHelper.diagramDiv.querySelectorAll(`div.note[data-fretboard-string-number="${stringNumber}"]`));
   stringNotes.shift();
-  console.log(stringNotes);
   let scaleToServe = scalesController.getOctaves(2, scalesController.getChromaticScale(scalesController.flatNoteToSharp(value)));
   scaleToServe.shift();
-  console.log(scaleToServe);
-
   for (let i = 0; i < stringNotes.length; i++) {
     const note = stringNotes[i];
     note.textContent = scaleToServe[i];

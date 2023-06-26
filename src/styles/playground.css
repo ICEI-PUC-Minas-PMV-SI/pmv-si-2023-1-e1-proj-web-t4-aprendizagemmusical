@@ -5,11 +5,11 @@
   font-family: 'Rubik', sans-serif;
 }
 :root {
-  --light-highlight-root-note: yellow;
-  --light-highlight-scale-note: red;
-  --light-highlight-3rdMajor-note: orange;
-  --light-highlight-3rdMinor-note: orange;
-  --light-highlight-5th-note: blue;
+  --light-highlight-root-note: #eba327;
+  --light-highlight-scale-note: #2d887d;
+  --light-highlight-3rdMajor-note: #1b8f45;
+  --light-highlight-3rdMinor-note: #1b8f45;
+  --light-highlight-5th-note: #da452d;
 
   --dark-highlight-root-note: #eba327;
   --dark-highlight-scale-note: #4f3c3c;
@@ -129,6 +129,9 @@
   align-self: self-end;
   width: 100%;
   height: min-content;
+}
+.fret, .note {
+  grid-gap: 1px;
 }
 .note, .fretCount {
   display: flex;

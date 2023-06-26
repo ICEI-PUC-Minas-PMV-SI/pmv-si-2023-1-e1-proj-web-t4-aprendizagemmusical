@@ -34,7 +34,16 @@ export function getMajorScale(rootNote) { //get some intervals that creates a ma
   }
   return majorScaleArray;
 }
-
+export function getHalfStepsApart(firstNote, secondNote) {
+  let firstIndex = scalesHelper.getNoteIndex(firstNote);
+  let secondIndex = scalesHelper.getNoteIndex(secondNote);
+  
+  let halfSteps = secondIndex - firstIndex;
+  if (halfSteps < 0) {
+      halfSteps += 12;
+  }
+  return halfSteps;
+}
 export function getScaleCustomIntervals(rootNote, intervalsArray) {
   let majorScaleArray = [];
   let acceptedIntervals = intervalsArray;

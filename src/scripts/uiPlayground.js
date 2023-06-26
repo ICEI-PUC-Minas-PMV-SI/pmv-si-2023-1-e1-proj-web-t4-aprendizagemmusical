@@ -161,10 +161,29 @@ function showAdvancedPlayground(){
   uiPlaygroundController.loadDefaultAdvancedDiagram();
   uiPlaygroundHelper.assignEventListenersToAdvancedModeInitialNotes();
   diagramController.assignAdvancedModeSubSequentialNotes();
+  diagramController.iterateThroughNotesAdvancedMode();
 }
 
+let initialNotePreviousValue;
+function storeInitialNotePreviousValue(element) {
+  initialNotePreviousValue = element.value;
+}
 export function handleAdvancedPlaygroundInitialNotes(e) {
-  diagramController.assignStringNotesFromInitialNote(e.target.parentElement.getAttribute("data-fretboard-string-number"), e.target.value);
+  if(e.type == "focus") {
+    storeInitialNotePreviousValue(e.target);
+  }
+  if(e.type == "change") {
+    let newValue = e.target.value;
+    let isAscendent = uiPlaygroundHelper.isChosenInitialNoteAscendent(initialNotePreviousValue, newValue);
+    diagramController.assignStringNotesFromInitialNote(e.target.parentElement.getAttribute("data-fretboard-string-number"), e.target.value);
+    let stepsApart = scaleController.getHalfStepsApart(initialNotePreviousValue, newValue);
+    if(isAscendent) {
+      uiPlaygroundHelper.reallocateManuallyMarkedNoteStyles(e.target.parentElement.getAttribute("data-fretboard-string-number"), isAscendent, stepsApart);
+    } else {
+      uiPlaygroundHelper.reallocateManuallyMarkedNoteStyles(e.target.parentElement.getAttribute("data-fretboard-string-number"), isAscendent, stepsApart);
+    }
+  }
+  e.target.blur();
 }
 
 function showInstrumentDiagram(e) {
