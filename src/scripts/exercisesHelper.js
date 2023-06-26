@@ -14,15 +14,23 @@ let exercisesCompleteEscalaBtn = document.getElementById('exercisesCompleteEscal
 //exercisesPercepcaoRitmicaBtn.addEventListener("click", chooseExercise);
 //exercisesCompleteEscalaBtn.addEventListener("click", chooseExercise);
 //difficultySelect.addEventListener("change", chooseExerciseDificulty);
-exercisesPercepcaoMusicalBtn.addEventListener("click", redirectToNewPage);
-exercisesPercepcaoRitmicaBtn.addEventListener("click", redirectToNewPage);
-exercisesCompleteEscalaBtn.addEventListener("click", redirectToNewPage);
+exercisesPercepcaoMusicalBtn.addEventListener("click", redirectToPercepcaoMusical);
+exercisesPercepcaoRitmicaBtn.addEventListener("click", redirectToPercepcaoRitmica);
+exercisesCompleteEscalaBtn.addEventListener("click", redirectToCompleteEscala);
 
 
-function redirectToNewPage() {
+function redirectToPercepcaoMusical() {
+    window.location.href = 'exercisesChooseMode.html';
+  }
+
+function redirectToPercepcaoRitmica() {
+    window.location.href = 'exercisesChooseMode.html';
+  }
+
+function redirectToCompleteEscala() {
     window.location.href = 'exercisesChooseMode.html';
   }
 
 //export {redirectToNewPage, chooseExerciseDificulty, showDifficultyOptions}
-export { redirectToNewPage };
+export { redirectToPercepcaoMusical, redirectToPercepcaoRitmica, redirectToCompleteEscala };
 console.log("exercisesHelper.js LOADED");
