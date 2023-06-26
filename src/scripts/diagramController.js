@@ -46,7 +46,7 @@ export function assignNotesFromTunningNotes(initialNotes) {
   uiPlaygroundHelper.changeDiagramAccidentalNotes();
 }
 
-export function iterateThroughNotesAdvancedMode() {
+export function assignEventListenersToNotesAdvancedMode() {
   let fretElement = Array.from(document.getElementsByClassName("fret"));
   fretElement.shift();
   

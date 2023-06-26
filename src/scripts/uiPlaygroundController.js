@@ -19,6 +19,8 @@ export function updatePlaygroundUiOptions(instrument) {
     diagramController.assignAdvancedPlaygroundInitialNotes();
     uiPlaygroundHelper.assignEventListenersToAdvancedModeInitialNotes();
     diagramController.assignAdvancedModeSubSequentialNotes();
+
+    diagramController.assignEventListenersToNotesAdvancedMode();
   }
   uiPlaygroundHelper.changeDiagramAccidentalNotes();
 }

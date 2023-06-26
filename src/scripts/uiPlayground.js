@@ -161,7 +161,7 @@ function showAdvancedPlayground(){
   uiPlaygroundController.loadDefaultAdvancedDiagram();
   uiPlaygroundHelper.assignEventListenersToAdvancedModeInitialNotes();
   diagramController.assignAdvancedModeSubSequentialNotes();
-  diagramController.iterateThroughNotesAdvancedMode();
+  diagramController.assignEventListenersToNotesAdvancedMode();
 }
 
 let initialNotePreviousValue;
