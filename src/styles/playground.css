@@ -130,6 +130,10 @@
   width: 100%;
   height: min-content;
 }
+.note {
+  cursor: crosshair;
+  font-size: 0.8em;
+}
 .fret, .note {
   grid-gap: 1px;
 }
@@ -153,10 +157,8 @@
   display: flex;
 }
 .dark .note {
-  cursor: crosshair;
   color: white;
   box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
-  font-size: 0.8em;
 }
 .dark .fretCount {
   color: white;
@@ -181,6 +183,10 @@
   color: white;
   background-color: #0a2740;
   box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
+}
+
+.playgroundField label {
+  font-size: 0.8em;
 }
 
 @media (max-width: 1200px) {
