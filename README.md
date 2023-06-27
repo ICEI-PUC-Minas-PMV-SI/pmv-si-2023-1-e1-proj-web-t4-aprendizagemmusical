@@ -6,14 +6,15 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto 'Aprendizagem musical' tem como objetivo criar um aplicativo que auxilie aqueles que desejam aprender ou aperfeiçoar os conhecimentos em teoria musical.
+<br>
+Através de um software de treinamento que ofereça módulos de treinos e ensinos teóricos envolvendo um ou mais instrumentos.
 
 ## Integrantes
 
 * Nathália Lopes Soares Bispo
-* Marilia
-* João Marcos Magalhães Füzessy Teixeira
-* Daniel
+* Marilia Rocha de Andrade
+* Daniel Felipe Maciel Fernandes
 * Luiz Henrique Santos de Andrade
 * Matheus Carlos Fraga dos Santos
 
@@ -26,7 +27,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 | Etapa         | Atividades |
 |  :----:   | ----------- |
 | ETAPA 1         |[Documentação de Contexto](docs/context.md) <br> [Especificação do Projeto](docs/especification.md) |
-| ETAPA 2         |[Projeto de Interface](docs/interface.md) <br> [Template Padrão](docs/template.md) |
+| ETAPA 2         |[Projeto de Interface](docs/interface.md) <br> [Template Padrão](docs/template.md) <br> [Metodologia](docs/metodologia.md)|
 | ETAPA 3         |[Programação de Funcionalidades - HTML e CSS](docs/development.md) |
 | ETAPA 4        |[Programação de Funcionalidades - Javascript](docs/development.md) <br> [Testes de Software ](docs/tests.md) |
 | ETAPA 5         | [Apresentação](presentation/README.md) |

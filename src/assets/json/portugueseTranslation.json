@@ -1,0 +1,81 @@
+{
+  "presentationHeader" : "Aprenda Música título",
+  "presentationSubHeader" : "Aprenda Música subtítulo",
+  "exercises" : "Exercícios",
+  "playground" : "Playground",
+  "theory" : "Teoria",
+  "home" : "Home",
+  "aboutUs" : "Sobre nós",
+  "contact" : "Contato",
+  "presentationExercises": "Exercícios",
+  "introductionExercises": "Prepare-se para desbloquear seu potencial musical!",
+  "exercisesPercepcaoMusical": "Percepção Musical",
+  "exercisesPercepcaoRitmica": "Percepção Rítmica",
+  "exercisesCompleteEscala": "Complete a Escala",
+  "appName": "Aprendizagem músical",
+  "presentationHeaderPlayAdvanced": "Playground: Modo Avançado",
+  "presentationSubHeaderPlay": "Escolha a diagramação",
+  "playgroundViolao": "Violão",
+  "playgroundPiano": "Piano",
+  "playgroundBaixo": "Baixo",
+  "presentationHeaderPlayFree": "Playground: Modo livre",
+  "presentationPlay":"Playground",
+  "introductionPlay":"Bem vindo ao Playground. Escolha abaixo qual modo voce irá utilizar",
+  "buttonsDescriptionFree": "MODO LIVRE: Caso você seja livrão",
+  "buttonsDescriptionAdvanced": "MODO AVANÇADO: Caso vc seja desumilde",
+
+
+
+
+
+
+  "presentationHeaderTheory": "Grade de Cursos",
+  "introductionTheory": "Bem-vindo à nossa área de estudos musicais! Explore teoria, instrumentos e muito mais para aprimorar suas habilidades e descobrir o poder da música.",
+  "messageTheory": "Vamos embarcar nessa jornada juntos?",
+
+  "instructionOrderCourses": "Escolha seu objetivo e te sugerimos a sua ordem de cursos",
+  "windInstrumentCategory":  "foco em instrumentos de sopro",
+  "percussionInstrumentCategory":"foco em instrumentos de percussão",
+  "stringInstrumentCategory":"foco em instrumentos de cordas",
+  "keyboardInstrumentsCategory":"foco em instrumentos de teclas",
+  "courseHeader": "Nossos cursos",
+
+  "title-course-1":"Teoria Elementar",
+  "title-course-2":"História da Música",
+  "title-course-3":"Bateria/Percussão",
+  "title-course-4":"Introdução ao Jazz",
+  "title-course-5":"Violino/Violoncelo",
+  "title-course-6":"Saxofone/Trompete",
+  "title-course-7":"Teclado/Piano",
+  "title-course-8":"Violão/Guitarra",
+
+  "courseLessonsAndTime-1": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-2": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-3": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-4": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-5": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-6": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-7": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-8": "00 Horas 00 Aulas",
+
+  "instrumentQuizzPrompt": "Em dúvida? Explore ou faça um teste para descobrir qual instrumento combina com você!",
+  "QuizzText": "Teste",
+
+
+
+
+
+  "presentationHeaderModule-1":"Parte I: Generalidades",
+  "introductionModule-1":"A teoria elementar musical é o estudo dos elementos básicos da música, como ritmo, melodia e harmonia. Ela aprimora habilidades musicais, interpretação e apreciação, oferecendo uma compreensão mais profunda da linguagem musical.",
+  "messageModule-1":"Vamos começar a aprender?",
+
+
+
+  "titleDomainChallenge": "Desafio de Domínio",
+  "textDomainChallenge": "Domine ainda mais as habilidades que você já praticou com apenas 00 questões",
+  "TextStartDomainChallange": "Iniciar",
+
+
+  "textProgress":"5.800 / 5.800 (100%)",
+  "textPoints":"Pontos"
+}

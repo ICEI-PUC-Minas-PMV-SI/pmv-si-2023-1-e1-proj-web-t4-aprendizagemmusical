@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Aprendizagem Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+      <nav id="mainPageNav">
+        <a class="logo" href="/src/views/index.html">
+          <img src="../assets/images/svg/logo.svg">
+          <p data-text-node="appName"></p>
+        </a>
+        <div class="userUiSettings">
+          <button id="changeTheme" value="dark"></button>
+          <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+          <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+        </div>
+        <a href="#" data-text-node="aboutUs"></a>
+      </nav>
+      <div class="presentation">
+        <div class="presentationContent">
+          <h1 class="presentationText" data-text-node="presentationHeaderTheory"></h1>
+          <h2 class="presentationText" data-text-node="introductionTheory"></h2>
+          <p class="presentationText"data-text-node="messageTheory"></p>
+          
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--content-->
+
+    <div class="content">
+      <div class="objective-courses">
+        <h1 class="objective-course-title" data-text-node="instructionOrderCourses"></h1>
+        <div class="objective-courses-btn-container">
+          <a class="objective-course-btn" href="#" data-text-node="windInstrumentCategory"></a>
+          <a class="objective-course-btn" href="#" data-text-node="percussionInstrumentCategory"></a>
+          <a class="objective-course-btn" href="#" data-text-node="stringInstrumentCategory"></a>
+          <a class="objective-course-btn" href="#" data-text-node="keyboardInstrumentsCategory"></a>
+        </div>
+      </div>
+      <div class="courses">
+        <h1 data-text-node="courseHeader"></h1>
+        <div class="course-info-box-container" id="elemento-dinamico">
+
+        </div>
+      </div>
+      <div class="index-call-to-action-container">
+        <p data-text-node="instrumentQuizzPrompt"></p>
+        <a href="#" data-text-node="QuizzText">Test</a>
+      </div>
+    </div>
+    <script src="../scripts/cardsGenerator.js"></script>
+    <script src="../scripts/main.js" type="module"></script>
+  </body>
+</html>

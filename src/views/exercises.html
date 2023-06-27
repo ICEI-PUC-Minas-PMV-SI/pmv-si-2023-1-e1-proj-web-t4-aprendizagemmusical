@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Aprendizagem Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+  <div class="container">
+    <nav id="childrenPageNav">
+      <a class="logo" href="/src/views/index.html">
+        <img src="/src/assets/images/svg/logo.svg">
+        <p>Aprendizagem musical</p>
+      </a>
+      <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
+      <div class="userUiSettings">
+        <button id="changeTheme" value="dark"></button>
+        <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+        <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+      </div>
+    </nav>
+    <div class="presentation">
+      <div class="presentationContent">
+        <h1 class="presentationText" data-text-node="presentationExercises">Exercícios</h1>
+        <h2 class="presentationText" data-text-node="introductionExercises">Prepare-se para desbloquear seu potencial musical!</h2>
+      </div>
+    </div>
+    <div class ="buttons">
+      <a href="/src/views/exercises-percepcao-musical.html"  data-text-node="exercisesPercepcaoMusical">Percepção Musical</a>
+      <a href="/src/views/exercises-percepcao-ritmica.html"  data-text-node="exercisesPercepcaoRitmica">Percepção Rítmica</a>
+      <a href="/src/views/exercises-complete-escala.html"  data-text-node="exercisesCompleteEscala">Complete a Escala</a>
+    </div>
+  </div>
+  <div class="content"></div>
+  <script src="../scripts/main.js" type="module"></script>
+</body>
+</html>
