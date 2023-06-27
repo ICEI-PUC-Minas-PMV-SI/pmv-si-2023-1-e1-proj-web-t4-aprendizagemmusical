@@ -168,6 +168,7 @@ let initialNotePreviousValue;
 function storeInitialNotePreviousValue(element) {
   initialNotePreviousValue = element.value;
 }
+
 export function handleAdvancedPlaygroundInitialNotes(e) {
   let sharpFlatBtnTag = document.querySelector("#sharpFlatBtn");
   let sharpFlatBtn = sharpFlatBtnTag.querySelector("button");

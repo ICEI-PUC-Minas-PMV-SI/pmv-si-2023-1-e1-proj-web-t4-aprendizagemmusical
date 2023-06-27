@@ -1,6 +1,5 @@
 let changeThemeBtn = document.getElementById('changeTheme');
 changeThemeBtn.addEventListener("click", changeTheme);
-
 function setInitialTheme() {
 	const root = document.documentElement;
 	const savedTheme = localStorage.getItem('theme');
@@ -34,6 +33,10 @@ function changeTheme(e) {
 	root.classList.remove(...themeArray);
   root.classList.add(e.target.value);
   localStorage.setItem('theme', e.target.value);
+
+  if(document.querySelector("div.playground")) {  
+    handlePlaygroundPageChangeTheme();
+  }
 }
 
 function setNodeValue(node, currentTheme) {
@@ -54,5 +57,16 @@ function changeNodeContent(node) {
   }
 }
 
+function handlePlaygroundPageChangeTheme() {
+  let selectedTheme = localStorage.getItem("theme") == undefined ? "dark" : localStorage.getItem("theme");
+  let fretElement = document.getElementsByClassName("fret");
+
+  Object.values(fretElement).forEach(fret => {
+    let noteElement = fret.getElementsByClassName("note");
+    Object.values(noteElement).forEach(note => {
+      note.style.backgroundColor = note.style.backgroundColor.replace(note.style.backgroundColor.split("-")[2], selectedTheme);
+    })
+  })
+}
 export { setInitialTheme }
 console.log("uiTheme.js LOADED");

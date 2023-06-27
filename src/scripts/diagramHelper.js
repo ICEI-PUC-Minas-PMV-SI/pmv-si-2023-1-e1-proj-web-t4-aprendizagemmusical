@@ -52,7 +52,7 @@ export function handleFretboarGeneratorParams(notesPerFret, frets, instrumentNam
 
 export function adjustGridStyle(frets, notesPerFret) {
   diagramDiv.style.gridTemplateColumns = `repeat(${frets}, 1fr)`;
-  diagramDiv.style.gridTemplateRows = `25px repeat(${notesPerFret}, 1fr)`;
+  //diagramDiv.style.gridTemplateRows = `25px repeat(${notesPerFret}, 1fr)`;
 }
 
 export function getNoteElementsFromFret(fretElement) {
