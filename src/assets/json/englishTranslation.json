@@ -91,7 +91,11 @@
   "module-6": "Module 6 - Other Musical Aspects",
   "unit-42": "Unit 42 - Acoustics Notions",
   "unit-43": "Unit 43 - Harmonic Sounds - Octave Numbering",
-  "presentationExercisesChooseDificult": "Choose Mode",
+  "presentationExercisesScale": "Scale exercise",
+  "Choosedifficulty": "Choose difficulty level",
+  "nextExercise": "Next exercise",
+  "toSend": "To send",
+  "presentationExercisesIntervals": "Interval exercises",
 
  
   "readingIndications": "Reading indications",

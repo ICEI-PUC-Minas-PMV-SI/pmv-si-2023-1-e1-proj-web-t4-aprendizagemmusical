@@ -20,7 +20,7 @@ exercisesCompleteEscalaBtn.addEventListener("click", redirectToCompleteEscala);
 
 
 function redirectToPercepcaoMusical() {
-    window.location.href = 'exercisesChooseMode.html';
+    window.location.href = 'exercisesIntervals.html';
   }
 
 function redirectToPercepcaoRitmica() {
@@ -28,7 +28,7 @@ function redirectToPercepcaoRitmica() {
   }
 
 function redirectToCompleteEscala() {
-    window.location.href = 'exercisesChooseMode.html';
+    window.location.href = 'exercisesScale.html';
   }
 
 //export {redirectToNewPage, chooseExerciseDificulty, showDifficultyOptions}

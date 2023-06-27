@@ -91,7 +91,11 @@
   "module-6": "Módulo 6 – Outros aspectos musicais",
   "unit-42": "Unidade 42 - Noções de acústica",
   "unit-43": "Unidade 43 - Sons harmônicos — numeração das oitavas",
-  "presentationExercisesChooseDificult": "Escolha o modo",
+  "presentationExercisesScale": "Exercício de Escalas",
+  "Choosedifficulty": "Escolha o nível de dificuldade",
+  "nextExercise": "Proximo exercício",
+  "toSend": "Enviar",
+  "presentationExercisesIntervals": "Exercício de Intervalos",
 
   "readingIndications": "Indicações de leitura",
   "detailedArticle": "Matéria mais detalhada sobre o assunto",
