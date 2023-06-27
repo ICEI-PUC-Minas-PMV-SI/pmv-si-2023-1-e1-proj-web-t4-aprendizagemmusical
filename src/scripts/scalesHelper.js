@@ -1,5 +1,5 @@
 export const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-const intervalHashtable = {
+export const intervalHashtable = {
   1: "Perfect Unison",
   2: "Minor Second",
   3: "Major Second",
