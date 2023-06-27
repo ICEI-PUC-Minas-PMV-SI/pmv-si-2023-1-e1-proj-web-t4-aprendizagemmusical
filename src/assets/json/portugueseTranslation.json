@@ -33,7 +33,10 @@
   "introductionModules": "Explore a linguagem musical! Desvende os segredos da teoria musical de maneira cativante. Aprenda notas, escalas, acordes e leitura de partituras em um curso acessível. Desperte seu talento musical e mergulhe nessa jornada de descobertas!",
   "moduleChoiceText": "Escolha por onde começar:",
   "introductionUnit-1": "Aprenda sobre as propriedades fundamentais do som.",
-  "module-1": "Módulo 1 - Generalidades",
+  "module-1": "História da música",
+  "theoryDrums": "Bateria",
+  "theoryViolin": "Violino",
+  "theorySaxophone": "Saxofone",
   "unit-1": "Unidade 1 - Propriedades do som",
   "unit-2": "Unidade 2 - Nota — pentagrama",
   "unit-3": "Unidade 3 – Clave",
@@ -82,5 +85,7 @@
   "module-6": "Módulo 6 – Outros aspectos musicais",
   "unit-42": "Unidade 42 - Noções de acústica",
   "unit-43": "Unidade 43 - Sons harmônicos — numeração das oitavas",
-  "presentationExercisesChooseDificult": "Escolha o modo"
+  "presentationExercisesChooseDificult": "Escolha o modo",
+  "testeNaMoral": "Contando um pouquinho sobre o instrumento",
+  "testeNaMoral2": "Popularmente conhecido como Sax, é um instrumento de sopro inventado na década de 1840, feito de latão e composto por vários tubos, chaves e almofadas. Possui uma palheta única que , quando soprada pelo músico, vibra, produzindo o som."
 }
