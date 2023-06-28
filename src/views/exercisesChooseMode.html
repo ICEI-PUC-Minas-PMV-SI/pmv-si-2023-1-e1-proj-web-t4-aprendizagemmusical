@@ -2,16 +2,21 @@
 <html>
   <head>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/playground.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+
+
+
   </head>
-  <body>
-    <nav id="minimalNav">
+
+<body>
+  <div class="container">
+    <nav id="childrenPageNav">
       <a class="logo" href="/src/views/index.html">
         <img src="/src/assets/images/svg/logo.svg">
         <p data-text-node="appName"></p>
@@ -23,14 +28,25 @@
         <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
       </div>
     </nav>
-  </body>
-  <div class="playground">
-    <div class="choosePlaygroundDiv">
-      <button type="button" id="displayPlaygroundFreePlay" value="playgroundFreePlay" data-text-node="presentationHeaderPlayFree"></button>
-      <button type="button" id="displayPlaygroundAdvanced" value="playgroundAdvanced" data-text-node="presentationHeaderPlayAdvanced"></button>
+    <div class="presentation">
+      <div class="presentationContent">
+        <h1 class="presentationText" data-text-node="presentationExercisesChooseDificult"></h1>
+      </div>
     </div>
-    <div class="diagram"></div>
+    <div class ="buttons">
+      <div id="chooseMode" style="display: none;"></div>
+      <button  id="exercisesBasic">
+        <option value = "exercisesBasic" data-text-node="basicDifficulty"></option></button>
+      <button id="exercisesAdvanced">
+        <option value = "exercisesAdvanced" data-text-node="advancedDifficulty"></option></button>
+      <button id="exercisesIntermediary">
+        <option value = "exercisesIntermediary" data-text-node="intermediateDifficulty"></option></button>
+    </div>
   </div>
-  <script src="/src/scripts/main.js" type="module"></script>
-  <script src="/src/scripts/playground.js" type="module"></script>
+  <div class="content">
+    <div id="contentTextExercises"></div> 
+  </div>
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/exercises.js" type="module"></script>
+</body>
 </html>

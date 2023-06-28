@@ -4,10 +4,14 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+
+
+
   </head>
 
 <body>
@@ -15,7 +19,7 @@
     <nav id="childrenPageNav">
       <a class="logo" href="/src/views/index.html">
         <img src="/src/assets/images/svg/logo.svg">
-        <p>Aprendizagem musical</p>
+        <p data-text-node="appName"></p>
       </a>
       <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
       <div class="userUiSettings">
@@ -26,17 +30,24 @@
     </nav>
     <div class="presentation">
       <div class="presentationContent">
-        <h1 class="presentationText" data-text-node="presentationExercises">Exercícios</h1>
-        <h2 class="presentationText" data-text-node="introductionExercises">Prepare-se para desbloquear seu potencial musical!</h2>
+        <h1 class="presentationText" data-text-node="presentationExercises"></h1>
+        <h2 class="presentationText" data-text-node="introductionExercises"></h2>
       </div>
     </div>
     <div class ="buttons">
-      <a href="/src/views/exercises-percepcao-musical.html"  data-text-node="exercisesPercepcaoMusical">Percepção Musical</a>
-      <a href="/src/views/exercises-percepcao-ritmica.html"  data-text-node="exercisesPercepcaoRitmica">Percepção Rítmica</a>
-      <a href="/src/views/exercises-complete-escala.html"  data-text-node="exercisesCompleteEscala">Complete a Escala</a>
+      <div id="chooseMode" style="display: none;"></div>
+      <button  id="exercisesPercepcaoMusical">
+        <option value = "percepcao-musical" data-text-node="exercisesPercepcaoMusical"></option></button>
+      <button id="exercisesPercepcaoRitmica">
+        <option value = "percepcao-ritimica" data-text-node="exercisesPercepcaoRitmica"></option></button>
+      <button id="exercisesCompleteEscala">
+        <option value = "complete-escala" data-text-node="exercisesCompleteEscala"></option></button>
     </div>
   </div>
-  <div class="content"></div>
+  <div class="content">
+    <div id="contentTextExercises"></div> 
+  </div>
   <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/exercises.js" type="module"></script>
 </body>
 </html>

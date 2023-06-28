@@ -15,74 +15,101 @@
   "appName": "Musician's tool",
   "presentationHeaderPlayAdvanced": "Playground: Advanced Mode",
   "presentationSubHeaderPlay": "Choose layout",
-  "playgroundViolao": "Acoustic Guitar",
-  "playgroundPiano": "Piano",
-  "playgroundBaixo": "Bass",
+  "guitarPlayground": "Acoustic Guitar",
+  "pianoPlayground": "Piano",
+  "bassPlayground": "Bass",
   "presentationHeaderPlayFree": "Playground: Free play",
   "introductionPlay":"Welcome to the Playground. Choose below which mode you will use",
   "presentationPlay":"Playground",
-  "buttonsDescriptionFree": "FREE MODE: If you are free",
-  "buttonsDescriptionAdvanced": "ADVANCED MODE: In case you are disheartened",
+  "buttonsDescriptionFree": "FREE MODE: If you are a beginner",
+  "buttonsDescriptionAdvanced": "ADVANCED MODE: If you are an advanced user",
+  "basicDifficulty": "Basic",
+  "intermediateDifficulty": "Intermediary",
+  "advancedDifficulty":  "Advanced",
+  "selectDifficulty": "Select",
+  
+  "presentationHeaderModules": "Elementary Theory",
+  "presentationModules": "Modules",
+  "introductionModules": "Explore the language of music! Unravel the secrets of music theory in a captivating way. Learn notes, scales, chords, and sheet music reading in an accessible course. Awaken your musical talent and dive into this journey of discovery!",
+  "moduleChoiceText": "Choose where to start:",
+  "introductionUnit-1": "Learn about the fundamental properties of sound.",
+  "module-1": "History of music",
+  "theoryDrums": "Drums",
+  "theoryViolin": "Violin",
+  "theorySaxophone": "Saxophone",
+  "theoryPiano": "Piano",
+  "theoryGuitar": "Guitar",
+  "theoryJazz": "History of Jazz",
+  "aboutMusicGender": "A little about the musical genre",
+  "recommendedPlaylist" : "Recommended Playlist",
+  "theoryMpb": "History of MPB",
+  "unit-1": "Unit 1 - Sound Properties",
+  "unit-2": "Unit 2 - Note - Staff",
+  "unit-3": "Unit 3 - Clef",
+  "module-2": "Module 2 - Duration",
+  "unit-4": "Unit 4 - Note Figure - Rest",
+  "unit-5": "Unit 5 - Tie - Augmentation Dot - Double Augmentation Dot - Fermata - Diminution Dot",
+  "unit-6": "Unit 6 - Time Signature",
+  "unit-7": "Unit 7 - Simple and Compound Time Signature",
+  "unit-8": "Unit 8 - Time Signature Formula",
+  "unit-9": "Unit 9 - Spelling Rules",
+  "unit-10": "Unit 10 - Tempo",
+  "unit-11": "Unit 11 - Time Marking",
+  "unit-12": "Unit 12 - Irregular Time Signatures",
+  "unit-13": "Unit 13 - Offbeat - Syncopation",
+  "unit-14": "Unit 14 - Articulations",
+  "unit-15": "Unit 15 - Repeat Signs",
+  "module-3": "Module 3 - Intensity",
+  "unit-16": "Unit 16 - Dynamic Signs",
+  "module-4": "Module 4 - Pitch",
+  "unit-17": "Unit 17 - Interval Notion - Semitone and Whole Tone",
+  "unit-18": "Unit 18 - Alteration Signs",
+  "unit-19": "Unit 19 - Enharmonic Notes - Chromatic and Diatonic Semitone",
+  "unit-20": "Unit 20 - Scale - Mode",
+  "unit-21": "Unit 21 - Major Mode",
+  "unit-22": "Unit 22 - Major Mode (cont.)",
+  "unit-23": "Unit 23 - Minor Mode",
+  "unit-24": "Unit 24 - Minor Mode (cont.)",
+  "unit-25": "Unit 25 - Notion of Melody and Harmony",
+  "unit-26": "Unit 26 - Tonality",
+  "unit-27": "Unit 27 - Chromatic Scale - Enharmonic Scales - Homonymous Scales",
+  "unit-28": "Unit 28 - Intervals",
+  "unit-29": "Unit 29 - Intervals (cont.)",
+  "unit-30": "Unit 30 - Natural Intervals",
+  "unit-31": "Unit 31 - How to Qualify Intervals",
+  "unit-32": "Unit 32 - How to Form Intervals",
+  "unit-33": "Unit 33 - Inversion of Intervals",
+  "unit-34": "Unit 34 - Consonant and Dissonant Intervals",
+  "unit-35": "Unit 35 - Modes",
+  "unit-36": "Unit 36 - Modes (cont.)",
+  "unit-37": "Unit 37 - Exotic Scales",
+  "unit-38": "Unit 38 - Ornaments",
+  "unit-39": "Unit 39 - Transposition (cont.)",
+  "module-5": "Module 5 - Timbre",
+  "unit-40": "Unit 40 - Voice Classification",
+  "unit-41": "Unit 41 - Instrument Classification",
+  "module-6": "Module 6 - Other Musical Aspects",
+  "unit-42": "Unit 42 - Acoustics Notions",
+  "unit-43": "Unit 43 - Harmonic Sounds - Octave Numbering",
+  "presentationExercisesScale": "Scale exercise",
+  "Choosedifficulty": "Choose difficulty level",
+  "nextExercise": "Next exercise",
+  "toSend": "To send",
+  "presentationExercisesIntervals": "Interval exercises",
 
+ 
+  "readingIndications": "Reading indications",
+  "detailedArticle": "More detailed article on the subject",
+  "aboutMusicHistory": "Telling a little bit about the history of music",
+  "whereToBuy": "Where to buy",
+  "instrumentsH2": "Sharing a little bit about the instrument",
 
-
-
-
-
-  "presentationHeaderTheory": "Course Schedule",
-  "introductionTheory":"Welcome to our music study area! Explore theory, instruments, and much more to enhance your skills and discover the power of music.",
-  "messageTheory": "Shall we embark on this journey together?",
-
-  "instructionOrderCourses": "Choose your goal and we will suggest your course order.",
-  "windInstrumentCategory":  "Focus on wind instruments",
-  "percussionInstrumentCategory":"Focus on percussion instruments",
-  "stringInstrumentCategory":"Focus on string instruments",
-  "keyboardInstrumentsCategory":"Focus on keyboard instruments",
-  "courseHeader": "Our Courses",
-  "title-course-1": "Elementary Theory",
-  "title-course-2": "History of Music",
-  "title-course-3": "Drums/Percussion",
-  "title-course-4": "Introduction to Jazz",
-  "title-course-5": "Violin/Cello",
-  "title-course-6": "Saxophone/Trumpet",
-  "title-course-7": "Keyboard/Piano",
-  "title-course-8": "Guitar",
-
-  "courseLessonsAndTime-1": "00 Hours 00 Lessons",
-  "courseLessonsAndTime-2": "00 Hours 00 Lessons",
-  "courseLessonsAndTime-3": "00 Hours 00 Lessons",
-  "courseLessonsAndTime-4": "00 Hours 00 Lessons",
-  "courseLessonsAndTime-5": "00 Hours 00 Lessons",
-  "courseLessonsAndTime-6": "00 Hours 00 Lessons",
-  "courseLessonsAndTime-7": "00 Hours 00 Lessons",
-  "courseLessonsAndTime-8": "00 Hours 00 Lessons",
-
-  "instrumentQuizzPrompt":"In doubt? Explore or take a test to discover which instrument suits you!",
-  "QuizzText": "Test",
-
-
-
-
-
-  "presentationHeaderModule-1":"Part I: Fundamentals",
-  "introductionModule-1":"Elementary music theory is the study of the fundamental elements of music, such as rhythm, melody, and harmony. It enhances musical skills, interpretation, and appreciation, providing a deeper understanding of the language of music.",
-  "messageModule-1":"Let's start learning?",
-
-  "titleDomainChallenge": "Domain Challenge",
-  "textDomainChallenge":"Master your already practiced skills with just 00 questions",
-  "TextStartDomainChallange": "Start",
-
-  "textProgress":"5.800 / 5.800 (100%)",
-  "textPoints":"Points"
-
-
-
-
-
-
-
-
-
-
-
-}
+  "saxContent": "Popularly known as the Sax, it is a wind instrument invented in the 1840s, made of brass and composed of various tubes, keys, and pads. It has a single reed that vibrates when blown by the musician, producing sound.\n\n The Sax can have various sizes, each with its specific pitch. The most popular is the alto saxophone, but there are also the tenor, soprano, and baritone saxophones. The size of the instrument results in different sounds being produced. Each one has its own tonal range.\n\n To play the saxophone, it is necessary to blow air through the mouthpiece, always controlling the pressure and position of the embouchure. The keys, manipulated by the hands, allow the musician to change the pitch of the note, creating a distinctive and expressive timbre, ranging from softer and melancholic sounds to more energetic and brilliant ones. The musician can use techniques such as vibrato, bend, glissando, and growl to add feeling and energy to their sound.\n\n The sax can act as a solo instrument or as part of a wind section. It adds harmony and texture to the music. As a versatile instrument, it is mainly associated with jazz, but it is also used in classical music, especially in orchestras and chamber music, in rock groups, big bands, popular music, and even in some styles of folk music.\n\n Learning to play the saxophone requires a lot of practice, dedication, and guidance from a qualified teacher. Reading sheet music, technique, and improvisation are relevant aspects for developing musical skills. The embouchure, breathing, and finger coordination will allow the musician to extract the most from this expressive and captivating instrument, capable of conveying emotion and energy through its unique and versatile sound.",
+  "violinContent": "The violin is an instrument belonging to the family of friction-stringed instruments. Its sound is popularly known for being beautiful, unique, and versatile, applicable to music styles such as jazz, folk, classical music, among others. There are several curiosities and information about the violin, as well as about how to play it.\n\n The violin has a fairly simple construction. In summary, it consists of the resonating body, which is the main part, made of wood, usually with an opening on the top, the neck, scroll, and pegbox, which make up the area where the pitch is selected. Unlike other instruments, the violin comes in various sizes to accommodate musicians of different ages and physical sizes. The standard size is 4/4, but there are also 3/4, 1/2, 1/4, 1/8, 1/10, and 1/16 sizes. The violin is tuned to the notes G, D, A, and E, from the lowest string to the highest.\n\n The violin is a highly versatile instrument, capable of producing a wide range of sounds, from soft and delicate to bright and intense. Techniques such as vibrato, staccato, legato, pizzicato, and harmonics can be used by the musician to add nuances and emotions to their performance. Because of this, the violin transcends classical music, where it is most commonly used and prominent, to venture into completely different genres such as folk and ethnic music, funk, popular music, among others.\n\n Learning the violin requires dedication, practice, and guidance from a qualified teacher. The student will position the base of the instrument between the chin and the left shoulder. The left hand will press the strings on the fingerboard to alter the pitch. The right hand holds a bow made of horsehair attached to a wooden stick. The friction of this horsehair against the strings produces sound. Performing these movements with excellence is complex, as the violin is a challenging instrument. With patience and perseverance, it is possible to extract wonderful and melodic sounds from this instrument.",
+  "drumContent": "One of the most famous percussion instruments, the drum set is composed of various drums and cymbals arranged ergonomically for a single individual, the drummer, to play them. The drum set typically has the following layout:\n\nBass drum: The largest drum, usually centered in relation to the others. It is played by a pedal that, when activated, causes a drumstick to strike the drumhead, producing a deep and pulsating sound that marks the tempo of the music.\n\nSnare drum: Consisting of two heads, one on the bottom and another on the top, stretched over a metal rim. When struck by drumsticks, it produces a sound resembling a snappy crack.\n\nTom-toms: Smaller drums positioned on stands at an elevated position relative to the bass drum. There are commonly two or more tom-toms in a drum set, each producing a specific sound when struck.\n\nCymbals: Metallic discs that produce a high-pitched sound when struck. A drum set can contain various types of cymbals. The hi-hat consists of a pair of cymbals that can be opened and closed. Ride cymbals are larger and heavier, used for accentuation. Crash cymbals, on the other hand, are used to create a crashing sound.\n\nDrummers use different types of drumsticks to play different drums, cymbals, and tom-toms. The formation of complex patterns of beats, with variations in hand techniques and applied force, guarantees a unique sound to this instrument.\n\nThe drum set is found in various music styles such as rock, pop, jazz, blues, funk, metal, reggae, among others. It provides the foundation for other instruments, marking the rhythm and contributing to the overall feel of the music.\n\nTo learn to play the drums, it is necessary to develop skills such as motor coordination and rhythmic perception. Techniques such as independence among the limbs allow hands and feet to perform completely different functions. Not only is motor skill required, but also endurance to repeat the same movements many times, with different intensities, without getting injured or fatigued. With dedication and study, the drums can become an extremely engaging and stimulating instrument.",
+   "historyOfMusicContent": "In prehistoric times, humans began to organize the sounds of the environment through primitive instruments and the sound of their own voices. Over time, music developed and became increasingly present in everyday life, reflecting cultures, beliefs, and artistic influences from various historical periods, as we will see below\n\nEgyptian, Greek, and Roman civilizations used music in religious rituals, ceremonies, and festivals. This is where wind instruments such as the flute and string instruments like the harp and lyre emerged, considered some of the oldest instruments in human history.\n\nThe Middle Ages, marked by Catholicism and its dominance in various socio-economic realms, brought Gregorian chant (a form of monophonic vocal music) to the musical landscape, which was practiced in monasteries and cathedrals. Vocal groups and choirs developed more complex forms of polyphonic music over time, such as the motet and madrigal.\n\nIn the Renaissance period, polyphonic music was disseminated through sheet music, reaching the population more easily and allowing for broader diffusion.\n\nThe Baroque period made significant advancements in instrumental music through concerts, sonatas, and fugues. During this period, prominent figures such as Johann Sebastian Bach and Antonio Vivaldi gained recognition.\n\nIn the 18th century, influenced by the Classical period and its emphasis on simplicity and musical proportion, names like Mozart and Beethoven expanded the possibilities of instrumental music. Highlights include the symphony, sonata, and string quartet.\n\nOThe 19th century was marked by the emergence of musical Romanticism. Chopin, Robert Schumann, and Franz Schubert expressed intense emotions in their works, exploring new sounds and harmonies. Opera flourished during this time with the works of Giuseppe Verdi and Richard Wagner.\n\nIn the 20th century, music underwent its greatest revolution. Movements and musical styles such as Impressionism, Expressionism, Minimalism, and Jazz emerged. Popular music genres like rock, pop, jazz, hip-hop, reggae, and electronic dominated the music charts, showcasing new techniques employed to create sound and intimately connecting music with culture.",
+   "pianoContent":"It is a string instrument, considered one of the most popular and versatile. It is widely used in classical music, jazz, popular music, and other genres.\n\nThe piano is a complex instrument, composed of a wooden soundboard that houses the strings and internal mechanisms. It features 88 keys, with white and black colors, representing different musical notes. The mechanism as a whole consists of hammers, strings, pedals, and a lever system. The force applied when pressing a key directly impacts the intensity with which the hammer attached to that key strikes the string, and consequently, the power of the produced sound. The pedals, usually arranged in a total of 3, are used to dampen, resonate, or alter the timbre of the instrument's sound. Due to this vast range of combinations, the piano is known for its ability to produce a wide range of tones and dynamics, from soft notes to powerful chords.\n\nLearning to play the piano requires regular practice and guidance from a qualified professional. Music theory, also taught here on our platform, as well as the ability to read sheet music, fingering techniques, ear training, studying harmonies, and musical composition are all necessary requirements to become a pianist. Playing the piano provides a rich and expansive musical experience, allowing you to explore various musical styles and convey deep emotions through music.",
+   "guitarContent": "It is a plucked string instrument, one of the most popular worldwide. It belongs to the family of string instruments, which includes instruments like the ukulele, guitar, bass, banjo, among others. The guitar is extremely versatile and is present in genres such as folk, pop, rock, country, blues, and more.\n\nA guitar consists of a hollow body with a circular opening that serves as a soundbox. The soundboard is crafted from wood, typically spruce or cedar, while the sides and back are made from materials such as rosewood, mahogany, or maple. Attached to this body is a long neck with frets and a fretboard where the strings are pressed to alter the produced sound. Guitars usually have 6 strings, but they can also have 7 or 12 strings. The thickness and material of these strings, as well as the tension applied to them, affect the sound. They are fastened at both ends of the body and the neck. To tune this instrument, the tuning pegs are rotated to increase or decrease the tension of the strings. The strings are tuned in standard tuning to the notes E, A, D, G, B, and E, from low to high.\n\nPlaying the guitar requires regular practice to develop technical and musical skills. Unlike other instruments, learning through videos and online lessons is completely possible, thanks to the instrument's widespread popularity. The guitar can be played in various ways, including fingerpicking, strumming with a pick, and percussive techniques. The right hand produces the notes, while the left hand presses the strings against the frets to obtain different notes and chords. This requires good motor coordination.\n\nThe versatility of the guitar is astonishing. It can be used as both an accompaniment instrument, providing rhythm and harmony, and a solo instrument, allowing for the execution of complex melodies. Additionally, it is an extremely portable instrument where, despite the availability of different guitar sizes, all are relatively easy to transport.",
+   "historyOfJazz": "Born in New Orleans at the end of the 19th century, jazz is the result of a combination of different musical styles such as blues, Afro-American rhythms, military marches, classical music, and traditional African music.\n\nDue to its Afro-American roots, jazz not only brought a tremendous musical heritage from Africa but also carried the existing marginalization due to racism. It was music made by Black people for Black people, initially characterized by improvisation, syncopated rhythms, and individual expression. Musicians had an immense ability to improvise melodies and solos, which, when combined with the swing and spontaneity of the performers, gave rise to something entirely new and original.\n\nInitially, jazz was played at parties, funerals, bars, and nightclubs, mainly by Black musicians. It wasn't until the 1920s that the musical style gained popularity, reaching other ethnic groups, incorporating new elements and influences. This marked the beginning of the Jazz Age, a time of profound social changes tied to great prosperity.\n\nNames like Louis Armstrong, Duke Ellington, Miles Davis, John Coltrane, among others, were responsible for spreading the voice of a marginalized Black community throughout the country and eventually internationally. Jazz is considered by many to be one of America's great contributions to music. What was once an extremely rich and complex music, albeit restricted to the hardships of the population, has now spread among elitist classes and surpassed any barriers of color and income.",
+  "historyOfMpb": "Born in Brazil in the 1960s, MPB (Música Popular Brasileira) is the result of a fusion of various musical styles such as bossa nova, samba, folk music, jazz, and rock.\n\nThe 'golden age' of bossa nova, represented by composers and musicians like Tom Jobim, Vinícius de Moraes, João Gilberto, Chico Buarque, Milton Nascimento, and many others, combined traditional Brazilian rhythms with poetic lyrics and sophisticated harmonies. The result was a style that offered an innovative approach to Brazilian music, incorporating elements from other musical styles and forming its own identity with songs addressing controversial topics such as politics, as well as themes of love and social issues.\n\nDuring the military dictatorship, MPB became a liberating and culturally significant movement. It represented resistance and freedom of expression at a time when all voices were silenced in favor of one. It was no longer just a genre; it became the voice of the people!\n\nThis typically Brazilian genre, born out of our musical maturity, continues to evolve and reflect popular aspirations. With elaborate arrangements, distinct voices, and sophisticated composition, Música Popular Brasileira remains vibrant and influential, inspiring new generations of musicians and spreading our culture to the world."
+  }

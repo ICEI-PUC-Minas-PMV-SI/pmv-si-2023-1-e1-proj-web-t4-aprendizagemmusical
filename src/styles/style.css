@@ -1,5 +1,5 @@
 :root {
-  --dark-theme-background-color: #0a2740;
+  --dark-theme-background-color: #0A2740;
   --dark-theme-background-active-color: #123454;
   --dark-theme-main-color: #64E4A3;
   --dark-theme-primary-text-color: #FFF;
@@ -92,11 +92,10 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
+
   background-color: var(--dark-theme-background-color);
-  padding: 0 calc(50% - 600px);
-  max-width: 1200px;
+  padding: 0 calc((100% - 1200px)/2);
   min-height: 35vh;
-  box-sizing: initial;
 }
 
 .containerExercises {
@@ -105,10 +104,8 @@ a {
   grid-template-rows: 1fr 1fr 1fr;
 
   background-color: var(--dark-theme-background-color);
-  padding: 0 calc(50% - 600px);
-  max-width: 1200px;
+  padding: 0 calc((100% - 1200px)/2);
   min-height: 35vh;
-  box-sizing: initial;
 }
 
 .containerPlay {
@@ -128,11 +125,6 @@ a {
 
 .buttonsDescription {
   color: var(--dark-theme-secondary-text-color);
-}
-
-@media only screen and (max-width: 600px) {
-  /* Media queries para dispositivos móveis */
-  /* Restante do seu código CSS para dispositivos móveis */
 }
 
 #mainPageNav .logo {
@@ -244,7 +236,7 @@ a {
 }
 
 
-.buttons a {
+.buttons a, .buttons button {
   width: 100%;
   height: 100%;
 
@@ -256,11 +248,13 @@ a {
   color: var(--dark-theme-background-color);
   margin: 0 15px;
   box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0) inset;
+  border: 0;
+  cursor: pointer;
 
   font-size: 1.2em;
 }
 
-.buttons a:hover {
+.buttons a:hover, .buttons button:hover {
   background-color: var(--dark-theme-background-color);
   color: var(--dark-theme-main-color);
   box-shadow: 0px 0px 0px 3px var(--dark-theme-main-color) inset;
@@ -268,199 +262,131 @@ a {
   transition: background-color 0.2s, color 0.2s, box-shadow 0.4s, font-size 0.8s;
 }
 
-/* index */
-.objective-courses {
-  height: 420px;
-  padding-top: 100px;
-  max-width: 1200px;
-  margin: 0 auto
-}
-
-.objective-course-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: lighter;
-}
-
-.objective-courses-btn-container {
-  width: 100%;
-  margin-top: 40px;
-  display: grid;
-  grid-template-areas:
-          "a b"
-          "c d";
-}
-
-.objective-course-btn {
-  background: #FFFFFF;
-  filter: drop-shadow(0px 0px 10px #eee);
-  display: inline-block;
-  width: 70%;
-  min-height: 60px;
-  margin: 10px auto;
-  text-align: center;
-  line-height: 60px;
-  color: #000;
-}
-
-.courses {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.courses > h1 {
-  font-size: 2rem;
-  font-weight: lighter;
-}
-
-.course-info-box-container {
-  width: 100%;
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.course-info-box {
-  width: 320px;
-  height: 300px;
+.content {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  cursor: pointer;
-}
-
-.course-info-box > figure > img {
-  width: 300px;
-  max-height: 200px;
-  border-radius: 12px;
-}
-
-.course-info-box > h2 {
-  color: var(--dark-theme-background-color);
-  font-weight: normal;
-}
-
-.course-info-box > p {
-  color: var(--dark-theme-secondary-text-color)
-}
-
-.index-call-to-action-container {
-  width: 1200px;
-  height: 400px;
-  margin: 20px auto 0px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  background: var(--dark-theme-background-color);
-  text-align: center;
-}
-
-.index-call-to-action-container > p {
-  font-size: 2rem;
-  color: var(--dark-theme-primary-text-color);
-  font-weight: lighter;
-  line-height: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.index-call-to-action-container > a {
-  display: inline-block;
-  width: 200px;
-  height: 60px;
-  margin: 0 auto;
-  background: var(--dark-theme-main-color);
-  line-height: 60px;
-  border-radius: 30px;
-  color: var(--dark-theme-background-color);
-  font-weight: bolder;
-}
-
-/* elementary theory */
-.elementary-theory-call-to-action {
-  width: 1000px;
-  height: 240px;
-  margin: 60px auto;
-  background: linear-gradient(349deg, rgb(147, 227, 187) 26%, rgb(138, 232, 158) 72%);
-  text-align: center;
-  font-weight: lighter;
-  display: grid;
   align-items: center;
+  height: 10vh;
 }
 
-.elementary-theory-call-to-action > a {
-  display: inline-block;
-  width: 280px;
-  height: 40px;
-  border-radius: 5px;
-  margin: 0 auto;
-  color: #FFF;
-  line-height: 40px;
-  background: #4646ff;
-}
-
-.points {
-  width: 1000px;
-  height: 60px;
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 10px;
-  background: #dadada;
-}
-
-.points > p {
-  margin-left: 20px;
-}
-
-.points > p > span {
-  display: inline-block;
-  margin-left: 40px;
-}
-
-.points > p:last-child {
-  margin-top: 5px;
-}
-
-.unity-cards-container {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-.unity-card {
-  margin-bottom: 10px;
-  border: 1px solid var(--dark-theme-secondary-text-color);
-  border-radius: 5px;
-}
-
-.unity-header {
+#contentTextExercises {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+/*estilos teoria modulo*/
+
+.card-container {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.card-header {
+  display: flex;
   align-items: center;
-  padding: 15px;
-  border-bottom: 1px solid var(--dark-theme-secondary-text-color);
+  margin-bottom: 10px;
 }
 
-.unity-header > figure > img {
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
-  filter: drop-shadow(0px 0px 1px #c1c1c1);
+.card-title {
+  color: #027d97;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.unity-content {
-  height: 200px;
-}
-
-.unity-content > ul {
-  list-style: none;
-  height: 100%;
+.card-list {
   display: grid;
-  grid-template-areas: "a b";
-  justify-items: center;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style: none;
 }
 
+.card-list a {
+  text-decoration: none;
+  color: #737277;
+}
 
+.card-title a {
+  text-decoration: none;
+  color: #027d97;
+}
 
+.content-unit {
+  background-color: #f2f2f2;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .definitions-unit {
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .definitions-unit h2 {
+    margin-top: 0;
+  }
+  
+  .definitions-unit ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .definitions-unit li {
+    margin-bottom: 10px;
+  }
+  
+  .definitions-unit li strong {
+    font-weight: bold;
+  }
+  
+  .faq-unit {
+    background-color: #fff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  
+  .resources-unit {
+    background-color: #fff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  .resources-unit a {
+    color:#027d97;
+    text-decoration: none;
+  }
+  
+  .exercises-unit {
+    background-color: #fff;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  
+/* Responsividade para telas médias */
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+  .card-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
@@ -490,7 +416,7 @@ a {
     height: 50%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 0;
+    padding: 0 20px;
   }
 
   #mainPageNav {
@@ -550,83 +476,5 @@ a {
   .presentationText {
     font-size: 1rem;
   }
-
-  .objective-courses-btn-container {
-    margin-top: 10px;
-    grid-template-areas:
-          "a"
-          "b"
-          "c"
-          "d";
-  }
-
-  .objective-course-title {
-    font-size: 1.5rem;
-    margin: 0 10px
-  }
-
-  .objective-course-btn {
-    width: 100%;
-  }
-
-  .courses {
-    text-align: center;
-  }
-
-  .courses > h1 {
-    font-size: 1.5rem;
-    margin-top: 120px;
-  }
-
-  .course-info-box-container {
-    grid-template-columns: 1fr;
-  }
-
-  .course-info-box {
-    margin: 0 auto;
-  }
-
-  .index-call-to-action-container {
-    width: 100%;
-  }
-
-  .index-call-to-action-container > p {
-    font-size: 1.2rem;
-  }
-
-  .elementary-theory-call-to-action {
-    width: 100%;
-  }
-
-  .points {
-    width: 90%;
-  }
-
-  .unity-cards-container {
-    width: 90%;
-  }
-
-  .unity-header > figure > img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .unity-header > h1 {
-    font-size: 1rem;
-    text-align: center;
-    margin-left: 10px;
-  }
-
-  .unity-header > p {
-    font-size: 0.7rem;
-  }
-
-  .elementary-theory-call-to-action {
-    width: 90%;
-    height: 200px;
-    display: grid;
-    align-items: center;
-  }
-
-
 }
+

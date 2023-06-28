@@ -2,23 +2,20 @@
 <html>
   <head>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/playground.css">
-    <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
   </head>
   <body>
-    
     <div class="container">
       <nav id="childrenPageNav">
         <a class="logo" href="/src/views/index.html">
           <img src="/src/assets/images/svg/logo.svg">
           <p data-text-node="appName"></p>
         </a>
-        <a href="/src/views/playground.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
+        <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
         <div class="userUiSettings">
           <button id="changeTheme" value="dark"></button>
           <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
@@ -27,19 +24,32 @@
       </nav>
       <div class="presentation">
         <div class="presentationContent">
-          <h1 class="presentationText" data-text-node="presentationHeaderPlayAdvanced"></h1>
-          <h2 class="presentationText" data-text-node="presentationSubHeaderPlay"></h2>
+          <h1 class="presentationText" data-text-node="presentationExercisesScale"></h1>
         </div>
       </div>
-      <div class="buttons">
-        <button type="button" id="guitarBtn" value="guitar" data-text-node="playgroundViolao"></button>
-        <button type="button" id="bassBtn" value="bass" data-text-node="playgroundBaixo"></button>
-        <button type="button" id="pianoBtn" value="piano" data-text-node="playgroundPiano"></button>
-      </div>
     </div>
-    <div class="playground">
-      <div class="diagram"></div>
+    <div class="content">
+      <div id="contentTextExercises"></div> 
     </div>
     <script src="../scripts/main.js" type="module"></script>
-    <script src="../scripts/scales.js" type="module"></script>
+    <script src="../scripts/exercises.js" type="module"></script>
+<div id="exercicio">
+    <div>
+      <label for="level" data-text-node="Choosedifficulty"></label>
+      <select id="level">
+        <option value="easy" data-text-node="basicDifficulty"></option>
+        <option value="medium" data-text-node="intermediateDifficulty"></option>
+        <option value="hard" data-text-node="advancedDifficulty"></option>
+      </select>
+    </div>
+
+    <div>
+      <p id="questionScale"></p>
+      <input type="text" id="answerS" />
+      <button id="submit" data-text-node="toSend"></button>
+      <button id="next" disabled data-text-node="nextExercise"></button>
+    </div>
+  </div>
+    <script src="../scripts/mainExercisesScale.js" type="module"></script>
   </body>
+</html>
