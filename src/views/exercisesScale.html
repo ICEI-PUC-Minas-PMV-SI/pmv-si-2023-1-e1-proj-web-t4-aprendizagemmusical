@@ -32,24 +32,19 @@
       <div id="contentTextExercises"></div> 
     </div>
     <script src="../scripts/main.js" type="module"></script>
-    <script src="../scripts/exercises.js" type="module"></script>
-<div id="exercicio">
-    <div>
-      <label for="level" data-text-node="Choosedifficulty"></label>
-      <select id="level">
-        <option value="easy" data-text-node="basicDifficulty"></option>
-        <option value="medium" data-text-node="intermediateDifficulty"></option>
-        <option value="hard" data-text-node="advancedDifficulty"></option>
-      </select>
-    </div>
-
-    <div>
-      <p id="questionScale"></p>
-      <input type="text" id="answerS" />
-      <button id="submit" data-text-node="toSend"></button>
-      <button id="next" disabled data-text-node="nextExercise"></button>
-    </div>
+<div id="exerciseScale">
+  <select id="nivelDificuldade">
+    <option value="basico">Básico</option>
+    <option value="intermediario">Intermediário</option>
+    <option value="avancado">Avançado</option>
+  </select>
+    <button onclick="gerarEscala()">Gerar Escala</button>
+    <p id="escalaIncompleta"></p>
+    <p>Digite as notas que faltam na escala:</p>
+    <input type="text" id="respostaEscala">
+    <button onclick="verificarRespostaEscala()">Verificar Resposta</button>
+    <p id="resultadoEscala"></p>
   </div>
-    <script src="../scripts/mainExercisesScale.js" type="module"></script>
-  </body>
+  <script src="../scripts/exercisesScale.js" defer></script>
+</body>
 </html>
