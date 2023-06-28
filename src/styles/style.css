@@ -373,7 +373,10 @@ a {
     padding: 30px;
     border-radius: 5px;
   }
-  
+
+  /* */
+
+
 /* Responsividade para telas médias */
 @media (max-width: 768px) {
   .card-list {
@@ -393,6 +396,8 @@ a {
   }
   
 }
+
+/* Responsividade para as telas de courses e de modules */
 
 @media(max-width:1000px){
   .elementary-theory-call-to-action {

@@ -4,6 +4,7 @@
   "exercises" : "Exercícios",
   "playground" : "Playground",
   "theory" : "Teoria",
+  "courses-offer":"Cursos",
   "home" : "Home",
   "aboutUs" : "Sobre nós",
   "contact" : "Contato",
@@ -97,11 +98,59 @@
   "toSend": "Enviar",
   "presentationExercisesIntervals": "Exercício de Intervalos",
 
+  "presentationHeaderTheory": "Grade de Cursos",
+  "introductionTheory": "Bem-vindo à nossa área de estudos musicais! Explore teoria, instrumentos e muito mais para aprimorar suas habilidades e descobrir o poder da música.",
+  "messageTheory": "Vamos embarcar nessa jornada juntos?",
+
+  "instructionOrderCourses": "Escolha seu objetivo e te sugerimos a sua ordem de cursos",
+  "windInstrumentCategory":  "Foco em instrumentos de sopro",
+  "percussionInstrumentCategory":"Foco em instrumentos de percussão",
+  "stringInstrumentCategory":"Foco em instrumentos de cordas",
+  "keyboardInstrumentsCategory":"Foco em instrumentos de teclas",
+  "courseHeader": "Nossos cursos",
+
+  "title-course-1":"Teoria Elementar",
+  "title-course-2":"História da Música",
+  "title-course-3":"Bateria/Percussão",
+  "title-course-4":"Introdução ao Jazz",
+  "title-course-5":"Violino/Violoncelo",
+  "title-course-6":"Saxofone/Trompete",
+  "title-course-7":"Teclado/Piano",
+  "title-course-8":"Violão/Guitarra",
+
+  "courseLessonsAndTime-1": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-2": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-3": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-4": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-5": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-6": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-7": "00 Horas 00 Aulas",
+  "courseLessonsAndTime-8": "00 Horas 00 Aulas",
+
+  "instrumentQuizzPrompt": "Em dúvida? Explore ou faça um teste para descobrir qual instrumento combina com você!",
+  "QuizzText": "Teste",
+
+
+
   "readingIndications": "Indicações de leitura",
   "detailedArticle": "Matéria mais detalhada sobre o assunto",
   "aboutMusicHistory": "Contando um pouquinho sobre a história da música",
   "whereToBuy": "Onde comprar",
   "instrumentsH2": "Contando um pouquinho sobre o instrumento",
+
+  "presentationHeaderModule-1":"Parte I: Generalidades",
+  "introductionModule-1":"A teoria elementar musical é o estudo dos elementos básicos da música, como ritmo, melodia e harmonia. Ela aprimora habilidades musicais, interpretação e apreciação, oferecendo uma compreensão mais profunda da linguagem musical.",
+  "messageModule-1":"Vamos começar a aprender?",
+
+
+
+  "titleDomainChallenge": "Desafio de Domínio",
+  "textDomainChallenge": "Domine ainda mais as habilidades que você já praticou com apenas 00 questões",
+  "TextStartDomainChallange": "Iniciar",
+
+
+  "textProgress":"5.800 / 5.800 (100%)",
+  "textPoints":"Pontos",
 
   "saxContent": "Popularmente conhecido como Sax, é um instrumento de sopro inventado na década de 1840, feito de latão e composto por vários tubos, chaves e almofadas. Possui uma palheta única que , quando soprada pelo músico, vibra, produzindo o som.\n \n O Sax pode possuir vários tamanhos, cada um com sua afinação específica. O mais popular é o saxofone alto, porem existe o tenor, soprano e barítono. O tamanho do equipamento resulta em diferentes sons produzidos. Cada um possui sua própria extensão tonal.\n \n Para se tocar o saxofone é necessário soprar ar através do bocal, sempre controlando a pressão e posição da embocadura. As chaves, manuseadas pelas mãos, permitem que o músico altere a altura da nota, criando um timbre distintivo e expressivos, indo de sons mais suaves e melancólicos até sons mais energéticos e brilhantes. O músico pode utilizar de algumas técnicas comom vibrato, bend, glissando e growl para adicionar sentimento e energia ao seu som.\n \n O sax pode atuar como instrumento solo ou como parte de um secao de sopros. Ele adiciona harmonia e textura à música. Como é um instrumento versátil, ele se associa principalmente o jazz, porem também é utilizado na música clássica, especialmente em orquestras e músicas de câmara, em grupos de rock, big bands, música popular e até mesmo em alguns estilos de música folclórica.\n \n Aprender a tocar o saxofone reque muita prática, dedicação e orientação de um professor qualificado. A leitura de partituras, técnica e improvisação são aspectos relevantes para que possa desenvolver habilidades musicas. A embocadura, respiração e coordenação dos dedos irão permitir que o músico extraia o máximo desse instrumento expressivo e cativante, capaz de transmitir emoção e energia através de sua sonoridade única e versátil.",
   "violinContent": "O violino é um instrumento pertencente a família dos instrumentos de cordas friccionadas. O som produzido por ele é popularmente conhecido por ser muito belo, único e versátil, se aplicando a estilos musicais como jazz, folk, música clássica, dentre outros. Existem diversas curiosidades e informações sobre o violino, bem como sobre a maneira de se tocá-lo.\n\n O violino possui construção bastante simples. Em síntese ele é composto pela caixa de ressonância, que é a parte principal, feita em madeira, comumente com uma abertura no tampo, pelo pescoço, voluta e cravelha, que compõe o local onde se seleciona qual nota tocará. Diferente de outros instrumentos o violino possui diversos tamanhos para acomodar músico de diferentes idades e tamanhos físicos. O tamanho padrão é o 4/4, porem existem o 3/4, 1/2, 1/4, 1/8, 1/10 e 1/16. O violino é afinado nas notas sol, ré, lá e mi, da corda mais grave para a mais aguda.\n\n O violino é um instrumento muito versátil, podendo produzir uma ampla fama de sons, desde os suaves e delicados, até os brilhantes e intensos. Técnicas como vibrato, staccato, legato, pizzicato e harmônicos podem ser utilizados pelo músico para adicionar nuances e emoção à sua interpretação. Devido a isso, esse instrumento extrapola a música clássica, local onde é mais utilizado e marcante, para adentrar em gêneros completamente distintos como música folclórica e étnica, funk, música popular, dentre outros.\n\n O aprendizado do violino requer bastante dedicação, prática e orientação de um professor qualificado. O aluno irá posicionar a base do instrumento entre o queixo e o obro esquerdo. A mao esquerda irá pressionar as cordas no praco do violino para alterar a altura do som. A mao direita segura um arco composto por crina de cavalo amarrada a um arco de madeira. A fricção dessa crina com as cordas produz o som. A execução desses movimentos com excelência é complexa, pois o violino é um instrumento desafiador. Com paciência e perseverança é possível extrair sons maravilhosos e melódicos desse aparelho.",
