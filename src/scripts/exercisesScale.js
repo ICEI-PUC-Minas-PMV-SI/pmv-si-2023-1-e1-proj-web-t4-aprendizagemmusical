@@ -38,13 +38,13 @@ function generateRandomScale(numMissingNotes) {
   
     switch (level) {
       case "basico":
-        numMissingNotes = 2;
+        numMissingNotes = 1;
         break;
       case "intermediario":
-        numMissingNotes = 4;
+        numMissingNotes = 2;
         break;
       case "avancado":
-        numMissingNotes = 6;
+        numMissingNotes = 3;
         break;
       default:
         return;
@@ -64,9 +64,9 @@ function generateRandomScale(numMissingNotes) {
     document.getElementById("resultadoEscala").style.display = "none";
     document.getElementById("respostaEscala").value = "";
   
-    const respostaEscalaLabel = document.getElementById("respostaEscalaLabel");
+    const respostaEscalaLabel = document.getElementById("respostaEscala");
     respostaEscalaLabel.innerHTML = "Digite as " + numMissingNotes + " notas que faltam na escala:";
-    respostaEscalaLabel.style.display = "block";
+    respostaEscalaLabel.style.display = "none";
   }
 
 function generateMissingNotes() {

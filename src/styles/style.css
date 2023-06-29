@@ -264,11 +264,165 @@ a {
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 30vh; 
+  position: relative; 
 }
 
+/* inicio da edicao imagem home*/
+
+.content img {
+  position: absolute;
+  bottom: 50;
+  left: 25%;
+  transform: translateX(-50%);
+  max-height: 580px;
+  }
+
+  .image-container-home {
+    flex: 1;
+    display: flex;
+    justify-content: flex;
+    align-items: flex;
+  }
+
+  .image-container-home img {
+    width: 50%;
+    height: auto;
+    max-width: 100vw; 
+  }
+
+  #wipTextHome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: auto
+  }
+
+  @media screen and (max-width: 768px) {
+    #wipTextHome {
+      font-size: auto; /* Ajuste o valor conforme necessário para um tamanho de fonte adequado */
+    }
+  }
+    
+  /* fim da edicao imagem home*/
+
+  /* Inicio edição exercises */
+
+  .contentExercises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 100%;
+  }
+  #exerciseScale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #nivelDificuldade,
+  #escalaIncompleta,
+  #respostaEscala,
+  #resultadoEscala {
+    margin-bottom: 10px;
+  }
+
+  #nivelDificuldade option[value="basico"],
+  #nivelDificuldade option[value="intermediario"],
+  #nivelDificuldade option[value="avancado"] {
+  font-size: 20px;
+  padding: 10px;
+}
+
+  .presentationTextExercisesScale {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .select-dificuldadeExercises {
+    font-size: 16px;
+    padding: 10px;
+    color: #333;
+    background-color: #fff;
+    border: 3px solid #0e0d0d;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  /* Estilizando a seta da caixa de seleção (apenas para navegadores WebKit) */
+  .select-dificuldadeExercises::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .select-dificuldadeExercises::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .select-dificuldadeExercises::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+  
+  .select-dificuldadeExercises::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+
+  .customElementExercisesScale {
+    font-size: 16px;
+    padding: 10px;
+    color: #333;
+    background-color: #fff;
+    border: 3px solid #0e0d0d;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  #missingNotesText {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .customElementExercisesScale::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .customElementExercisesScale::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .customElementExercisesScale::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+  
+  .customElementExercisesScale::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+
+   /* Fim edição exercises */
 #contentTextExercises {
   display: flex;
   justify-content: center;
@@ -484,4 +638,3 @@ a {
     font-size: 1rem;
   }
 }
-

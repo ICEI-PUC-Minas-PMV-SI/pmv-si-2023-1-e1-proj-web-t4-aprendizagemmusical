@@ -1,6 +1,6 @@
 {
-  "presentationHeader" : "Learn Music Header",
-  "presentationSubHeader" : "Learn Music Sub Header",
+  "presentationHeader" : "Explore the world of music",
+  "presentationSubHeader" : "Develop musical skills, perfect your technique and create your own:",
   "exercises" : "Exercises",
   "playground" : "Playground",
   "theory" : "Theory",
@@ -28,6 +28,10 @@
   "intermediateDifficulty": "Intermediary",
   "advancedDifficulty":  "Advanced",
   "selectDifficulty": "Select",
+  "presentationTextExercisesScale":"A scale is an ordered sequence of musical notes that follow a specific pattern of intervals between them. There are different types of scales, such as major, minor, pentatonic, chromatic, among others. This exercise is based on the chromatic scale and aims to generate a sequence of notes that you will have to complete. Let's start?",
+  "missingNotesText": "Type the missing notes:",
+  "generateScale": "Generate scale",
+  "checkAnswer": "Check answer",
   
   "presentationHeaderModules": "Elementary Theory",
   "presentationModules": "Modules",
@@ -92,7 +96,7 @@
   "module-6": "Module 6 - Other Musical Aspects",
   "unit-42": "Unit 42 - Acoustics Notions",
   "unit-43": "Unit 43 - Harmonic Sounds - Octave Numbering",
-  "presentationExercisesScale": "Scale exercise",
+  "presentationExercisesScale": "Scale",
   "Choosedifficulty": "Choose difficulty level",
   "nextExercise": "Next exercise",
   "toSend": "To send",
