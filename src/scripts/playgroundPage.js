@@ -1,2 +1,3 @@
-import { showDefaultAdvancedPlayground } from './uiPlaygroundHelper.js';
-showDefaultAdvancedPlayground();
+import { showDefaultAdvancedFreeplayPlayground } from './uiPlaygroundHelper.js';
+
+showDefaultAdvancedFreeplayPlayground();

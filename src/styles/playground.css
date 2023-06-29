@@ -61,7 +61,6 @@
   background-color: #0a2740;
   transition: background-color 0.2s;
 }
-
 .playground {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -73,7 +72,7 @@
   padding: 0 5vh;
   grid-template-areas:  "choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv"
                         "buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv"
-                        "playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv . . . . ."
+                        "playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV"
                         "diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram";
 }
 .diagram {
@@ -112,6 +111,32 @@
 .choosePlaygroundDiv {
   grid-area: choosePlaygroundDiv;
 }
+
+.dark .choosePlaygroundDiv button:hover {
+  background-color: var(--dark-theme-background-color);
+  color: var(--dark-theme-main-color);
+  box-shadow: 0px 0px 0px 3px var(--dark-theme-main-color) inset;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.4s, font-size 0.8s;
+}
+.light .choosePlaygroundDiv button:hover {
+  background-color: var(--dark-theme-main-color);
+  color: var(--dark-theme-background-color);
+  box-shadow: 0px 0px 0px 3px var(--dark-theme-background-color) inset;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.4s, font-size 0.8s;
+}
+.dark .chooseInstrumentDiv button:hover {
+  background-color: var(--dark-theme-background-color);
+  color: var(--dark-theme-main-color);
+  box-shadow: 0px 0px 0px 3px var(--dark-theme-main-color) inset;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.4s, font-size 0.8s;
+}
+.light .chooseInstrumentDiv button:hover {
+  background-color: var(--dark-theme-main-color);
+  color: var(--dark-theme-background-color);
+  box-shadow: 0px 0px 0px 3px var(--dark-theme-background-color) inset;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.4s, font-size 0.8s;
+}
+
 /* #guitarBtn {grid-area: guitarBtn}
 #guitarBtn {grid-area: bassBtn}
 #guitarBtn {grid-area: pianoBtn} */
@@ -120,15 +145,23 @@
 #rootNoteBtn {grid-area: rootNoteBtn}
 #scaleBtn {grid-area: scaleBtn}
 #sharpFlatBtn {grid-area: sharpFlatBtn}
-.playgroundFreeplayFields {grid-area: playgroundFreeplayFieldsDiv}
+.playgroundFreeplayFields {grid-area: playgroundFPDV}
 
 .playgroundField {
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-self: self-end;
-  width: 100%;
   height: min-content;
+}
+.playgroundField:has(input[type="checkbox"]) {
+  align-items: center;
+  margin: 0 5px;
+  flex-direction: row;
+}
+.playgroundField input[type="checkbox"] {
+  zoom: 1.5;
+  margin-left: 2px;
 }
 .note {
   cursor: crosshair;
@@ -155,7 +188,42 @@
 .playgroundFreeplayFields {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
+.tutorial {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  padding: 20px;
+  width: calc(min(1200px, 100% - 2 * 2vh) - (5vh * 2));
+}
+
+.tutorial .question, .tutorial .answer {
+  font-size: 0.9em;
+}
+.tutorial h1, .tutorial h2, .tutorial hr {
+  grid-column: 1/-1;
+}
+.tutorial hr {
+  margin: 5px 0;
+}
+.tutorial h1,
+.tutorial h2,
+.tutorial p {
+  text-align: justify;
+}
+.tutorialQuestion p:first-child {
+  font-weight: bold;
+}
+.tutorialQuestion p:last-child {
+  padding-left: 10px;
+}
+.dark .tutorial h1, .dark .tutorial ul, .dark .tutorial h2 {
+  color: white;
+}
+
 .dark .note {
   color: white;
   box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
@@ -165,7 +233,18 @@
   background-color: #f2722d;
   box-shadow: 0px 0px 0px 1px rgb(204, 204, 204);
 }
-
+.dark .tutorial {
+  box-shadow: inset 0px 0px 0px 2px white;
+}
+.light .tutorial {
+  box-shadow: inset 0px 0px 0px 2px rgb(0, 0, 0);
+}
+.dark .tutorialQuestion p {
+  color: white;
+}
+.light .tutorialQuestion p {
+  color: black;
+}
 .dark .playground {
   color: rgb(204, 204, 204);
 }
@@ -193,8 +272,14 @@
   body {
     padding: 0 calc((100% - 1200px)/2);
   }
+
 }
+
 @media (max-width: 600px) {
+  .tutorial {
+    margin: auto;
+    width: calc(100% - (2vh * 2));
+  }
   body {
     padding: 0 calc((100% - 1200px)/2);
   }
@@ -214,7 +299,6 @@
     align-items: center;
     justify-items: center;
   }
-
   .playground {
     padding: 0 2vh;
     width: 100%;
@@ -223,7 +307,7 @@
     grid-template-rows: 10vh 10vh min-content minmax(20vh, 30vh);
     grid-template-areas:  "choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv choosePlaygroundDiv"
                           "buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv buttonsDiv"
-                          "playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv playgroundFreeplayFieldsDiv . . . . . . . ."
+                          "playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV playgroundFPDV"
                           "diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram diagram"
                           ". . . . . . . . . . . .";
                           justify-items: start;

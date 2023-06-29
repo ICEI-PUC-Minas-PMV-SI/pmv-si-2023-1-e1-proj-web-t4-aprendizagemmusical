@@ -11,6 +11,7 @@ import * as uiPlaygroundController from './uiPlaygroundController.js';
 import * as diagramController  from './diagramController.js';
 import * as scaleController from './scalesController.js';
 
+let playgroundDiv = document.querySelector("div.playground");
 
 export function showAvailableTunnings(instrument) {
   let tunningSelect = document.getElementById("tunning");
@@ -65,10 +66,11 @@ export function isChosenInitialNoteAscendent(oldValue, newValue) {
   return scalesHelper.getNoteIndex(newValue) > scalesHelper.getNoteIndex(oldValue) == true ? true : false; 
 }
 
-export function showDefaultAdvancedPlayground() {
+export function showDefaultAdvancedFreeplayPlayground() {
   let diagramDiv = diagramHelper.diagramDiv;
   diagramDiv.setAttribute("data-diagram-mode","freeplay");
   showFreePlayPlayground();
+  uiPlayground.showTutorial();
 }
 
 export function showFreePlayPlayground(){
@@ -78,8 +80,8 @@ export function showFreePlayPlayground(){
       element.remove();
     }
   });
-
-  if(uiPlayground.playgroundDiv.children.length <= 2) {
+  
+  if(playgroundDiv.children.length <= 2) {
     generateInstrumentButtons();
     generatePlaygroundOptionsButtons();
     assignPlaygroundOptionsButtonsEventListeners();
@@ -105,7 +107,7 @@ export function showAdvancedPlayground(){
     }
   });
 
-  if(uiPlayground.playgroundDiv.children.length <= 2) {
+  if(playgroundDiv.children.length <= 2) {
     generateInstrumentButtons();
   }
   
@@ -115,7 +117,7 @@ export function showAdvancedPlayground(){
     <button value="${playgroundFreePlayButtons.sharpFlat.value}">${playgroundFreePlayButtons.sharpFlat.label}</button>
    </div>
   `
-  uiPlayground.playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="playgroundFreeplayFields">${playgroundFreePlayButtonsHtmlElements}</div>`);
+  playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="playgroundFreeplayFields">${playgroundFreePlayButtonsHtmlElements}</div>`);
   
   let sharpFlatBtnTag = document.querySelector("#sharpFlatBtn");
   let sharpFlatBtn = sharpFlatBtnTag.querySelector("button");
@@ -142,7 +144,7 @@ function generateInstrumentButtons() {
   Object.keys(instrumentsObject).forEach(instrument => {
     instrumentHtmlElements += `<button type="button" id="${instrument}Btn" value="${instrument}" data-text-node="${instrument}Playground"></button>`
   })
-  uiPlayground.playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="chooseInstrumentDiv">${instrumentHtmlElements}</div>`);
+  playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="chooseInstrumentDiv">${instrumentHtmlElements}</div>`);
 }
 
 function generatePlaygroundOptionsButtons() {
@@ -172,7 +174,7 @@ function generatePlaygroundOptionsButtons() {
       `
     }
   })
-  uiPlayground.playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="playgroundFreeplayFields">${playgroundFreePlayButtonsHtmlElements}</div>`);
+  playgroundDiv.insertAdjacentHTML("afterbegin", `<div class="playgroundFreeplayFields">${playgroundFreePlayButtonsHtmlElements}</div>`);
 }
 
 function assignPlaygroundOptionsButtonsEventListeners() {
@@ -406,4 +408,10 @@ function assignNotesStyle() {
   diagramController.assignStyleToIntervals(scaleController.getScaleCustomIntervals(paramField0, intervals), paramField3, paramField4, paramField5, paramField6);
 }
 
+export function resetComponent(component){
+  if(component.innerHTML == "") {
+    return;
+  }
+  component.innerHTML = "";
+}
 console.log("uiPlaygroundHelper.js LOADED");

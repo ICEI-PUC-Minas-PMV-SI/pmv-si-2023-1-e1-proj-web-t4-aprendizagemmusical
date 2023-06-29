@@ -94,5 +94,19 @@ export function translateElements(elementArray) {
 	}); 
 }
 
+export function translateElementsRecursively(element) {
+	console.log(element);
+	let elementArray = Array.from(element.querySelectorAll("[data-text-node]"))
+	console.log(elementArray);
+	elementArray.forEach(element => {
+		if(getLocalStorageLanguage() == "enus") {
+			element.innerText = englishTranslation[element.getAttribute("data-text-node")];
+		}
+		if(getLocalStorageLanguage() == "ptbr") {
+			element.innerText = portugueseTranslation[element.getAttribute("data-text-node")];
+		}
+	}); 
+}
+
 export { setInitialLanguage };
 console.log("uiTranslation.js LOADED");
