@@ -16,7 +16,7 @@
           <img src="/src/assets/images/svg/logo.svg">
           <p data-text-node="appName"></p>
         </a>
-        <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
+        <a href="/src/views/exercises.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
         <div class="userUiSettings">
           <button id="changeTheme" value="dark"></button>
           <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
@@ -32,14 +32,14 @@
     <div class="contentExercises">
       <div id="contentTextExercises"></div> 
     </div>
-    <script src="../scripts/main.js" type="module"></script>
-    <script src="../scripts/exercises.js" type="module"></script>
+
 
     <!-- código original -->
 <div id="exercicio">
+  <p data-text-node="presentationTextExercisesIntervals" class="presentationTextExercisesScale"></p>
     <div>
-      <label for="level" data-text-node="Choosedifficulty"></label>
-      <select id="level">
+      <label for="level" class="presentationTextExercisesScale" data-text-node="Choosedifficulty"></label>
+      <select id="level" class="select-dificuldadeExercises">
         <option value="easy" data-text-node="basicDifficulty"></option>
         <option value="medium" data-text-node="intermediateDifficulty"></option>
         <option value="hard" data-text-node="advancedDifficulty"></option>
@@ -47,14 +47,16 @@
     </div>
 
     <div>
-      <p id="question"></p>
-      <input type="text" id="answer" />
-      <button id="submit" data-text-node="toSend"></button>
-      <button id="next" disabled data-text-node="nextExercise"></button>
+      <p id="question" class="presentationTextExercisesScale"></p>
+      <input type="text" id="answer" class="customElementExercisesScale"/>
+      <button id="submit" data-text-node="toSend" class="customElementExercisesScale"></button>
+      <button id="next" disabled data-text-node="nextExercise" class="customElementExercisesScale"></button>
     </div>
 
     <p id="feedback"></p>
   </div>
+    <script src="../scripts/main.js" type="module"></script>
+    <script src="../scripts/exercises.js" type="module"></script>
     <script src="../scripts/mainIntervals.js" type="module"></script>
   </body>
 </html>

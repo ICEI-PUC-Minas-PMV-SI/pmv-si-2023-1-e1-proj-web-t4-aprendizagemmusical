@@ -344,7 +344,7 @@ lottie-player {
     margin-right: 100px;
     width: 100%;
   }
-  #exerciseScale {
+  #exerciseScale, #exercicio {
     display: flex;
     flex-direction: column;
     align-items: center;
