@@ -51,6 +51,14 @@ a {
   color: var(--dark-theme-secondary-text-color);
 }
 
+lottie-player {
+  justify-self: end;
+  width: 300px;
+  grid-column: 1/3;
+  height: 300px;
+  grid-row: 2/3;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -90,6 +98,16 @@ a {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+
+  background-color: var(--dark-theme-background-color);
+  padding: 0 calc((100% - 1200px)/2);
+  min-height: 35vh;
+}
+
+.containerMainPage {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
@@ -216,6 +234,12 @@ a {
   grid-row: 2/3;
 }
 
+.presentationMainPage {
+  align-self: center;
+  grid-column: 3/6;
+  grid-row: 2/3;
+}
+
 .buttons {
   grid-column: 1/6;
   grid-row: 3/4;
@@ -236,6 +260,16 @@ a {
   word-wrap: break-word;
 }
 
+.presentationContentMainPage {
+  word-wrap: break-word;
+}
+
+.presentationTextMainPage {
+  text-align: left;
+  color: var(--dark-theme-primary-text-color);
+  word-wrap: break-word;
+  margin-right: 30%;
+}
 
 .buttons a, .buttons button {
   width: 100%;
@@ -574,6 +608,28 @@ a {
     padding: 0 20px;
   }
 
+  .containerMainPage {
+    width: 100%;
+    height: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    padding: 0 20px;
+  }
+
+  lottie-player {
+    justify-self: center;
+  }
+
+  .presentationMainPage {
+    align-self: center;
+    grid-column: 1/1;
+    grid-row: 3/3;
+  }
+
+  .presentationTextMainPage {
+    text-align: center;
+    margin: 0;
+  }
   #mainPageNav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
