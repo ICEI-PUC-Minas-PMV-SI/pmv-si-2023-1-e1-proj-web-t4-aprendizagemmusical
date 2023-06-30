@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <title>Teoria elementar da Música</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="containerExercises">
+
+    <nav id="childrenPageNav">
+      <a class="logo" href="/src/views/index.html">
+        <img src="/src/assets/images/svg/logo.svg">
+        <p data-text-node="appName"></p>
+      </a>
+      <a href="/src/views/theory.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
+      <div class="userUiSettings">
+        <button id="changeTheme" value="dark"></button>
+        <button id="englishTranslation" value="enus"><img
+            src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+        <button id="portugueseTranslation" value="ptbr"><img
+            src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+      </div>
+    </nav>
+
+    <!--presentation-->
+    <div class="presentation">
+      <div class="presentationContent">
+        <h1 class="presentationText" data-text-node="elemntaryTheory"></h1>
+      </div>
+    </div>
+
+  </div>
+
+  <article>
+
+    <section class="content-unit">
+
+      <!-- <h2 data-text-node="aboutMusicHistory"></h2> -->
+        <p data-text-node="historyOfMusicContent"></p>
+    </section>
+
+    <section class="resources-unit">
+      <h2 data-text-node="readingIndications"></h2>
+      <ul>
+        <li><a href="https://escolaeducacao.com.br/historia-da-musica/" data-text-node="detailedArticle"></a></li>
+      </ul>
+    </section>
+
+  </article>
+  <script src="../../scripts/main.js" type="module"></script>
+</body>
+
+</html>
