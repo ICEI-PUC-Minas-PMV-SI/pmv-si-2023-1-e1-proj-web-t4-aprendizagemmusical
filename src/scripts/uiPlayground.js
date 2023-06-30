@@ -51,8 +51,8 @@ function handleTutorialContent() {
 
 function createFreePlayTutorial() {
   return `
-  <h1>Tutorial: Freeplay playground</h1>
-  <h2>This mode should be used for beginners or students that wants to learn musical scales such as major and minor scales, as well as pentatonics.</h2>
+  <h1 data-text-node="tutorialFreeplayTitle">Tutorial: Freeplay playground</h1>
+  <h2 data-text-node="tutorialFreeplaySubTitle">This mode should be used for beginners or students that wants to learn musical scales such as major and minor scales, as well as pentatonics.</h2>
   <hr>
   <div class="tutorialQuestion">
     <p data-text-node="tutorialQuestionTunningselect"></p>
@@ -93,10 +93,8 @@ function createFreePlayTutorial() {
 
 function createAdvancedTutorial() {
   return `
-  <h1>Tutorial: Freeplay Advanced</h1>
-  <h2>Means you already know how musical scales works, and wants to experiment with it.
-	There you can change your tunning manually and assign each fretboard note to a color to keep track of what you're trying to study.
-	This is also useful for music teachers teaching toal beginners or people that already know music, but wants to give improvisation a try.</h2>
+  <h1 data-text-node="tutorialAdvancedTitle"></h1>
+  <h2 data-text-node="tutorialAdvancedSubTitle"></h2>
   <hr>
     <div class="tutorialQuestion">
       <p data-text-node="tutorialAdvancedQuestionLMB"></p>
