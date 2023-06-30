@@ -714,3 +714,48 @@ lottie-player {
 .light .presentationTextExercisesScale {
   color: #000;
 }
+
+/* estilos quizz */
+.quizz-section img {
+  width: 300px;
+  border-radius: 15px;
+}
+.quizz-section {
+margin-bottom: 10px; 
+font-size: 18px;
+}
+.dark .quizz-section{
+color: var(--dark-theme-secondary-text-color);
+}
+
+.light .quizz-section {
+color: #000;
+}
+
+.quizz-sectionButton {
+font-size: 16px;
+padding: 10px;
+color: #333;
+background-color: #fff;
+border: 3px solid #0e0d0d;
+border-radius: 4px;
+margin-bottom: 20px;
+}
+
+.quizz-sectionButton::-webkit-scrollbar {
+width: 12px;
+}
+
+.quizz-sectionButton::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+.quizz-sectionButton::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 6px;
+}
+
+.quizz-sectionButton::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+/* fim estilos quizz */
