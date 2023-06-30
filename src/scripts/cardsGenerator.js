@@ -15,7 +15,7 @@ console.log(urlImagens)
 function cardsCourse(cardRef) {
   const linhaDiv = `
   <a href=${cardRef.refLink}>
-    <div class="course-info-box">
+    <div class="course-info-box transition-time">
       <figure>
         <img src="../assets/images/${cardRef.image}" alt="${cardRef.textAlt}">
       </figure>

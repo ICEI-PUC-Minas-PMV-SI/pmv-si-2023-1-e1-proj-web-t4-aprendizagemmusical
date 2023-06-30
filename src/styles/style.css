@@ -4,9 +4,10 @@
   --dark-theme-main-color: #64E4A3;
   --dark-theme-primary-text-color: #FFF;
   --dark-theme-secondary-text-color: #C2C2C2;
-
+  
   --generic-svg-white: invert(99%) sepia(17%) saturate(1%) hue-rotate(238deg) brightness(110%) contrast(100%);
   --generic-svg-secondary-text-color: invert(98%) sepia(0%) saturate(291%) hue-rotate(187deg) brightness(79%) contrast(96%);
+
 }
 
 /* generic */
