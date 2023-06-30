@@ -264,53 +264,40 @@ a {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
-  height: 30vh; 
-  position: relative; 
+  height: 40vh;
+  text-align: center;
 }
 
-/* inicio da edicao imagem home*/
+/* inicio da edicao  home*/
 
-.content img {
-  position: absolute;
-  bottom: 50;
-  left: 25%;
-  transform: translateX(-50%);
-  max-height: 580px;
-  }
+.paragraph-text {
+  margin-bottom: 10px; 
+  font-size: 18px;
+}
 
-  .image-container-home {
-    flex: 1;
-    display: flex;
-    justify-content: flex;
-    align-items: flex;
-  }
+.image-container-home img {
+  max-width: 40%;
+  height: auto;
+}
 
-  .image-container-home img {
-    width: 50%;
-    height: auto;
-    max-width: 100vw; 
-  }
+.image-container-home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
+  margin-top: -310px;
+}
 
-  #wipTextHome {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: auto
-  }
-
-  @media screen and (max-width: 768px) {
-    #wipTextHome {
-      font-size: auto; /* Ajuste o valor conforme necessário para um tamanho de fonte adequado */
-    }
-  }
     
-  /* fim da edicao imagem home*/
+  /* fim da edicao  home*/
 
   /* Inicio edição exercises */
 
@@ -346,6 +333,12 @@ a {
   padding: 10px;
 }
 
+#respostaEscala {
+  width: 150px; 
+  height: 40px; 
+}
+
+
   .presentationTextExercisesScale {
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
@@ -355,8 +348,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .select-dificuldadeExercises {

@@ -66,7 +66,7 @@ function generateRandomScale(numMissingNotes) {
   
     const respostaEscalaLabel = document.getElementById("respostaEscala");
     respostaEscalaLabel.innerHTML = "Digite as " + numMissingNotes + " notas que faltam na escala:";
-    respostaEscalaLabel.style.display = "none";
+    respostaEscalaLabel.style.display = "block";
   }
 
 function generateMissingNotes() {
