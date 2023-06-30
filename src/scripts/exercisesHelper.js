@@ -24,7 +24,7 @@ function redirectToPercepcaoMusical() {
   }
 
 function redirectToPercepcaoRitmica() {
-    window.location.href = 'exercisesChooseMode.html';
+    window.location.href = 'exercisesRhythm.html';
   }
 
 function redirectToCompleteEscala() {

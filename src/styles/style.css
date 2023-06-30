@@ -632,3 +632,25 @@ a {
     font-size: 1rem;
   }
 }
+
+#ball {
+  position: absolute;
+  top: 50%;
+  right: 35%; 
+  transform: translate(0, -50%);
+  width: 5%; 
+  padding-bottom: 5%; 
+  background-color: red;
+  border-radius: 50%;
+}
+
+#containerBall {
+  position: absolute;
+  top: 70%;
+  right: 20%; 
+  transform: translate(50%, -50%);
+  width: 10%; 
+  height: 10%;
+  padding-bottom: 10%; /* Manter a proporção 1:1 */
+  border: 2px solid black;
+}
