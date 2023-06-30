@@ -52,10 +52,10 @@ a {
 }
 
 lottie-player {
-  justify-self: end;
-  width: 300px;
-  grid-column: 1/3;
+  width: clamp(300px, 300px, 100%);
   height: 300px;
+  justify-self: end;
+  grid-column: 1/3;
   grid-row: 2/3;
 }
 
@@ -303,7 +303,6 @@ lottie-player {
   grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
-  height: 40vh;
   text-align: center;
 }
 
