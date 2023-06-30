@@ -14,13 +14,12 @@ const urlImagens = [
 console.log(urlImagens)
 function cardsCourse(cardRef) {
   const linhaDiv = `
-  <a href=${cardRef.refLink}>
+  <a href=${cardRef.refLink} class="cardsMarg">
     <div class="course-info-box transition-time">
       <figure>
         <img src="../assets/images/${cardRef.image}" alt="${cardRef.textAlt}">
       </figure>
       <h2 data-text-node="${cardRef.textH2}"></h2>
-      <p data-text-node="${cardRef.textP}"></p>
     </div>
   </a>`;
 
