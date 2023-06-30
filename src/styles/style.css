@@ -632,3 +632,14 @@ a {
     font-size: 1rem;
   }
 }
+
+#ball {
+  position: absolute;
+  top: 78%;
+  left: 60%; /* Posição relativa ao contêiner pai */
+  transform: translate(-50%, -50%);
+  width: 5%;
+  padding-bottom: 5%;
+  background-color: red;
+  border-radius: 50%;
+}
