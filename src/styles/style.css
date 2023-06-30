@@ -643,3 +643,19 @@ a {
   background-color: red;
   border-radius: 50%;
 }
+
+.dark .paragraph-text {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+.light .paragraph-text {
+  color: #000;
+}
+
+.dark .presentationTextExercisesScale {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+.light .presentationTextExercisesScale {
+  color: #000;
+}
