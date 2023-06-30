@@ -194,5 +194,9 @@
   "tutorialAdvancedQuestionDropdownMenus": "Menus suspensos no primeiro traste:",
   "tutorialAdvancedAnswerDropdownMenus": "Alteram a afinação de cada corda.",
   "presentationExercisesRhythm": "Rítimo",
-  "presentationTextExercisesRhythm": "O ritmo é uma das principais características da música e está relacionado à organização dos sons no tempo. É a sensação de movimento e pulsação que sentimos ao ouvir uma música. Nesse jogo, o usuário é desafiado a ouvir uma batida de ritmo e deve clicar na barra de espaço do teclado no mesmo momento em que a batida ocorre. Quando o usuário acerta o tempo corretamente, uma bolinha na tela fica verde, indicando que o clique foi preciso."
+  "presentationTextExercisesRhythm": "O ritmo é uma das principais características da música e está relacionado à organização dos sons no tempo. É a sensação de movimento e pulsação que sentimos ao ouvir uma música. Nesse jogo, o usuário é desafiado a ouvir uma batida de ritmo e deve clicar na barra de espaço do teclado no mesmo momento em que a batida ocorre. Quando o usuário acerta o tempo corretamente, uma bolinha na tela fica verde, indicando que o clique foi preciso.",
+  "introHome": "Seja você um iniciante curioso ou um músico experiente em busca de aprimoramento, nosso aplicativo está aqui para ajudá-lo a desenvolver suas habilidades musicais!",
+  "introTeory": "Na seção de teoria, você encontrará uma coleção abrangente de artigos que irão consolidar seus conhecimentos musicais.",
+  "introExercises": "Em nossa seção de exercícios, você poderá colocar em prática o que aprendeu. Com treinamentos auditivos e tambem exercícios de identificação de intervalos.",
+  "introPlayground": "No playground, você terá a oportunidade de explorar ainda mais o mundo das diagramações musicais. Aprenda a interpretar e teste as escalas musicais."
 }

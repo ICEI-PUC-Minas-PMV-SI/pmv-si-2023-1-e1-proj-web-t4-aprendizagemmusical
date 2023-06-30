@@ -31,10 +31,6 @@ var bpmRanges = {
 
 var ball = document.getElementById("ball");
 
-ball.style.width = "50px";
-ball.style.height = "50px";
-ball.style.backgroundColor = "red";
-ball.style.borderRadius = "50%";
 
 var isPlaying = false;
 var isCorrect = false;

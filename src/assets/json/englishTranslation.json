@@ -187,5 +187,9 @@
   "tutorialAdvancedQuestionDropdownMenus" : "Dropdown menus on first fret",
   "tutorialAdvancedAnswerDropdownMenus" : "Changes the tunning for each string.",
   "presentationExercisesRhythm": "Rhythm",
-  "presentationTextExercisesRhythm": "Rhythm is one of the main characteristics of music and is related to the organization of sounds in time. It is the sensation of movement and pulsation that we feel when listening to music. In this game, the user is challenged to hear a rhythmic beat and must click on the keyboard's space bar at the same moment that the beat occurs. When the user sets the time correctly, a ball on the screen turns green, indicating that the click was accurate."
+  "presentationTextExercisesRhythm": "Rhythm is one of the main characteristics of music and is related to the organization of sounds in time. It is the sensation of movement and pulsation that we feel when listening to music. In this game, the user is challenged to hear a rhythmic beat and must click on the keyboard's space bar at the same moment that the beat occurs. When the user sets the time correctly, a ball on the screen turns green, indicating that the click was accurate.",
+  "introHome": "Whether you're a curious beginner or a seasoned musician looking to improve, our app is here to help you develop your musical skills!",
+  "introTeory": "In the theory section, you will find a comprehensive collection of articles that will consolidate your musical knowledge.",
+  "introExercises": "In our exercises section, you will be able to put what you have learned into practice. With auditory training and also interval identification exercises.",
+  "introPlayground": "In the playground, you will have the opportunity to explore the world of musical layouts even further. Learn to interpret and test the musical scales."
 }
