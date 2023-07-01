@@ -17,7 +17,7 @@ function cardsCourse(cardRef) {
   <a href=${cardRef.refLink} class="cardsMarg">
     <div class="course-info-box transition-time">
       <figure>
-        <img src="../assets/images/${cardRef.image}" alt="${cardRef.textAlt}">
+        <img src="../assets/images/${cardRef.image}" alt="${cardRef.textAlt}" class="img-res">
       </figure>
       <h2 data-text-node="${cardRef.textH2}"></h2>
     </div>
