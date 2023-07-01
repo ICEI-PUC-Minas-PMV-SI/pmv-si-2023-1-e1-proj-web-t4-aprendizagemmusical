@@ -1,7 +1,7 @@
 const divAlter = document.querySelector("#elemento-dinamico");
 console.log(divAlter)
 const urlImagens = [
-  { image: "music_sheet.jpg", textH2: "title-course-1", textP: "courseLessonsAndTime-1", textAlt: "Photo of music sheets", refLink:" /src/views/theory/historyOfMpb.html" },
+  { image: "music_sheet.jpg", textH2: "title-course-1", textP: "courseLessonsAndTime-1", textAlt: "Photo of music sheets", refLink:" /src/views/theory/elementaryTheory.html" },
   { image: "music_history.jpeg", textH2: "title-course-2", textP: "courseLessonsAndTime-2", textAlt: "Photo of an Egyptian mural with a drawing of people with ancient instruments",refLink:" /src/views/theory/historyOfMusic.html" },
   { image: 'drum_percussion.jpg', textH2: "title-course-3", textP: "courseLessonsAndTime-3", textAlt: "Photo of a drum", refLink:" /src/views/theory/drums.html"},
   { image: "jazz.jpeg", textH2: "title-course-4", textP: "courseLessonsAndTime-4", textAlt: "Photo of jazz band", refLink:" /src/views/theory/historyOfJazz.html" },
