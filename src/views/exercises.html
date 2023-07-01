@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
+  <meta charset="UTF-8">    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +18,14 @@
   <div class="container">
     <nav id="childrenPageNav">
       <a class="logo" href="/src/views/index.html">
-        <img src="/src/assets/images/svg/logo.svg">
+        <img src="/src/assets/images/svg/logo.svg" title="logo">
         <p data-text-node="appName"></p>
       </a>
-      <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
+      <a href="/src/views/index.html" aria-label="Back button" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"  title="left arrow"></a>
       <div class="userUiSettings">
-        <button id="changeTheme" value="dark"></button>
-        <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
-        <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+        <button id="changeTheme" value="dark" title="Change Theme"></button>
+        <button id="englishTranslation" value="enus" title="Translate to English"><img src="https://www.countryflagicons.com/FLAT/32/US.png" style="height:32px;width:32px;" title="USA flag"></button>
+        <button id="portugueseTranslation" value="ptbr" title="Translate to Portuguese"><img src="https://www.countryflagicons.com/FLAT/32/BR.png" style="height:32px;width:32px;" title="BRA flag"></button>
       </div>
     </nav>
     <div class="presentation">

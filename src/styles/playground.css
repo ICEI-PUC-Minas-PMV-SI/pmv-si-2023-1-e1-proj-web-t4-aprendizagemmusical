@@ -6,7 +6,7 @@
 }
 :root {
   --light-highlight-root-note: #eba327;
-  --light-highlight-scale-note: #2d887d;
+  --light-highlight-scale-note: #35A699;
   --light-highlight-3rdMajor-note: #1b8f45;
   --light-highlight-3rdMinor-note: #1b8f45;
   --light-highlight-5th-note: #da452d;
@@ -160,7 +160,6 @@
   flex-direction: row;
 }
 .playgroundField input[type="checkbox"] {
-  zoom: 1.5;
   margin-left: 2px;
 }
 .note {
@@ -250,7 +249,7 @@
 }
 
 .light .note {
-  color: #0a2740;
+  color: black;
   box-shadow: 0px 0px 0px 1px #0a2740;
 }
 

@@ -167,9 +167,9 @@ function generatePlaygroundOptionsButtons() {
     }
     if(button.type == "checkbox") {
       playgroundFreePlayButtonsHtmlElements += 
-      `<div class="playgroundField" id="${button.id}">
-        <label for="${button.label.toLowerCase()}">${button.label}</label>
-        <input type="${button.type}">
+      `<div class="playgroundField" id="${button.id}Wrapper">
+        <label for="${button.id}">${button.label}</label>
+        <input id="${button.id}" type="${button.type}">
        </div>
       `
     }
@@ -399,9 +399,9 @@ function assignNotesStyle() {
   let paramField1 = document.getElementById("scale").value;
   let paramField2 = document.getElementById("tunning").value;
   let paramField3 = document.getElementById("sharpFlatBtn").querySelector("button").value;
-  let paramField4 = document.getElementById("showMajor3rdBtn").querySelector("input").checked;
-  let paramField5 = document.getElementById("showMinor3rdBtn").querySelector("input").checked;
-  let paramField6 = document.getElementById("show5thBtn").querySelector("input").checked;
+  let paramField4 = document.getElementById("showMajor3rdBtnWrapper").querySelector("input").checked;
+  let paramField5 = document.getElementById("showMinor3rdBtnWrapper").querySelector("input").checked;
+  let paramField6 = document.getElementById("show5thBtnWrapper").querySelector("input").checked;
 
   let intervals = paramField1.split(","); //should be an function in helper
   diagramController.assignNotesFromTunningNotes(paramField2);

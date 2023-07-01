@@ -47,6 +47,7 @@ function setNodeValue(node, currentTheme) {
 function changeNodeContent(node) {
   node.replaceChildren();
   let img = document.createElement("img");
+  img.setAttribute("title", "change theme");
   if(node.value === "light") {
     img.setAttribute("src", "/src/assets/images/svg/moon.svg");
   } else {

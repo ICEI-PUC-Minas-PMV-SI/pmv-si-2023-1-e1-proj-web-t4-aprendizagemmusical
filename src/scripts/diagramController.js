@@ -195,7 +195,7 @@ function advancedPlaygroundInitialNotesOptions() {
   scalesHelper.notes.forEach(note => {
     options += `<option value="${note}">${note}</option>`;
   });
-  return `<select>${options}</select>`
+  return `<select name="possibleNotes">${options}</select>`
 }
 
 function resetStyle() {
