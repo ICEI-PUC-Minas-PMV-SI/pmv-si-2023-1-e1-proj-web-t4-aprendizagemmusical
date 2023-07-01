@@ -55,7 +55,16 @@ function generateRandomScale(numMissingNotes) {
     if (scale === null) {
       document.getElementById("escalaIncompleta").innerHTML = "Escala não pôde ser gerada.";
     } else {
-      document.getElementById("escalaIncompleta").innerHTML = "Escala Incompleta: " + scale.join(", ");
+      const language = localStorage.getItem("userPreferredLanguage");
+      let resultText = "";
+    
+      if (language === "ptbr") {
+        resultText = "Escala Incompleta: ";
+      } else {
+        resultText = "Incomplete Scale: ";
+      }
+    
+      document.getElementById("escalaIncompleta").innerHTML = resultText + scale.join(", ");
     }
   
     document.getElementById("respostaEscala").disabled = false;
@@ -100,16 +109,32 @@ function generateMissingNotes() {
   function verificarRespostaEscala() {
     const respostaUsuario = document.getElementById("respostaEscala").value;
     const missingNotes = generateMissingNotes();
+    const language = localStorage.getItem("userPreferredLanguage");
+    let resultadoEscalaText = "";
   
     if (missingNotes.length === 0) {
-      document.getElementById("resultadoEscala").innerHTML = "Escala completa. Não há notas faltando.";
+      if (language === "ptbr") {
+        resultadoEscalaText = "Escala completa. Não há notas faltando.";
+      } else {
+        resultadoEscalaText = "Complete scale. No missing notes.";
+      }
     } else {
       if (checkAnswer(respostaUsuario, missingNotes)) {
-        document.getElementById("resultadoEscala").innerHTML = "Resposta: Correta!";
+        if (language === "ptbr") {
+          resultadoEscalaText = "Resposta: Correta!";
+        } else {
+          resultadoEscalaText = "Answer: Correct!";
+        }
       } else {
-        document.getElementById("resultadoEscala").innerHTML = "Resposta: Incorreta. As notas que faltam são: " + missingNotes.join(", ");
+        if (language === "ptbr") {
+          resultadoEscalaText = "Resposta: Incorreta. As notas que faltam são: " + missingNotes.join(", ");
+        } else {
+          resultadoEscalaText = "Answer: Incorrect. The missing notes are: " + missingNotes.join(", ");
+        }
       }
     }
   
+    document.getElementById("resultadoEscala").innerHTML = resultadoEscalaText;
     document.getElementById("resultadoEscala").style.display = "block";
   }
+  

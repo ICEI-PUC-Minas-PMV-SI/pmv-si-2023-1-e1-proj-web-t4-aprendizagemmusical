@@ -8,12 +8,16 @@ import * as mainIntervals from './mainIntervals.js'
 export function displayQuestion() {
   const level = document.getElementById("level").value;
   let intervalData = intervalGenerator.generateRandomInterval(level);
-  document.getElementById("question").textContent =
-    "Qual é o intervalo em semitons entre " +
-    intervalData.note1 +
-    " e " +
-    intervalData.note2 +
-    "?";
+  const language = localStorage.getItem("userPreferredLanguage");
+  let questionText = "";
+
+  if (language === "ptbr") {
+    questionText = "Qual é o intervalo em semitons entre " + intervalData.note1 + " e " + intervalData.note2 + "?";
+  } else {
+    questionText = "What is the interval in semitones between " + intervalData.note1 + " and " + intervalData.note2 + "?";
+  }
+
+  document.getElementById("question").textContent = questionText;
   document.getElementById("answer").value = "";
   document.getElementById("feedback").textContent = "";
   document.getElementById("answer").focus();
