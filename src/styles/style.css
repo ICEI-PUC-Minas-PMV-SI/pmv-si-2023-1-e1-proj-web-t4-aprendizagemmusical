@@ -702,6 +702,7 @@ lottie-player {
   width: 5vw; /* Ajusta a largura com base na largura da viewport */
   height: 2vh; /* Ajusta a altura com base na altura da viewport */
   padding-bottom: 5vw; /* Ajusta o padding com base na largura da viewport */
+  box-shadow: 0 0 0 1px black;
 }
 
 
