@@ -690,13 +690,15 @@ lottie-player {
 
 #ball {
   position: absolute;
-  top: 78%;
-  left: 60%; /* Posição relativa ao contêiner pai */
+  top: 65%;
+  left: 50%; /* Posição relativa ao contêiner pai */
   transform: translate(-50%, -50%);
   width: 5%;
+  height: 2%;
   padding-bottom: 5%;
-  background-color: red;
+  background-color: rgba(0, 0, 0);
   border-radius: 50%;
+  display: flex;
 }
 
 .dark .paragraph-text {

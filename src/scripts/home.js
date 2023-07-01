@@ -11,13 +11,13 @@ export function showHome() {
         <p class="paragraph-text" data-text-node="introExercises"></p>
       </div>
       <div class="paragraph">
-        <p class="paragraph-text" data-text-node="introPlayground">No playground, você terá a oportunidade de explorar ainda mais o mundo das diagramações musicais. Aprenda a interpretar e teste as escalas musicais.</p>
+        <p class="paragraph-text" data-text-node="introPlayground"></p>
       </div>
     `;
   
     content.insertAdjacentHTML("beforeend", paragraphs);
   }
-  
+
   document.addEventListener("DOMContentLoaded", () => {
     showHome();
   });
