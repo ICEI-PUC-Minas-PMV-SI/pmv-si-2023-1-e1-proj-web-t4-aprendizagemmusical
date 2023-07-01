@@ -34,15 +34,20 @@ export function checkAnswer() {
 
 
 
+  const language = localStorage.getItem("userPreferredLanguage");
+  let resultText = "";
+
+  if (language === "ptbr") {
+    resultText = "Resposta incorreta! O intervalo correto é";
+  } else {
+    resultText = "Incorrect answer! The correct interval is";
+  }
+
   if (userAnswer === correctAnswer) {
     document.getElementById("feedback").textContent = "Resposta correta!";
   } else {
-    document.getElementById("feedback").textContent =
-      "Resposta incorreta! O intervalo correto é " +
-      correctAnswer +
-      " semitons (" +
-      intervalGenerator.getIntervalName(correctAnswer) +
-      ")";
+    const intervalName = intervalGenerator.getIntervalName(correctAnswer);
+    document.getElementById("feedback").textContent = `${resultText} ${correctAnswer} semitons.`;
   }
   
 
