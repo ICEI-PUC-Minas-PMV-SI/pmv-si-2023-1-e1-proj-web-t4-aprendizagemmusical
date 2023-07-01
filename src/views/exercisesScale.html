@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="../styles/style.css">
+    <title>Exercises Scale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,9 +36,9 @@
     <div id="exerciseScale">
       <label for="nivelDificuldade" class="presentationTextExercisesScale" data-text-node="presentationTextExercisesScale"></label>
       <select id="nivelDificuldade" class="select-dificuldadeExercises">
-        <option value="basico" data-text-node="basicDifficulty"></option>
-        <option value="intermediario" data-text-node="intermediateDifficulty"></option>
-        <option value="avancado" data-text-node="advancedDifficulty"></option>
+        <option value="basico" data-text-node="basicDifficulty">Basic</option>
+        <option value="intermediario" data-text-node="intermediateDifficulty">Intermediate</option>
+        <option value="avancado" data-text-node="advancedDifficulty">Advanced</option>
       </select>
       <button class="customElementExercisesScale" onclick="gerarEscala()" data-text-node="generateScale"></button>
       <p id="escalaIncompleta"></p>
