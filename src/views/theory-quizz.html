@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teste musical</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
   <div class="containerExercises">
-
     <nav id="childrenPageNav">
       <a class="logo" href="/src/views/index.html">
         <img src="/src/assets/images/svg/logo.svg" title="logo">
@@ -18,125 +17,124 @@
       <div class="userUiSettings">
         <button id="changeTheme" value="dark"></button>
         <button id="englishTranslation" value="enus"><img
-            src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
+            src="https://www.countryflagicons.com/FLAT/32/US.png" alt="usaFlag"></button>
         <button id="portugueseTranslation" value="ptbr"><img
-            src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
+            src="https://www.countryflagicons.com/FLAT/32/BR.png" alt="brazilFlag"></button>
       </div>
     </nav>
-
     <!--presentation-->
     <div class="presentation">
       <div class="presentationContent">
         <h1 class="presentationText" data-text-node="presentationQuizz"></h1>
       </div>
     </div>
-    
   </div>
   <div class="quizz-section">
-    <h2>Qual instrumento musical combina mais com você?</h2>
+    <h2 data-text-node="question1"></h2>
     <form class="quiz-form">
-      <p>Qual é o seu gênero musical favorito?</p>
+      <p data-text-node="question2"></p>
       <div class="input-quizz">
-      <input type="radio" name="genre" value="rock" id="rock"/>
-      <label for="rock">Rock</label>
-      <input type="radio" name="genre" value="pop" id="pop"/>
-      <label for="pop">Pop</label>
-      <input type="radio" name="genre" value="classical" id="classical"/>
-      <label for="classical">Clássico</label>
-      <input type="radio" name="genre" value="jazz" id="jazz"/>
-      <label for="jazz">Jazz</label>
-      <input type="radio" name="genre" value="electronic" id="electronic"/>
-      <label for="electronic">Eletrônica</label>
-      <input type="radio" name="genre" value="other" id="other"/>
-      <label for="other">Outro</label>
+        <input type="radio" name="genre" value="rock" id="rock">
+        <label for="rock" data-text-node="genre1"></label>
+        <input type="radio" name="genre" value="pop" id="pop">
+        <label for="pop" data-text-node="genre2"></label>
+        <input type="radio" name="genre" value="classical" id="classical">
+        <label for="classical" data-text-node="genre3"></label>
+        <input type="radio" name="genre" value="jazz" id="jazz">
+        <label for="jazz" data-text-node="genre4"></label>
+        <input type="radio" name="genre" value="electronic" id="electronic">
+        <label for="electronic" data-text-node="genre5"></label>
+        <input type="radio" name="genre" value="other" id="other">
+        <label for="other" data-text-node="genre6"></label>
     </div>
-      <p>Qual é o tipo de som que você mais gosta?</p>
+    <p data-text-node="question3"></p>
       <div class="input-quizz">
-      <input type="radio" name="sound" value="melodious" id="melodious"/>
-      <label for="melodious">Suave e melodioso</label>
-      <input type="radio" name="sound" value="powerful" id="powerful"/>
-      <label for="powerful">Energético e poderoso</label>
-      <input type="radio" name="sound" value="expressive" id="expressive"/>
-      <label for="expressive">Complexo e expressivo</label>
-      <input type="radio" name="sound" value="improvised" id="improvised"/>
-      <label for="improvised">Ritmado e improvisado</label>
-      <input type="radio" name="sound" value="experimental" id="experimental"/>
-      <label for="experimental">Moderno e experimental</label>
-      <input type="radio" name="sound" value="other" id="sound-other"/>
-      <label for="sound-other">Outro</label>
+        <input type="radio" name="sound" value="melodious" id="melodious">
+        <label for="melodious" data-text-node="sound1"></label>
+        <input type="radio" name="sound" value="powerful" id="powerful">
+        <label for="powerful" data-text-node="sound2"></label>
+        <input type="radio" name="sound" value="expressive" id="expressive">
+        <label for="expressive" data-text-node="sound3"></label>
+        <input type="radio" name="sound" value="improvised" id="improvised">
+        <label for="improvised" data-text-node="sound4"></label>
+        <input type="radio" name="sound" value="experimental" id="experimental">
+        <label for="experimental" data-text-node="sound5"></label>
+        <input type="radio" name="sound" value="other" id="sound-other">
+        <label for="sound-other" data-text-node="sound6"></label>
     </div>
-      <p>Qual é o nível de paciência e dedicação para praticar um instrumento?</p>
+    <p data-text-node="question4"></p>
       <div class="input-quizz">
-      <input type="radio" name="patience" value="very-patient" id="very-patient"/>
-      <label for="very-patient">Muito paciente e dedicado</label>
-      <input type="radio" name="patience" value="patient" id="patient"/>
-      <label for="patient">Paciente e dedicado</label>
-      <input type="radio" name="patience" value="neutral" id="neutral"/>
-      <label for="neutral">Neutro, posso me esforçar quando necessário</label>
-      <input type="radio" name="patience" value="not-patient" id="not-patient"/>
-      <label for="not-patient">Pouco paciente, prefiro resultados rápidos</label>
+        <input type="radio" name="patience" value="very-patient" id="very-patient">
+        <label for="very-patient" data-text-node="patience1"></label>
+        <input type="radio" name="patience" value="patient" id="patient">
+        <label for="patient" data-text-node="patience2"></label>
+        <input type="radio" name="patience" value="neutral" id="neutral">
+        <label for="neutral" data-text-node="patience3"></label>
+        <input type="radio" name="patience" value="not-patient" id="not-patient">
+        <label for="not-patient" data-text-node="patience4"></label>
     </div>
-      <p>Qual é o tamanho de instrumento que você prefere?</p>
+    <p data-text-node="question5"></p>
       <div class="input-quizz">
-      <input type="radio" name="size" value="small" id="small"/>
-      <label for="small">Pequeno e compacto</label>
-      <input type="radio" name="size" value="medium" id="medium"/>
-      <label for="medium">Médio, nem muito grande nem muito pequeno</label>
-      <input type="radio" name="size" value="large" id="large"/>
-      <label for="large">Grande e imponente</label>
+        <input type="radio" name="size" value="small" id="small">
+        <label for="small" data-text-node="size1"></label>
+        <input type="radio" name="size" value="medium" id="medium">
+        <label for="medium" data-text-node="size2"></label>
+        <input type="radio" name="size" value="large" id="large">
+        <label for="large" data-text-node="size3"></label>
     </div>
-      <p>Como você prefere tocar música?</p>
+    <p data-text-node="question6"></p>
       <div class="input-quizz">
-      <input type="radio" name="play-style" value="band" id="band"/>
-      <label for="band">Tocar em uma banda ou grupo</label>
-      <input type="radio" name="play-style" value="solo" id="solo"/>
-      <label for="solo">Tocar solo ou ser um destaque</label>
-      <input type="radio" name="play-style" value="orchestra" id="orchestra"/>
-      <label for="orchestra">Tocar em uma orquestra ou ensemble</label>
-      <input type="radio" name="play-style" value="improvise" id="improvise"/>
-      <label for="improvise">Improvisar e tocar com liberdade</label>
-      <input type="radio" name="play-style" value="experimental" id="play-style-other"/>
-      <label for="play-style-other">Experimentar novas sonoridades e estilos</label>
+        <input type="radio" name="play-style" value="band" id="band">
+        <label for="band" data-text-node="playStyle1"></label>
+        <input type="radio" name="play-style" value="solo" id="solo">
+        <label for="solo" data-text-node="playStyle2"></label>
+        <input type="radio" name="play-style" value="orchestra" id="orchestra">
+        <label for="orchestra" data-text-node="playStyle3"></label>
+        <input type="radio" name="play-style" value="improvise" id="improvise">
+        <label for="improvise" data-text-node="playStyle4"></label>
+        <input type="radio" name="play-style" value="experimental" id="play-style-other">
+        <label for="play-style-other" data-text-node="playStyle5"></label>
     </div>
-      <p>O que você acha de instrumentos de sopro?</p>
+    <p data-text-node="question7"></p>
       <div class="input-quizz">
-      <input type="radio" name="brass" value="love" id="love"/>
-      <label for="love">Adoro instrumentos de sopro</label>
-      <input type="radio" name="brass" value="like" id="like"/>
-      <label for="like">Gosto de instrumentos de sopro</label>
-      <input type="radio" name="brass" value="neutral" id="brass-neutral"/>
-      <label for="brass-neutral">Neutro, sem preferência</label>
-      <input type="radio" name="brass" value="dislike" id="dislike"/>
-      <label for="dislike">Não sou muito fã de instrumentos de sopro</label>
-      <input type="radio" name="brass" value="hate" id="hate"/>
-      <label for="hate">Não gosto de instrumentos de sopro</label>
+        <input type="radio" name="brass" value="love" id="love">
+        <label for="love" data-text-node="brassOpinion1"></label>
+        <input type="radio" name="brass" value="like" id="like">
+        <label for="like" data-text-node="brassOpinion2"></label>
+        <input type="radio" name="brass" value="neutral" id="brass-neutral">
+        <label for="brass-neutral" data-text-node="brassOpinion3"></label>
+        <input type="radio" name="brass" value="dislike" id="dislike">
+        <label for="dislike" data-text-node="brassOpinion4"></label>
+        <input type="radio" name="brass" value="hate" id="hate">
+        <label for="hate" data-text-node="brassOpinion5"></label>
     </div>
-      <p>Você conhece sua extensão vocal?</p>
+    <p data-text-node="question8"></p>
       <div class="input-quizz">
-      <input type="radio" name="vocal-range" value="tenor" id="tenor"/>
-      <label for="tenor">Tenor</label>
-      <input type="radio" name="vocal-range" value="baritone" id="baritone"/>
-      <label for="baritone">Barítono</label>
-      <input type="radio" name="vocal-range" value="bass" id="bass"/>
-      <label for="bass">Baixo</label>
-      <input type="radio" name="vocal-range" value="soprano" id="soprano"/>
-      <label for="soprano">Soprano</label>
-      <input type="radio" name="vocal-range" value="mezzo-soprano" id="mezzo-soprano"/>
-      <label for="mezzo-soprano">Mezzo-soprano</label>
-      <input type="radio" name="vocal-range" value="unknown" id="vocal-range-unknown"/>
-      <label for="vocal-range-unknown">Não sei</label>
+      <input type="radio" name="vocal-range" value="tenor" id="tenor">
+      <label for="tenor" data-text-node="vocalRange1"></label>
+
+      <input type="radio" name="vocal-range" value="baritone" id="baritone">
+      <label for="baritone" data-text-node="vocalRange2"></label>
+      <input type="radio" name="vocal-range" value="bass" id="bass">
+      <label for="bass" data-text-node="vocalRange3"></label>
+      <input type="radio" name="vocal-range" value="soprano" id="soprano">
+      <label for="soprano" data-text-node="vocalRange4"></label>
+      <input type="radio" name="vocal-range" value="mezzo-soprano" id="mezzo-soprano">
+      <label for="mezzo-soprano" data-text-node="vocalRange5"></label>
+      <input type="radio" name="vocal-range" value="unknown" id="vocal-range-unknown">
+      <label for="vocal-range-unknown" data-text-node="vocalRange6"></label>
     </div>
-      <p>Você prefere instrumentos acústicos ou eletrônicos?</p>
+    <p data-text-node="question9"></p>
       <div class="input-quizz">
-      <input type="radio" name="acoustic-electronic" value="acoustic" id="acoustic"/>
-      <label for="acoustic">Instrumentos acústicos</label>
-      <input type="radio" name="acoustic-electronic" value="electronic" id="electronic-instrument"/>
-      <label for="electronic-instrument">Instrumentos eletrônicos</label>
-      <input type="radio" name="acoustic-electronic" value="both" id="both"/>
-      <label for="both">Tanto faz, gosto dos dois</label>
+      <input type="radio" name="acoustic-electronic" value="acoustic" id="acoustic">
+      <label for="acoustic" data-text-node="acousticElectronicPreference1"></label>
+      <input type="radio" name="acoustic-electronic" value="electronic" id="electronic-instrument">
+      <label for="electronic-instrument" data-text-node="acousticElectronicPreference2"></label>
+      <input type="radio" name="acoustic-electronic" value="both" id="both">
+      <label for="both" data-text-node="acousticElectronicPreference3"></label>
     </div>
-      <button type="submit" class="quizz-sectionButton">Ver resultado</button>
-      <button type="reset" class="quizz-sectionButton">Redefinir teste</button>
+      <button type="submit" class="quizz-sectionButton" data-text-node="seeResult"></button>
+      <button type="reset" class="quizz-sectionButton" data-text-node="resetTest"></button>
     </form>
   </div>
   <script src="/src/scripts/main.js" type="module"></script>

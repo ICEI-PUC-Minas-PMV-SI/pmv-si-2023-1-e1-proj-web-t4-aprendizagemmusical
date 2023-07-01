@@ -18,8 +18,7 @@ export function displayQuestion() {
   document.getElementById("feedback").textContent = "";
   document.getElementById("answer").focus();
   
-  console.log(Object.isFrozen(intervalData));
-  console.log(intervalData);
+
 
   currentExercise = intervalData;
 
