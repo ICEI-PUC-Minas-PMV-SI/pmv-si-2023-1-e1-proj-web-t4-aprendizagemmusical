@@ -6,20 +6,12 @@ form.addEventListener("submit", function (event) {
   // Obter as respostas selecionadas
   const genre = document.querySelector('input[name="genre"]:checked').value;
   const sound = document.querySelector('input[name="sound"]:checked').value;
-  const patience = document.querySelector(
-    'input[name="patience"]:checked'
-  ).value;
+  const patience = document.querySelector('input[name="patience"]:checked').value;
   const size = document.querySelector('input[name="size"]:checked').value;
-  const playStyle = document.querySelector(
-    'input[name="play-style"]:checked'
-  ).value;
+  const playStyle = document.querySelector('input[name="play-style"]:checked').value;
   const brass = document.querySelector('input[name="brass"]:checked').value;
-  const vocalRange = document.querySelector(
-    'input[name="vocal-range"]:checked'
-  ).value;
-  const acousticElectronic = document.querySelector(
-    'input[name="acoustic-electronic"]:checked'
-  ).value;
+  const vocalRange = document.querySelector('input[name="vocal-range"]:checked').value;
+  const acousticElectronic = document.querySelector('input[name="acoustic-electronic"]:checked').value;
 
   // Calcular o resultado
   let instrument = "";
@@ -73,14 +65,25 @@ form.addEventListener("submit", function (event) {
     form.removeChild(previousResult);
   }
 
-  // Exibir o resultado ao usuário
-  const resultContainer = document.createElement("div");
-  resultContainer.className = "result-container";
-  resultContainer.innerHTML = `
-  <p>Com base nas suas respostas, o instrumento que combina mais com você é: <strong>${instrument}</strong>.</p>
+// Exibir o resultado ao usuário
+const resultContainer = document.createElement("div");
+resultContainer.className = "result-container";
+
+const language = localStorage.getItem("userPreferredLanguage");
+let resultText = "";
+
+if (language === "ptbr") {
+  resultText = "Com base nas suas respostas, o instrumento que combina mais com você é";
+} else {
+  resultText = "Based on your answers, the instrument that best suits you is";
+}
+
+resultContainer.innerHTML = `
+  <p>${resultText} <strong>${instrument}</strong>.</p>
   <img src="../assets/images/img-quizz/${instrument}.jpg" alt="${instrument}" />
 `;
-  form.appendChild(resultContainer);
+
+form.appendChild(resultContainer);
 });
 const resetButton = document.querySelector('button[type="reset"]');
 resetButton.addEventListener("click", function () {
