@@ -716,47 +716,116 @@ lottie-player {
   color: #000;
 }
 
-/* estilos quizz */
+
+/* Estilos quizz */
+.quizz-section {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
 .quizz-section img {
   width: 300px;
   border-radius: 15px;
 }
-.quizz-section {
-margin-bottom: 10px; 
-font-size: 18px;
+
+.quizz-section p,
+.quizz-section h2 {
+  margin: 18px;
+  text-align: center;
 }
-.dark .quizz-section{
-color: var(--dark-theme-secondary-text-color);
+
+.quizz-section h2 {
+  margin-bottom: 50px;
+}
+
+.input-quizz {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dark .quizz-section {
+  color: var(--dark-theme-secondary-text-color);
 }
 
 .light .quizz-section {
-color: #000;
+  color: #000;
 }
 
 .quizz-sectionButton {
-font-size: 16px;
-padding: 10px;
-color: #333;
-background-color: #fff;
-border: 3px solid #0e0d0d;
-border-radius: 4px;
-margin-bottom: 20px;
+  font-size: 16px;
+  padding: 10px;
+  color: #333;
+  background-color: #fff;
+  border: 3px solid #0e0d0d;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .quizz-sectionButton::-webkit-scrollbar {
-width: 12px;
+  width: 12px;
 }
 
 .quizz-sectionButton::-webkit-scrollbar-track {
-background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 .quizz-sectionButton::-webkit-scrollbar-thumb {
-background: #888;
-border-radius: 6px;
+  background: #888;
+  border-radius: 6px;
 }
 
 .quizz-sectionButton::-webkit-scrollbar-thumb:hover {
-background: #555;
+  background: #555;
 }
-/* fim estilos quizz */
+/* Media queries */
+@media (max-width: 768px) {
+  .quizz-section img {
+    width: 200px;
+  }
+
+  .input-quizz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-quizz label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .input-quizz input[type="radio"] {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .quizz-section {
+    font-size: 16px;
+  }
+
+  .quizz-section img {
+    width: 150px;
+  }
+
+  .quizz-section h2 {
+    margin-bottom: 30px;
+  }
+
+  .input-quizz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-quizz label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .input-quizz input[type="radio"] {
+    margin-right: 0;
+  }
+}
+/* Fim estilos quizz */

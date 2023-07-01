@@ -36,6 +36,7 @@
     <h2>Qual instrumento musical combina mais com você?</h2>
     <form class="quiz-form">
       <p>Qual é o seu gênero musical favorito?</p>
+      <div class="input-quizz">
       <input type="radio" name="genre" value="rock" id="rock"/>
       <label for="rock">Rock</label>
       <input type="radio" name="genre" value="pop" id="pop"/>
@@ -48,8 +49,9 @@
       <label for="electronic">Eletrônica</label>
       <input type="radio" name="genre" value="other" id="other"/>
       <label for="other">Outro</label>
-    
+    </div>
       <p>Qual é o tipo de som que você mais gosta?</p>
+      <div class="input-quizz">
       <input type="radio" name="sound" value="melodious" id="melodious"/>
       <label for="melodious">Suave e melodioso</label>
       <input type="radio" name="sound" value="powerful" id="powerful"/>
@@ -62,8 +64,9 @@
       <label for="experimental">Moderno e experimental</label>
       <input type="radio" name="sound" value="other" id="sound-other"/>
       <label for="sound-other">Outro</label>
-    
+    </div>
       <p>Qual é o nível de paciência e dedicação para praticar um instrumento?</p>
+      <div class="input-quizz">
       <input type="radio" name="patience" value="very-patient" id="very-patient"/>
       <label for="very-patient">Muito paciente e dedicado</label>
       <input type="radio" name="patience" value="patient" id="patient"/>
@@ -72,16 +75,18 @@
       <label for="neutral">Neutro, posso me esforçar quando necessário</label>
       <input type="radio" name="patience" value="not-patient" id="not-patient"/>
       <label for="not-patient">Pouco paciente, prefiro resultados rápidos</label>
-    
+    </div>
       <p>Qual é o tamanho de instrumento que você prefere?</p>
+      <div class="input-quizz">
       <input type="radio" name="size" value="small" id="small"/>
       <label for="small">Pequeno e compacto</label>
       <input type="radio" name="size" value="medium" id="medium"/>
       <label for="medium">Médio, nem muito grande nem muito pequeno</label>
       <input type="radio" name="size" value="large" id="large"/>
       <label for="large">Grande e imponente</label>
-    
+    </div>
       <p>Como você prefere tocar música?</p>
+      <div class="input-quizz">
       <input type="radio" name="play-style" value="band" id="band"/>
       <label for="band">Tocar em uma banda ou grupo</label>
       <input type="radio" name="play-style" value="solo" id="solo"/>
@@ -92,8 +97,9 @@
       <label for="improvise">Improvisar e tocar com liberdade</label>
       <input type="radio" name="play-style" value="experimental" id="play-style-other"/>
       <label for="play-style-other">Experimentar novas sonoridades e estilos</label>
-    
+    </div>
       <p>O que você acha de instrumentos de sopro?</p>
+      <div class="input-quizz">
       <input type="radio" name="brass" value="love" id="love"/>
       <label for="love">Adoro instrumentos de sopro</label>
       <input type="radio" name="brass" value="like" id="like"/>
@@ -104,8 +110,9 @@
       <label for="dislike">Não sou muito fã de instrumentos de sopro</label>
       <input type="radio" name="brass" value="hate" id="hate"/>
       <label for="hate">Não gosto de instrumentos de sopro</label>
-    
+    </div>
       <p>Você conhece sua extensão vocal?</p>
+      <div class="input-quizz">
       <input type="radio" name="vocal-range" value="tenor" id="tenor"/>
       <label for="tenor">Tenor</label>
       <input type="radio" name="vocal-range" value="baritone" id="baritone"/>
@@ -118,15 +125,16 @@
       <label for="mezzo-soprano">Mezzo-soprano</label>
       <input type="radio" name="vocal-range" value="unknown" id="vocal-range-unknown"/>
       <label for="vocal-range-unknown">Não sei</label>
-    
+    </div>
       <p>Você prefere instrumentos acústicos ou eletrônicos?</p>
+      <div class="input-quizz">
       <input type="radio" name="acoustic-electronic" value="acoustic" id="acoustic"/>
       <label for="acoustic">Instrumentos acústicos</label>
       <input type="radio" name="acoustic-electronic" value="electronic" id="electronic-instrument"/>
       <label for="electronic-instrument">Instrumentos eletrônicos</label>
       <input type="radio" name="acoustic-electronic" value="both" id="both"/>
       <label for="both">Tanto faz, gosto dos dois</label>
-      
+    </div>
       <button type="submit" class="quizz-sectionButton">Ver resultado</button>
       <button type="reset" class="quizz-sectionButton">Redefinir teste</button>
     </form>
