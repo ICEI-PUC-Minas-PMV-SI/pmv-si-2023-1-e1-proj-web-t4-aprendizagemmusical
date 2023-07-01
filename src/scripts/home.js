@@ -1,3 +1,5 @@
+import * as uiTranslation from './uiTranslation.js';
+
 export function showHome() {
     let content = document.querySelector(".content");
     let paragraphs = `
@@ -16,11 +18,13 @@ export function showHome() {
     `;
   
     content.insertAdjacentHTML("beforeend", paragraphs);
+    uiTranslation.translateElementsRecursively(document.querySelector(".content"));
   }
 
   document.addEventListener("DOMContentLoaded", () => {
     showHome();
   });
   
+
   
   
