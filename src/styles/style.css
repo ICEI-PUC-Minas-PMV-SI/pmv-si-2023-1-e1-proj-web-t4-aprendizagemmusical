@@ -689,18 +689,16 @@ lottie-player {
   }
 }
 
+
+/* Estilos para tornar a bolinha responsiva */
 #ball {
-  position: absolute;
-  top: 65%;
-  left: 50%; /* Posição relativa ao contêiner pai */
-  transform: translate(-50%, -50%);
-  width: 5%;
-  height: 2%;
-  padding-bottom: 5%;
-  background-color: rgba(0, 0, 0);
-  border-radius: 50%;
-  display: flex;
+  top: calc(65% - 1vh); /* Ajusta a posição verticalmente com base na altura da viewport */
+  left: calc(65% - 2.5vw); /* Ajusta a posição horizontalmente com base na largura da viewport */
+  width: 5vw; /* Ajusta a largura com base na largura da viewport */
+  height: 2vh; /* Ajusta a altura com base na altura da viewport */
+  padding-bottom: 5vw; /* Ajusta o padding com base na largura da viewport */
 }
+
 
 .dark .paragraph-text {
   color: var(--dark-theme-secondary-text-color);

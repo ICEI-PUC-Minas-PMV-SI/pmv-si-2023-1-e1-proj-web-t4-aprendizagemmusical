@@ -81,6 +81,8 @@ function playRhythm() {
     if (index >= rhythm.length) {
       index = 0;
     }
+    
+    ball.style.backgroundColor = "transparent";
   }, intervalTime);  // Intervalo definido pelo BPM
 
   isPlaying = true;
