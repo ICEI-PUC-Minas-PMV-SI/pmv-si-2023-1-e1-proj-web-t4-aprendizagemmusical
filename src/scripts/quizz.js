@@ -70,6 +70,72 @@ const resultContainer = document.createElement("div");
 resultContainer.className = "result-container";
 
 const language = localStorage.getItem("userPreferredLanguage");
+
+let translatedInstrument = "";
+
+if (language === "ptbr") {
+  if (instrument === "Bateria") {
+    translatedInstrument = "Bateria";
+  } else if (instrument === "Guitarra") {
+    translatedInstrument = "Guitarra";
+  } else if (instrument === "Violão") {
+    translatedInstrument = "Violão";
+  } else if (instrument === "Piano") {
+    translatedInstrument = "Piano";
+  } else if (instrument === "Teclado") {
+    translatedInstrument = "Teclado";
+  } else if (instrument === "Violino") {
+    translatedInstrument = "Violino";
+  } else if (instrument === "Violoncelo") {
+    translatedInstrument = "Violoncelo";
+  } else if (instrument === "Saxofone") {
+    translatedInstrument = "Saxofone";
+  } else if (instrument === "Trompete") {
+    translatedInstrument = "Trompete";
+  } else if (instrument === "Contrabaixo") {
+    translatedInstrument = "Contrabaixo";
+  } else if (instrument === "Sintetizador") {
+    translatedInstrument = "Sintetizador";
+  } else if (instrument === "Controlador MIDI") {
+    translatedInstrument = "Controlador MIDI";
+  } else if (instrument === "Sampler") {
+    translatedInstrument = "Sampler";
+  } else {
+    translatedInstrument = "Instrumento de sua escolha";
+  }
+} else {
+  if (instrument === "Bateria") {
+    translatedInstrument = "Drums";
+  } else if (instrument === "Guitarra") {
+    translatedInstrument = "Guitar";
+  } else if (instrument === "Violão") {
+    translatedInstrument = "Acoustic Guitar";
+  } else if (instrument === "Piano") {
+    translatedInstrument = "Piano";
+  } else if (instrument === "Teclado") {
+    translatedInstrument = "Keyboard";
+  } else if (instrument === "Violino") {
+    translatedInstrument = "Violin";
+  } else if (instrument === "Violoncelo") {
+    translatedInstrument = "Cello";
+  } else if (instrument === "Saxofone") {
+    translatedInstrument = "Saxophone";
+  } else if (instrument === "Trompete") {
+    translatedInstrument = "Trumpet";
+  } else if (instrument === "Contrabaixo") {
+    translatedInstrument = "Bass Guitar";
+  } else if (instrument === "Sintetizador") {
+    translatedInstrument = "Synthesizer";
+  } else if (instrument === "Controlador MIDI") {
+    translatedInstrument = "MIDI Controller";
+  } else if (instrument === "Sampler") {
+    translatedInstrument = "Sampler";
+  } else {
+    translatedInstrument = "Instrument of your choice";
+  }
+}
+
+
 let resultText = "";
 
 if (language === "ptbr") {
@@ -79,8 +145,8 @@ if (language === "ptbr") {
 }
 
 resultContainer.innerHTML = `
-  <p>${resultText} <strong>${instrument}</strong>.</p>
-  <img src="../assets/images/img-quizz/${instrument}.jpg" alt="${instrument}" />
+  <p>${resultText} <strong>${translatedInstrument}</strong>.</p>
+  <img src="../assets/images/img-quizz/${instrument}.jpg"" />
 `;
 
 form.appendChild(resultContainer);
