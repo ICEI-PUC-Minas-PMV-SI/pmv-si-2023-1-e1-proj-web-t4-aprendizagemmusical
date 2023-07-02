@@ -52,7 +52,7 @@ a {
 }
 
 lottie-player {
-  width: clamp(300px, 300px, 100%);
+  width: clamp(250px, 300px, 100%);
   height: 300px;
   justify-self: end;
   grid-column: 1/3;
