@@ -62,7 +62,11 @@ function changeLanguageEnglish(){
 
 function setDocumentRootLangAttribute() {
 	
-	let lang = localStorage.getItem("userPreferredLanguage").substring(0,2);
+	let lang = localStorage.getItem("userPreferredLanguage")
+	if(lang) {
+		lang.substring(0,2);
+	}
+
 	let root = document.querySelector("html");
 	if(root.hasAttribute("lang")) {
 		root.removeAttribute("lang");
