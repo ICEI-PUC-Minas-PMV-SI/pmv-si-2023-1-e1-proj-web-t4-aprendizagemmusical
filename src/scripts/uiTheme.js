@@ -16,6 +16,7 @@ function setInitialTheme() {
 
 	root.classList.add(currentTheme);
 	localStorage.setItem('theme', currentTheme);
+  setNodeValue(changeThemeBtn, savedTheme == null ? "light" : savedTheme);
 }
 
 // change theme on demand
