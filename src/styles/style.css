@@ -508,7 +508,11 @@ lottie-player {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 1500px;
   }
-  
+  .dark .content-unit{
+    background: var(--dark-theme-background-active-color);
+    box-shadow: 10px 0px 10px rgba(17, 17, 17, 0.1);
+    color: var(--dark-theme-primary-text-color);
+  }
 .center-content{
   align-self: center;
 }
@@ -555,7 +559,17 @@ lottie-player {
     color:#027d97;
     text-decoration: none;
   }
-  
+  .dark .resources-unit{
+    background: var(--dark-theme-background-active-color);
+    box-shadow: 10px 0px 10px rgba(17, 17, 17, 0.1);
+    color: var(--dark-theme-primary-text-color);
+  }
+  .dark .resources-unit a{
+    background: var(--dark-theme-background-active-color);
+    box-shadow: 10px 0px 10px rgba(17, 17, 17, 0.1);
+    color: var(--dark-theme-primary-text-color);
+    text-decoration: none;
+  }
   .exercises-unit {
     background-color: #fff;
     margin: 20px;
