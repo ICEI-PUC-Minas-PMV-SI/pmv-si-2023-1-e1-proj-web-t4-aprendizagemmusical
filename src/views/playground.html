@@ -2,43 +2,35 @@
 <html>
   <head>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/playground.css">
     <title>Aprendizagem Musical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
+  <meta charset="UTF-8">    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <nav id="childrenPageNav">
-        <a class="logo" href="/src/views/index.html">
-          <img src="/src/assets/images/svg/logo.svg">
-          <p data-text-node="appName"></p>
-        </a>
-        <a href="/src/views/index.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"></a>
-        <div class="userUiSettings">
-          <button id="changeTheme" value="dark"></button>
-          <button id="englishTranslation" value="enus"><img src="https://www.countryflagicons.com/FLAT/32/US.png"></button>
-          <button id="portugueseTranslation" value="ptbr"><img src="https://www.countryflagicons.com/FLAT/32/BR.png"></button>
-        </div>
-      </nav>
-      <div class="presentation">
-        <div class="presentationContent">
-          <h1 class="presentationText" data-text-node="presentationPlay"></h1>
-          <h2 class="presentationText" data-text-node="introductionPlay">
-          </h2>
-        </div>
+    <nav id="minimalNav">
+      <a class="logo" href="/src/views/index.html">
+        <img src="/src/assets/images/svg/logo.svg" title="logo">
+        <p data-text-node="appName"></p>
+      </a>
+      <a href="/src/views/index.html" title="back button" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"  title="left arrow"></a>
+      <div class="userUiSettings">
+        <button id="changeTheme" value="dark" title="Change Theme"></button>
+        <button id="englishTranslation" value="enus" title="Translate to English"><img src="https://www.countryflagicons.com/FLAT/32/US.png" style="height:32px;width:32px;" title="USA flag"></button>
+        <button id="portugueseTranslation" value="ptbr" title="Translate to Portuguese"><img src="https://www.countryflagicons.com/FLAT/32/BR.png" style="height:32px;width:32px;" title="BRA flag"></button>
       </div>
-      <div class="buttons">
-        <a href="/src/views/playground-freeplay-mode.html" data-text-node="presentationHeaderPlayFree"></a>
-        <a href="/src/views/playground-advanced-mode.html" data-text-node="presentationHeaderPlayAdvanced"></a>
-      </div>
-    </div>
+    </nav>
   </body>
-  <div class="containerPlay">
-    <div class="buttonsDescription" data-text-node="buttonsDescriptionFree"></div>
-    <div class="buttonsDescription" data-text-node="buttonsDescriptionAdvanced"></div>
+  <div class="playground">
+    <div class="choosePlaygroundDiv">
+      <button type="button" id="displayPlaygroundFreePlay" value="playgroundFreePlay" data-text-node="presentationHeaderPlayFree"></button>
+      <button type="button" id="displayPlaygroundAdvanced" value="playgroundAdvanced" data-text-node="presentationHeaderPlayAdvanced"></button>
+    </div>
+    <div class="diagram"></div>
   </div>
-  <script src="../scripts/main.js" type="module"></script>
+  <script src="/src/scripts/main.js" type="module"></script>
+  <script src="/src/scripts/playground.js" type="module"></script>
 </html>

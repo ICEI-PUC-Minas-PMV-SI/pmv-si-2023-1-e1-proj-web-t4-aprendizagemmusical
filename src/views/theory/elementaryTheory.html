@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <title>Teoria elementar da Música</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="containerExercises">
+
+    <nav id="childrenPageNav">
+      <a class="logo" href="/src/views/index.html">
+        <img src="/src/assets/images/svg/logo.svg" title="logo">
+        <p data-text-node="appName"></p>
+      </a>
+      <a href="/src/views/theory.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"  title="left arrow"></a>
+      <div class="userUiSettings">
+        <button id="changeTheme" value="dark" title="Change Theme"></button>
+        <button id="englishTranslation" value="enus" title="Translate to English"><img src="https://www.countryflagicons.com/FLAT/32/US.png" alt="usaFlag"></button>
+        <button id="portugueseTranslation" value="ptbr" title="Translate to Portuguese"><img src="https://www.countryflagicons.com/FLAT/32/BR.png" alt="brazilFlag" ></button>
+      </div>
+    </nav>
+
+    <!--presentation-->
+    <div class="presentation">
+      <div class="presentationContent">
+        <h1 class="presentationText" data-text-node="elemntaryTheory"></h1>
+      </div>
+    </div>
+
+  </div>
+
+  <article class="center-content">
+
+    <section class="content-unit">
+
+      <!-- <h2 data-text-node="aboutMusicHistory"></h2> -->
+        <p data-text-node="elementaryTheoryContent"></p>
+    </section>
+
+    <section class="resources-unit">
+      <h2 data-text-node="readingIndications"></h2>
+      <ul>
+        <li><a href="https://www.amazon.com.br/Compendio-Teoria-Elementar-Osvaldo-Lacerda/dp/8599477285" data-text-node="recommendedReading"></a></li>
+      </ul>
+    </section>
+
+  </article>
+  <script src="../../scripts/main.js" type="module"></script>
+</body>
+
+</html>

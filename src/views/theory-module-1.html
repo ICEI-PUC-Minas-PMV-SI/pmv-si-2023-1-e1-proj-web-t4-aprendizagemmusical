@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/courseStyle.css">
+    <title>Aprendizagem Musical</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+      <nav id="mainPageNav">
+        <a class="logo" href="/src/views/index.html">
+          <img src="../assets/images/svg/logo.svg">
+          <p data-text-node="appName"></p>
+        </a>
+        <div class="userUiSettings">
+          <button id="changeTheme" value="dark" title="Change Theme"></button>
+          <button id="englishTranslation" value="enus" title="Translate to English"><img src="https://www.countryflagicons.com/FLAT/32/US.png" style="height:32px;width:32px;" title="USA flag"></button>
+          <button id="portugueseTranslation" value="ptbr" title="Translate to Portuguese"><img src="https://www.countryflagicons.com/FLAT/32/BR.png" style="height:32px;width:32px;" title="BRA flag"></button>
+        </div>
+      </nav>
+      <div class="presentation">
+        <div class="presentationContent">
+          <h1 class="presentationText" data-text-node="title-course-1"></h1>
+          <h2 class="presentationText" data-text-node="presentationHeaderModule-1"></h2>
+          <h2 class="presentationText" data-text-node="introductionModule-1"></h2>
+          <p class="presentationText" data-text-node="messageModule-1"></p>
+          
+        </div>
+      </div>
+
+    </div>
+
+  <div class="content">
+    <div class="elementary-theory-call-to-action">
+      <h1 data-text-node="titleDomainChallenge"></h1>
+      <p data-text-node="textDomainChallenge"></p>
+      <a href="#" data-text-node="TextStartDomainChallange"></a>
+    </div>
+
+
+      
+      
+    </div>
+    
+    <div class="unity-cards-container">
+      <h1 class="befProgress" data-text-node="textPoints"></h1>
+      <p class="befProgress" data-text-node="textProgress"></p>
+
+      <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+        <div class="stripes"></div>
+      </div>
+
+      <div class="unity-card">
+        <div class="unity-header">
+          <figure>
+            <img src="../assets/images/img.png" alt="Music note">
+          </figure>
+          <a href="theory-unit-1.html" >Unidade 1: Propriedades do som</a>
+          <p>1500/1500 ponto de domínio</p>
+          <div>
+            <input type="checkbox" id="checkbox1" onchange="updateProgressBar()">
+            </div>
+        </div>
+        <div class="unity-content">
+          <p>Essa unidade explora as propriedades físicas do som, como frequência, amplitude e timbre.</p>
+        </div>
+      </div>
+      <div class="unity-card">
+        <div class="unity-header">
+          <figure>
+            <img src="../assets/images/img.png" alt="Music note">
+          </figure>
+          <h1>Unidade 2: Marcação de compasso</h1>
+          <p>1500/1500 ponto de domínio</p>
+          <div>
+            <input type="checkbox" id="checkbox2" onchange="updateProgressBar()">
+            </div>
+        </div>
+        <div class="unity-content">
+          <p>Aqui, você aprenderá sobre o sistema de notação musical, com destaque para a representação das notas musicais no pentagrama.</p>
+        </div>
+      </div>
+      <div class="unity-card">
+        <div class="unity-header">
+          <figure>
+            <img src="../assets/images/img.png" alt="Music note">
+          </figure>
+          <h1>Unidade 3: Intervalos</h1>
+          <p>1500/1500 ponto de domínio</p>
+          <div>
+            <input type="checkbox" id="checkbox3" onchange="updateProgressBar()">
+            </div>
+        </div>
+        <div class="unity-content">
+          <p>A clave é um símbolo colocado no início do pentagrama para indicar a nota correspondente a uma linha específica. Neste capítulo, você aprenderá sobre os diferentes tipos de claves utilizados na notação musical.</p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../scripts/main.js" type="module"></script>
+  <script src="../scripts/progressController.js"></script>
+</body>
+</html>

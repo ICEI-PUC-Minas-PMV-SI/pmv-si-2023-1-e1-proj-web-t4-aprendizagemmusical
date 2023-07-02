@@ -4,9 +4,10 @@
   --dark-theme-main-color: #64E4A3;
   --dark-theme-primary-text-color: #FFF;
   --dark-theme-secondary-text-color: #C2C2C2;
-
+  
   --generic-svg-white: invert(99%) sepia(17%) saturate(1%) hue-rotate(238deg) brightness(110%) contrast(100%);
   --generic-svg-secondary-text-color: invert(98%) sepia(0%) saturate(291%) hue-rotate(187deg) brightness(79%) contrast(96%);
+
 }
 
 /* generic */
@@ -48,6 +49,14 @@ h2 {
 a {
   text-decoration: none;
   color: var(--dark-theme-secondary-text-color);
+}
+
+lottie-player {
+  width: clamp(250px, 300px, 100%);
+  height: 300px;
+  justify-self: end;
+  grid-column: 1/3;
+  grid-row: 2/3;
 }
 
 .logo {
@@ -94,10 +103,18 @@ a {
   grid-template-rows: 1fr 3fr 1fr;
 
   background-color: var(--dark-theme-background-color);
-  padding: 0 calc(50% - 600px);
-  max-width: 1200px;
+  padding: 0 calc((100% - 1200px)/2);
   min-height: 35vh;
-  box-sizing: initial;
+}
+
+.containerMainPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+
+  background-color: var(--dark-theme-background-color);
+  padding: 0 calc((100% - 1200px)/2);
+  min-height: 35vh;
 }
 
 .containerExercises {
@@ -106,10 +123,8 @@ a {
   grid-template-rows: 1fr 1fr 1fr;
 
   background-color: var(--dark-theme-background-color);
-  padding: 0 calc(50% - 600px);
-  max-width: 1200px;
+  padding: 0 calc((100% - 1200px)/2);
   min-height: 35vh;
-  box-sizing: initial;
 }
 
 .containerPlay {
@@ -219,6 +234,12 @@ a {
   grid-row: 2/3;
 }
 
+.presentationMainPage {
+  align-self: center;
+  grid-column: 3/6;
+  grid-row: 2/3;
+}
+
 .buttons {
   grid-column: 1/6;
   grid-row: 3/4;
@@ -239,6 +260,16 @@ a {
   word-wrap: break-word;
 }
 
+.presentationContentMainPage {
+  word-wrap: break-word;
+}
+
+.presentationTextMainPage {
+  text-align: left;
+  color: var(--dark-theme-primary-text-color);
+  word-wrap: break-word;
+  margin-right: 30%;
+}
 
 .buttons a, .buttons button {
   width: 100%;
@@ -253,6 +284,7 @@ a {
   margin: 0 15px;
   box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0) inset;
   border: 0;
+  cursor: pointer;
 
   font-size: 1.2em;
 }
@@ -266,12 +298,159 @@ a {
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  text-align: center;
+  margin-top: 80px ;
 }
 
+/* inicio da edicao  home*/
+
+.paragraph-text {
+  margin-bottom: 10px; 
+  font-size: 18px;
+}
+
+.image-container-home img {
+  max-width: 40%;
+  height: auto;
+}
+
+.image-container-home {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
+  margin-top: -310px;
+}
+
+    
+  /* fim da edicao  home*/
+
+  /* Inicio edição exercises */
+
+  .contentExercises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 100%;
+  }
+  #exerciseScale, #exercicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #nivelDificuldade,
+  #escalaIncompleta,
+  #respostaEscala,
+  #resultadoEscala {
+    margin-bottom: 10px;
+  }
+
+  #nivelDificuldade option[value="basico"],
+  #nivelDificuldade option[value="intermediario"],
+  #nivelDificuldade option[value="avancado"] {
+  font-size: 20px;
+  padding: 10px;
+}
+
+#respostaEscala {
+  width: 150px; 
+  height: 40px; 
+}
+
+
+  .presentationTextExercisesScale {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .select-dificuldadeExercises {
+    font-size: 16px;
+    padding: 10px;
+    color: #333;
+    background-color: #fff;
+    border: 3px solid #0e0d0d;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  /* Estilizando a seta da caixa de seleção (apenas para navegadores WebKit) */
+  .select-dificuldadeExercises::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .select-dificuldadeExercises::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .select-dificuldadeExercises::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+  
+  .select-dificuldadeExercises::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+
+  .customElementExercisesScale {
+    font-size: 16px;
+    padding: 10px;
+    color: #333;
+    background-color: #fff;
+    border: 3px solid #0e0d0d;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  #missingNotesText {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .customElementExercisesScale::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .customElementExercisesScale::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .customElementExercisesScale::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+  }
+  
+  .customElementExercisesScale::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+
+   /* Fim edição exercises */
 #contentTextExercises {
   display: flex;
   justify-content: center;
@@ -287,6 +466,8 @@ a {
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .card-header {
@@ -325,7 +506,16 @@ a {
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1500px;
   }
+  .dark .content-unit{
+    background: var(--dark-theme-background-active-color);
+    box-shadow: 10px 0px 10px rgba(17, 17, 17, 0.1);
+    color: var(--dark-theme-primary-text-color);
+  }
+.center-content{
+  align-self: center;
+}
   
   .definitions-unit {
     background-color: #f2f2f2;
@@ -369,14 +559,27 @@ a {
     color:#027d97;
     text-decoration: none;
   }
-  
+  .dark .resources-unit{
+    background: var(--dark-theme-background-active-color);
+    box-shadow: 10px 0px 10px rgba(17, 17, 17, 0.1);
+    color: var(--dark-theme-primary-text-color);
+  }
+  .dark .resources-unit a{
+    background: var(--dark-theme-background-active-color);
+    box-shadow: 10px 0px 10px rgba(17, 17, 17, 0.1);
+    color: var(--dark-theme-primary-text-color);
+    text-decoration: none;
+  }
   .exercises-unit {
     background-color: #fff;
     margin: 20px;
     padding: 30px;
     border-radius: 5px;
   }
-  
+
+  /* */
+
+
 /* Responsividade para telas médias */
 @media (max-width: 768px) {
   .card-list {
@@ -394,21 +597,58 @@ a {
   .cards {
     grid-template-columns: 1fr;
   }
+  
 }
+
+/* Responsividade para as telas de courses e de modules */
+
+@media(max-width:1000px){
+  .elementary-theory-call-to-action {
+    width: 90%;
+  }
+  .points {
+    width: 90%;
+  }
+  .unity-cards-container {
+    width: 90%;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   body {
     margin: 0;
   }
-
   .container {
     width: 100%;
     height: 50%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 0;
+    padding: 0 20px;
   }
 
+  .containerMainPage {
+    width: 100%;
+    height: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    padding: 0 20px;
+  }
+
+  lottie-player {
+    justify-self: center;
+  }
+
+  .presentationMainPage {
+    align-self: center;
+    grid-column: 1/1;
+    grid-row: 3/3;
+  }
+
+  .presentationTextMainPage {
+    text-align: center;
+    margin: 0;
+  }
   #mainPageNav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -468,3 +708,144 @@ a {
   }
 }
 
+
+/* Estilos para tornar a bolinha responsiva */
+#ball {
+  top: calc(65% - 1vh); /* Ajusta a posição verticalmente com base na altura da viewport */
+  left: calc(65% - 2.5vw); /* Ajusta a posição horizontalmente com base na largura da viewport */
+  width: 5vw; /* Ajusta a largura com base na largura da viewport */
+  height: 2vh; /* Ajusta a altura com base na altura da viewport */
+  padding-bottom: 5vw; /* Ajusta o padding com base na largura da viewport */
+  box-shadow: 0 0 0 1px black;
+}
+
+
+.dark .paragraph-text {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+.light .paragraph-text {
+  color: #000;
+}
+
+.dark .presentationTextExercisesScale {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+.light .presentationTextExercisesScale {
+  color: #000;
+}
+
+
+/* Estilos quizz */
+.quizz-section {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.quizz-section img {
+  width: 300px;
+  border-radius: 15px;
+}
+
+.quizz-section p,
+.quizz-section h2 {
+  margin: 18px;
+  text-align: center;
+}
+
+.quizz-section h2 {
+  margin-bottom: 50px;
+}
+
+.input-quizz {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dark .quizz-section {
+  color: var(--dark-theme-secondary-text-color);
+}
+
+.light .quizz-section {
+  color: #000;
+}
+
+.quizz-sectionButton {
+  font-size: 16px;
+  padding: 10px;
+  color: #333;
+  background-color: #fff;
+  border: 3px solid #0e0d0d;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.quizz-sectionButton::-webkit-scrollbar {
+  width: 12px;
+}
+
+.quizz-sectionButton::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.quizz-sectionButton::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.quizz-sectionButton::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Media queries */
+@media (max-width: 768px) {
+  .quizz-section img {
+    width: 200px;
+  }
+
+  .input-quizz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-quizz label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .input-quizz input[type="radio"] {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .quizz-section {
+    font-size: 16px;
+  }
+
+  .quizz-section img {
+    width: 150px;
+  }
+
+  .quizz-section h2 {
+    margin-bottom: 30px;
+  }
+
+  .input-quizz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-quizz label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .input-quizz input[type="radio"] {
+    margin-right: 0;
+  }
+}
+/* Fim estilos quizz */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercício de Intervalo</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">    <link rel="icon" type="image/x-icon" href="/src/assets/images/svg/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class="container">
+      <nav id="childrenPageNav">
+        <a class="logo" href="/src/views/index.html">
+          <img src="/src/assets/images/svg/logo.svg" title="logo">
+          <p data-text-node="appName"></p>
+        </a>
+        <a href="/src/views/exercises.html" class="backBtn"><img src="/src/assets/images/svg/arrow-left.svg"  title="left arrow"></a>
+        <div class="userUiSettings">
+          <button id="changeTheme" value="dark" title="Change Theme"></button>
+          <button id="englishTranslation" value="enus" title="Translate to English"><img src="https://www.countryflagicons.com/FLAT/32/US.png" style="height:32px;width:32px;" title="USA flag"></button>
+          <button id="portugueseTranslation" value="ptbr" title="Translate to Portuguese"><img src="https://www.countryflagicons.com/FLAT/32/BR.png" style="height:32px;width:32px;" title="BRA flag"></button>
+        </div>
+      </nav>
+      <div class="presentation">
+        <div class="presentationContent">
+          <h1 class="presentationText" data-text-node="presentationExercisesIntervals"></h1>
+        </div>
+      </div>
+    </div>
+    <div class="contentExercises">
+      <div id="contentTextExercises"></div> 
+    </div>
+<div id="exercicio">
+  <p data-text-node="presentationTextExercisesIntervals" class="presentationTextExercisesScale"></p>
+    <div>
+      <label for="level" class="presentationTextExercisesScale" data-text-node="Choosedifficulty"></label>
+      <select id="level" class="select-dificuldadeExercises">
+        <option value="easy" data-text-node="basicDifficulty">Basic</option>
+        <option value="medium" data-text-node="intermediateDifficulty">Intermediate</option>
+        <option value="hard" data-text-node="advancedDifficulty">Advanced</option>
+      </select>
+    </div>
+    <div>
+      <p id="question" class="presentationTextExercisesScale"></p>
+      <input type="text" id="answer" class="customElementExercisesScale">
+      <button id="submit" data-text-node="toSend" class="customElementExercisesScale"></button>
+      <button id="next" disabled data-text-node="nextExercise" class="customElementExercisesScale"></button>
+    </div>
+    <p id="feedback" class="presentationTextExercisesScale"></p>
+  </div>
+    <script src="../scripts/main.js" type="module"></script>
+    <script src="../scripts/exercises.js" type="module"></script>
+    <script src="../scripts/mainIntervals.js" type="module"></script>
+  </body>
+</html>
