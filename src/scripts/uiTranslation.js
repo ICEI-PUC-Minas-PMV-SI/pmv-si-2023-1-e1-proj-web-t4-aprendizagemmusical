@@ -64,7 +64,9 @@ function setDocumentRootLangAttribute() {
 	
 	let lang = localStorage.getItem("userPreferredLanguage")
 	if(lang) {
-		lang.substring(0,2);
+		lang = lang.substring(0,2);
+	} else {
+		lang = navigator.language.substring(0,2);
 	}
 
 	let root = document.querySelector("html");
