@@ -70,6 +70,8 @@ function playRhythm() {
   ball.style.backgroundColor = "transparent";  // Esconde a bola no início do ritmo
 
   rhythmInterval = setInterval(function() {
+    ball.style.backgroundColor = "transparent";
+
     if (rhythm[index]) {
       playTone();  // Reproduz o som apenas quando a batida é correta
       isCorrect = true;
@@ -81,8 +83,6 @@ function playRhythm() {
     if (index >= rhythm.length) {
       index = 0;
     }
-    
-    ball.style.backgroundColor = "transparent";
   }, intervalTime);  // Intervalo definido pelo BPM
 
   isPlaying = true;
@@ -116,14 +116,22 @@ document.getElementById("stopButton").addEventListener("click", stopRhythm);
 
 document.getElementById("nextButton").addEventListener("click", playNextRhythm);
 
-document.addEventListener("keydown", function(event) {
-  if (event.code === "Space" && isPlaying) {
-    isSpaceKeyPressed = true; // Define a variável como true
-
+document.addEventListener("click", function() {
+  if (isPlaying) {
     if (isCorrect) {
-      ball.style.backgroundColor = "green"; // Muda a cor da bolinha para verde
+      ball.style.backgroundColor = "green"; // Muda a cor da bola para verde se o clique estiver correto
     } else {
-      ball.style.backgroundColor = "red"; // Muda a cor da bolinha para vermelho (tecla pressionada no momento errado)
+      ball.style.backgroundColor = "red"; // Muda a cor da bola para vermelho se o clique estiver errado ou fora de tempo
+    }
+  }
+});
+
+document.addEventListener("touchstart", function() {
+  if (isPlaying) {
+    if (isCorrect) {
+      ball.style.backgroundColor = "green"; // Muda a cor da bola para verde se o toque estiver correto
+    } else {
+      ball.style.backgroundColor = "red"; // Muda a cor da bola para vermelho se o toque estiver errado ou fora de tempo
     }
   }
 });
