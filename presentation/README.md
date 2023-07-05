@@ -1,10 +1,16 @@
 # Apresentação
 
 Bem-vindo à seção de apresentação do documento do nosso site de aprendizado musical! 
-Neste documento, vamos destacar as principais características e benefícios que nosso site oferece aos entusiastas e estudantes de música.
-Nosso site foi criado com o objetivo de tornar essa experiência acessível a todos, independentemente do nível de habilidade ou conhecimento musical.
-Oferecendo recursos e ferramentas projetadas para tornar a aprendizagem musical mais envolvente, temos teorias, exercícios e um playground com diagrações completas de violão, baixo e piano.
+<br>
 
+Neste documento, vamos destacar as principais características e benefícios que nosso site oferece aos entusiastas e estudantes de música.
+<br>
+
+Nosso site foi criado com o objetivo de tornar essa experiência acessível a todos, independentemente do nível de habilidade ou conhecimento musical.
+<br>
+
+Oferecendo recursos e ferramentas projetadas para tornar a aprendizagem musical mais envolvente, temos teorias, exercícios e um playground com diagrações completas de violão, baixo e piano.
+<br>
 
 * [Pitch inicial](./pitchProjetoDesvWebAprendizagemMusical.pdf)
 * [Apresentação final](./apresentacaoAprendizagemMusicalEtapa4.pdf)
