@@ -17,20 +17,23 @@ A documentação dos testes é dividida nas seguintes seções:
  - [Avaliação dos Testes de Usabilidade](#avaliação-dos-testes-de-usabilidade)
 
 # Teste de Software
-
+<b>
+ 
 Os testes de software desempenham um papel fundamental no ciclo de vida do desenvolvimento de software, permitindo a detecção de erros, falhas e comportamentos indesejados.
+<b>
 
 ## Plano de Testes de Software
-
+<b>
+ 
 Aqui exemplificamos alguns testes feitos pautados nos requisitos funcionais e nao funcionais.
-
+<b>
 
 **Caso de Teste** | **CT01 - Manter preferências de tema e idioma do usuário**
  :--------------: | ------------
 **Procedimento**  | As alterações de tema (dark ou light) e idioma (português ou inglês) devem ficar armazenadas, afim do usuário não precisar trocar suas configurações em cada página
 **Requisitos associados** | RNF-09
 **Resultado esperado** | Ao escolher um tema e um idioma e navegar pelas páginas do site a configuração deve ser mantida.
-**Ação** | Clique nos botões do escolha.
+**Ação** | Clique nos botões indicados.
 **Resultado obtido** | Sucesso.
 
 **Caso de Teste** | **CT02 - O playground deverá apresentar as notas corretas de acordo com a escolha do usuário**
@@ -38,12 +41,12 @@ Aqui exemplificamos alguns testes feitos pautados nos requisitos funcionais e na
 **Procedimento**  | Ao selecionar a nota desejada o playground deverá destacar na diagramção a escolha feita.
 **Requisitos associados** | RF-03
 **Resultado esperado** | Destaque das notas selecionadas no layout.
-**Ação** | Seleção da nota na caixa de multipla escolha.
+**Ação** | Seleção da nota na caixa de múltipla escolha.
 **Resultado obtido** | Sucesso.
 
 **Caso de Teste** | **O site deverá ser responsivo permitindo a visualização em um celular de forma adequada**
  :--------------: | ------------
-**Procedimento**  | 1) Usuário informa gênero, seu tipo de usuário (cuidador ou comum), data de nascimento e clica em criar.<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.<br> 3) A aplicação armazena os dados e direciona o usuário para a tela de login.
+**Procedimento**  | O usuário deverá testar as funcionalidades das telas, incluindo os exercicíos, layouts do playground e leitura dos artigos teóricos.
 **Requisitos associados** | RNF-02
 **Resultado esperado** | Todas as funcionalidades do site devem ter êxito quando usadas em um celular.
 **Ação** | Percorrer todas as telas a fim de utilizar o site em um celular.
@@ -51,22 +54,35 @@ Aqui exemplificamos alguns testes feitos pautados nos requisitos funcionais e na
 
 ## Registro dos Testes de Software
 
-Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
+Os registros de teste de software são registros detalhados que capturam as atividades realizadas durante o processo de verificação.
+<b>
 
-|*Caso de Teste*                                 |*TC-01 - Criar uma conta*                                         |
-|---|---|
-|Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
-|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
+Documentamos aqui os vídeos que comprovam o funcionamento das aplicabilidades propostas. 
+<b>
 
-|*Caso de Teste*                                 |*TC-02 - Efetuar Login (usuário autenticado)*                                         |
+Veja os exemplos a seguir.
+
+|*Caso de Teste*                                 |*TC-01 -  Manter preferências de tema e idioma do usuário*                                         |
 |---|---|
-|Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Requisito Associado | RNF-09 |
+|Link do vídeo do teste realizado: | | 
+
+|*Caso de Teste*                                 |*TC-02 - O playground deverá apresentar as notas corretas de acordo com a escolha do usuário*                                         |
+|---|---|
+|Requisito Associado | RF-03 |
+|Link do vídeo do teste realizado: |  | 
+
+|*Caso de Teste*                                 |*TC-03 - O site deverá ser responsivo permitindo a visualização em um celular de forma adequada*                                         |
+|---|---|
+|Requisito Associado | RF-03 |
+|Link do vídeo do teste realizado: |  | 
 
 
 ## Avaliação dos Testes de Software
-
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Os resultados dos testes foram satisfatórios e desempenhou um papel fundamental para conseguirmos definir estratégias para solucionar os erros encontrados.
+<br>
+Ao analisar os resultados dos testes foi possível obter insights para evolução do projeto, a crição de novos exercícios e implementação de um sistema de pontuações de acordo com o avanço do
+usuário nas seções de estudos teóricos, são exemplos de pontos de evolução que o grupo visa para a plataforma.
 
 
 # Testes de Usabilidade
