@@ -6,8 +6,8 @@ Nosso site foi criado com o objetivo de tornar essa experiência acessível a to
 Oferecendo recursos e ferramentas projetadas para tornar a aprendizagem musical mais envolvente, temos teorias, exercícios e um playground com diagrações completas de violão, baixo e piano.
 
 
-* [Pitch inicial](./pitchProjetoDesvWebAprendizagemMusical.ppt.pdf.)
-* [Apresentação final](./apresentacaoAprendizagemMusicalEtapa4.pdf.pdf)
+* [Pitch inicial](./pitchProjetoDesvWebAprendizagemMusical.pdf)
+* [Apresentação final](./apresentacaoAprendizagemMusicalEtapa4.pdf)
 * [Vídeo de demonstração](./demo-aprendizagem-musical.mp4)
 
 > **Links Úteis**:
