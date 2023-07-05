@@ -61,23 +61,22 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
 
-
-## Testes de unidade automatizados (Opcional)
-
-Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de software, ele podera desenvolver testes automatizados de software que verificam o funcionamento das funções JavaScript desenvolvidas. Para conhecer sobre testes unitários em JavaScript, leia 0 documento  [Ferramentas de Teste para Java Script](https://geekflare.com/javascript-unit-testing/).
-
-
 # Testes de Usabilidade
 
 O objetivo do Plano de Testes de Usabilidade é obter informações quanto à expectativa dos usuários em relação à  funcionalidade da aplicação de forma geral.
+<br>
 
 Para tanto, elaboramos dois cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, conforme especificado na etapa de especificações do projeto.
+<br>
 
 Foram convidadas duas pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
+<br>
 
 Taxa de sucesso: responde se o usuário conseguiu ou não executar a funcionalidade proposta;
+<br>
 
 Satisfação subjetiva: responde como o usuário avalia o sistema com relação à execução da funcionalidade proposta, conforme a seguinte escala:
+<br>
 
 1. Péssimo; 
 2. Ruim; 
@@ -86,8 +85,10 @@ Satisfação subjetiva: responde como o usuário avalia o sistema com relação 
 5. Ótimo.
 
 Com o intuito de respeitar as diretrizes da Lei Geral de Proteção de Dados, não foram coletadas informações pessoais dos usuários que participaram do teste, pois não havia Termo de Consentimento Livre e Esclarecido.
+<br>
 
 A seguir, apresento os dois cenários utilizados durante a realização dos testes de usabilidade da aplicação. Esses cenários foram escolhidos para demonstrar as principais histórias de usuário sendo realizadas, juntamente com as funcionalidades avaliadas e as ferramentas utilizadas.
+<br>
 
 > - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
 
@@ -113,6 +114,8 @@ Cenário 1: Você é uma pessoa que já toca um instrumento músical e gostaria 
 
 Comentários dos usuários: 
 Usando modo avançado do playground consegui testar novas composições de escalas e criar novas músicas.
+<br>
+
 Não tive dificuldades, melhorei meus conhecimentos musicais com os artigos e pude praticar usando o playground.
 
 
@@ -128,6 +131,8 @@ Cenário 2: Você é uma pessoa que quer aprender a tocar piano mas nao tem cond
 
 Comentários dos usuários: 
 Achei muito bom ter a interface do piano no playground, com isso consegui testar as notas e escalas.
+<br>
+
 Não tive dificuldades, o site redireciona bem as telas e tem responsividade nas layouts dos instrumentos, facilitando o estudo através do celular. 
 
 
@@ -135,10 +140,12 @@ Não tive dificuldades, o site redireciona bem as telas e tem responsividade nas
 ## Avaliação dos Testes de Usabilidade
 
 Analisando os resultados obtidos nos testes de usabilidades podemos concluir que a aplicação web se comportou conforme esperado e alcançou seu objetivo de ser uma plataforma de aprendizagem musical.
+<br>
 
 Durante a avaliação de testes de usabilidade, os participantes realizaramm tarefas específicas dentro da aplicação enquanto foram observados e suas interações foram registradas. Além disso, as notas das avaliações foram 100% satisfatórias.
+<br>
 
 Com os testes, tivemos a oportunidade de identificar e corrigir problemas de usabilidade, validamos as funcionalidades e com isso ajustamos todos os gaps encontrados para manter o nosso compromisso de qualidade da plataforma desenvolvida.
-
+<br>
 
 
