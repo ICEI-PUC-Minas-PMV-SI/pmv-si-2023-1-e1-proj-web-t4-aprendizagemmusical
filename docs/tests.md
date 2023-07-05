@@ -27,7 +27,7 @@ Aqui exemplificamos alguns testes feitos pautados nos requisitos funcionais e na
 
 **Caso de Teste** | **CT01 - Manter preferências de tema e idioma do usuário**
  :--------------: | ------------
-**Procedimento**  | As alterações de tema (dark ou light) e idioma (português ou inglês) devem ficar armazenadas, afim do usuário não precisar trocar suas configurações em casa página
+**Procedimento**  | As alterações de tema (dark ou light) e idioma (português ou inglês) devem ficar armazenadas, afim do usuário não precisar trocar suas configurações em cada página
 **Requisitos associados** | RNF-09
 **Resultado esperado** | Ao escolher um tema e um idioma e navegar pelas páginas do site a configuração deve ser mantida.
 **Ação** | Clique nos botões do escolha.
