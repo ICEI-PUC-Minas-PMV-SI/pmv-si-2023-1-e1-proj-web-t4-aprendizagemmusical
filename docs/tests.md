@@ -25,20 +25,28 @@ Os testes de software desempenham um papel fundamental no ciclo de vida do desen
 Aqui exemplificamos alguns testes feitos pautados nos requisitos funcionais e nao funcionais.
 
 
-**Caso de Teste** | **CT01 - Criar conta parte 1**
+**Caso de Teste** | **CT01 - Manter preferências de tema e idioma do usuário**
  :--------------: | ------------
-**Procedimento**  | 1) Usuário informa nome, sobrenome, email, senha, Estado e Cidade e clica no botão "Continuar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
-**Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro.
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
+**Procedimento**  | As alterações de tema (dark ou light) e idioma (português ou inglês) devem ficar armazenadas, afim do usuário não precisar trocar suas configurações em casa página
+**Requisitos associados** | RNF-09
+**Resultado esperado** | Ao escolher um tema e um idioma e navegar pelas páginas do site a configuração deve ser mantida.
+**Ação** | Clique nos botões do escolha.
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
+**Caso de Teste** | **CT02 - O playground deverá apresentar as notas corretas de acordo com a escolha do usuário**
+ :--------------: | ------------
+**Procedimento**  | Ao selecionar a nota desejada o playground deverá destacar na diagramção a escolha feita.
+**Requisitos associados** | RF-03
+**Resultado esperado** | Destaque das notas selecionadas no layout.
+**Ação** | Seleção da nota na caixa de multipla escolha.
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **O site deverá ser responsivo permitindo a visualização em um celular de forma adequada**
  :--------------: | ------------
 **Procedimento**  | 1) Usuário informa gênero, seu tipo de usuário (cuidador ou comum), data de nascimento e clica em criar.<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.<br> 3) A aplicação armazena os dados e direciona o usuário para a tela de login.
-**Requisitos associados** | RF-001
-**Resultado esperado** | Criação de cadastro
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
+**Requisitos associados** | RNF-02
+**Resultado esperado** | Todas as funcionalidades do site devem ter êxito quando usadas em um celular.
+**Ação** | Percorrer todas as telas a fim de utilizar o site em um celular.
 **Resultado obtido** | Sucesso.
 
 ## Registro dos Testes de Software
