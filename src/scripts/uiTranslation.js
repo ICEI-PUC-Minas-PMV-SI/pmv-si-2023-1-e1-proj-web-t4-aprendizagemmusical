@@ -46,14 +46,14 @@ function setInitialLanguageBasedOnLocalStorage() {
 	changeLanguageEnglish();
 }
 
-function changeLanguagePortuguese(){
+export function changeLanguagePortuguese(){
 	document.querySelectorAll('[data-text-node]').forEach(element => {
 		element.innerText = portugueseTranslation[element.getAttribute("data-text-node")];
 	});
 	setDocumentRootLangAttribute();
 }
 
-function changeLanguageEnglish(){
+export function changeLanguageEnglish(){
 	document.querySelectorAll('[data-text-node]').forEach(element => {
 		element.innerText = englishTranslation[element.getAttribute("data-text-node")];
 	});
