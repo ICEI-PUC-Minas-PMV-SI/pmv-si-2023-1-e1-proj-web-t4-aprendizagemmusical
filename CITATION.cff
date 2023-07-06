@@ -1,28 +1,34 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title:
+title: Aprendizagem musical
 authors:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - name-suffix: Professor XXXX
+  - family-names: Andrade
+    given-names: Luiz Henrique Santos de
+  - family-names: Fernandes
+    given-names: Daniel Felipe Maciel
+  - family-names: Andrade
+    given-names: Marília Rocha de
+  - family-names: Santos
+    given-names: Matheus Carlos Fraga dos
+  - family-names: Bispo
+    given-names: Nathália Lopes Soares
+  - name-suffix: Professor Marcos Rodrigo Costa
     affiliation: PUC Minas
-    family-names:
-    given-names:
+    family-names: Costa
+    given-names: Marcos Rodrigo
 keywords:
-  -
-  -
+'music notation'
+'music scoring'
+'scales'
+'musical notes'
+'playground'
+'exercises'
+'music'
+'guitar'
+'piano'
+'bass'
+'article'
+  
 repository-code:
 license: CC-BY-4.0
 version: 1.0.0
