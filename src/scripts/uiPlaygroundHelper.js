@@ -394,7 +394,7 @@ export function convertFlatToSharp(note){
   return scalesController.flatNoteToSharp(note);
 }
 
-function assignNotesStyle() {
+export function assignNotesStyle() {
   let paramField0 = document.getElementById("root").value;
   let paramField1 = document.getElementById("scale").value;
   let paramField2 = document.getElementById("tunning").value;
