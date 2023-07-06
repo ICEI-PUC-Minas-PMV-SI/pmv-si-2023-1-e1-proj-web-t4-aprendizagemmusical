@@ -5,7 +5,9 @@ import * as diagramHelper from './diagramHelper.js';
 
 export function handleClick(e){
     updatePlaygroundUiOptions(e.target.value);
-    uiPlayground.assignNotesDefaultStyle();
+    if(diagramHelper.diagramDiv.getAttribute("data-diagram-mode") == "freeplay"){
+      uiPlaygroundHelper.assignNotesStyle();
+    }
 }
 
 export function updatePlaygroundUiOptions(instrument) {

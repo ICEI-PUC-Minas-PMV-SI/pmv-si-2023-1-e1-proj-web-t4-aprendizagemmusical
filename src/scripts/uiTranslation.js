@@ -74,7 +74,6 @@ function setDocumentRootLangAttribute() {
 		root.removeAttribute("lang");
 	}
 	root.setAttribute("lang", lang);
-	console.log(root);
 }
 
 //event listeners
@@ -118,7 +117,6 @@ export function translateElements(elementArray) {
 
 export function translateElementsRecursively(element) {
 	let elementArray = Array.from(element.querySelectorAll("[data-text-node]"))
-	console.log(elementArray);
 	elementArray.forEach(element => {
 		if(getLocalStorageLanguage() == "enus") {
 			element.innerText = englishTranslation[element.getAttribute("data-text-node")];

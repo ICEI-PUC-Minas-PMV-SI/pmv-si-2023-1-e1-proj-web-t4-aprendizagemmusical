@@ -39,7 +39,6 @@ export function showTutorial() {
 function handleTutorialContent() {
   let diagram = document.querySelector("div.diagram");
   let tutorialContent = '';
-  console.log(diagram.getAttribute("data-diagram-mode"));
   if(diagram.getAttribute("data-diagram-mode").includes("freeplay")) {
     tutorialContent = createFreePlayTutorial();
   }

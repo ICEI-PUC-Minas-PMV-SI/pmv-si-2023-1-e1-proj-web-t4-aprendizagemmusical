@@ -31,7 +31,7 @@ export function generateFretboard(notesPerFret, frets, instrumentName) {
   }
 
   if(diagramHelper.diagramDiv.getAttribute("data-diagram-mode") == "advanced"){
-    console.log('generateFretboard advanced mode');
+    //console.log('generateFretboard advanced mode');
   }
 }
 
