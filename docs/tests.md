@@ -66,17 +66,17 @@ Veja os exemplos a seguir.
 |*Caso de Teste*                                 |*TC-01 -  Manter preferências de tema e idioma do usuário*                                         |
 |---|---|
 |Requisito Associado | RNF-09 |
-|Link do vídeo do teste realizado: | [Video](docs/img/ct-tema-idioma.mp4) |
+|Link do vídeo do teste realizado: | [Video](/img/ct-tema-idioma.mp4) |
 
 |*Caso de Teste*                                 |*TC-02 - O playground deverá apresentar as notas corretas de acordo com a escolha do usuário*                                         |
 |---|---|
 |Requisito Associado | RF-03 |
-|Link do vídeo do teste realizado: | [Video](docs/img/ct-notas.mp4) | 
+|Link do vídeo do teste realizado: | [Video](/img/ct-notas.mp4) | 
 
 |*Caso de Teste*                                 |*TC-03 - O site deverá ser responsivo permitindo a visualização em um celular de forma adequada*                                         |
 |---|---|
 |Requisito Associado | RF-03 |
-|Link do vídeo do teste realizado: | [Video](docs/img/ct-responsividade.mp4) | 
+|Link do vídeo do teste realizado: | [Video](/img/ct-responsividade.mp4) | 
 
 
 ## Avaliação dos Testes de Software
