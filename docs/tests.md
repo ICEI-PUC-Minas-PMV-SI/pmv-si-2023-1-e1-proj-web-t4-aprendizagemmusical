@@ -3,6 +3,7 @@
 Neste projeto serão realizados dois tipos de testes:
 
  - O **Teste de Software**, que utiliza uma abordadem de caixa preta, e tem por objetivo verificar a conformidade do software com os requisitos funcionais e não funcionais do sistema.
+ - 
  - O **Teste de Usabilidade**, que busca avaliar a qualidade do uso do sistema por um usuário do público alvo. 
 
 Se quiser conhecer um pouco mais sobre os tipos de teste de software, leia o documento [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/).
@@ -18,66 +19,90 @@ A documentação dos testes é dividida nas seguintes seções:
 
 # Teste de Software
 
-Nesta seção o grupo deverá documentar os testes de software que verificam a correta implementação dos requisitos funcionais e não funcionais do software.
+ 
+Os testes de software desempenham um papel fundamental no ciclo de vida do desenvolvimento de software, permitindo a detecção de erros, falhas e comportamentos indesejados.
+
 
 ## Plano de Testes de Software
 
-Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito  Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
+ 
+Aqui exemplificamos alguns testes feitos pautados nos requisitos funcionais e nao funcionais.
 
 
-**Caso de Teste** | **CT01 - Criar conta parte 1**
+**Caso de Teste** | **CT01 - Manter preferências de tema e idioma do usuário**
  :--------------: | ------------
-**Procedimento**  | 1) Usuário informa nome, sobrenome, email, senha, Estado e Cidade e clica no botão "Continuar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
-**Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro.
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
+**Procedimento**  | As alterações de tema (dark ou light) e idioma (português ou inglês) devem ficar armazenadas, afim do usuário não precisar trocar suas configurações em cada página
+**Requisitos associados** | RNF-09
+**Resultado esperado** | Ao escolher um tema e um idioma e navegar pelas páginas do site a configuração deve ser mantida.
+**Ação** | Clique nos botões indicados.
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
+**Caso de Teste** | **CT02 - O playground deverá apresentar as notas corretas de acordo com a escolha do usuário**
  :--------------: | ------------
-**Procedimento**  | 1) Usuário informa gênero, seu tipo de usuário (cuidador ou comum), data de nascimento e clica em criar.<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.<br> 3) A aplicação armazena os dados e direciona o usuário para a tela de login.
-**Requisitos associados** | RF-001
-**Resultado esperado** | Criação de cadastro
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
+**Procedimento**  | Ao selecionar a nota desejada o playground deverá destacar na diagramção a escolha feita.
+**Requisitos associados** | RF-03
+**Resultado esperado** | Destaque das notas selecionadas no layout.
+**Ação** | Seleção da nota na caixa de múltipla escolha.
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **O site deverá ser responsivo permitindo a visualização em um celular de forma adequada**
+ :--------------: | ------------
+**Procedimento**  | O usuário deverá testar as funcionalidades das telas, incluindo os exercicíos, layouts do playground e leitura dos artigos teóricos.
+**Requisitos associados** | RNF-02
+**Resultado esperado** | Todas as funcionalidades do site devem ter êxito quando usadas em um celular.
+**Ação** | Percorrer todas as telas a fim de utilizar o site em um celular.
 **Resultado obtido** | Sucesso.
 
 ## Registro dos Testes de Software
 
-Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
+Os registros de teste de software são registros detalhados que capturam as atividades realizadas durante o processo de verificação.
 
-|*Caso de Teste*                                 |*TC-01 - Criar uma conta*                                         |
-|---|---|
-|Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
-|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
 
-|*Caso de Teste*                                 |*TC-02 - Efetuar Login (usuário autenticado)*                                         |
+Documentamos aqui os vídeos que comprovam o funcionamento das aplicabilidades propostas. 
+
+
+Veja os exemplos a seguir.
+
+|*Caso de Teste*                                 |*TC-01 -  Manter preferências de tema e idioma do usuário*                                         |
 |---|---|
-|Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Requisito Associado | RNF-09 |
+|Link do vídeo do teste realizado: | [Video](img/ct-tema-idioma.mp4) |
+
+|*Caso de Teste*                                 |*TC-02 - O playground deverá apresentar as notas corretas de acordo com a escolha do usuário*                                         |
+|---|---|
+|Requisito Associado | RF-03 |
+|Link do vídeo do teste realizado: | [Video](img/ct-notas.mp4) | 
+
+|*Caso de Teste*                                 |*TC-03 - O site deverá ser responsivo permitindo a visualização em um celular de forma adequada*                                         |
+|---|---|
+|Requisito Associado | RF-03 |
+|Link do vídeo do teste realizado: | [Video](img/ct-responsividade.mp4) | 
 
 
 ## Avaliação dos Testes de Software
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Os resultados dos testes foram satisfatórios e desempenhou um papel fundamental para conseguirmos definir estratégias para solucionar os erros encontrados.
 
-
-
-## Testes de unidade automatizados (Opcional)
-
-Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de software, ele podera desenvolver testes automatizados de software que verificam o funcionamento das funções JavaScript desenvolvidas. Para conhecer sobre testes unitários em JavaScript, leia 0 documento  [Ferramentas de Teste para Java Script](https://geekflare.com/javascript-unit-testing/).
+Ao analisar os resultados dos testes foi possível obter insights para evolução do projeto, a crição de novos exercícios e implementação de um sistema de pontuações de acordo com o avanço do
+usuário nas seções de estudos teóricos, são exemplos de pontos de evolução que o grupo visa para a plataforma.
 
 
 # Testes de Usabilidade
 
 O objetivo do Plano de Testes de Usabilidade é obter informações quanto à expectativa dos usuários em relação à  funcionalidade da aplicação de forma geral.
 
-Para tanto, elaboramos quatro cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, definido na etapa das especificações do projeto.
 
-Foram convidadas quatro pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
+Para tanto, elaboramos dois cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, conforme especificado na etapa de especificações do projeto.
 
-Taxa de sucesso: responde se o usuário conseguiu ou não executar a tarefa proposta;
 
-Satisfação subjetiva: responde como o usuário avalia o sistema com relação à execução da tarefa proposta, conforme a seguinte escala:
+Foram convidadas duas pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
+
+
+Taxa de sucesso: responde se o usuário conseguiu ou não executar a funcionalidade proposta;
+
+
+Satisfação subjetiva: responde como o usuário avalia o sistema com relação à execução da funcionalidade proposta, conforme a seguinte escala:
+
 
 1. Péssimo; 
 2. Ruim; 
@@ -85,12 +110,11 @@ Satisfação subjetiva: responde como o usuário avalia o sistema com relação 
 4. Bom; 
 5. Ótimo.
 
-Tempo para conclusão da tarefa: em segundos, e em comparação com o tempo utilizado quando um especialista (um desenvolvedor) realiza a mesma tarefa.
-
-Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as informações pessoais dos usuários que participaram do teste não foram coletadas, tendo em vista a ausência de Termo de Consentimento Livre e Esclarecido.
+Com o intuito de respeitar as diretrizes da Lei Geral de Proteção de Dados, não foram coletadas informações pessoais dos usuários que participaram do teste, pois não havia Termo de Consentimento Livre e Esclarecido.
 
 
-Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+A seguir, apresento os dois cenários utilizados durante a realização dos testes de usabilidade da aplicação. Esses cenários foram escolhidos para demonstrar as principais histórias de usuário sendo realizadas, juntamente com as funcionalidades avaliadas e as ferramentas utilizadas.
+
 
 > - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
 
@@ -99,60 +123,56 @@ Apresente os cenários de testes utilizados na realização dos testes de usabil
 
 | Nº do Cenário | Descrição do cenário |
 |---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço. |
+| 1             | Você é uma pessoa que já toca um instrumento músical e gostaria de criar suas próprias composições. |
+| 2             | Você é uma pessoa que quer aprender a tocar piano mas nao tem condições financeiras. |
 
 
 
 ## Registro de Testes de Usabilidade
 
-Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando.
+Cenário 1: Você é uma pessoa que já toca um instrumento músical e gostaria de criar suas próprias composições.
 
-| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
-|---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 27.87 segundos                  |
-| 2       | SIM             | 5                    | 17.11 segundos                  |
-| 3       | SIM             | 5                    | 39.09 segundos                  |
-|  |  |  |  |
-| **Média**     | 0%           | 0                | 0 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
+| Usuário | Taxa de sucesso | Satisfação subjetiva |
+|---------|-----------------|----------------------|
+| 1       | SIM             | 5                    |
+| 2       | SIM             | 5                    | 
 
 
-    Comentários dos usuários: Achei o site muito bom e intuitivo. 
-    Não tive dificuldades e acho que ficou bem intuitivo.
+Comentários dos usuários: 
+
+Usando modo avançado do playground consegui testar novas composições de escalas e criar novas músicas.
+
+
+Não tive dificuldades, melhorei meus conhecimentos musicais com os artigos e pude praticar usando o playground.
 
 
 
 
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço.
+Cenário 2: Você é uma pessoa que quer aprender a tocar piano mas nao tem condições financeiras.
 
-| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
-|---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
-| 2       | SIM             | 5                    | 31.42 segundos                          |
-| 3       | SIM             | 5                    | 36.21 segundos                          |
-|  |  |  |  |
-| **Média**     | 0%           | 0                | 0 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+| Usuário | Taxa de sucesso | Satisfação subjetiva |
+|---------|-----------------|----------------------|
+| 1       | SIM             | 5                    |
+| 2       | SIM             | 5                    |
 
 
-    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
-    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
-    tanto na hora da pesquisa, quanto depois dela, nos resultados.
+Comentários dos usuários: 
 
+Achei muito bom ter a interface do piano no playground, com isso consegui testar as notas e escalas.
+
+Não tive dificuldades, o site redireciona bem as telas e tem responsividade nas layouts dos instrumentos, facilitando o estudo através do celular. 
 
 
 
 ## Avaliação dos Testes de Usabilidade
 
+Analisando os resultados obtidos nos testes de usabilidades podemos concluir que a aplicação web se comportou conforme esperado e alcançou seu objetivo de ser uma plataforma de aprendizagem musical.
 
-Tomando como base os resultados obtidos, foi possível verificar que a aplicação web apresenta bons resultados quanto à taxa de sucesso na interação dos usuários, tendo em vista que os cenários propostos foram concluídos com sucesso.
 
-Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos usuários no momento que realizavam os cenários propostos. Prova são as médias das avaliações em cada um dos cenários, que variou entre 4 (bom) e 5 (ótimo).
+Durante a avaliação de testes de usabilidade, os participantes realizaramm tarefas específicas dentro da aplicação enquanto foram observados e suas interações foram registradas. Além disso, as notas das avaliações foram 100% satisfatórias.
 
-Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Tal discrepância, em certa medida, é esperada, tendo em vista que o desenvolvedor já tem prévio conhecimento de toda a interface da aplicação, do posicionamento dos elementos, lógica de organização das páginas, etc.
 
-Contudo, tendo em vista que a diferença foi relevante (por exemplo, 113 segundos — média usuários — contra 25 segundos — especialista — no cenário três), e ainda os comentários feitos por alguns usuários, entendemos haver oportunidades de melhoria na usabilidade da aplicação.
+Com os testes, tivemos a oportunidade de identificar e corrigir problemas de usabilidade, validamos as funcionalidades e com isso ajustamos todos os gaps encontrados para manter o nosso compromisso de qualidade da plataforma desenvolvida.
 
 
 

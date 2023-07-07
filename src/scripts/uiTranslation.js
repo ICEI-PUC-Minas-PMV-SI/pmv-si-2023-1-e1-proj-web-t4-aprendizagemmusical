@@ -46,14 +46,14 @@ function setInitialLanguageBasedOnLocalStorage() {
 	changeLanguageEnglish();
 }
 
-function changeLanguagePortuguese(){
+export function changeLanguagePortuguese(){
 	document.querySelectorAll('[data-text-node]').forEach(element => {
 		element.innerText = portugueseTranslation[element.getAttribute("data-text-node")];
 	});
 	setDocumentRootLangAttribute();
 }
 
-function changeLanguageEnglish(){
+export function changeLanguageEnglish(){
 	document.querySelectorAll('[data-text-node]').forEach(element => {
 		element.innerText = englishTranslation[element.getAttribute("data-text-node")];
 	});
@@ -64,7 +64,9 @@ function setDocumentRootLangAttribute() {
 	
 	let lang = localStorage.getItem("userPreferredLanguage")
 	if(lang) {
-		lang.substring(0,2);
+		lang = lang.substring(0,2);
+	} else {
+		lang = navigator.language.substring(0,2);
 	}
 
 	let root = document.querySelector("html");
@@ -72,7 +74,6 @@ function setDocumentRootLangAttribute() {
 		root.removeAttribute("lang");
 	}
 	root.setAttribute("lang", lang);
-	console.log(root);
 }
 
 //event listeners
@@ -116,7 +117,6 @@ export function translateElements(elementArray) {
 
 export function translateElementsRecursively(element) {
 	let elementArray = Array.from(element.querySelectorAll("[data-text-node]"))
-	console.log(elementArray);
 	elementArray.forEach(element => {
 		if(getLocalStorageLanguage() == "enus") {
 			element.innerText = englishTranslation[element.getAttribute("data-text-node")];
