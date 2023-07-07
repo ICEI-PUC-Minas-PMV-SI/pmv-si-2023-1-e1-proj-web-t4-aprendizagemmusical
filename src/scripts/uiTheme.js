@@ -50,9 +50,9 @@ function changeNodeContent(node) {
   let img = document.createElement("img");
   img.setAttribute("title", "change theme");
   if(node.value === "light") {
-    img.setAttribute("src", "/src/assets/images/svg/moon.svg");
+    img.setAttribute("src", "/assets/images/svg/moon.svg");
   } else {
-    img.setAttribute("src", "/src/assets/images/svg/sun.svg");
+    img.setAttribute("src", "/assets/images/svg/sun.svg");
   }
   if(node.children.length == 0) {
     node.appendChild(img);
