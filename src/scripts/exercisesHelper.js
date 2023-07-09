@@ -1,4 +1,8 @@
 import exercisesObject from "../assets/json/exercises.json" assert { type: 'json' };
+import * as uiTranslation from "./uiTranslation.js";
+
+uiTranslation.defaultLanguage();
+
 
 let exercisesPercepcaoMusicalBtn = document.getElementById('exercisesPercepcaoMusical');
 let exercisesPercepcaoRitmicaBtn = document.getElementById('exercisesPercepcaoRitmica');

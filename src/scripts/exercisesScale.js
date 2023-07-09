@@ -1,3 +1,7 @@
+import * as uiTranslation from "./uiTranslation.js";
+
+uiTranslation.defaultLanguage();
+
 const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 let scale = [];
 
