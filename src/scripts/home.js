@@ -1,10 +1,8 @@
-import * as uiTranslation from './uiTranslation.js';
-import { changeLanguageEnglish } from './uiTranslation.js';
-import { changeLanguagePortuguese } from './uiTranslation.js';
+import * as uiTranslation from "./uiTranslation.js";
 
 export function showHome() {
-    let content = document.querySelector(".content");
-    let paragraphs = `
+  let content = document.querySelector(".content");
+  let paragraphs = `
       <div class="paragraph">
         <p class="paragraph-text" data-text-node="introHome"></p>
       </div>
@@ -18,21 +16,14 @@ export function showHome() {
         <p class="paragraph-text" data-text-node="introPlayground"></p>
       </div>
     `;
-  
-    content.insertAdjacentHTML("beforeend", paragraphs);
-    uiTranslation.translateElementsRecursively(document.querySelector(".content"));
-    
-    if(navigator.language === "en-US") {
-      changeLanguageEnglish()}
-    
-    else {changeLanguagePortuguese();}
-  
-  }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    showHome();
-  });
-  
+  content.insertAdjacentHTML("beforeend", paragraphs);
+  uiTranslation.translateElementsRecursively(
+    document.querySelector(".content")
+  );
+  uiTranslation.defaultLanguage();
+}
 
-  
-  
+document.addEventListener("DOMContentLoaded", () => {
+  showHome();
+});

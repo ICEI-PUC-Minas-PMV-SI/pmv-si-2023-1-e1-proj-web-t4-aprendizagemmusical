@@ -1,3 +1,7 @@
+import * as uiTranslation from "./uiTranslation.js";
+
+uiTranslation.defaultLanguage();
+
 var audioContext = new (window.AudioContext || window.webkitAudioContext)();
 var rhythmInterval;
 var rhythmIndex = 0;
